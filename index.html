@@ -31,68 +31,96 @@
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
+
   <style>
+    .services-section {
+      background-color: #f4f8fb;
+      padding: 80px 0;
+    }
+
+    /* Aluth Card Design Eka */
+    .service-card-new {
+      display: block;
+      text-decoration: none;
+      background-color: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      height: 100%;
+      border: 1.5px solid transparent;
+    }
+
     /* Hover Effect eka card ekata */
-    .medical-card {
-      transition: all 0.3s ease-in-out;
-      border-radius: 15px;
-      border: none;
-      background: #fff;
-    }
-
-    .medical-card:hover {
+    .service-card-new:hover {
       transform: translateY(-8px);
-      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+      border-color: #4e1922;
     }
 
-    .medical-card img {
-      border-top-left-radius: 15px;
-      border-top-right-radius: 15px;
-      object-fit: cover;
+    /* Image eka thiyena box eka */
+    .img-wrapper {
       height: 200px;
+      overflow: hidden;
+      position: relative;
     }
 
-    /* Image eka uda thiyena date badge eka */
-    .date-badge {
-      background-color: #0d1b2a;
-      /* Dark blue color */
-      color: white;
-      border-radius: 8px;
-      padding: 5px 12px;
+    .card-img-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease;
+      z-index: 1;
+    }
+
+    /* Re-added Dark Overlay */
+    .card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      /* Dark blue overlay */
+      z-index: 2;
+      transition: all 0.3s ease;
+    }
+
+    /* Hover Effects for Image and Overlay */
+    .service-card-new:hover .card-img-layer {
+      transform: scale(1.1);
+    }
+
+    .service-card-new:hover .card-overlay {
+      background: rgba(48, 15, 33, 0.452);
+      /* Mouse eka thiyaddi color eka wenas wenna */
+    }
+
+    /* Text eka thiyena box eka (Yata kotasa) */
+    .card-text-wrapper {
+      padding: 20px 15px;
       text-align: center;
+      background-color: #ffffff;
+      position: relative;
+      z-index: 3;
     }
 
-    .date-badge .day {
-      font-size: 1.2rem;
-      font-weight: bold;
-      line-height: 1;
-    }
-
-    .date-badge .month-year {
-      font-size: 0.75rem;
-    }
-
-    /* Card footer section eka */
-    .card-footer-custom {
-      background-color: #f8fbff;
-      border-bottom-left-radius: 15px;
-      border-bottom-right-radius: 15px;
-      border-top: 1px solid #edf2f7;
-      font-size: 0.85rem;
-      color: #6c757d;
-    }
-
-    .icon-color {
-      color: #48cfae;
-      /* Light green/teal color for icons */
-    }
-
-    .section-title {
-      color: #1b3a6b;
+    .service-title-text {
+      color: #4e1535;
+      font-size: 1.1rem;
       font-weight: 700;
+      margin: 0;
+      transition: color 0.3s ease;
+    }
+
+    .service-card-new:hover .service-title-text {
+      color: #3a0b21;
     }
   </style>
-
 
 </head>
 
@@ -109,30 +137,30 @@
   <!-- header area -->
   <header class="header hd-1">
     <!-- header top -->
-    <div class="header-top">
+    <!-- d-none d-lg-block class deka methanata add kala -->
+    <div class="header-top ">
       <div class="container px-lg-0">
         <div class="header-top-wrap">
           <div class="header-top-left">
             <div class="header-top-social">
-              <span>Follow Us: </span>
+              <!-- <span>Follow Us: </span>
               <a href="#"><i class="fab fa-facebook"></i></a>
               <a href="#"><i class="fab fa-x-twitter"></i></a>
               <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-linkedin"></i></a>
+              <a href="#"><i class="fab fa-linkedin"></i></a> -->
             </div>
           </div>
-          <div class="header-top-right">
+          <div class="header-top-left">
             <div class="header-top-list">
               <ul>
                 <li>
-                  <a href="mailto:info@example.com"><i class="far fa-envelopes"></i>
-                    info@sapphireskinlaserclinic.com</a>
+
                 </li>
                 <li>
-                  <a href="tel:+21236547898"><i class="far fa-phone-volume"></i> 02 7500 5858</a>
+
                 </li>
                 <li>
-                  <a href="#"><i class="far fa-alarm-clock"></i> Sun - Fri (08AM - 10PM)</a>
+
                 </li>
               </ul>
             </div>
@@ -172,21 +200,16 @@
             <div class="offcanvas-body gap-xl-4">
               <ul class="navbar-nav justify-content-end gap-1 flex-grow-1">
                 <li class="nav-item dropdown">
-                  <a class="nav-link  active" href="#" data-bs-toggle="dropdown">HOME</a>
+                  <a class="nav-link  active" href="#" data-bs-toggle="dropdown">Home</a>
 
                 </li>
-                <li class="nav-item"><a class="nav-link" href="about.html">SERVICES</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">BILLINHG POLICY</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">Billing Policy</a></li>
 
-                <li class="nav-item"><a class="nav-link" href="#">SKIN</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">TELEHEALTH</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">ABOUT US</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">CONTACT US</a></li>
-
-
-
-
-
+                <li class="nav-item"><a class="nav-link" href="#">Skin</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Telehealth</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
 
 
               </ul>
@@ -221,24 +244,28 @@
   <div id="smooth-wrapper">
     <div id="smooth-content">
       <main class="main">
-        <!-- hero area -->
-        <div class="hero-section hs-1">
-          <div class="hero-single">
+        
+     
+        <div class="hero-section hs-1" style="height: 750px; min-height: auto; overflow: hidden;">
+          <div class="hero-single" style="height: 100%;">
             <div class="hero-bg-img" data-speed="clamp(0.5)"
-              style="background-image: url(assets/img/hero/slider-1.jpg)"></div>
+              style="background-image: url(assets/img/hero/slide-4.png); height: 100%;">
+            </div>
             <div class="container">
               <div class="row">
                 <div class="col-md-12 col-lg-7">
-                  <div class="hero-content">
-                    <h4 class="hero-sub-title wow fadeInUp" data-wow-delay=".2s"><i class="far fa-tooth"></i> Welcome To
-                      SAPPHIRE!</h4>
-                    <h3 class="hero-title ani-text-1">TRUSTED QUALITY CARE- BECAUSE YOUR HEALTH MATTERS</h3>
-                    <p class="wow fadeInUp" data-wow-delay=".4s">
-                      For over a decade, Renwick GP in Wyoming, NSW, has provided top-tier healthcare to the Central
-                      Coast community. Our two experienced GP Fellows specialize in Chronic Care, Women’s and Children's
-                      Health, Skin Cancer, and Mental Health. As a mixed-billing practice, we offer bulk billing for
-                      children, mental health appointments, and eligible pensioners. Our clinic features a fully
-                      equipped treatment room for minor procedures and convenient onsite pathology.
+
+                  <!-- Hero එකේ උස අඩු කරපු නිසා top එකේ අගය -100px විදියට වෙනස් කළා (අවශ්‍ය නම් මේකත් වෙනස් කරගන්න පුළුවන්) -->
+                  <div class="hero-content" style="position: relative; top: -100px; z-index: 2;">
+
+                    <!-- <h4 class="hero-sub-title wow fadeInUp" data-wow-delay=".2s"><i class="far fa-tooth"></i> Welcome To
+                      SAPPHIRE!</h4> -->
+                    <h3 class="hero-title ani-text-3 text-justify">
+                      Trusted Quality Care <br>
+                      Because Health Matters
+                    </h3>
+                    <p class="wow fadeInUp text-center text-md-start" data-wow-delay=".4s">
+
                     </p>
                     <div class="hero-info wow fadeInUp" data-wow-delay=".6s">
                       <ul>
@@ -248,41 +275,113 @@
                     </div>
                     <div class="hero-btn wow fadeInUp" data-wow-delay=".8s">
                       <a href="about.html" class="theme-btn">About More<i class="fas fa-arrow-circle-right"></i></a>
-                      <a href="contact.html" class="theme-btn2">Learn More<i class="fas fa-arrow-circle-right"></i></a>
+                      <a href="contact.html" class="theme-btn2">Book & Apoimnet<i
+                          class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                 </div>
-                <!-- <div class="col-md-12 col-lg-5 align-self-end">
-                  <div class="hero-item-box wow fadeInUp" data-wow-delay=".2s">
-                    <div class="hero-item-rating">
-                      <img src="assets/img/icon/icon-google.svg" alt="" />
-                      <span class="rating">4.5/5 Rating</span>
-                      <span class="star">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                      </span>
-                    </div>
-                    <div class="content">
-                      <h4 class="title">Feel free to contact us</h4>
-                      <div class="call-box">
-                        <div class="call-icon">
-                          <img src="assets/img/icon/call.svg" alt="" />
-                        </div>
-                        <div class="call-info">
-                          <span>24/7 Call Now</span>
-                          <a href="tel:+21236547898">+2 123 654 7898</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
               </div>
             </div>
           </div>
         </div>
+        <!-- hero area end -->
+        <!-- hero area end -->
+         <!-- about area -->
+     <!-- about area -->
+       
+
+        <div class="about-area py-120" style="background-color: #fffcf8;">
+          <div class="container">
+            <div class="row align-items-center">
+              
+              <!-- Left Side: Overlapping Images -->
+              <div class="col-lg-6">
+                <div class="about-image-wrapper wow fadeInLeft" data-wow-delay=".2s">
+                  <!-- Main Image -->
+                  <img src="assets/img/about/02.jpg" alt="Care" class="about-main-img" />
+                  <!-- Top Image -->
+                  <img src="assets/img/about/01.jpg" alt="Couple" class="about-top-img" />
+                </div>
+              </div>
+
+              <!-- Right Side: Content -->
+              <div class="col-lg-6">
+                <div class="about-right ps-lg-4">
+                  <div class="site-heading mb-3">
+                    <h3 class="site-title ani-text-1" style="font-size: 2rem; font-weight: 600; color: #1a202c;">
+                      Welcome to Sapphire General Practice
+                    </h3>
+                  </div>
+                  
+                  <!-- Text Justified -->
+                  <p class="wow fadeInUp about-text wow fadeInUp text-justify" data-wow-delay=".2s" style="text-align: justify; line-height: 1.7; color: #4a5568; margin-bottom: 15px;">
+                    At Renwick GP, our team has provided care across the NSW East Coast for the past decade and our
+                    mission is to provide the highest standard of care to our community. We are a General Practice with
+                    2 GP Fellows who have a special interest in a range of concerns including Chronic Care Management,
+                    Women’s Health, Skin Cancer Management, Childrens Health and Mental Health.
+                  </p>
+                  
+                  <p class="wow fadeInUp" data-wow-delay=".3s" style="text-align: justify; line-height: 1.7; color: #4a5568; margin-bottom: 30px;">
+                    Sapphire General Practice is a MIXED BILLING GP in Wyoming NSW with Bulk Billing options available for children, mental health appointments, some pensioners and other patients to the discretion of the doctor. Non-rebatable fees apply for all clinical procedures.
+                  </p>
+
+                  <!-- Icons and Features Side by Side -->
+                  <!-- <div class="d-flex flex-wrap gap-4 mb-4 wow fadeInUp" data-wow-delay=".4s">
+                    <div class="d-flex align-items-center gap-2">
+                      <img src="assets/img/icon/checkup.svg" alt="Icon" style="width: 35px; height: auto;" />
+                      <span style="font-weight: 500; color: #2d3748; font-size: 1.05rem;">Free Checkup</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <img src="assets/img/icon/dentist-2.svg" alt="Icon" style="width: 35px; height: auto;" />
+                      <span style="font-weight: 500; color: #2d3748; font-size: 1.05rem;">Highly Professional</span>
+                    </div>
+                  </div> -->
+                   <div class="about-content wow fadeInUp" data-wow-delay=".4s">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="about-item">
+                          <div class="icon">
+                            <img src="assets/img/icon/checkup.svg" alt="" />
+                          </div>
+                          <div class="content">
+                            <h4>Free Checkup</h4>
+                            <p>It is a long established fact that reader will some layout.</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="about-item">
+                          <div class="icon">
+                            <img src="assets/img/icon/dentist-2.svg" alt="" />
+                          </div>
+                          <div class="content">
+                            <h4>Highly Professional</h4>
+                            <p>It is a long established fact that reader will some layout.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                     <div class="wow fadeInUp" data-wow-delay=".4s">
+                    <a href="about.html" class="theme-btn">Book Personal Care<i
+                        class="fas fa-arrow-circle-right"></i></a>
+                         
+                  </div>
+                  
+                  </div>
+
+                  <!-- Buttons Container -->
+                 
+                  
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- about area end -->
+       
+        <!-- about area end -->
         <!-- hero area end -->
 
         <!-- about area -->
@@ -327,9 +426,11 @@
                     <span class="site-title-tagline wow fadeInUp"><i class="far fa-tooth"></i> About Us</span>
                     <h3 class="site-title ani-text-1">Personal Care </h3>
                   </div>
-                  <p class="about-text wow fadeInUp" data-wow-delay=".2s">
-                    Honds-on help whith the activiies of daily living. delivered with patience and -son everyday
-                    routines tay comfortable , safe , and familiar
+                  <p class="about-text wow fadeInUp text-justify" data-wow-delay=".2s">
+                    At Renwick GP, our team has provided care across the NSW East Coast for the past decade and our
+                    mission is to provide the highest standard of care to our community. We are a General Practice with
+                    2 GP Fellows who have a special interest in a range of concerns including Chronic Care Management,
+                    Women’s Health, Skin Cancer Management, Childrens Health and Mental Health.
                   </p>
                   <div class="about-content wow fadeInUp" data-wow-delay=".4s">
                     <div class="row">
@@ -505,201 +606,267 @@ sesssss -->
 
 
 
-<section class="services-section">
-  <div class="container">
-    
-    <div class="text-center mb-20">
-       <span class="site-title-tagline wow fadeInUp"><i class="far fa-tooth"></i>Health & Medical Support</span>
-                    <h3 class="site-title ani-text-1"> Access comprehensive general practice services and expert doctors </h3>
-    </div>
 
-   
+        <section class="services-section">
+          <div class="container">
 
-    <!-- Services Grid -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-      
-      <!-- Card 1 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <!-- Methana thiyena url ekata oyage image path eka denna (e.g., url('assets/img/services/01.jpg')) -->
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">General Health</h4>
+            <div class="text-center mb-5">
+              <span class="site-title-tagline wow fadeInUp d-inline-block mb-2"
+                style="color: #48cfae; font-weight: 600;">
+                <i class="far fa-tooth me-2"></i>Health & Medical Support
+              </span>
+              <h3 class="site-title ani-text-1" style="color: #1a202c; font-size: 2.2rem; font-weight: 700;">
+                Access comprehensive general practice services and expert doctors
+              </h3>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+              <!-- Card 1 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <!-- Overlay eka methanata add kala -->
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">General Health</h4>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">Children's Care</h4>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1532938911079-1b06ac7ce122?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">Women's Health</h4>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">Men's Health</h4>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 5 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">Mental Health</h4>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 6 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">Immunisation</h4>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 7 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">Travel Medicine</h4>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 8 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">Care Plans</h4>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 9 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">Skin Checks</h4>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 10 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">Skin Cancer<br>Management</h4>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 11 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">Minor Procedures</h4>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 12 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">Dermatology</h4>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 13 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">Pre-Employment</h4>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 14 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">Work Cover</h4>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 15 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">Sexual Health</h4>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 16 -->
+              <div class="col">
+                <a href="#" class="service-card-new">
+                  <div class="img-wrapper">
+                    <div class="card-img-layer"
+                      style="background-image: url('https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&w=600&q=80');">
+                    </div>
+                    <div class="card-overlay"></div>
+                  </div>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text">Chronic Disease<br>Management</h4>
+                  </div>
+                </a>
+              </div>
+
+            </div>
           </div>
-        </a>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">Children's Care</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1532938911079-1b06ac7ce122?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">Women's Health</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">Men's Health</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">Mental Health</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">Immunisation</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- Card 7 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">Travel Medicine</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- Card 8 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">Care Plans</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- Card 9 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">Skin Checks</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- Card 10 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">Skin Cancer<br>Management</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- Card 11 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">Minor Procedures</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- Card 12 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">Dermatology</h4>
-          </div>
-        </a>
-      </div>
-      
-      <!-- Card 13 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">Pre-Employment</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- Card 14 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">Work Cover</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- Card 15 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">Sexual Health</h4>
-          </div>
-        </a>
-      </div>
-
-      <!-- Card 16 -->
-      <div class="col">
-        <a href="#" class="service-card-bg">
-          <div class="card-img-layer" style="background-image: url('https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&w=600&q=80');"></div>
-          <div class="card-overlay"></div>
-          <div class="card-text-content">
-            <h4 class="service-title-text">Chronic Disease<br>Management</h4>
-          </div>
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
+        </section>
 
 
         <!-- about area -->
@@ -1136,10 +1303,10 @@ sesssss -->
                     </div>
                     <div class="content">
                       <h5>Call Us</h5>
-                      <a href="tel:+21236547898">+2 123 654 7898</a>
+                      <a href="tel:+21236547898"> 02 7500 5858</a>
                     </div>
                   </div>
-                  <div class="footer-contact-item">
+                  <!-- <div class="footer-contact-item">
                     <div class="icon">
                       <i class="far fa-envelopes"></i>
                     </div>
@@ -1147,7 +1314,7 @@ sesssss -->
                       <h5>Mail Us</h5>
                       <a href="mailto:info@example.com">info@example.com</a>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="footer-contact-item">
                     <div class="icon">
                       <i class="far fa-location-dot"></i>
@@ -1187,12 +1354,12 @@ sesssss -->
                   <div class="footer-widget-box list">
                     <h4 class="footer-widget-title">Company</h4>
                     <ul class="footer-list">
-                      <li><a href="about.html"><i class="far fa-angle-double-right"></i>About Us</a></li>
-                      <li><a href="faq.html"><i class="far fa-angle-double-right"></i>FAQ's</a></li>
-                      <li><a href="blog.html"><i class="far fa-angle-double-right"></i>Update News</a></li>
-                      <li><a href="contact.html"><i class="far fa-angle-double-right"></i>Contact Us</a></li>
-                      <li><a href="terms.html"><i class="far fa-angle-double-right"></i>Terms Of Service</a></li>
-                      <li><a href="privacy.html"><i class="far fa-angle-double-right"></i>Privacy policy</a></li>
+                      <li><a href="about.html"><i class="far fa-angle-double-right"></i>Services</a></li>
+                      <li><a href="faq.html"><i class="far fa-angle-double-right"></i>Billing Policy</a></li>
+                      <li><a href="blog.html"><i class="far fa-angle-double-right"></i>Skin</a></li>
+                      <li><a href="contact.html"><i class="far fa-angle-double-right"></i>Telehealth</a></li>
+                      <li><a href="terms.html"><i class="far fa-angle-double-right"></i>About us</a></li>
+                      <li><a href="privacy.html"><i class="far fa-angle-double-right"></i>Contact Us</a></li>
                     </ul>
                   </div>
                 </div>
@@ -1202,16 +1369,16 @@ sesssss -->
                   <div class="footer-widget-box list">
                     <h4 class="footer-widget-title">Our Services</h4>
                     <ul class="footer-list">
-                      <li><a href="service-single.html"><i class="far fa-angle-double-right"></i>Dental Implants</a>
+                      <li><a href="#"><i class="far fa-angle-double-right"></i>Annual Checkups</a>
                       </li>
-                      <li><a href="service-single.html"><i class="far fa-angle-double-right"></i>Teeth Whitening</a>
+                      <li><a href="#"><i class="far fa-angle-double-right"></i>Care Planning</a>
                       </li>
-                      <li><a href="service-single.html"><i class="far fa-angle-double-right"></i>Cosmetic Dentistry</a>
+                      <li><a href="#"><i class="far fa-angle-double-right"></i>Health Support</a>
                       </li>
-                      <li><a href="service-single.html"><i class="far fa-angle-double-right"></i>Dental Root Canal</a>
+                      <li><a href="#"><i class="far fa-angle-double-right"></i>Service Referrals</a>
                       </li>
-                      <li><a href="service-single.html"><i class="far fa-angle-double-right"></i>Teeth Cleaning</a></li>
-                      <li><a href="service-single.html"><i class="far fa-angle-double-right"></i>Orthodontics</a></li>
+                      <li><a href="#"><i class="far fa-angle-double-right"></i>Outreach Visits</a></li>
+
                     </ul>
                   </div>
                 </div>
