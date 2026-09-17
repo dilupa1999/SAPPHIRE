@@ -62,54 +62,46 @@ Table of contents
  /* Section Background */
   
 
-          /* Custom Styles for the About Section Image Layout */
+     /* Custom Styles for the About Section Image Layout */
           .about-image-wrapper {
             position: relative;
-            padding-top: 30px;
-            padding-left: 20px;
+            padding-right: 15px;
             z-index: 1;
+            text-align: center;
           }
           
-          /* Main Large Image (Wheelchair) */
-          .about-main-img {
-            width: 65%;
-            margin-left: auto;
-            display: block;
-            border-radius: 25px; /* Rounded corners */
-            object-fit: cover;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-          }
-
-          /* Top Overlapping Image (Old Couple) */
-          .about-top-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 50%;
-            border-radius: 20px;
-            /* White border creates the cutout effect over the main image */
-            border: 10px solid #fffcf8; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            z-index: 2;
+          /* Single Image Styles */
+          .about-single-img {
+            width: 100%;
+            max-width: 550px; /* පින්තූරය ඕනෑවට වඩා ලොකු වීම වළක්වයි */
+            height: auto;
+            display: inline-block;
+            border-radius: 20px; /* අවශ්‍ය නම් පමණක් තබා ගන්න */
           }
 
           /* Adjustments for Mobile Responsive */
           @media (max-width: 991px) {
             .about-image-wrapper {
               margin-bottom: 40px;
+              padding-right: 0;
             }
-            .about-main-img {
-              width: 90%;
-            }
-            .about-top-img {
-              width: 55%;
-              border-width: 6px; /* Slightly thinner border on mobile */
+            .about-single-img {
+              max-width: 100%;
             }
           }
-       
+/* Large devices (desktops, 992px and up) වලදී පමණක් 10% margin එක වැඩ කරයි */
+@media (min-width: 992px) {
+  .custom-margin-lg {
+    margin-right: 10%;
+  }
+}
 
-
-
+/* Mobile සහ Tablet වලදී margin එක 0 වේ, එබැවින් screen එකට ගානට fit වේ */
+@media (max-width: 991px) {
+  .custom-margin-lg {
+    margin-right: 0;
+  }
+}
 
 
 
@@ -127,7 +119,7 @@ Table of contents
   --body-text-color: #757f95;
   --color-white: #ffffff;
   --color-dark: #0e0303;
-  --color-green: #15d4c9;
+  --color-green: #002ec4;
   --color-blue: #2075fe;
   --color-skyblue: #00bfff;
   --color-purple: #a855f7;
@@ -2703,7 +2695,7 @@ label {
   margin-bottom: 21px;
 }
 .about-area2 .about-content .about-list li {
-  background: var(--theme-bg-light2);
+  background: white;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 50px;
@@ -6004,7 +5996,7 @@ label {
   top: 0;
   width: 100%;
   height: 100%;
-  background: rgba(13, 64, 62, 0.65);
+  background: rgba(10, 3, 3, 0.51);
 }
 .quote-content {
   display: flex;
