@@ -489,25 +489,38 @@
 
 
 @media only screen and (max-width: 767px) {
-    /* Container එක flex කරලා column විදිහට හදාගන්නවා */
     .hero-btn {
         display: flex;
         flex-direction: column; 
-        gap: 15px; /* Button දෙක අතර පරතරය (ඕනේ නම් වෙනස් කරගන්න) */
-        align-items: flex-start; /* වම් පැත්තට align වෙන්න */
+        gap: 15px; 
+        align-items: flex-start; 
+        
     }
 
-    /* Button ඇතුළේ text එක පේළි දෙකකට කැඩෙන එක නවත්වන්න */
+    /* Button දෙකේම size එක සමාන කරන්න */
     .hero-btn .appointment-btn,
     .hero-btn .theme-btn2 {
         white-space: nowrap; 
-        width: max-content; /* Text එකේ දිගට හරියන්න button එකේ දිග හැදෙන්න */
-        display: inline-flex;
+        width: max-content; 
+        display: inline-flex !important;
         align-items: center;
         justify-content: center;
+        padding: 15px 35px !important; /* මෙතනින් button එකේ උස සහ පළල හැදෙනවා */
+        min-height: 55px !important; /* යට button එකේ size එකට ගැලපෙන්න */
+        border-radius: 50px !important; /* ලස්සන රවුම් හැඩයක් එන්න (Pill shape) */
+        font-size: 16px !important; 
+        font-weight: 600 !important;
+    }
+    
+    /* Appointment button එකේ තියෙන SVG icon එක හරියට align වෙන්න */
+    .hero-btn .appointment-btn .svg-icon-wrapper {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+        display: flex;
+        align-items: center;
     }
 }
-
 
   </style>
 
