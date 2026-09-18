@@ -33,12 +33,122 @@
 
 
   <style>
+    .appointment-btn {
+      background-color: #5c172a;
+      /* Dark maroon background */
+      color: #ffffff;
+      /* White text */
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+
+      /* Padding is slightly smaller on the left to accommodate the round SVG icon */
+      padding: 8px 24px 8px 8px;
+      border-radius: 50px;
+      /* Fully rounded pill shape */
+
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      /* Space between icon, text, and arrow */
+
+      box-shadow: 0 4px 10px rgba(92, 23, 42, 0.2);
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .appointment-btn:hover {
+      background-color: #45101f;
+      /* Slightly darker on hover */
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(92, 23, 42, 0.3);
+    }
+
+    .svg-icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+    }
+
+    .right-arrow {
+      font-size: 20px;
+      color: #ffffff;
+      /* Rotates the standard right arrow to point top-right */
+      transform: rotate(-45deg);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .appointment-btn:hover .right-arrow {
+      transform: rotate(-45deg) translate(2px, -2px);
+      /* Slight movement on hover */
+    }
+
+    @media (max-width: 768px) {
+      .appointment-btn {
+        font-size: 13px;
+        /* අකුරු වල ප්‍රමාණය මඳක් කුඩා කිරීම */
+        padding: 6px 18px 6px 6px;
+        /* Padding එක අඩු කිරීම */
+        gap: 10px;
+        /* අයිකන් සහ අකුරු අතර පරතරය අඩු කිරීම */
+      }
+
+      .svg-icon-wrapper {
+        width: 28px;
+        /* SVG අයිකන් එකේ ප්‍රමාණය කුඩා කිරීම */
+        height: 28px;
+      }
+
+      .right-arrow {
+        font-size: 16px;
+        /* ඊතලයේ ප්‍රමාණය කුඩා කිරීම */
+      }
+    }
+
+    @media (max-width: 576px) {
+      .appointment-btn {
+        font-size: 11px;
+        /* තවත් කුඩා තිර වලදී අකුරු ප්‍රමාණය අඩු කිරීම */
+        padding: 5px 14px 5px 5px;
+        /* Padding එක තවදුරටත් අඩු කිරීම */
+        gap: 8px;
+      }
+
+      .svg-icon-wrapper {
+        width: 24px;
+        height: 24px;
+      }
+
+      .right-arrow {
+        font-size: 14px;
+      }
+    }
+
+    .hero-title,
+    .ani-text-3 {
+      color: #ffffff !important;
+      -webkit-text-stroke: 0px transparent !important;
+      text-shadow: none !important;
+    }
+
+    /* Right side arrow icon[cite: 1] */
+
+
+
+
+
+    /* Services Section */
     .services-section {
       background-color: #f4f8fb;
       padding: 80px 0;
     }
 
-    /* Aluth Card Design Eka */
+    /* 1. Main Card Design Eka */
     .service-card-new {
       display: block;
       text-decoration: none;
@@ -51,18 +161,25 @@
       border: 1.5px solid transparent;
     }
 
-    /* Hover Effect eka card ekata */
+    /* Hover Effect eka Main card ekata */
     .service-card-new:hover {
       transform: translateY(-8px);
       box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
-      border-color: #4e1922;
+      border-color: #551228;
+      background-color: #551228;
+      /* සුදු ඉර වසා දැමීමට hover වෙද්දී main card එකේ පාටත් වෙනස් කිරීම */
     }
 
-    /* Image eka thiyena box eka */
+    /* 2. Image eka thiyena box eka */
     .img-wrapper {
       height: 200px;
       overflow: hidden;
       position: relative;
+      background-color: #551228;
+      /* පින්තූරය පිටුපස හිස්තැනට අදාළ පාට ලබා දීම */
+      transform: translateZ(0);
+      /* Browser rendering issue එක fix කිරීම */
+      backface-visibility: hidden;
     }
 
     .card-img-layer {
@@ -77,7 +194,7 @@
       z-index: 1;
     }
 
-    /* Re-added Dark Overlay */
+    /* Dark Overlay */
     .card-overlay {
       position: absolute;
       top: 0;
@@ -85,7 +202,7 @@
       right: 0;
       bottom: 0;
       background: rgba(0, 0, 0, 0.5);
-      /* Dark blue overlay */
+      /* Dark overlay */
       z-index: 2;
       transition: all 0.3s ease;
     }
@@ -100,15 +217,23 @@
       /* Mouse eka thiyaddi color eka wenas wenna */
     }
 
-    /* Text eka thiyena box eka (Yata kotasa) */
+    /* 3. Text eka thiyena box eka (Yata kotasa) */
     .card-text-wrapper {
       padding: 20px 15px;
       text-align: center;
       background-color: #ffffff;
       position: relative;
       z-index: 3;
+      transition: background-color 0.3s ease;
+      /* Background පාට smooth වෙනස් වෙන්න */
     }
 
+    /* Hover වෙද්දී card එකේ යට background එක brown (maroon) පාට වීම */
+    .service-card-new:hover .card-text-wrapper {
+      background-color: #551228;
+    }
+
+    /* Title Text Design Eka */
     .service-title-text {
       color: #4e1535;
       font-size: 1.1rem;
@@ -117,9 +242,249 @@
       transition: color 0.3s ease;
     }
 
+    /* Hover වෙද්දී Text එක සුදු පාට වීම */
     .service-card-new:hover .service-title-text {
-      color: #3a0b21;
+      color: #ffffff;
     }
+
+
+
+
+
+
+
+
+
+    /* Desktop සඳහා සාමාන්‍ය අකුරු වල ප්‍රමාණය (ඔබට අවශ්‍ය අගයක් දෙන්න) */
+    .hero-title {
+      font-size: 6px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    /* Mobile Screens (767px ට අඩු) සඳහා අකුරු කුඩා කිරීම */
+    @media (max-width: 767px) {
+      .hero-title {
+        /* Mobile එකේ පළලට හරියන්න අකුරු කුඩා කර ඇත */
+        font-size: 18px;
+
+        /* අකුරු පේළි කැඩීම සම්පූර්ණයෙන්ම නවත්වයි */
+        white-space: nowrap;
+
+        /* පේළි දෙක අතර පරතරය */
+        line-height: 1.5;
+      }
+    }
+
+
+
+
+
+
+/* Team Section Background */
+.team-section {
+    background-color: #f4f8fb; /* ඔයාගේ site එකේ පවතින background පාට */
+}
+
+/* Card General Styling */
+.team-card {
+    border-radius: 20px;
+    background-color: #ffffff;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Hover Effect for the Card */
+.team-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(27, 38, 65, 0.08) !important;
+}
+
+/* Circular Image Container with a Gradient Border effect */
+.team-card .img-container {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, #551228, #e59a67); /* Maroon to Orange gradient */
+    transition: transform 0.4s ease;
+}
+
+/* Make image cover the circle perfectly */
+.team-card .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 4px solid #ffffff; /* White border inside the gradient */
+}
+
+/* Slight zoom on image when hovering the card */
+.team-card:hover .img-container {
+    transform: scale(1.05);
+}
+
+/* Custom Button Styling */
+.btn-outline-team {
+    color: #551228;
+    border: 2px solid #551228;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-outline-team:hover {
+    background-color: #551228;
+    color: #ffffff;
+    border-color: #551228;
+}
+
+/* Medium සහ Mobile Devices සඳහා විශේෂිත වෙනස්කම් */
+/* 1. Large Desktops (ප්‍රධාන/සාමාන්‍ය තිරය සඳහා - Base Style) */
+.team-section {
+    margin-top: -8%; 
+}
+
+/* 2. Laptops / Small Desktops (1199px ට අඩු තිර සඳහා) */
+@media (max-width: 1199px) {
+    .team-section {
+        margin-top: -8%; 
+    }
+}
+
+/* 3. Tablets - Landscape (991px ට අඩු තිර සඳහා) */
+@media (max-width: 991px) {
+    .team-section {
+        margin-top: -50%; 
+    }
+}
+
+/* 4. Tablets - Portrait & Large Mobile Phones (767px ට අඩු තිර සඳහා) */
+@media (max-width: 767px) {
+    .team-section {
+        margin-top: -45%; 
+    }
+}
+
+/* 5. Small Mobile Phones (575px ට අඩු තිර සඳහා) */
+@media (max-width: 575px) {
+    .team-section {
+        margin-top: -40%; 
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 991px) {
+    /* පසුබිම් රූපය සහිත ප්‍රධාන කොටසේ ඉහළ හිඩැස 20px දක්වා ඉතා කුඩා කිරීම */
+    .quote-area .quote-wrap {
+        padding-top: 20px !important; 
+        padding-bottom: 30px !important;
+    }
+
+    /* මාතෘකාව (Need help?...) ඉහළින් ඇති සියලුම ස්වභාවික හිඩැස් මැකීම */
+    .quote-area .quote-content,
+    .quote-area .site-heading,
+    .quote-area .site-title {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+    }
+
+    /* Contact Box එකට යටින් ඇති විශාල පරතරය අඩු කිරීම */
+    .quote-contact.mb-100 {
+        margin-bottom: 30px !important; 
+    }
+}
+
+
+
+
+
+/* Card chi fix height ani border radius set karne */
+.team-item {
+    position: relative;
+    overflow: hidden;
+    height: 380px; /* Saglya cards chi height saman thevnyasathi */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.team-img {
+    height: 100%;
+}
+
+.team-img .ani-img, .team-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hover karnya aadhi chi overlay box design (Choti ani saman height) */
+.team-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75px; /* Hi height saglya cards sathi saman ani choti asel */
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 22px 15px;
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+/* Hover kelyavar box purna card var (100%) expand honar */
+.team-item:hover .team-content {
+    height: 100%; 
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Heading la madhobi (center) thevne */
+.team-content h4 {
+    margin: 0 0 20px 0;
+    text-align: center;
+    font-size: 1.15rem;
+}
+
+.team-content h4 a {
+    color: #1b2641;
+    text-decoration: none;
+}
+
+/* Hover karnya aadhi paragraph text hide thevne */
+.team-social {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.4s ease-in-out;
+    
+    /* Text එක සම්පූර්ණයෙන්ම Justify කිරීම */
+    text-align: justify !important; 
+    
+    /* අකුරු පැහැදිලිව පෙනීමට */
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Hover kelyavar paragraph text smooth animation sahit disne */
+.team-item:hover .team-social {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+
+
+
+
   </style>
 
 </head>
@@ -171,7 +536,7 @@
       <nav class="navbar navbar-expand-lg">
         <div class="container position-relative">
           <a class="navbar-brand" href="index.html">
-            <img src="assets/img/logo/logo.png" alt="logo" />
+            <img src="assets/img/logo/logo.png" style="max-width: 100%; height: 80%; margin-left: 40px;" alt="logo" />
           </a>
           <div class="mobile-menu-right">
             <div class="mobile-menu-btn">
@@ -198,13 +563,17 @@
                 <li class="nav-item dropdown">
                   <a class="nav-link  active" href="#" data-bs-toggle="dropdown">Home</a>
 
+
                 </li>
+                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Our Team</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">Services</a></li>
+
                 <li class="nav-item"><a class="nav-link" href="about.html">Billing Policy</a></li>
 
                 <li class="nav-item"><a class="nav-link" href="#">Skin</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Telehealth</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+
                 <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
 
 
@@ -240,8 +609,6 @@
   <div id="smooth-wrapper">
     <div id="smooth-content">
       <main class="main">
-
-
         <div class="hero-section hs-1" style="height: 750px; min-height: auto; overflow: hidden;">
           <div class="hero-single" style="height: 100%;">
             <div class="hero-bg-img" data-speed="clamp(0.5)"
@@ -256,23 +623,43 @@
 
                     <!-- <h4 class="hero-sub-title wow fadeInUp" data-wow-delay=".2s"><i class="far fa-tooth"></i> Welcome To
                       SAPPHIRE!</h4> -->
+
                     <h3 class="hero-title ani-text-3 text-justify">
-                      Trusted Quality Care <br>
-                      Because Health Matters
+                      TRUSTED QUALITY CARE <br>
+                      BECAUSE YOUR HEALTH MATTERS
                     </h3>
                     <p class="wow fadeInUp text-center text-md-start" data-wow-delay=".4s">
 
                     </p>
                     <div class="hero-info wow fadeInUp" data-wow-delay=".6s">
                       <ul>
-                        <li><img src="assets/img/icon/check.svg" alt="" /> Satisfaction Guarantee</li>
-                        <li><img src="assets/img/icon/check.svg" alt="" /> No Upfront Payments</li>
+                        <li><img src="assets/img/icon/check.svg" alt="" /> We accept walk-in appointments when available
+                        </li>
+
                       </ul>
                     </div>
                     <div class="hero-btn wow fadeInUp" data-wow-delay=".8s">
-                      <a href="about.html" class="theme-btn">About More<i class="fas fa-arrow-circle-right"></i></a>
-                      <a href="contact.html" class="theme-btn2">Book & Apoimnet<i
-                          class="fas fa-arrow-circle-right"></i></a>
+                      <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                        class="appointment-btn">
+
+                        <!-- Inline SVG Medical Icon -->
+                        <div class="svg-icon-wrapper">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+                            <!-- White background circle with dark green border -->
+                            <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#4a7c38" stroke-width="6" />
+
+                            <!-- Light green cross with dark green border -->
+                            <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z" fill="#83ba48"
+                              stroke="#4a7c38" stroke-width="5" stroke-linejoin="round" />
+                          </svg>
+                        </div>
+
+                        BOOK AN APPOINTMENT
+
+                        <!-- Font Awesome Right Arrow -->
+                        <i class="fas fa-arrow-circle-right right-arrow"></i>
+                      </a>
+                      <a href="#" class="theme-btn2">READ MORE<i class="fas fa-arrow-circle-right"></i></a>
                     </div>
                   </div>
                 </div>
@@ -293,8 +680,8 @@
               <!-- Left Side: Single Combined Image -->
               <div class="col-lg-6">
                 <div class="about-image-wrapper wow fadeInLeft" data-wow-delay=".2s">
-                  <!-- මෙතැනට ඔයාගේ අලුත් image එකේ path එක දෙන්න -->
-                  <img src="assets/img/service/servicesbg1.png" alt="Elderly Care" class="about-single-img img-fluid" />
+                  <!-- Tumchya image cha path -->
+                  <img src="assets/img/service/aboutus.jpg" alt="Elderly Care" class="about-single-img img-fluid" />
                 </div>
               </div>
 
@@ -302,7 +689,7 @@
               <div class="col-lg-6">
                 <div class="about-right ps-lg-4">
                   <div class="site-heading mb-3">
-                    <h3 class="site-title ani-text-1" style="font-size: 2rem; font-weight: 600; color: #1a202c;">
+                    <h3 class="site-title ani-text-1" style="font-size: 1.50rem; font-weight: 600; color: #1a202c;">
                       Welcome to Sapphire General Practice
                     </h3>
                   </div>
@@ -339,7 +726,7 @@
                       <div class="col-lg-6">
                         <div class="about-item">
                           <div class="icon">
-                            <img src="assets/img/icon/dentist-2.svg" alt="" />
+                            <img src="assets/img/icon/doctor-svgrepo-com.svg" alt="" />
                           </div>
                           <div class="content">
                             <h4>Highly Professional</h4>
@@ -349,9 +736,8 @@
                       </div>
                     </div>
 
-                    <div class="wow fadeInUp mt-4" data-wow-delay=".5s">
-                      <a href="about.html" class="theme-btn">Book Personal Care<i
-                          class="fas fa-arrow-circle-right ms-2"></i></a>
+                    <div class="wow fadeInUp " style="margin-top: -20px;" data-wow-delay=".5s">
+                      <a href="about.html" class="theme-btn">READ MORE<i class="fas fa-arrow-circle-right ms-2"></i></a>
                     </div>
                   </div>
 
@@ -387,16 +773,17 @@
                 <div class="team-item wow fadeInUp" data-wow-delay=".2s">
                   <div class="team-img">
                     <div class="ani-img">
-                      <img src="assets/img/team/bio1.jpg" alt="thumb" />
+                      <img src="assets/img/team/conveniently-located.jpg" alt="thumb" />
                     </div>
                   </div>
                   <div class="team-content">
                     <h4><a href="#">Conveniently Located </a></h4>
 
                     <div class="team-social text-justify text-start">
-                      <span> Conveniently located on Renwick Street with easy parking, Renwick GP provides stress-free
-                        healthcare to individuals and families in Wyoming, Gosford, Woy, Narara, Lisarow, and Tumbi
-                        Umbi.</span>
+                      <span>Sapphire GP is conveniently located on Sapphire Street in Wyoming. We proudly serve
+                        individuals and families across Wyoming and nearby suburbs including Gosford, Woy Woy, Narara,
+                        Lisarow, and Tumbi Umbi. With local parking and easy access, visiting your trusted local doctors
+                        is simple and stress-free..</span>
 
                     </div>
                   </div>
@@ -406,16 +793,17 @@
                 <div class="team-item wow fadeInUp" data-wow-delay=".4s">
                   <div class="team-img">
                     <div class="ani-img">
-                      <img src="assets/img/team/bion02.jpg" alt="thumb" />
+                      <img src="assets/img/team/opening-hours.jpg" alt="thumb" />
                     </div>
                   </div>
                   <div class="team-content">
                     <h4><a href="#">Opening Hours</a></h4>
 
                     <div class="team-social text-justify text-start">
-                      <span>We are open Monday to Friday from 9:00 AM to 5:00 PM (Closed weekends and public holidays).
-                        Our welcoming team is dedicated to providing professional, compassionate healthcare throughout
-                        the week.</span>
+                      <span>The clinic is open Monday to Friday from 9:00 AM to 5:00 PM. We are closed on weekends and
+                        Public Holidays. Our friendly team provides professional care in a warm, welcoming environment —
+                        ensuring your health needs are met during the week with compassion, attention, and commitment to
+                        your wellbeing.</span>
                     </div>
                   </div>
                 </div>
@@ -424,15 +812,17 @@
                 <div class="team-item wow fadeInUp" data-wow-delay=".6s">
                   <div class="team-img">
                     <div class="ani-img">
-                      <img src="assets/img/team/boio3.jpg" alt="thumb" />
+                      <img src="assets/img/team/how-to-book.jpg" alt="thumb" />
                     </div>
                   </div>
                   <div class="team-content">
                     <h4><a href="#">How to Book</a></h4>
 
                     <div class="team-social text-justify text-start">
-                      <span>Schedule your visit easily at your convenience. Book your appointment by calling (02) 4341
-                        7722 or book online via HotDoc by clicking the "Book Appointment" button on our website.</span>
+                      <span>Appointments can be booked by calling (02) 4341 7722 or by clicking the “Book Appointment”
+                        button on our website. Online bookings are made through HotDoc. We offer flexible options so you
+                        can schedule your visit easily, whether by phone or online—whatever works best for your time and
+                        comfort.</span>
                     </div>
                   </div>
                 </div>
@@ -441,16 +831,17 @@
                 <div class="team-item wow fadeInUp" data-wow-delay=".8s">
                   <div class="team-img">
                     <div class="ani-img">
-                      <img src="assets/img/team/boio3.jpg" alt="thumb" />
+                      <img src="assets/img/team/afterhourscare.jpg" alt="thumb" />
                     </div>
                   </div>
                   <div class="team-content">
                     <h4><a href="#">After Hours Care</a></h4>
 
                     <div class="team-social about-text text-justify text-start">
-                      <span>In a medical emergency, please call 000 immediately. For urgent medical care outside of
-                        clinic hours, contact the National Home Doctor Service on 13SICK (13 7425) to arrange a home
-                        visit.</span>
+                      <span>If you are experiencing a medical emergency, please call 000 immediately. For urgent care
+                        outside of normal clinic hours, contact the National Home Doctor Service on 13SICK (13 7425).
+                        After-hours doctors are available to visit your home and provide medical care when your regular
+                        GP clinic is closed.</span>
                     </div>
                   </div>
                 </div>
@@ -485,8 +876,10 @@ sesssss -->
                 style="color: #551228; font-weight: 700; font-size: 2.2rem; ">
                 <i class="far fa-butterfly me-2"></i>Health & Medical Support
               </span>
-              <h3 class="site-title ani-text-1" style="color: #1a202c; font-size: 1.2rem; font-weight: 700;">
-                Access comprehensive general practice services and expert doctors
+              <h3 class="site-title ani-text-1"
+                style="color: #1a202c; font-size: 1.2rem; font-weight: 700; text-align: justify;">
+                Gain access to a comprehensive range of services and experienced doctors across all areas of general
+                practice.
               </h3>
             </div>
 
@@ -498,13 +891,13 @@ sesssss -->
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=600&q=80');">
+                      style="background-image: url('assets/img/service/1-GENERAL-HEALTH.jpg');">
                     </div>
                     <!-- Overlay eka methanata add kala -->
                     <div class="card-overlay"></div>
                   </div>
                   <div class="card-text-wrapper">
-                    <h4 class="service-title-text">General Health</h4>
+                    <h4 class="service-title-text text-uppercase">General Health</h4>
                   </div>
                 </a>
               </div>
@@ -514,7 +907,7 @@ sesssss -->
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&w=600&q=80');">
+                      style="background-image: url('assets/img/service/2-CHILDREN\'S-CARE.jpg');">
                     </div>
                     <div class="card-overlay"></div>
                   </div>
@@ -529,7 +922,7 @@ sesssss -->
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1532938911079-1b06ac7ce122?auto=format&fit=crop&w=600&q=80');">
+                      style="background-image: url('assets/img/service/3-WOMEN\'S-HEALTH.jpg');">
                     </div>
                     <div class="card-overlay"></div>
                   </div>
@@ -544,7 +937,7 @@ sesssss -->
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80');">
+                      style="background-image: url('assets/img/service/4-MEN\'S-HEALTH.jpg');">
                     </div>
                     <div class="card-overlay"></div>
                   </div>
@@ -559,7 +952,7 @@ sesssss -->
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80');">
+                      style="background-image: url('assets/img/service/5-MENTAL-HEALTH.jpg');">
                     </div>
                     <div class="card-overlay"></div>
                   </div>
@@ -573,8 +966,7 @@ sesssss -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
-                    <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1584362917165-526a968579e8?auto=format&fit=crop&w=600&q=80');">
+                    <div class="card-img-layer" style="background-image: url('assets/img/service/6-IMMUNISATION.jpg');">
                     </div>
                     <div class="card-overlay"></div>
                   </div>
@@ -589,7 +981,7 @@ sesssss -->
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80');">
+                      style="background-image: url('assets/img/service/7-TRAVEL-MEDICINE.jpg');">
                     </div>
                     <div class="card-overlay"></div>
                   </div>
@@ -603,8 +995,7 @@ sesssss -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
-                    <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80');">
+                    <div class="card-img-layer" style="background-image: url('assets/img/service/8-CARE-PLANS.jpg');">
                     </div>
                     <div class="card-overlay"></div>
                   </div>
@@ -618,12 +1009,11 @@ sesssss -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
-                    <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80');">
+                    <div class="card-img-layer" style="background-image: url('assets/img/service/9-SKIN-CHECKS.jpg');">
                     </div>
                     <div class="card-overlay"></div>
                   </div>
-                  <div class="card-text-wrapper">
+                  <div class="card-text-wrapper ">
                     <h4 class="service-title-text">Skin Checks</h4>
                   </div>
                 </a>
@@ -634,7 +1024,7 @@ sesssss -->
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=600&q=80');">
+                      style="background-image: url('assets/img/service/10-SKIN-CANCER-MANAGEMENT.jpg');">
                     </div>
                     <div class="card-overlay"></div>
                   </div>
@@ -649,7 +1039,7 @@ sesssss -->
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=600&q=80');">
+                      style="background-image: url('assets/img/service/11-MINOR-PROCEDURES.jpg');">
                     </div>
                     <div class="card-overlay"></div>
                   </div>
@@ -663,8 +1053,7 @@ sesssss -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
-                    <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=600&q=80');">
+                    <div class="card-img-layer" style="background-image: url('assets/img/service/12-DERMATOLOGY.jpg');">
                     </div>
                     <div class="card-overlay"></div>
                   </div>
@@ -679,7 +1068,7 @@ sesssss -->
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80');">
+                      style="background-image: url('assets/img/service/13-PRE-EMPLOYMENT.jpg');">
                     </div>
                     <div class="card-overlay"></div>
                   </div>
@@ -693,8 +1082,7 @@ sesssss -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
-                    <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=600&q=80');">
+                    <div class="card-img-layer" style="background-image: url('assets/img/service/14-WORK-COVER.jpg');">
                     </div>
                     <div class="card-overlay"></div>
                   </div>
@@ -709,7 +1097,7 @@ sesssss -->
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=600&q=80');">
+                      style="background-image: url('assets/img/service/15-SEXUAL-HEALTH.jpg');">
                     </div>
                     <div class="card-overlay"></div>
                   </div>
@@ -724,7 +1112,7 @@ sesssss -->
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('https://images.unsplash.com/photo-1504439468489-c8920d796a29?auto=format&fit=crop&w=600&q=80');">
+                      style="background-image: url('assets/img/service/16\ CHRONIC-DISEASE-MANAGEMENT.jpg');">
                     </div>
                     <div class="card-overlay"></div>
                   </div>
@@ -740,138 +1128,146 @@ sesssss -->
 
 
         <!-- about area -->
+
+        <!-- about area end -->
+
+
         <div class="about-area2 mt-60 py-50">
           <div class="container">
-            <div class="row">
+            <div class="row align-items-center g-5">
+
+              <!-- Left Side: Images, Call Box & Button -->
               <div class="col-lg-6">
-                <div class="about-left wow fadeInLeft" data-wow-delay=".2s">
-                  <div class="about-experience">
-                    <div class="content">
-                      <h4>30<span>+</span></h4>
-                      <p>Years Of Experience</p>
+                <div class="row g-3">
+
+                  <!-- Column 1: Image 1 & Book Appointment Button -->
+                  <div class="col-6 d-flex flex-column gap-3">
+                    <img src="assets/img/about/4.png" alt="Doctor and Patient"
+                      class="img-fluid rounded-4 w-100 shadow-sm"
+                      style="object-fit: cover; flex-grow: 1; min-height: 100px;">
+
+                    <!-- Custom Button Box (Replacing Flags) -->
+                    <div class="d-flex justify-content-center align-items-center rounded-4 shadow-sm"
+                      style="background-color: #ffffff; border: 1px solid #f8f9fa; padding: 15px 8px; min-height: 150px;">
+
+
+                      <div class="hero-btn wow fadeInUp" data-wow-delay=".8s">
+                        <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                          class="appointment-btn">
+
+                          <!-- Inline SVG Medical Icon -->
+                          <div class="svg-icon-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+                              <!-- White background circle with dark green border -->
+                              <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#4a7c38" stroke-width="6" />
+
+                              <!-- Light green cross with dark green border -->
+                              <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z" fill="#83ba48"
+                                stroke="#4a7c38" stroke-width="5" stroke-linejoin="round" />
+                            </svg>
+                          </div>
+
+                          BOOK AN APPOINTMENT
+
+                          <!-- Font Awesome Right Arrow -->
+                          <i class="fas fa-arrow-circle-right right-arrow"></i>
+                        </a>
+
+                      </div>
+
                     </div>
                   </div>
-                  <div class="about-img">
-                    <div class="row g-4">
-                      <div class="col-6">
-                        <div class="img-1">
-                          <div class="ani-img">
-                            <img src="assets/img/about/4.png" alt="" />
-                          </div>
-                        </div>
-                     <div class="rating-box d-flex align-items-center gap-3">
-  <!-- Kodiya 1: Pride Flag -->
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/4/48/Gay_Pride_Flag.svg"
-    alt="Pride Flag" class="rounded shadow-sm"
-    style="width: 45px; height: 30px; object-fit: cover;" />
 
-  <!-- Kodiya 2: Australian Aboriginal Flag -->
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Australian_Aboriginal_Flag.svg"
-    alt="Aboriginal Flag" class="rounded shadow-sm"
-    style="width: 45px; height: 30px; object-fit: cover;" />
+                  <!-- Column 2: Call Box & Image 2 -->
+                  <div class="col-6 d-flex flex-column gap-3">
 
-  <!-- Kodiya 3: Torres Strait Islander Flag -->
-  <img
-   img
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Torres_Strait_Islanders_Flag.svg/512px-Torres_Strait_Islanders_Flag.svg.png"
-    alt="Torres Strait Islander Flag" class="rounded shadow-sm"
-    style="width: 45px; height: 30px; object-fit: cover;" />
-</div>
+                    <!-- Call Now Box -->
+                    <div
+                      class="rounded-4 d-flex flex-column align-items-center justify-content-center shadow-sm text-center"
+                      style="background-color: #eef5f4; padding: 20px 10px; min-height: 150px;">
+                      <div class="rounded-circle d-flex justify-content-center align-items-center mb-2"
+                        style="width: 45px; height: 45px; background-color: #1b2641; color: white; font-size: 18px;">
+                        <i class="fas fa-phone-alt"></i>
                       </div>
-                      <div class="col-6">
-                        <div class="call-box">
-                          <div class="call-icon">
-                            <img src="assets/img/icon/call.svg" alt="" />
-                          </div>
-                          <div class="call-info">
-                            <span> Call Now</span>
-                            <a href="tel:+21236547898">02 7500 5858</a>
-                          </div>
-                        </div>
-                        <div class="img-2">
-                          <div class="ani-img">
-                            <img src="assets/img/about/02.jpg" alt="" />
-                          </div>
-                        </div>
-                      </div>
+                      <span style="font-size: 13px; color: #111; font-weight: 600;">Call Now</span>
+                      <a href="tel:0275005858" class="text-decoration-none"
+                        style="font-size: 15px; font-weight: 800; color: #111;">02 7500 5858</a>
                     </div>
+
+                    <!-- Image 2 -->
+                    <img src="assets/img/about/aboriginal-&-Torres2.jpg" alt="Patient"
+                      class="img-fluid rounded-4 w-100 shadow-sm"
+                      style="object-fit: cover; flex-grow: 1; min-height: 200px;">
                   </div>
+
                 </div>
               </div>
+
+              <!-- Right Side: Text Content -->
               <div class="col-lg-6">
                 <div class="about-right">
-                  <div class="site-heading mb-3">
-                    <h3 class="site-title ani-text-1">Aboriginal & Torres Strait Islander Health</h3>
-                  </div>
 
-                  <!-- Text Justified and line-height adjusted for readability -->
-                  <p class="about-text wow fadeInUp" data-wow-delay=".2s"
-                    style="text-align: justify; line-height: 1.7; color: #555;">
+                  <!-- Title -->
+                  <h3 class="fw-bold mb-4" style="color: #111; font-size: 28px;">Aboriginal & Torres Strait Islander
+                    Health</h3>
+
+                  <!-- Paragraph 1 -->
+                  <p style="text-align: justify; line-height: 1.7; color: #555; font-size: 15px;">
                     Our dedicated health team is committed to providing safe health checks and ongoing support for
                     Aboriginal and Torres Strait Islander people of all ages. We aim to ensure everyone receives the
                     care they need, respecting their unique cultural backgrounds. Our goal is to create a welcoming
                     environment where community members feel valued as they access essential health services.
                   </p>
 
-                  <div class="about-content wow fadeInUp" data-wow-delay=".4s">
-                    <div class="about-info">
-                      <div class="about-list mb-4">
-                        <!-- List neatly formatted with customized icons -->
-                        <ul style="list-style: none; padding-left: 0; margin-bottom: 0;">
-                          <li style="margin-bottom: 10px; color: #444;">
-                            <i class="fas fa-circle"
-                              style="font-size: 8px; margin-right: 12px; vertical-align: middle; color: #555;"></i>Annual
-                            health checks
-                          </li>
-                          <li style="margin-bottom: 10px; color: #444;">
-                            <i class="fas fa-circle"
-                              style="font-size: 8px; margin-right: 12px; vertical-align: middle; color: #555;"></i>Health
-                            care planning
-                          </li>
-                          <li style="margin-bottom: 10px; color: #444;">
-                            <i class="fas fa-circle"
-                              style="font-size: 8px; margin-right: 12px; vertical-align: middle; color: #555;"></i>Support
-                            to manage health
-                          </li>
-                          <li style="margin-bottom: 10px; color: #444;">
-                            <i class="fas fa-circle"
-                              style="font-size: 8px; margin-right: 12px; vertical-align: middle; color: #555;"></i>Connection
-                            to other services
-                          </li>
-                          <li style="margin-bottom: 10px; color: #444;">
-                            <i class="fas fa-circle"
-                              style="font-size: 8px; margin-right: 12px; vertical-align: middle; color: #555;"></i>Outreach
-                            visits when needed
-                          </li>
-                        </ul>
-                      </div>
+                  <!-- Paragraph 2 -->
+                  <p style="text-align: justify; line-height: 1.7; color: #555; font-size: 15px;">
+                    We acknowledge the Aboriginal and Torres Strait Islander Traditional Custodians of the land on which
+                    we work, live and dream. We pay respect to Elders past, present and emerging.
+                  </p>
 
-                      <div class="img">
-                        <div class="ani-img">
-                          <!-- Added img-fluid to make it responsive, rounded, and a small shadow for a better look -->
-                          <!-- <img src="assets/img/about/03.jpg" alt="Health Care" class="img-fluid rounded shadow-sm" /> -->
-                        </div>
-                      </div>
-                    </div>
+                  <!-- Bullet List -->
+                  <ul style="list-style: none; padding-left: 0; margin-top: 20px;">
+                    <li style="margin-bottom: 12px; color: #555; font-size: 15px; display: flex; align-items: center;">
+                      <i class="fas fa-angle-double-right me-3" style="color: #e59a67; font-size: 14px;"></i>Annual
+                      health checks
+                    </li>
+                    <li style="margin-bottom: 12px; color: #555; font-size: 15px; display: flex; align-items: center;">
+                      <i class="fas fa-angle-double-right me-3" style="color: #e59a67; font-size: 14px;"></i>Health care
+                      planning
+                    </li>
+                    <li style="margin-bottom: 12px; color: #555; font-size: 15px; display: flex; align-items: center;">
+                      <i class="fas fa-angle-double-right me-3" style="color: #e59a67; font-size: 14px;"></i>Support to
+                      manage health
+                    </li>
+                    <li style="margin-bottom: 12px; color: #555; font-size: 15px; display: flex; align-items: center;">
+                      <i class="fas fa-angle-double-right me-3" style="color: #e59a67; font-size: 14px;"></i>Connection
+                      to other services
+                    </li>
+                    <li style="margin-bottom: 12px; color: #555; font-size: 15px; display: flex; align-items: center;">
+                      <i class="fas fa-angle-double-right me-3" style="color: #e59a67; font-size: 14px;"></i>Outreach
+                      visits when needed
+                    </li>
+                  </ul>
+
+                  <!-- Flags Container -->
+                  <div class="d-flex align-items-center gap-3 mt-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Gay_Pride_Flag.svg" alt="Pride Flag"
+                      class="rounded shadow-sm" style="width: 45px; height: 30px; object-fit: cover;" />
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Australian_Aboriginal_Flag.svg"
+                      alt="Aboriginal Flag" class="rounded shadow-sm"
+                      style="width: 45px; height: 30px; object-fit: cover;" />
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Torres_Strait_Islanders_Flag.svg/512px-Torres_Strait_Islanders_Flag.svg.png"
+                      alt="Torres Strait Islander Flag" class="rounded shadow-sm"
+                      style="width: 45px; height: 30px; object-fit: cover;" />
                   </div>
 
-                  <!-- <div class="wow fadeInUp mt-4" data-wow-delay=".4s">
-                    <a href="about.html" class="theme-btn">Discover More<i class="fas fa-arrow-circle-right ms-2"></i></a>
-                  </div> -->
                 </div>
               </div>
+
             </div>
           </div>
         </div>
-        <!-- about area end -->
-
-
-
-
-
-
 
 
 
@@ -879,10 +1275,10 @@ sesssss -->
         <div class="app-download-area py-5 mt-60" style="background-color: #f8f9fa;">
           <div class="container">
             <!-- Dark Blue Background Container -->
-            <!-- p-4 p-md-5 මගින් වටේට ඉඩ (padding) ලබා දෙයි -->
+          
             <div class="shadow-lg p-4 p-md-5" style="background-color: #111a3a; border-radius: 20px;">
 
-              <!-- align-items-center මගින් පින්තූරය සහ සුදු කොටුව හරියටම උඩින් සහ යටින් balance කරයි -->
+         
               <div class="row align-items-center justify-content-between g-4">
 
                 <!-- Left Side: Mobile Phone Image -->
@@ -894,7 +1290,7 @@ sesssss -->
 
                 <!-- Right Side: White Content Card -->
                 <div class="col-lg-7 col-xl-6">
-                  <!-- inline style එකෙන් margin-right ඉවත් කර custom-margin-lg class එක එකතු කර ඇත -->
+                
                   <div class="bg-white shadow custom-margin-lg" style="border-radius: 15px; padding: 40px;">
 
                     <h3 class="mb-4" style="color: #d81b60; font-weight: 600; font-size: 1.6rem; line-height: 1.4;">
@@ -904,8 +1300,8 @@ sesssss -->
                     <!-- Text Justified as requested -->
                     <p class="mb-4"
                       style="color: #203c71; font-size: 1.05rem; line-height: 1.7; font-weight: 500; text-align: justify;">
-                      We Are Please To Advise That You Can Now Self Check In For Your Appointments Via The HotDoc App.
-                      Simply Go To Apple App Store Or The Google Play Store And Down Load The HotDoc App.
+                      We are please to advise that you can now self check in for your appointments via the HotDoc app.
+                      Simply go to Apple App Store or the Google Play store and down load the HotDoc app.
                     </p>
 
                     <!-- App Store Buttons -->
@@ -952,13 +1348,20 @@ sesssss -->
                     style="color: #555; text-transform: uppercase; letter-spacing: 2px;">
                     <i class="far fa-comment-dots me-2"></i> Testimonials
                   </span>
-                  <h3 class="site-title ani-text-1 mt-2">Real feedback from our awesome happy clients</h3>
+                  <h3 class="site-title ani-text-1 mt-2">Hear from our Patients</h3>
+                  <span class=" wow fadeInUp mt-4"
+                    style="color: #020202; text-transform: uppercase; letter-spacing: 1px; text-align: justify; display: block; ">
+                    To improve our healthcare services, we prioritize listening to our patients. By gaining insights
+                    into their needs and expectations, we reinforce our commitment to exceptional care. Patient feedback
+                    is vital in shaping our services, allowing us to better tailor them to individual circumstances and
+                    enhance their overall experience.
+                  </span>
                 </div>
               </div>
             </div>
 
             <!-- Testimonial Slider -->
-            <div class="testimonial-slider owl-carousel owl-theme">
+            <div class="testimonial-slider owl-carousel owl-theme" style="margin-top: -30px;">
 
               <!-- Testimonial Item 1 -->
               <div class="testimonial-item p-3">
@@ -968,9 +1371,8 @@ sesssss -->
                   <div class="quote-wrapper d-flex flex-column mb-3">
                     <i class="fas fa-quote-left fs-2 mb-2" style="color: #b07d4b; align-self: flex-start;"></i>
                     <p style="font-size: 1.05rem; line-height: 1.7; color: #555; text-align: justify; margin: 0 15px;">
-                      There are many variations of passage the majority have suffered of alteration of the some humour
-                      words look even slightly form by the injected to default need to be sure model believable repeat
-                      predefined chunks.
+                      I was very happy with my first clinic. All staff were helpful and the practitioner was thorough
+                      and willing to listen
                     </p>
                     <i class="fas fa-quote-right fs-2 mt-2" style="color: #b07d4b; align-self: flex-end;"></i>
                   </div>
@@ -979,11 +1381,11 @@ sesssss -->
                   <div class="author d-flex align-items-center justify-content-center mt-3">
                     <div class="initials-circle me-3 d-flex align-items-center justify-content-center rounded-circle"
                       style="width: 45px; height: 45px; background-color: #333; color: #fff; font-weight: bold; font-size: 1.1rem;">
-                      EI
+                      BL
                     </div>
                     <h4 class="mb-0"
                       style="font-size: 1.05rem; font-weight: 600; color: #333; text-transform: uppercase;">
-                      Eugene Ivan
+                      Patient
                     </h4>
                   </div>
                 </div>
@@ -996,9 +1398,8 @@ sesssss -->
                   <div class="quote-wrapper d-flex flex-column mb-3">
                     <i class="fas fa-quote-left fs-2 mb-2" style="color: #b07d4b; align-self: flex-start;"></i>
                     <p style="font-size: 1.05rem; line-height: 1.7; color: #555; text-align: justify; margin: 0 15px;">
-                      There are many variations of passage the majority have suffered of alteration of the some humour
-                      words look even slightly form by the injected to default need to be sure model believable repeat
-                      predefined chunks.
+                      I was very happy with my first clinic. All staff were helpful and the practitioner was thorough
+                      and willing to listen
                     </p>
                     <i class="fas fa-quote-right fs-2 mt-2" style="color: #b07d4b; align-self: flex-end;"></i>
                   </div>
@@ -1006,11 +1407,11 @@ sesssss -->
                   <div class="author d-flex align-items-center justify-content-center mt-3">
                     <div class="initials-circle me-3 d-flex align-items-center justify-content-center rounded-circle"
                       style="width: 45px; height: 45px; background-color: #333; color: #fff; font-weight: bold; font-size: 1.1rem;">
-                      NP
+                      CL
                     </div>
                     <h4 class="mb-0"
                       style="font-size: 1.05rem; font-weight: 600; color: #333; text-transform: uppercase;">
-                      Niesha Phips
+                      Chris
                     </h4>
                   </div>
                 </div>
@@ -1023,9 +1424,8 @@ sesssss -->
                   <div class="quote-wrapper d-flex flex-column mb-3">
                     <i class="fas fa-quote-left fs-2 mb-2" style="color: #b07d4b; align-self: flex-start;"></i>
                     <p style="font-size: 1.05rem; line-height: 1.7; color: #555; text-align: justify; margin: 0 15px;">
-                      There are many variations of passage the majority have suffered of alteration of the some humour
-                      words look even slightly form by the injected to default need to be sure model believable repeat
-                      predefined chunks.
+                      I was very happy with my first clinic. All staff were helpful and the practitioner was thorough
+                      and willing to listen
                     </p>
                     <i class="fas fa-quote-right fs-2 mt-2" style="color: #b07d4b; align-self: flex-end;"></i>
                   </div>
@@ -1033,11 +1433,11 @@ sesssss -->
                   <div class="author d-flex align-items-center justify-content-center mt-3">
                     <div class="initials-circle me-3 d-flex align-items-center justify-content-center rounded-circle"
                       style="width: 45px; height: 45px; background-color: #333; color: #fff; font-weight: bold; font-size: 1.1rem;">
-                      BC
+                      WD
                     </div>
                     <h4 class="mb-0"
                       style="font-size: 1.05rem; font-weight: 600; color: #333; text-transform: uppercase;">
-                      Buchan Conie
+                      Patient
                     </h4>
                   </div>
                 </div>
@@ -1047,6 +1447,67 @@ sesssss -->
           </div>
         </div>
         <!-- testimonial-area end -->
+
+        <!-- Team / Staff Section -->
+        <section class="team-section py-5" style="background-color: #f8f9fa;  "  >
+          <div class="container">
+            <!-- Section Heading -->
+            <div class="text-center mb-5">
+              <span class="fw-bold text-uppercase" style="color: #551228; letter-spacing: 2px; font-size: 14px;">Our
+                Dedicated Team</span>
+              <h2 class="fw-bold mt-2" style="color: #1b2641; font-size: 32px;">Meet Our Experienced Doctors</h2>
+              <p class="text-muted mt-2 mx-auto" style="max-width: 600px;">
+                We take pride in our highly skilled professionals who are dedicated to providing the best healthcare
+                services for you and your family.
+              </p>
+            </div>
+
+            <!-- Team Grid -->
+            <div class="row justify-content-center g-4">
+
+              <!-- Staff Member 1 -->
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="team-card card h-100 border-0 shadow-sm text-center p-4">
+                  <div class="img-container mx-auto mb-4">
+                    <!-- පළමු පින්තූරය මෙතනට -->
+                    <img src="assets/img/testimonial/Dr.Reza.jpg" alt="Dr. Reza"
+                      class="img-fluid rounded-circle shadow-sm">
+                  </div>
+                  <h4 class="fw-bold mb-1" style="color: #1b2641;">Dr. Reza</h4>
+                  <p class="text-muted mb-3 fw-semibold" style="color: #e59a67 !important;">General Practitioner</p>
+                  <p class="small text-secondary mb-4" style="line-height: 1.6;">
+                    With over 15 years of experience, Dr. Reza specializes in comprehensive family medicine and chronic
+                    disease management.
+                  </p>
+
+                </div>
+              </div>
+
+              <!-- Staff Member 2 -->
+              <div class="col-12 col-sm-6 col-lg-4">
+                <div class="team-card card h-100 border-0 shadow-sm text-center p-4">
+                  <div class="img-container mx-auto mb-4">
+                    <!-- දෙවන පින්තූරය මෙතනට -->
+                    <img src="assets/img/testimonial/Dr.Reza2.jpg" alt="Doctor"
+                      class="img-fluid rounded-circle shadow-sm">
+                  </div>
+                  <h4 class="fw-bold mb-1" style="color: #1b2641;">Dr. Sarah</h4>
+                  <p class="text-muted mb-3 fw-semibold" style="color: #e59a67 !important;">Senior Medical Officer</p>
+                  <p class="small text-secondary mb-4" style="line-height: 1.6;">
+                    Dedicated to women's health, pediatrics, and providing compassionate care tailored to individual
+                    patient needs.
+                  </p>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+
+
+
 
         <!-- quote-area -->
         <div class="quote-area  mb-10">
@@ -1058,22 +1519,17 @@ sesssss -->
                   <div class="col-lg-6">
                     <div class="quote-content">
                       <div class="site-heading">
-                        <span class="site-title-tagline bg-white wow fadeInUp"><i class="far fa-book"></i> Get
-                          Appointment</span>
+                     
                         <h3 class="site-title text-white ani-text-1">Need help? we are just a message away</h3>
-                        <p class="text-white wow fadeInUp" data-wow-delay="0.2s">
-                          It is a long established fact that a reader will be distracted by the readable content of a
-                          page when looking at
-                          its at the majority have suffered layout.
-                        </p>
+                        
                       </div>
-                      <div class="quote-contact wow fadeInUp" data-wow-delay="0.4s">
+                      <div class="quote-contact wow fadeInUp mb-100" data-wow-delay="0.4s">
                         <div class="top">
                           <h4>Feel free to contact us</h4>
                           <p>If you are going to use passage you need sure there in the middle of text.</p>
                         </div>
                         <ul class="info">
-                          <li><i class="far fa-phone-volume"></i><a href="tel:+21236547898"> 02 7500 5858</a></li>
+                          <li><i class="far fa-phone-volume"></i><a href="tel:+21236547898">02 4341 7722</a></li>
 
                         </ul>
                       </div>
@@ -1082,11 +1538,10 @@ sesssss -->
                   <div class="col-lg-5 offset-lg-1">
                     <div class="quote-form wow fadeInUp" data-wow-delay="0.2s">
                       <div class="quote-header">
-                        <h4>Get your appointment</h4>
-                        <p>It is long establish fact that reader will by the read content of page when looking at its
-                          layout.</p>
+                        <h4>Contact us</h4>
+                        
                       </div>
-                      <form action="#">
+                      <form action="#" style="margin-top: -10%;">
                         <div class="row">
                           <div class="col-md-12">
                             <div class="form-group">
@@ -1128,108 +1583,106 @@ sesssss -->
       </main>
 
       <!-- footer area -->
-<footer class="footer-area py-5 mt-100" style="background-color: #5c0322;">
-        <div class="container">
-          <div class="row g-4">
-
-            <!-- Column 1: Logo -->
-            <div
-              class="col-lg-3 col-md-6 col-12 d-flex align-items-center justify-content-center justify-content-lg-start mb-4 mb-lg-0">
-              <a href="index.html" class="footer-logo">
-                <!-- ඔයාගේ නිවැරදි logo පින්තූරයේ නම මෙතනට දෙන්න -->
-                <img src="assets/img/logo/logo-light.png" alt="Renwick General Practice Logo" class="img-fluid"
-                  style="max-width: 180px;">
-              </a>
-            </div>
-
-            <!-- Column 2: Contact Us -->
-            <div class="col-lg-3 col-md-6 col-12">
-              <h5 class="mb-3 text-white" style="font-size: 1.05rem; font-weight: normal; text-transform: uppercase;">
-                Contact Us</h5>
-              <!-- තද පසුබිමට ගැලපෙන විදිහට සුදු කොටුව ඉවත් කර, ලස්සන transparent effect එකක් ලබා දී ඇත -->
-              <div class="p-3 rounded shadow-sm" style="background-color: rgba(255, 255, 255, 0);">
-                <ul class="list-unstyled mb-0" style="font-size: 0.95rem; color: #fff;">
-                  <li class="d-flex align-items-start mb-2">
-                    <i class="fas fa-phone-alt mt-1 me-2 text-white"></i>
-                    <span>Call us on : 02 7500 5858</span>
-                  </li>
-                  <li class="d-flex align-items-start mb-2">
-                    <i class="fas fa-map-marker-alt mt-1 me-2 text-white"></i>
-                    <span>127 Carp St, Bega NSW 2550</span>
-                  </li>
-                  <li class="d-flex align-items-start">
-                    <i class="fas fa-envelope mt-1 me-2 text-white"></i>
-                    <span>admin@sapphire.com.au</span>
-                  </li>
+<footer class="footer-area py-5" style="background-color: #5c0322;">
+    <div class="container">
+        <!-- Footer Top: 3 Columns -->
+        <div class="row g-4 g-lg-5">
+            
+            <!-- Column 1: Logo & Contact Info -->
+            <div class="col-lg-4 col-md-6 col-12 text-start">
+                <a href="index.html" class="d-block mb-4">
+                    <!-- ඔයාගේ නිවැරදි logo පින්තූරයේ නම මෙතනට දෙන්න -->
+                    <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="img-fluid" style="max-width: 300px;">
+                </a>
+                <ul class="list-unstyled mb-0" style="color: #fff; font-size: 14px;">
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-phone-alt me-3"></i> Call us on : 02 7500 5858
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-map-marker-alt me-3"></i> 127 Carp St, Bega NSW 2550
+                    </li>
+                    <li class="mb-3 d-flex align-items-center">
+                        <i class="fas fa-envelope me-3"></i> admin@sapphire.com.au
+                    </li>
                 </ul>
-              </div>
             </div>
 
-            <!-- Column 3: Opening Hours -->
-            <div class="col-lg-3 col-md-6 col-12">
-              <h5 class="mb-3 text-white" style="font-size: 1.05rem; font-weight: normal; text-transform: uppercase;">
-                Opening Hours</h5>
-              <div class="p-3 rounded shadow-sm" style="background-color: rgba(99, 3, 3, 0.041);">
-                <ul class="list-unstyled mb-0" style="font-size: 0.95rem; color: #fff;">
-                  <li class="d-flex justify-content-between mb-2">
-                    <span>Monday - Friday</span>
-                    <span>8AM - 6PM</span>
-                  </li>
-                  <li class="d-flex justify-content-between mb-2">
-                    <span>Saturday</span>
-                    <span style="font-weight: normal; color: #ff8fa3;">CLOSED</span>
-                  </li>
-                  <li class="d-flex justify-content-between">
-                    <span>Sunday and Public Holidays</span>
-                    <span style="font-weight: normal; color: #ff8fa3;">CLOSED</span>
-                  </li>
+            <!-- Column 2: Opening Hours -->
+            <div class="col-lg-4 col-md-6 col-12 text-start">
+                <h5 class="text-white mb-3" style="text-transform: uppercase; font-size: 17px; letter-spacing: 1px;">
+                    Opening Hours
+                </h5>
+                <ul class="list-unstyled mb-0" style="color: #fff; font-size: 17px;">
+                    <li class="d-flex justify-content-between mb-3">
+                        <span><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Monday - Friday</span>
+                        <span>8AM - 6PM</span>
+                    </li>
+                    <li class="d-flex justify-content-between mb-3">
+                        <span><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Saturday</span>
+                        <span style="color: #ff4d6d;">CLOSED</span>
+                    </li>
+                    <li class="d-flex justify-content-between mb-3">
+                        <span><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Sunday and Public Holidays</span>
+                        <span style="color: #ff4d6d;">CLOSED</span>
+                    </li>
                 </ul>
-              </div>
             </div>
 
-            <!-- Column 4: Online Booking -->
-            <div class="col-lg-3 col-md-6 col-12">
-              <h5 class="mb-3 text-white" style="font-size: 1.05rem; font-weight: normal; text-transform: uppercase;">
-                Online Booking</h5>
-
-              <!-- Text Justified and White Color -->
-              <p class="mb-3" style="font-size: 0.95rem; color: #fff; text-align: justify; line-height: 1.6;">
-                Book an appointment with your preferred doctor and see up to date availability and book instantly.
-              </p>
-
-              <!-- Custom Styled Booking Button matching the image -->
-              <a href="#" class="d-inline-flex align-items-stretch text-decoration-none shadow-sm mb-3"
-                style="border-radius: 5px; overflow: hidden;">
-                <div class="d-flex align-items-center justify-content-center px-3"
-                  style="background-color: #1a0c0c; color: white;">
-                  <i class="fas fa-plus-square fs-5"></i>
+            <!-- Column 3: Quick Links -->
+            <div class="col-lg-4 col-md-12 col-12 text-start">
+                <h5 class="text-white mb-4" style="text-transform: uppercase; font-size: 17px; letter-spacing: 1px;">
+                    Quick Links
+                </h5>
+                <div class="row">
+                    <!-- Quick Links: Left Sub-column -->
+                    <div class="col-6">
+                        <ul class="list-unstyled mb-0" style="font-size: 17px;">
+                            <li class="mb-3"><a href="index.html" class="text-white text-decoration-none"><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Home</a></li>
+                            <li class="mb-3"><a href="about.html" class="text-white text-decoration-none"><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>About Us</a></li>
+                            <li class="mb-3"><a href="services.html" class="text-white text-decoration-none"><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Services</a></li>
+                        </ul>
+                    </div>
+                    <!-- Quick Links: Right Sub-column -->
+                    <div class="col-6">
+                        <ul class="list-unstyled mb-0" style="font-size: 17px;">
+                            <li class="mb-3"><a href="billing.html" class="text-white text-decoration-none"><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Billing Policy</a></li>
+                            <li class="mb-3"><a href="skin.html" class="text-white text-decoration-none"><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Skin</a></li>
+                            <li class="mb-3"><a href="telehealth.html" class="text-white text-decoration-none"><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Telehealth</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="px-4 py-1"
-                  style="background-color: #1e3a8a; color: white; font-weight: normal; font-size: 0.95rem;">
-                  Book<br>Appointment
-                </div>
-              </a>
-
             </div>
 
-          </div>
         </div>
+    </div>
 
-        <!-- Copyright Section -->
-        <div class="container mt-5 pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
-          <div class="row">
-            <div class="col-12 text-center">
-              <p class="mb-0" style="font-size: 0.85rem; color: #ccc;">
-                Copyright © 2026 Ceylon Bridal Brisbane. All Rights Reserved.
-                Designed by: Web Design Marketing Australia
-              </p>
+    <!-- Copyright Section (Split into two sides) -->
+    <div class="container mt-5 pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
+        <div class="row align-items-center">
+            <!-- Left Side -->
+            <div class="col-md-6 col-12 text-center text-md-start mb-2 mb-md-0">
+                <p class="mb-0" style="font-size: 13px; color: #e0e0e0;">
+                    Copyright &copy; 2026 Ceylon Bridal Brisbane. All Rights Reserved.
+                </p>
             </div>
-          </div>
+            <!-- Right Side -->
+            <div class="col-md-6 col-12 text-center text-md-end">
+                <p class="mb-0" style="font-size: 13px; color: #e0e0e0;">
+                    Designed by: Web Design Marketing Australia
+                </p>
+            </div>
         </div>
-      </footer>
+    </div>
+</footer>
       <!-- footer area end -->
     </div>
+
+
+
+    
   </div>
+
+  
 
   <!-- scroll-top -->
   <a href="#" id="scroll-top"><i class="fas fa-arrow-up"></i></a>

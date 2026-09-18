@@ -63,32 +63,35 @@ Table of contents
   
 
      /* Custom Styles for the About Section Image Layout */
-          .about-image-wrapper {
-            position: relative;
-            padding-right: 15px;
-            z-index: 1;
-            text-align: center;
-          }
-          
-          /* Single Image Styles */
-          .about-single-img {
-            width: 100%;
-            max-width: 550px; /* පින්තූරය ඕනෑවට වඩා ලොකු වීම වළක්වයි */
-            height: auto;
-            display: inline-block;
-            border-radius: 20px; /* අවශ්‍ය නම් පමණක් තබා ගන්න */
-          }
+   .about-image-wrapper {
+    position: relative;
+    padding-right: 5px;
+    z-index: 1;
+    text-align: center;
+}
 
-          /* Adjustments for Mobile Responsive */
-          @media (max-width: 991px) {
-            .about-image-wrapper {
-              margin-bottom: 40px;
-              padding-right: 0;
-            }
-            .about-single-img {
-              max-width: 100%;
-            }
-          }
+/* Single Image Styles */
+.about-single-img {
+    width: 100%;
+    max-width: 850px; /* Image khup mothi hou naye mhanun */
+    height: auto;
+    display: inline-block;
+    border-radius: 20px; 
+}
+
+/* Adjustments for Mobile Responsive */
+@media (max-width: 991px) {
+    .about-image-wrapper {
+        margin-top: 0px; /* Varchi gap kami karnyashathi (garaj aslyas 10px thevu shakta) */
+        margin-bottom: -20px;
+        margin-top: -60px;
+         /* Khaltun asleli mothi gap 100px varun 30px keli aahe */
+        padding-right: 0;
+    }
+    .about-single-img {
+        max-width: 100%;
+    }
+}
 /* Large devices (desktops, 992px and up) වලදී පමණක් 10% margin එක වැඩ කරයි */
 @media (min-width: 992px) {
   .custom-margin-lg {
@@ -1032,7 +1035,11 @@ label {
 @media all and (max-width: 767px) {
   .site-heading .site-title {
     font-size: 30px;
+    
   }
+  .site-title {
+        text-align: left;
+    }
 }
 .site-heading .site-title span {
   color: var(--theme-color);
@@ -1060,6 +1067,7 @@ label {
   .site-heading.inline .site-title {
     font-size: 30px;
   }
+  
 }
 .site-heading .heading-divider {
   display: inline-block;
@@ -2257,18 +2265,18 @@ label {
   border-radius: 50px 50px 50px 50px;
 }
 .hs-1 .hero-single .hero-content .hero-title {
-  font-size: 60px;
+  font-size: 42px;
   color: var(--color-white);
   font-weight: 600;
 }
 @media all and (min-width: 992px) and (max-width: 1199px) {
   .hs-1 .hero-single .hero-content .hero-title {
-    font-size: 50px;
+    font-size: 30px;
   }
 }
 @media all and (max-width: 767px) {
   .hs-1 .hero-single .hero-content .hero-title {
-    font-size: 45px;
+    font-size: 22px;
   }
 }
 .hs-1 .hero-single .hero-content .hero-title span {
