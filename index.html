@@ -486,6 +486,29 @@
       visibility: visible;
       transform: translateY(0);
     }
+
+
+@media only screen and (max-width: 767px) {
+    /* Container එක flex කරලා column විදිහට හදාගන්නවා */
+    .hero-btn {
+        display: flex;
+        flex-direction: column; 
+        gap: 15px; /* Button දෙක අතර පරතරය (ඕනේ නම් වෙනස් කරගන්න) */
+        align-items: flex-start; /* වම් පැත්තට align වෙන්න */
+    }
+
+    /* Button ඇතුළේ text එක පේළි දෙකකට කැඩෙන එක නවත්වන්න */
+    .hero-btn .appointment-btn,
+    .hero-btn .theme-btn2 {
+        white-space: nowrap; 
+        width: max-content; /* Text එකේ දිගට හරියන්න button එකේ දිග හැදෙන්න */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+
   </style>
 
 </head>
