@@ -451,26 +451,43 @@
     }
 
 
-/* Desktop සඳහා සාමාන්‍ය margin එක (-5%) */
-.team-area {
-  margin-top: -5%;
-}
+    /* Desktop සඳහා සාමාන්‍ය margin එක (-5%) */
+    .team-area {
+      margin-top: -5%;
+    }
 
-/* Medium Devices (Tablets, Laptops කුඩා තිර - 991px ට අඩු) සඳහා */
-@media (max-width: 991px) {
-  .team-area {
-    margin-top: -25%; /* පරතරය ඕනෙම නම් මෙතනට 10px වගේ අගයක් දෙන්න පුළුවන් */
-  }
-}
+    /* Medium Devices (Tablets, Laptops කුඩා තිර - 991px ට අඩු) සඳහා */
+    @media (max-width: 991px) {
+      .team-area {
+        margin-top: -25%;
+        /* පරතරය ඕනෙම නම් මෙතනට 10px වගේ අගයක් දෙන්න පුළුවන් */
+      }
+    }
 
-/* Mobile Devices (767px ට අඩු) සඳහා */
-@media (max-width: 767px) {
-  .team-area {
-    margin-top: -25%; 
-  }
-}
+    /* Mobile Devices (767px ට අඩු) සඳහා */
+    @media (max-width: 767px) {
+      .team-area {
+        margin-top: -25%;
+      }
+    }
 
+    @media (max-width: 991px) {
 
+      /* Mobile එකේදී Text එක පහළට ගැනීම */
+      .quote-mobile-balance .site-heading .site-title {
+        margin-top: 80px !important;
+      }
+
+      /* Title එක සහ Online Booking Card එක අතර ඉඩ */
+      .quote-mobile-balance .site-heading {
+        margin-bottom: 24px !important;
+      }
+
+      /* යටම තියෙන Contact Us Card එකට තියෙන ඉඩ සමාන කිරීම */
+      .quote-mobile-balance .quote-contact {
+        margin-bottom: 0px !important;
+      }
+    }
   </style>
 
 </head>
@@ -666,84 +683,84 @@
         </div>
 
         <!-- Info Grid Area -->
-     <div class="team-area"> <!-- මෙතන තිබුණු style එක අයින් කළා -->
-  <div class="container">
-    <div class="row g-4">
-      <div class="col-md-6 col-lg-3">
-        <div class="team-item wow fadeInUp" data-wow-delay=".2s">
-          <div class="team-img">
-            <div class="ani-img">
-              <img src="assets/img/team/conveniently-located.jpg" alt="thumb" />
-            </div>
-          </div>
-          <div class="team-content">
-            <h4><a href="#">Conveniently Located</a></h4>
-            <div class="team-social text-justify text-start">
-              <span>Sapphire GP is conveniently located on Sapphire Street in Wyoming. We proudly serve
-                individuals and families across Wyoming and nearby suburbs including Gosford, Woy Woy, Narara,
-                Lisarow, and Tumbi Umbi. With local parking and easy access, visiting your trusted local doctors
-                is simple and stress-free.</span>
+        <div class="team-area"> <!-- මෙතන තිබුණු style එක අයින් කළා -->
+          <div class="container">
+            <div class="row g-4">
+              <div class="col-md-6 col-lg-3">
+                <div class="team-item wow fadeInUp" data-wow-delay=".2s">
+                  <div class="team-img">
+                    <div class="ani-img">
+                      <img src="assets/img/team/conveniently-located.jpg" alt="thumb" />
+                    </div>
+                  </div>
+                  <div class="team-content">
+                    <h4><a href="#">Conveniently Located</a></h4>
+                    <div class="team-social text-justify text-start">
+                      <span>Sapphire GP is conveniently located on Sapphire Street in Wyoming. We proudly serve
+                        individuals and families across Wyoming and nearby suburbs including Gosford, Woy Woy, Narara,
+                        Lisarow, and Tumbi Umbi. With local parking and easy access, visiting your trusted local doctors
+                        is simple and stress-free.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="team-item wow fadeInUp" data-wow-delay=".4s">
+                  <div class="team-img">
+                    <div class="ani-img">
+                      <img src="assets/img/team/opening-hours.jpg" alt="thumb" />
+                    </div>
+                  </div>
+                  <div class="team-content">
+                    <h4><a href="#">Opening Hours</a></h4>
+                    <div class="team-social text-justify text-start">
+                      <span>The clinic is open Monday to Friday from 9:00 AM to 5:00 PM. We are closed on weekends and
+                        Public Holidays. Our friendly team provides professional care in a warm, welcoming environment —
+                        ensuring your health needs are met during the week with compassion, attention, and commitment to
+                        your wellbeing.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="team-item wow fadeInUp" data-wow-delay=".6s">
+                  <div class="team-img">
+                    <div class="ani-img">
+                      <img src="assets/img/team/how-to-book.jpg" alt="thumb" />
+                    </div>
+                  </div>
+                  <div class="team-content">
+                    <h4><a href="#">How to Book</a></h4>
+                    <div class="team-social text-justify text-start">
+                      <span>Appointments can be booked by calling (02) 4341 7722 or by clicking the “Book Appointment”
+                        button on our website. Online bookings are made through HotDoc. We offer flexible options so you
+                        can schedule your visit easily, whether by phone or online—whatever works best for your time and
+                        comfort.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-lg-3">
+                <div class="team-item wow fadeInUp" data-wow-delay=".8s">
+                  <div class="team-img">
+                    <div class="ani-img">
+                      <img src="assets/img/team/afterhourscare.jpg" alt="thumb" />
+                    </div>
+                  </div>
+                  <div class="team-content">
+                    <h4><a href="#">After Hours Care</a></h4>
+                    <div class="team-social about-text text-justify text-start">
+                      <span>If you are experiencing a medical emergency, please call 000 immediately. For urgent care
+                        outside of normal clinic hours, contact the National Home Doctor Service on 13SICK (13 7425).
+                        After-hours doctors are available to visit your home and provide medical care when your regular
+                        GP clinic is closed.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="team-item wow fadeInUp" data-wow-delay=".4s">
-          <div class="team-img">
-            <div class="ani-img">
-              <img src="assets/img/team/opening-hours.jpg" alt="thumb" />
-            </div>
-          </div>
-          <div class="team-content">
-            <h4><a href="#">Opening Hours</a></h4>
-            <div class="team-social text-justify text-start">
-              <span>The clinic is open Monday to Friday from 9:00 AM to 5:00 PM. We are closed on weekends and
-                Public Holidays. Our friendly team provides professional care in a warm, welcoming environment —
-                ensuring your health needs are met during the week with compassion, attention, and commitment to
-                your wellbeing.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="team-item wow fadeInUp" data-wow-delay=".6s">
-          <div class="team-img">
-            <div class="ani-img">
-              <img src="assets/img/team/how-to-book.jpg" alt="thumb" />
-            </div>
-          </div>
-          <div class="team-content">
-            <h4><a href="#">How to Book</a></h4>
-            <div class="team-social text-justify text-start">
-              <span>Appointments can be booked by calling (02) 4341 7722 or by clicking the “Book Appointment”
-                button on our website. Online bookings are made through HotDoc. We offer flexible options so you
-                can schedule your visit easily, whether by phone or online—whatever works best for your time and
-                comfort.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="team-item wow fadeInUp" data-wow-delay=".8s">
-          <div class="team-img">
-            <div class="ani-img">
-              <img src="assets/img/team/afterhourscare.jpg" alt="thumb" />
-            </div>
-          </div>
-          <div class="team-content">
-            <h4><a href="#">After Hours Care</a></h4>
-            <div class="team-social about-text text-justify text-start">
-              <span>If you are experiencing a medical emergency, please call 000 immediately. For urgent care
-                outside of normal clinic hours, contact the National Home Doctor Service on 13SICK (13 7425).
-                After-hours doctors are available to visit your home and provide medical care when your regular
-                GP clinic is closed.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
         <!-- Services Section -->
         <section class="services-section" style="margin-top: -1%;">
           <div class="container">
@@ -1066,11 +1083,11 @@
                 </div>
                 <div class="col-lg-7 col-xl-6">
                   <div class="bg-white shadow custom-margin-lg" style="border-radius: 15px; padding: 40px;">
-                    <h3 class="mb-4" style="color: #d81b60; font-weight: 600; font-size: 1.6rem; line-height: 1.4;">
+                    <h3 class="mb-4" style="color: #380719; font-weight: 600; font-size: 1.6rem; line-height: 1.4; ">
                       Use App To Get Access To Exceptional Healthcare, At Your Fingertips.
                     </h3>
                     <p class="mb-4"
-                      style="color: #203c71; font-size: 1.05rem; line-height: 1.7; font-weight: 500; text-align: justify;">
+                      style="color: #203c71; font-size: 1.05rem; line-height: 1.7; font-weight: 500; text-align: justify; text-align: justify; line-height: 1.7; color: #555; font-size: 15px;">
                       We are please to advise that you can now self check in for your appointments via the HotDoc app.
                       Simply go to Apple App Store or the Google Play store and down load the HotDoc app.
                     </p>
@@ -1229,7 +1246,7 @@
         </section>
 
         <!-- Quote Area -->
-        <div class="quote-area mb-10">
+        <div class="quote-area mb-10 quote-mobile-balance">
           <div class="container-fluid">
             <div class="quote-wrap py-100">
               <div class="container">
@@ -1238,7 +1255,8 @@
                   <div class="col-lg-6">
                     <div class="quote-content">
                       <div class="site-heading">
-                        <h3 class="site-title text-white ani-text-1">Need help? we are just a message away</h3>
+                        <h3 class="site-title text-white ani-text-1 " style="margin-top: 19px;">Need help? we are just a
+                          message away</h3>
                       </div>
                       <div class="quote-contact wow fadeInUp mb-100" data-wow-delay="0.4s">
                         <div class="top">
@@ -1308,7 +1326,7 @@
       </main>
 
       <!-- Footer -->
-   <!-- Footer -->
+      <!-- Footer -->
       <footer class="footer-area py-5" style="background-color: #5c0322;">
         <div class="container">
           <div class="row g-4 g-lg-5">
@@ -1329,7 +1347,7 @@
                 </li>
               </ul>
             </div>
-        <div class="col-lg-4 col-md-6 col-12 text-start">
+            <div class="col-lg-4 col-md-6 col-12 text-start">
               <h5 class="text-white mb-3" style="text-transform: uppercase; font-size: 17px; letter-spacing: 1px;">
                 Opening Hours</h5>
               <ul class="list-unstyled mb-0" style="color: #fff; font-size: 17px;">
