@@ -1157,6 +1157,7 @@ label {
   width: 0;
   height: 100%;
   background: var(--theme-color2);
+  
   transition: all 0.4s ease-in-out;
   z-index: -1;
 }
@@ -1195,9 +1196,29 @@ label {
 }
 .theme-btn2::before {
   background: var(--theme-color);
+ 
 }
 .theme-btn2:hover {
   color: var(--color-white);
+ 
+}
+
+
+.theme-btn2:hover {
+    color: #ffffff; 
+}
+
+/* Icon එකෙත් පාට වෙනස් වෙන්න ඕනේ නම් මේකත් දාන්න */
+.theme-btn2:hover i {
+    color: #ffffff;
+}
+
+.theme-btn2:hover {
+    color: #ffffff !important; 
+}
+
+.theme-btn2:hover i {
+    color: #ffffff !important;
 }
 
 .theme-border-btn {
