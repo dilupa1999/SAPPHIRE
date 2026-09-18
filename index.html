@@ -1327,31 +1327,53 @@
 
       <!-- Footer -->
       <!-- Footer -->
+     <!-- Footer -->
+    <!-- Footer -->
+      <style>
+        /* Desktop View එකේදී තීරු තුනේම මාතෘකා කොටස සමාන උසකට ගැනීම */
+        @media (min-width: 992px) {
+          .footer-title-wrapper {
+            min-height: 85px; /* ලෝගෝ එකේ උසට සමාන වන පරිදි */
+            display: flex;
+            align-items: flex-start; 
+          }
+        }
+      </style>
+      
       <footer class="footer-area py-5" style="background-color: #5c0322;">
         <div class="container">
           <div class="row g-4 g-lg-5">
+            
+            <!-- 1st Column (Logo & Contact) -->
             <div class="col-lg-4 col-md-6 col-12 text-start">
-              <a href="index.html" class="d-block mb-4">
-                <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="img-fluid"
-                  style="max-width: 300px;">
-              </a>
-              <ul class="list-unstyled mb-0" style="color: #fff; font-size: 14px;">
+              <div class="footer-title-wrapper mb-4">
+                <a href="index.html" class="d-block w-100">
+                  <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="img-fluid"
+                    style="max-width: 300px;">
+                </a>
+              </div>
+              <ul class="list-unstyled mb-0" style="color: #fff; font-size: 16px;">
                 <li class="mb-3 d-flex align-items-center text-white">
                   <i class="fas fa-phone-alt me-3"></i> Call us on :
-                  <!-- Phone number annu <a> tag olage haaki white color kotta baga -->
                   <a href="tel:0243417722" class="text-white text-decoration-none ms-1">02 4341 7722</a>
                 </li>
                 <li class="mb-3 d-flex align-items-center">
                   <i class="fas fa-map-marker-alt me-3"></i>Address: 6 Renwick Street, Wyoming, NSW 2250
                 </li>
                 <li class="mb-3 d-flex align-items-center">
-                  <i class="fas fa-envelope me-3"></i> aadmin@sapphiregp.com.au
+                  <i class="fas fa-envelope me-3"></i> admin@sapphiregp.com.au
                 </li>
               </ul>
             </div>
+            
+            <!-- 2nd Column (Opening Hours) -->
             <div class="col-lg-4 col-md-6 col-12 text-start">
-              <h5 class="text-white mb-3" style="text-transform: uppercase; font-size: 17px; letter-spacing: 1px;">
-                Opening Hours</h5>
+              <div class="footer-title-wrapper mb-4">
+                <!-- මෙතන margin-top: 30px; ලෙස වෙනස් කර ඇත -->
+                <h5 class="text-white mb-0" style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
+                  Opening Hours
+                </h5>
+              </div>
               <ul class="list-unstyled mb-0" style="color: #fff; font-size: 17px;">
                 <!-- Monday - Friday -->
                 <li class="row align-items-start mb-3">
@@ -1373,8 +1395,9 @@
                 </li>
                 <!-- Sunday and Public Holidays -->
                 <li class="row align-items-start mb-3">
-                  <div class="col-7 col-md-auto pe-1">
-                    <span style="color: #ffffff; margin-right: 0px;">&raquo;</span>Sunday and Public Holidays
+                  <div class="col-7 col-md-auto pe-1 d-flex">
+                    <span style="color: #ffffff; margin-right: 8px;">&raquo;</span>
+                    <span>Sunday and Public Holidays</span>
                   </div>
                   <div class="col-5 col-md-auto ms-md-auto text-start text-md-end ps-0" style="color: #f7f7f7;">
                     CLOSED
@@ -1382,9 +1405,15 @@
                 </li>
               </ul>
             </div>
+            
+            <!-- 3rd Column (Quick Links) -->
             <div class="col-lg-4 col-md-12 col-12 text-start">
-              <h5 class="text-white mb-4" style="text-transform: uppercase; font-size: 17px; letter-spacing: 1px;">Quick
-                Links</h5>
+              <div class="footer-title-wrapper mb-4">
+                <!-- මෙතන margin-top: 30px; ලෙස වෙනස් කර ඇත -->
+                <h5 class="text-white mb-0" style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
+                  Quick Links
+                </h5>
+              </div>
               <div class="row">
                 <div class="col-6">
                   <ul class="list-unstyled mb-0" style="font-size: 17px;">
@@ -1408,17 +1437,16 @@
                 </div>
               </div>
             </div>
+            
           </div>
         </div>
         <div class="container mt-5 pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
           <div class="row align-items-center">
-            <!-- Changed text-center to text-start for mobile -->
             <div class="col-md-6 col-12 text-start mb-2 mb-md-0">
               <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
                 Copyright 2026 &copy; All Right Reserved Sapphire General Practice
               </p>
             </div>
-            <!-- Changed text-center to text-start for mobile, kept text-md-end for desktop -->
             <div class="col-md-6 col-12 text-start text-md-end mt-2 mt-md-0">
               <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
                 <a href="https://www.anzwebdesign.com.au/" target="_blank" class="text-decoration-none"
