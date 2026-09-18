@@ -281,97 +281,100 @@
 
 
 
-/* Team Section Background */
-.team-section {
-    background-color: #f4f8fb; /* ඔයාගේ site එකේ පවතින background පාට */
-}
-
-/* Card General Styling */
-.team-card {
-    border-radius: 20px;
-    background-color: #ffffff;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* Hover Effect for the Card */
-.team-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(27, 38, 65, 0.08) !important;
-}
-
-/* Circular Image Container with a Gradient Border effect */
-.team-card .img-container {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    padding: 6px;
-    background: linear-gradient(135deg, #551228, #e59a67); /* Maroon to Orange gradient */
-    transition: transform 0.4s ease;
-}
-
-/* Make image cover the circle perfectly */
-.team-card .img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border: 4px solid #ffffff; /* White border inside the gradient */
-}
-
-/* Slight zoom on image when hovering the card */
-.team-card:hover .img-container {
-    transform: scale(1.05);
-}
-
-/* Custom Button Styling */
-.btn-outline-team {
-    color: #551228;
-    border: 2px solid #551228;
-    font-weight: 700;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
-.btn-outline-team:hover {
-    background-color: #551228;
-    color: #ffffff;
-    border-color: #551228;
-}
-
-/* Medium සහ Mobile Devices සඳහා විශේෂිත වෙනස්කම් */
-/* 1. Large Desktops (ප්‍රධාන/සාමාන්‍ය තිරය සඳහා - Base Style) */
-.team-section {
-    margin-top: -8%; 
-}
-
-/* 2. Laptops / Small Desktops (1199px ට අඩු තිර සඳහා) */
-@media (max-width: 1199px) {
+    /* Team Section Background */
     .team-section {
-        margin-top: -8%; 
+      background-color: #f4f8fb;
+      /* ඔයාගේ site එකේ පවතින background පාට */
     }
-}
 
-/* 3. Tablets - Landscape (991px ට අඩු තිර සඳහා) */
-@media (max-width: 991px) {
+    /* Card General Styling */
+    .team-card {
+      border-radius: 20px;
+      background-color: #ffffff;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    /* Hover Effect for the Card */
+    .team-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(27, 38, 65, 0.08) !important;
+    }
+
+    /* Circular Image Container with a Gradient Border effect */
+    .team-card .img-container {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      padding: 6px;
+      background: linear-gradient(135deg, #551228, #e59a67);
+      /* Maroon to Orange gradient */
+      transition: transform 0.4s ease;
+    }
+
+    /* Make image cover the circle perfectly */
+    .team-card .img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 4px solid #ffffff;
+      /* White border inside the gradient */
+    }
+
+    /* Slight zoom on image when hovering the card */
+    .team-card:hover .img-container {
+      transform: scale(1.05);
+    }
+
+    /* Custom Button Styling */
+    .btn-outline-team {
+      color: #551228;
+      border: 2px solid #551228;
+      font-weight: 700;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-outline-team:hover {
+      background-color: #551228;
+      color: #ffffff;
+      border-color: #551228;
+    }
+
+    /* Medium සහ Mobile Devices සඳහා විශේෂිත වෙනස්කම් */
+    /* 1. Large Desktops (ප්‍රධාන/සාමාන්‍ය තිරය සඳහා - Base Style) */
     .team-section {
-        margin-top: -50%; 
+      margin-top: -8%;
     }
-}
 
-/* 4. Tablets - Portrait & Large Mobile Phones (767px ට අඩු තිර සඳහා) */
-@media (max-width: 767px) {
-    .team-section {
-        margin-top: -45%; 
+    /* 2. Laptops / Small Desktops (1199px ට අඩු තිර සඳහා) */
+    @media (max-width: 1199px) {
+      .team-section {
+        margin-top: -8%;
+      }
     }
-}
 
-/* 5. Small Mobile Phones (575px ට අඩු තිර සඳහා) */
-@media (max-width: 575px) {
-    .team-section {
-        margin-top: -40%; 
+    /* 3. Tablets - Landscape (991px ට අඩු තිර සඳහා) */
+    @media (max-width: 991px) {
+      .team-section {
+        margin-top: -50%;
+      }
     }
-}
+
+    /* 4. Tablets - Portrait & Large Mobile Phones (767px ට අඩු තිර සඳහා) */
+    @media (max-width: 767px) {
+      .team-section {
+        margin-top: -45%;
+      }
+    }
+
+    /* 5. Small Mobile Phones (575px ට අඩු තිර සඳහා) */
+    @media (max-width: 575px) {
+      .team-section {
+        margin-top: -40%;
+      }
+    }
 
 
 
@@ -379,112 +382,110 @@
 
 
 
-@media (max-width: 991px) {
-    /* පසුබිම් රූපය සහිත ප්‍රධාන කොටසේ ඉහළ හිඩැස 20px දක්වා ඉතා කුඩා කිරීම */
-    .quote-area .quote-wrap {
-        padding-top: 20px !important; 
+    @media (max-width: 991px) {
+
+      /* පසුබිම් රූපය සහිත ප්‍රධාන කොටසේ ඉහළ හිඩැස 20px දක්වා ඉතා කුඩා කිරීම */
+      .quote-area .quote-wrap {
+        padding-top: 20px !important;
         padding-bottom: 30px !important;
-    }
+      }
 
-    /* මාතෘකාව (Need help?...) ඉහළින් ඇති සියලුම ස්වභාවික හිඩැස් මැකීම */
-    .quote-area .quote-content,
-    .quote-area .site-heading,
-    .quote-area .site-title {
+      /* මාතෘකාව (Need help?...) ඉහළින් ඇති සියලුම ස්වභාවික හිඩැස් මැකීම */
+      .quote-area .quote-content,
+      .quote-area .site-heading,
+      .quote-area .site-title {
         margin-top: 0 !important;
         padding-top: 0 !important;
+      }
+
+      /* Contact Box එකට යටින් ඇති විශාල පරතරය අඩු කිරීම */
+      .quote-contact.mb-100 {
+        margin-bottom: 30px !important;
+      }
     }
 
-    /* Contact Box එකට යටින් ඇති විශාල පරතරය අඩු කිරීම */
-    .quote-contact.mb-100 {
-        margin-bottom: 30px !important; 
+
+
+
+
+    /* Card chi fix height ani border radius set karne */
+    .team-item {
+      position: relative;
+      overflow: hidden;
+      height: 380px;
+      /* Saglya cards chi height saman thevnyasathi */
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
-}
 
+    .team-img {
+      height: 100%;
+    }
 
+    .team-img .ani-img,
+    .team-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
+    /* Hover karnya aadhi chi overlay box design (Choti ani saman height) */
+    .team-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 75px;
+      /* Hi height saglya cards sathi saman ani choti asel */
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 22px 15px;
+      transition: all 0.4s ease-in-out;
+      overflow: hidden;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
 
+    /* Hover kelyavar box purna card var (100%) expand honar */
+    .team-item:hover .team-content {
+      height: 100%;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
 
-/* Card chi fix height ani border radius set karne */
-.team-item {
-    position: relative;
-    overflow: hidden;
-    height: 380px; /* Saglya cards chi height saman thevnyasathi */
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
+    /* Heading la madhobi (center) thevne */
+    .team-content h4 {
+      margin: 0 0 20px 0;
+      text-align: center;
+      font-size: 1.15rem;
+    }
 
-.team-img {
-    height: 100%;
-}
+    .team-content h4 a {
+      color: #1b2641;
+      text-decoration: none;
+    }
 
-.team-img .ani-img, .team-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    /* Hover karnya aadhi paragraph text hide thevne */
+    .team-social {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all 0.4s ease-in-out;
 
-/* Hover karnya aadhi chi overlay box design (Choti ani saman height) */
-.team-content {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 75px; /* Hi height saglya cards sathi saman ani choti asel */
-    background-color: rgba(255, 255, 255, 0.95);
-    padding: 22px 15px;
-    transition: all 0.4s ease-in-out;
-    overflow: hidden;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-}
+      /* Text එක සම්පූර්ණයෙන්ම Justify කිරීම */
+      text-align: justify !important;
 
-/* Hover kelyavar box purna card var (100%) expand honar */
-.team-item:hover .team-content {
-    height: 100%; 
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
+      /* අකුරු පැහැදිලිව පෙනීමට */
+      font-size: 14px;
+      line-height: 1.6;
+      color: #444;
+    }
 
-/* Heading la madhobi (center) thevne */
-.team-content h4 {
-    margin: 0 0 20px 0;
-    text-align: center;
-    font-size: 1.15rem;
-}
-
-.team-content h4 a {
-    color: #1b2641;
-    text-decoration: none;
-}
-
-/* Hover karnya aadhi paragraph text hide thevne */
-.team-social {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    transition: all 0.4s ease-in-out;
-    
-    /* Text එක සම්පූර්ණයෙන්ම Justify කිරීම */
-    text-align: justify !important; 
-    
-    /* අකුරු පැහැදිලිව පෙනීමට */
-    font-size: 14px;
-    line-height: 1.6;
-    color: #444;
-}
-
-/* Hover kelyavar paragraph text smooth animation sahit disne */
-.team-item:hover .team-social {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-
-
-
-
-
+    /* Hover kelyavar paragraph text smooth animation sahit disne */
+    .team-item:hover .team-social {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
   </style>
 
 </head>
@@ -868,7 +869,7 @@ sesssss -->
 
 
 
-        <section class="services-section" style="margin-top: 1%;">
+        <section class="services-section" style="margin-top: -1%;">
           <div class="container">
 
             <div class="text-center mb-5">
@@ -1141,14 +1142,14 @@ sesssss -->
                 <div class="row g-3">
 
                   <!-- Column 1: Image 1 & Book Appointment Button -->
-                  <div class="col-6 d-flex flex-column gap-3">
+                  <div class="col-6 d-flex flex-column gap-3 ">
                     <img src="assets/img/about/4.png" alt="Doctor and Patient"
                       class="img-fluid rounded-4 w-100 shadow-sm"
                       style="object-fit: cover; flex-grow: 1; min-height: 100px;">
 
                     <!-- Custom Button Box (Replacing Flags) -->
-                    <div class="d-flex justify-content-center align-items-center rounded-4 shadow-sm"
-                      style="background-color: #ffffff; border: 1px solid #f8f9fa; padding: 15px 8px; min-height: 150px;">
+                    <div class="d-flex justify-content-center align-items-center "
+                      style="background-color: #ffffff; border: 1px solid #ffffff; padding: 15px 8px; min-height: 150px;">
 
 
                       <div class="hero-btn wow fadeInUp" data-wow-delay=".8s">
@@ -1185,7 +1186,7 @@ sesssss -->
                     <div
                       class="rounded-4 d-flex flex-column align-items-center justify-content-center shadow-sm text-center"
                       style="background-color: #eef5f4; padding: 20px 10px; min-height: 150px;">
-                      <div class="rounded-circle d-flex justify-content-center align-items-center mb-2"
+                      <div class=" d-flex justify-content-center align-items-center mb-2"
                         style="width: 45px; height: 45px; background-color: #1b2641; color: white; font-size: 18px;">
                         <i class="fas fa-phone-alt"></i>
                       </div>
@@ -1196,7 +1197,7 @@ sesssss -->
 
                     <!-- Image 2 -->
                     <img src="assets/img/about/aboriginal-&-Torres2.jpg" alt="Patient"
-                      class="img-fluid rounded-4 w-100 shadow-sm"
+                      class="img-fluid rounded-4 w-100 "
                       style="object-fit: cover; flex-grow: 1; min-height: 200px;">
                   </div>
 
@@ -1275,10 +1276,10 @@ sesssss -->
         <div class="app-download-area py-5 mt-60" style="background-color: #f8f9fa;">
           <div class="container">
             <!-- Dark Blue Background Container -->
-          
+
             <div class="shadow-lg p-4 p-md-5" style="background-color: #111a3a; border-radius: 20px;">
 
-         
+
               <div class="row align-items-center justify-content-between g-4">
 
                 <!-- Left Side: Mobile Phone Image -->
@@ -1290,7 +1291,7 @@ sesssss -->
 
                 <!-- Right Side: White Content Card -->
                 <div class="col-lg-7 col-xl-6">
-                
+
                   <div class="bg-white shadow custom-margin-lg" style="border-radius: 15px; padding: 40px;">
 
                     <h3 class="mb-4" style="color: #d81b60; font-weight: 600; font-size: 1.6rem; line-height: 1.4;">
@@ -1449,7 +1450,7 @@ sesssss -->
         <!-- testimonial-area end -->
 
         <!-- Team / Staff Section -->
-        <section class="team-section py-5" style="background-color: #f8f9fa;  "  >
+        <section class="team-section py-5" style="background-color: #f8f9fa;  ">
           <div class="container">
             <!-- Section Heading -->
             <div class="text-center mb-5">
@@ -1519,9 +1520,9 @@ sesssss -->
                   <div class="col-lg-6">
                     <div class="quote-content">
                       <div class="site-heading">
-                     
+
                         <h3 class="site-title text-white ani-text-1">Need help? we are just a message away</h3>
-                        
+
                       </div>
                       <div class="quote-contact wow fadeInUp mb-100" data-wow-delay="0.4s">
                         <div class="top">
@@ -1539,7 +1540,7 @@ sesssss -->
                     <div class="quote-form wow fadeInUp" data-wow-delay="0.2s">
                       <div class="quote-header">
                         <h4>Contact us</h4>
-                        
+
                       </div>
                       <form action="#" style="margin-top: -10%;">
                         <div class="row">
@@ -1583,107 +1584,115 @@ sesssss -->
       </main>
 
       <!-- footer area -->
-<footer class="footer-area py-5" style="background-color: #5c0322;">
-    <div class="container">
-        <!-- Footer Top: 3 Columns -->
-        <div class="row g-4 g-lg-5">
-            
+      <footer class="footer-area py-5" style="background-color: #5c0322;">
+        <div class="container">
+          <!-- Footer Top: 3 Columns -->
+          <div class="row g-4 g-lg-5">
+
             <!-- Column 1: Logo & Contact Info -->
             <div class="col-lg-4 col-md-6 col-12 text-start">
-                <a href="index.html" class="d-block mb-4">
-                    <!-- ඔයාගේ නිවැරදි logo පින්තූරයේ නම මෙතනට දෙන්න -->
-                    <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="img-fluid" style="max-width: 300px;">
-                </a>
-                <ul class="list-unstyled mb-0" style="color: #fff; font-size: 14px;">
-                    <li class="mb-3 d-flex align-items-center">
-                        <i class="fas fa-phone-alt me-3"></i> Call us on : 02 4341 7722
-                    </li>
-                    <li class="mb-3 d-flex align-items-center">
-                        <i class="fas fa-map-marker-alt me-3"></i>Address: 6 Renwick Street, Wyoming, NSW 2250
-                    </li>
-                    <li class="mb-3 d-flex align-items-center">
-                        <i class="fas fa-envelope me-3"></i> aadmin@sapphiregp.com.au
-                    </li>
-                </ul>
+              <a href="index.html" class="d-block mb-4">
+                <!-- ඔයාගේ නිවැරදි logo පින්තූරයේ නම මෙතනට දෙන්න -->
+                <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="img-fluid"
+                  style="max-width: 300px;">
+              </a>
+              <ul class="list-unstyled mb-0" style="color: #fff; font-size: 14px;">
+                <li class="mb-3 d-flex align-items-center text-white">
+                  <i class="fas fa-phone-alt me-3"></i> Call us on : 02 4341 7722
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                  <i class="fas fa-map-marker-alt me-3"></i>Address: 6 Renwick Street, Wyoming, NSW 2250
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                  <i class="fas fa-envelope me-3"></i> aadmin@sapphiregp.com.au
+                </li>
+              </ul>
             </div>
 
             <!-- Column 2: Opening Hours -->
             <div class="col-lg-4 col-md-6 col-12 text-start">
-                <h5 class="text-white mb-3" style="text-transform: uppercase; font-size: 17px; letter-spacing: 1px;">
-                    Opening Hours
-                </h5>
-                <ul class="list-unstyled mb-0" style="color: #fff; font-size: 17px;">
-                    <li class="d-flex justify-content-between mb-3">
-                        <span><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Monday - Friday</span>
-                        <span>9AM - 6PM</span>
-                    </li>
-                    <li class="d-flex justify-content-between mb-3">
-                        <span><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Saturday</span>
-                        <span style="color: #ff4d6d;">CLOSED</span>
-                    </li>
-                    <li class="d-flex justify-content-between mb-3">
-                        <span><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Sunday and Public Holidays</span>
-                        <span style="color: #ff4d6d;">CLOSED</span>
-                    </li>
-                </ul>
+              <h5 class="text-white mb-3" style="text-transform: uppercase; font-size: 17px; letter-spacing: 1px;">
+                Opening Hours
+              </h5>
+              <ul class="list-unstyled mb-0" style="color: #fff; font-size: 17px;">
+                <li class="d-flex justify-content-between mb-3">
+                  <span><span style="color: #ffffff; margin-right: 8px;">&raquo;</span>Monday - Friday</span>
+                  <span>9AM - 6PM</span>
+                </li>
+                <li class="d-flex justify-content-between mb-3">
+                  <span><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Saturday</span>
+                  <span style="color: #f8f7f8;">CLOSED</span>
+                </li>
+                <li class="d-flex justify-content-between mb-3">
+                  <span><span style="color: #ffffff; margin-right: 8px;">&raquo;</span>Sunday and Public Holidays</span>
+                  <span style="color: #f7f7f7;">CLOSED</span>
+                </li>
+              </ul>
             </div>
 
             <!-- Column 3: Quick Links -->
             <div class="col-lg-4 col-md-12 col-12 text-start">
-                <h5 class="text-white mb-4" style="text-transform: uppercase; font-size: 17px; letter-spacing: 1px;">
-                    Quick Links
-                </h5>
-                <div class="row">
-                    <!-- Quick Links: Left Sub-column -->
-                    <div class="col-6">
-                        <ul class="list-unstyled mb-0" style="font-size: 17px;">
-                            <li class="mb-3"><a href="index.html" class="text-white text-decoration-none"><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Home</a></li>
-                            <li class="mb-3"><a href="about.html" class="text-white text-decoration-none"><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>About Us</a></li>
-                            <li class="mb-3"><a href="services.html" class="text-white text-decoration-none"><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Services</a></li>
-                        </ul>
-                    </div>
-                    <!-- Quick Links: Right Sub-column -->
-                    <div class="col-6">
-                        <ul class="list-unstyled mb-0" style="font-size: 17px;">
-                            <li class="mb-3"><a href="billing.html" class="text-white text-decoration-none"><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Billing Policy</a></li>
-                            <li class="mb-3"><a href="skin.html" class="text-white text-decoration-none"><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Skin</a></li>
-                            <li class="mb-3"><a href="telehealth.html" class="text-white text-decoration-none"><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Telehealth</a></li>
-                        </ul>
-                    </div>
+              <h5 class="text-white mb-4" style="text-transform: uppercase; font-size: 17px; letter-spacing: 1px;">
+                Quick Links
+              </h5>
+              <div class="row">
+                <!-- Quick Links: Left Sub-column -->
+                <div class="col-6">
+                  <ul class="list-unstyled mb-0" style="font-size: 17px;">
+                    <li class="mb-3"><a href="index.html" class="text-white text-decoration-none"><span
+                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Home</a></li>
+                    <li class="mb-3"><a href="about.html" class="text-white text-decoration-none"><span
+                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>About Us</a></li>
+                    <li class="mb-3"><a href="services.html" class="text-white text-decoration-none"><span
+                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Services</a></li>
+                  </ul>
                 </div>
+                <!-- Quick Links: Right Sub-column -->
+                <div class="col-6">
+                  <ul class="list-unstyled mb-0" style="font-size: 17px;">
+                    <li class="mb-3"><a href="billing.html" class="text-white text-decoration-none"><span
+                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Billing Policy</a></li>
+                    <li class="mb-3"><a href="skin.html" class="text-white text-decoration-none"><span
+                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Skin</a></li>
+                    <li class="mb-3"><a href="telehealth.html" class="text-white text-decoration-none"><span
+                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Telehealth</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
 
+          </div>
         </div>
-    </div>
 
-    <!-- Copyright Section (Split into two sides) -->
-    <div class="container mt-5 pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
-        <div class="row align-items-center">
+        <!-- Copyright Section (Split into two sides) -->
+        <div class="container mt-5 pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
+          <div class="row align-items-center">
             <!-- Left Side -->
             <div class="col-md-6 col-12 text-center text-md-start mb-2 mb-md-0">
-                <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
-                    Copyright 2026 &copy; All Right Reserved Sapphire General Practice
-                </p>
+              <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
+                Copyright 2026 &copy; All Right Reserved Sapphire General Practice
+              </p>
             </div>
             <!-- Right Side -->
             <div class="col-md-6 col-12 text-center text-md-end">
-                <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
-                  <a href="https://www.anzwebdesign.com.au/" target="_blank" class="text-decoration-none" style="color: #ffffff;">Web Design Marketing Australia</a>
-                     
-                </p>
+              <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
+                <a href="https://www.anzwebdesign.com.au/" target="_blank" class="text-decoration-none"
+                  style="color: #ffffff;">Web Design Marketing Australia</a>
+
+              </p>
             </div>
+          </div>
         </div>
-    </div>
-</footer>
+      </footer>
       <!-- footer area end -->
     </div>
 
 
 
-    
+
   </div>
 
-  
+
 
   <!-- scroll-top -->
   <a href="#" id="scroll-top"><i class="fas fa-arrow-up"></i></a>
