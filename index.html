@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 
-
 <head>
   <!-- meta tags -->
   <meta charset="UTF-8" />
@@ -11,7 +10,7 @@
   <meta name="keywords" content="" />
 
   <!-- title -->
-  <title>SAPPHIRE </title>
+  <title>SAPPHIRE</title>
 
   <!-- favicon -->
   <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png" />
@@ -24,35 +23,25 @@
   <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
 
-
-
-  <!-- Bootstrap 5 CSS -->
-
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
-
   <style>
+    /* ==============================================================
+       General Styles
+       ============================================================== */
     .appointment-btn {
       background-color: #5c172a;
-      /* Dark maroon background */
       color: #ffffff;
-      /* White text */
       text-decoration: none;
       font-size: 15px;
       font-weight: 600;
       letter-spacing: 0.5px;
-
-      /* Padding is slightly smaller on the left to accommodate the round SVG icon */
       padding: 8px 24px 8px 8px;
       border-radius: 50px;
-      /* Fully rounded pill shape */
-
       display: inline-flex;
       align-items: center;
       gap: 15px;
-      /* Space between icon, text, and arrow */
-
       box-shadow: 0 4px 10px rgba(92, 23, 42, 0.2);
       transition: all 0.3s ease;
       white-space: nowrap;
@@ -60,7 +49,6 @@
 
     .appointment-btn:hover {
       background-color: #45101f;
-      /* Slightly darker on hover */
       transform: translateY(-2px);
       box-shadow: 0 6px 15px rgba(92, 23, 42, 0.3);
     }
@@ -77,7 +65,6 @@
     .right-arrow {
       font-size: 20px;
       color: #ffffff;
-      /* Rotates the standard right arrow to point top-right */
       transform: rotate(-45deg);
       transition: transform 0.3s ease;
       flex-shrink: 0;
@@ -85,48 +72,6 @@
 
     .appointment-btn:hover .right-arrow {
       transform: rotate(-45deg) translate(2px, -2px);
-      /* Slight movement on hover */
-    }
-
-    @media (max-width: 768px) {
-      .appointment-btn {
-        font-size: 13px;
-        /* අකුරු වල ප්‍රමාණය මඳක් කුඩා කිරීම */
-        padding: 6px 18px 6px 6px;
-        /* Padding එක අඩු කිරීම */
-        gap: 10px;
-        /* අයිකන් සහ අකුරු අතර පරතරය අඩු කිරීම */
-      }
-
-      .svg-icon-wrapper {
-        width: 28px;
-        /* SVG අයිකන් එකේ ප්‍රමාණය කුඩා කිරීම */
-        height: 28px;
-      }
-
-      .right-arrow {
-        font-size: 16px;
-        /* ඊතලයේ ප්‍රමාණය කුඩා කිරීම */
-      }
-    }
-
-    @media (max-width: 576px) {
-      .appointment-btn {
-        font-size: 11px;
-        /* තවත් කුඩා තිර වලදී අකුරු ප්‍රමාණය අඩු කිරීම */
-        padding: 5px 14px 5px 5px;
-        /* Padding එක තවදුරටත් අඩු කිරීම */
-        gap: 8px;
-      }
-
-      .svg-icon-wrapper {
-        width: 24px;
-        height: 24px;
-      }
-
-      .right-arrow {
-        font-size: 14px;
-      }
     }
 
     .hero-title,
@@ -134,21 +79,19 @@
       color: #ffffff !important;
       -webkit-text-stroke: 0px transparent !important;
       text-shadow: none !important;
+      font-size: 6px;
+      font-weight: 800;
+      line-height: 1.4;
     }
 
-    /* Right side arrow icon[cite: 1] */
-
-
-
-
-
-    /* Services Section */
+    /* ==============================================================
+       Services Section Styles
+       ============================================================== */
     .services-section {
       background-color: #f4f8fb;
       padding: 80px 0;
     }
 
-    /* 1. Main Card Design Eka */
     .service-card-new {
       display: block;
       text-decoration: none;
@@ -161,24 +104,19 @@
       border: 1.5px solid transparent;
     }
 
-    /* Hover Effect eka Main card ekata */
     .service-card-new:hover {
       transform: translateY(-8px);
       box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
       border-color: #551228;
       background-color: #551228;
-      /* සුදු ඉර වසා දැමීමට hover වෙද්දී main card එකේ පාටත් වෙනස් කිරීම */
     }
 
-    /* 2. Image eka thiyena box eka */
     .img-wrapper {
       height: 200px;
       overflow: hidden;
       position: relative;
       background-color: #551228;
-      /* පින්තූරය පිටුපස හිස්තැනට අදාළ පාට ලබා දීම */
       transform: translateZ(0);
-      /* Browser rendering issue එක fix කිරීම */
       backface-visibility: hidden;
     }
 
@@ -194,7 +132,6 @@
       z-index: 1;
     }
 
-    /* Dark Overlay */
     .card-overlay {
       position: absolute;
       top: 0;
@@ -202,22 +139,18 @@
       right: 0;
       bottom: 0;
       background: rgba(0, 0, 0, 0.5);
-      /* Dark overlay */
       z-index: 2;
       transition: all 0.3s ease;
     }
 
-    /* Hover Effects for Image and Overlay */
     .service-card-new:hover .card-img-layer {
       transform: scale(1.1);
     }
 
     .service-card-new:hover .card-overlay {
       background: rgba(48, 15, 33, 0.452);
-      /* Mouse eka thiyaddi color eka wenas wenna */
     }
 
-    /* 3. Text eka thiyena box eka (Yata kotasa) */
     .card-text-wrapper {
       padding: 20px 15px;
       text-align: center;
@@ -225,107 +158,63 @@
       position: relative;
       z-index: 3;
       transition: background-color 0.3s ease;
-      /* Background පාට smooth වෙනස් වෙන්න */
     }
 
-    /* Hover වෙද්දී card එකේ යට background එක brown (maroon) පාට වීම */
     .service-card-new:hover .card-text-wrapper {
       background-color: #551228;
     }
 
-    /* Title Text Design Eka */
     .service-title-text {
       color: #4e1535;
-      font-size: 1.1rem;
-      font-weight: 700;
+      font-size: 1.01rem;
+      font-weight: 400;
       margin: 0;
       transition: color 0.3s ease;
     }
 
-    /* Hover වෙද්දී Text එක සුදු පාට වීම */
     .service-card-new:hover .service-title-text {
       color: #ffffff;
     }
 
-
-
-
-
-
-
-
-
-    /* Desktop සඳහා සාමාන්‍ය අකුරු වල ප්‍රමාණය (ඔබට අවශ්‍ය අගයක් දෙන්න) */
-    .hero-title {
-      font-size: 6px;
-      font-weight: 800;
-      line-height: 1.4;
-    }
-
-    /* Mobile Screens (767px ට අඩු) සඳහා අකුරු කුඩා කිරීම */
-    @media (max-width: 767px) {
-      .hero-title {
-        /* Mobile එකේ පළලට හරියන්න අකුරු කුඩා කර ඇත */
-        font-size: 18px;
-
-        /* අකුරු පේළි කැඩීම සම්පූර්ණයෙන්ම නවත්වයි */
-        white-space: nowrap;
-
-        /* පේළි දෙක අතර පරතරය */
-        line-height: 1.5;
-      }
-    }
-
-
-
-
-
-
-    /* Team Section Background */
+    /* ==============================================================
+       Team Section Styles
+       ============================================================== */
     .team-section {
       background-color: #f4f8fb;
-      /* ඔයාගේ site එකේ පවතින background පාට */
+      margin-top: -8%;
     }
 
-    /* Card General Styling */
     .team-card {
       border-radius: 20px;
       background-color: #ffffff;
       transition: transform 0.4s ease, box-shadow 0.4s ease;
     }
 
-    /* Hover Effect for the Card */
     .team-card:hover {
       transform: translateY(-12px);
       box-shadow: 0 20px 40px rgba(27, 38, 65, 0.08) !important;
     }
 
-    /* Circular Image Container with a Gradient Border effect */
     .team-card .img-container {
       width: 160px;
       height: 160px;
       border-radius: 50%;
       padding: 6px;
       background: linear-gradient(135deg, #551228, #e59a67);
-      /* Maroon to Orange gradient */
       transition: transform 0.4s ease;
     }
 
-    /* Make image cover the circle perfectly */
     .team-card .img-container img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       border: 4px solid #ffffff;
-      /* White border inside the gradient */
     }
 
-    /* Slight zoom on image when hovering the card */
     .team-card:hover .img-container {
       transform: scale(1.05);
     }
 
-    /* Custom Button Styling */
     .btn-outline-team {
       color: #551228;
       border: 2px solid #551228;
@@ -342,78 +231,10 @@
       border-color: #551228;
     }
 
-    /* Medium සහ Mobile Devices සඳහා විශේෂිත වෙනස්කම් */
-    /* 1. Large Desktops (ප්‍රධාන/සාමාන්‍ය තිරය සඳහා - Base Style) */
-    .team-section {
-      margin-top: -8%;
-    }
-
-    /* 2. Laptops / Small Desktops (1199px ට අඩු තිර සඳහා) */
-    @media (max-width: 1199px) {
-      .team-section {
-        margin-top: -8%;
-      }
-    }
-
-    /* 3. Tablets - Landscape (991px ට අඩු තිර සඳහා) */
-    @media (max-width: 991px) {
-      .team-section {
-        margin-top: -50%;
-      }
-    }
-
-    /* 4. Tablets - Portrait & Large Mobile Phones (767px ට අඩු තිර සඳහා) */
-    @media (max-width: 767px) {
-      .team-section {
-        margin-top: -45%;
-      }
-    }
-
-    /* 5. Small Mobile Phones (575px ට අඩු තිර සඳහා) */
-    @media (max-width: 575px) {
-      .team-section {
-        margin-top: -40%;
-      }
-    }
-
-
-
-
-
-
-
-    @media (max-width: 991px) {
-
-      /* පසුබිම් රූපය සහිත ප්‍රධාන කොටසේ ඉහළ හිඩැස 20px දක්වා ඉතා කුඩා කිරීම */
-      .quote-area .quote-wrap {
-        padding-top: 20px !important;
-        padding-bottom: 30px !important;
-      }
-
-      /* මාතෘකාව (Need help?...) ඉහළින් ඇති සියලුම ස්වභාවික හිඩැස් මැකීම */
-      .quote-area .quote-content,
-      .quote-area .site-heading,
-      .quote-area .site-title {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-      }
-
-      /* Contact Box එකට යටින් ඇති විශාල පරතරය අඩු කිරීම */
-      .quote-contact.mb-100 {
-        margin-bottom: 30px !important;
-      }
-    }
-
-
-
-
-
-    /* Card chi fix height ani border radius set karne */
     .team-item {
       position: relative;
       overflow: hidden;
       height: 380px;
-      /* Saglya cards chi height saman thevnyasathi */
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
@@ -429,14 +250,12 @@
       object-fit: cover;
     }
 
-    /* Hover karnya aadhi chi overlay box design (Choti ani saman height) */
     .team-content {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
       height: 75px;
-      /* Hi height saglya cards sathi saman ani choti asel */
       background-color: rgba(255, 255, 255, 0.95);
       padding: 22px 15px;
       transition: all 0.4s ease-in-out;
@@ -445,14 +264,12 @@
       border-top-right-radius: 12px;
     }
 
-    /* Hover kelyavar box purna card var (100%) expand honar */
     .team-item:hover .team-content {
       height: 100%;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
     }
 
-    /* Heading la madhobi (center) thevne */
     .team-content h4 {
       margin: 0 0 20px 0;
       text-align: center;
@@ -464,63 +281,195 @@
       text-decoration: none;
     }
 
-    /* Hover karnya aadhi paragraph text hide thevne */
     .team-social {
       opacity: 0;
       visibility: hidden;
       transform: translateY(20px);
       transition: all 0.4s ease-in-out;
-
-      /* Text එක සම්පූර්ණයෙන්ම Justify කිරීම */
       text-align: justify !important;
-
-      /* අකුරු පැහැදිලිව පෙනීමට */
       font-size: 14px;
       line-height: 1.6;
       color: #444;
     }
 
-    /* Hover kelyavar paragraph text smooth animation sahit disne */
     .team-item:hover .team-social {
       opacity: 1;
       visibility: visible;
       transform: translateY(0);
     }
 
+    /* ==============================================================
+       Responsive Media Queries
+       ============================================================== */
 
-@media only screen and (max-width: 767px) {
-    .hero-btn {
-        display: flex;
-        flex-direction: column; 
-        gap: 15px; 
-        align-items: flex-start; 
-        
+    @media (max-width: 1199px) {
+      .team-section {
+        margin-top: -8%;
+      }
     }
 
-    /* Button දෙකේම size එක සමාන කරන්න */
-    .hero-btn .appointment-btn,
-    .hero-btn .theme-btn2 {
-        white-space: nowrap; 
-        width: max-content; 
+    @media (max-width: 991px) {
+      .team-section {
+        margin-top: -50%;
+      }
+
+      .quote-area .quote-wrap {
+        padding-top: 20px !important;
+        padding-bottom: 30px !important;
+      }
+
+      .quote-area .quote-content,
+      .quote-area .site-heading,
+      .quote-area .site-title {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+      }
+
+      .quote-contact.mb-100 {
+        margin-bottom: 30px !important;
+      }
+    }
+
+    /* Mobile Responsive Area */
+    @media only screen and (max-width: 767px) {
+      .team-section {
+        margin-top: -45%;
+      }
+
+      .hero-title {
+        font-size: 18px;
+        white-space: nowrap;
+        line-height: 1.5;
+      }
+
+      /* Hero Buttons */
+      .hero-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+      }
+
+      .hero-btn .appointment-btn,
+      .hero-btn .theme-btn2 {
+        white-space: nowrap;
+        width: max-content;
         display: inline-flex !important;
         align-items: center;
         justify-content: center;
-        padding: 15px 35px !important; /* මෙතනින් button එකේ උස සහ පළල හැදෙනවා */
-        min-height: 55px !important; /* යට button එකේ size එකට ගැලපෙන්න */
-        border-radius: 50px !important; /* ලස්සන රවුම් හැඩයක් එන්න (Pill shape) */
-        font-size: 16px !important; 
+        padding: 15px 35px !important;
+        min-height: 55px !important;
+        border-radius: 50px !important;
+        font-size: 16px !important;
         font-weight: 600 !important;
-    }
-    
-    /* Appointment button එකේ තියෙන SVG icon එක හරියට align වෙන්න */
-    .hero-btn .appointment-btn .svg-icon-wrapper {
+      }
+
+      .hero-btn .appointment-btn .svg-icon-wrapper {
         width: 24px;
         height: 24px;
         margin-right: 12px;
         display: flex;
         align-items: center;
+      }
+
+      /* About Section Appointment Button (Left Aligned Fixes) */
+      .about-btn-appoiment {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+
+      .about-btn-appoiment .appointment-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        padding: 12px 20px 12px 10px !important;
+        /* වම් පැත්තේ padding එක පොඩ්ඩක් අඩු කළා අයිකන් එකට ඉඩ දෙන්න */
+        border-radius: 50px !important;
+        box-sizing: border-box !important;
+        white-space: normal !important;
+        text-align: left !important;
+        line-height: 1.3 !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        gap: 12px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        /* අමතර ආරක්ෂාවක් විදිහට බොත්තමෙන් එළියට පනින දේවල් කපලා දාන්න */
+      }
+
+      /* අයිකන් එක අනිවාර්යයෙන්ම බොත්තම ඇතුළට ගැනීම */
+      .about-btn-appoiment .appointment-btn .svg-icon-wrapper {
+        position: static !important;
+        /* Theme එකෙන් absolute කරලා තිබ්බොත් ඒක අයින් කරන්න */
+        left: 0 !important;
+        top: 0 !important;
+        transform: translateX(0) !important;
+        /* Theme එකෙන් අයිකන් එක එළියට ඇදලා තියෙනවා නම් ඒක අයින් කරන්න */
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-width: 24px !important;
+        width: 24px !important;
+        height: 24px !important;
+        flex-shrink: 0 !important;
+      }
+
+      .about-btn-appoiment .appointment-btn .right-arrow {
+        position: relative !important;
+        right: auto !important;
+        transform: none !important;
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+      }
     }
+
+    @media (max-width: 575px) {
+      .team-section {
+        margin-top: -40%;
+      }
+
+      .appointment-btn {
+        font-size: 11px;
+        padding: 5px 14px 5px 5px;
+        gap: 8px;
+      }
+
+      .svg-icon-wrapper {
+        width: 24px;
+        height: 24px;
+      }
+
+      .right-arrow {
+        font-size: 14px;
+      }
+    }
+
+
+/* Desktop සඳහා සාමාන්‍ය margin එක (-5%) */
+.team-area {
+  margin-top: -5%;
 }
+
+/* Medium Devices (Tablets, Laptops කුඩා තිර - 991px ට අඩු) සඳහා */
+@media (max-width: 991px) {
+  .team-area {
+    margin-top: -25%; /* පරතරය ඕනෙම නම් මෙතනට 10px වගේ අගයක් දෙන්න පුළුවන් */
+  }
+}
+
+/* Mobile Devices (767px ට අඩු) සඳහා */
+@media (max-width: 767px) {
+  .team-area {
+    margin-top: -25%; 
+  }
+}
+
 
   </style>
 
@@ -538,35 +487,24 @@
 
   <!-- header area -->
   <header class="header hd-1">
-    <!-- header top -->
-    <!-- d-none d-lg-block class deka methanata add kala -->
-    <div class="header-top ">
+    <div class="header-top">
       <div class="container px-lg-0">
         <div class="header-top-wrap">
           <div class="header-top-left">
-            <div class="header-top-social">
-
-            </div>
+            <div class="header-top-social"></div>
           </div>
           <div class="header-top-left">
             <div class="header-top-list">
               <ul>
-                <li>
-
-                </li>
-                <li>
-
-                </li>
-                <li>
-
-                </li>
+                <li></li>
+                <li></li>
+                <li></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- header top end -->
 
     <!-- navbar -->
     <div class="main-navigation">
@@ -581,9 +519,7 @@
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
               aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-              <span></span>
-              <span></span>
-              <span></span>
+              <span></span><span></span><span></span>
             </button>
           </div>
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
@@ -597,27 +533,17 @@
             </div>
             <div class="offcanvas-body gap-xl-4">
               <ul class="navbar-nav justify-content-end gap-1 flex-grow-1">
-                <li class="nav-item dropdown">
-                  <a class="nav-link  active" href="#" data-bs-toggle="dropdown">Home</a>
-
-
+                <li class="nav-item dropdown"><a class="nav-link active" href="#" data-bs-toggle="dropdown">Home</a>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Our Team</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">Services</a></li>
-
                 <li class="nav-item"><a class="nav-link" href="about.html">Billing Policy</a></li>
-
                 <li class="nav-item"><a class="nav-link" href="#">Skin</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Telehealth</a></li>
-
                 <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
-
-
               </ul>
-              <!-- nav-right -->
               <div class="nav-right">
-
                 <div class="nav-btn">
                   <a href="#" class="theme-btn">Appointment<i class="fas fa-arrow-circle-right"></i></a>
                 </div>
@@ -627,73 +553,43 @@
         </div>
       </nav>
     </div>
-    <!-- navbar end-->
   </header>
   <!-- header area end -->
-
-  <!-- popup search -->
-  <!-- <div class="search-popup">
-      <button class="close-search"><span class="far fa-times"></span></button>
-      <form action="#">
-        <div class="form-group">
-          <input type="search" name="search-field" class="form-control" placeholder="Search Here..." required />
-          <button type="submit"><i class="far fa-search"></i></button>
-        </div>
-      </form>
-    </div> -->
-  <!-- popup search end -->
 
   <div id="smooth-wrapper">
     <div id="smooth-content">
       <main class="main">
+
+        <!-- Hero Section -->
         <div class="hero-section hs-1" style="height: 750px; min-height: auto; overflow: hidden;">
           <div class="hero-single" style="height: 100%;">
             <div class="hero-bg-img" data-speed="clamp(0.5)"
-              style="background-image: url(assets/img/hero/slide-4.png); height: 100%;">
-            </div>
+              style="background-image: url(assets/img/hero/slide-4.png); height: 100%;"></div>
             <div class="container">
               <div class="row">
                 <div class="col-md-12 col-lg-7">
-
-                  <!-- Hero එකේ උස අඩු කරපු නිසා top එකේ අගය -100px විදියට වෙනස් කළා (අවශ්‍ය නම් මේකත් වෙනස් කරගන්න පුළුවන්) -->
                   <div class="hero-content" style="position: relative; top: -100px; z-index: 2;">
-
-                    <!-- <h4 class="hero-sub-title wow fadeInUp" data-wow-delay=".2s"><i class="far fa-tooth"></i> Welcome To
-                      SAPPHIRE!</h4> -->
-
                     <h3 class="hero-title ani-text-3 text-justify">
                       TRUSTED QUALITY CARE <br>
                       BECAUSE YOUR HEALTH MATTERS
                     </h3>
-                    <p class="wow fadeInUp text-center text-md-start" data-wow-delay=".4s">
-
-                    </p>
                     <div class="hero-info wow fadeInUp" data-wow-delay=".6s">
                       <ul>
                         <li><img src="assets/img/icon/check.svg" alt="" /> We accept walk-in appointments when available
                         </li>
-
                       </ul>
                     </div>
                     <div class="hero-btn wow fadeInUp" data-wow-delay=".8s">
                       <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
                         class="appointment-btn">
-
-                        <!-- Inline SVG Medical Icon -->
                         <div class="svg-icon-wrapper">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-                            <!-- White background circle with dark green border -->
                             <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#4a7c38" stroke-width="6" />
-
-                            <!-- Light green cross with dark green border -->
                             <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z" fill="#83ba48"
                               stroke="#4a7c38" stroke-width="5" stroke-linejoin="round" />
                           </svg>
                         </div>
-
                         BOOK AN APPOINTMENT
-
-                        <!-- Font Awesome Right Arrow -->
                         <i class="fas fa-arrow-circle-right right-arrow"></i>
                       </a>
                       <a href="#" class="theme-btn2">READ MORE<i class="fas fa-arrow-circle-right"></i></a>
@@ -704,25 +600,16 @@
             </div>
           </div>
         </div>
-        <!-- hero area end -->
-        <!-- hero area end -->
-        <!-- about area -->
-        <!-- about area -->
 
-
+        <!-- About Area -->
         <div class="about-area py-120" style="background-color: #fffcf8;">
           <div class="container">
             <div class="row align-items-center">
-
-              <!-- Left Side: Single Combined Image -->
               <div class="col-lg-6">
                 <div class="about-image-wrapper wow fadeInLeft" data-wow-delay=".2s">
-                  <!-- Tumchya image cha path -->
                   <img src="assets/img/service/aboutus.jpg" alt="Elderly Care" class="about-single-img img-fluid" />
                 </div>
               </div>
-
-              <!-- Right Side: Content -->
               <div class="col-lg-6">
                 <div class="about-right ps-lg-4">
                   <div class="site-heading mb-3">
@@ -730,8 +617,6 @@
                       Welcome to Sapphire General Practice
                     </h3>
                   </div>
-
-                  <!-- Text Justified -->
                   <p class="wow fadeInUp about-text text-justify" data-wow-delay=".2s"
                     style="text-align: justify; line-height: 1.7; color: #4a5568; margin-bottom: 15px;">
                     At Renwick GP, our team has provided care across the NSW East Coast for the past decade and our
@@ -739,14 +624,12 @@
                     2 GP Fellows who have a special interest in a range of concerns including Chronic Care Management,
                     Women’s Health, Skin Cancer Management, Childrens Health and Mental Health.
                   </p>
-
                   <p class="wow fadeInUp" data-wow-delay=".3s"
                     style="text-align: justify; line-height: 1.7; color: #4a5568; margin-bottom: 30px;">
                     Sapphire General Practice is a MIXED BILLING GP in Wyoming NSW with Bulk Billing options available
                     for children, mental health appointments, some pensioners and other patients to the discretion of
                     the doctor. Non-rebatable fees apply for all clinical procedures.
                   </p>
-
                   <div class="about-content wow fadeInUp" data-wow-delay=".4s">
                     <div class="row">
                       <div class="col-lg-6">
@@ -772,145 +655,101 @@
                         </div>
                       </div>
                     </div>
-
-                    <div class="wow fadeInUp " style="margin-top: -20px;" data-wow-delay=".5s">
+                    <div class="wow fadeInUp" style="margin-top: -20px;" data-wow-delay=".5s">
                       <a href="about.html" class="theme-btn">READ MORE<i class="fas fa-arrow-circle-right ms-2"></i></a>
                     </div>
                   </div>
-
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-        <!-- about area end -->
-
-        <!-- about area end -->
-        <!-- hero area end -->
-
-        <!-- about area -->
-
-        <!-- about area end -->
-        <!-- service area -->
-
-
-        <div class="team-area " style="margin-top:-5%;">
-          <div class="container">
-            <!-- <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="site-heading text-center">
-
-
-                </div>
-              </div>
-            </div> -->
-            <div class="row g-4">
-              <div class="col-md-6 col-lg-3">
-                <div class="team-item wow fadeInUp" data-wow-delay=".2s">
-                  <div class="team-img">
-                    <div class="ani-img">
-                      <img src="assets/img/team/conveniently-located.jpg" alt="thumb" />
-                    </div>
-                  </div>
-                  <div class="team-content">
-                    <h4><a href="#">Conveniently Located </a></h4>
-
-                    <div class="team-social text-justify text-start">
-                      <span>Sapphire GP is conveniently located on Sapphire Street in Wyoming. We proudly serve
-                        individuals and families across Wyoming and nearby suburbs including Gosford, Woy Woy, Narara,
-                        Lisarow, and Tumbi Umbi. With local parking and easy access, visiting your trusted local doctors
-                        is simple and stress-free..</span>
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <div class="team-item wow fadeInUp" data-wow-delay=".4s">
-                  <div class="team-img">
-                    <div class="ani-img">
-                      <img src="assets/img/team/opening-hours.jpg" alt="thumb" />
-                    </div>
-                  </div>
-                  <div class="team-content">
-                    <h4><a href="#">Opening Hours</a></h4>
-
-                    <div class="team-social text-justify text-start">
-                      <span>The clinic is open Monday to Friday from 9:00 AM to 5:00 PM. We are closed on weekends and
-                        Public Holidays. Our friendly team provides professional care in a warm, welcoming environment —
-                        ensuring your health needs are met during the week with compassion, attention, and commitment to
-                        your wellbeing.</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <div class="team-item wow fadeInUp" data-wow-delay=".6s">
-                  <div class="team-img">
-                    <div class="ani-img">
-                      <img src="assets/img/team/how-to-book.jpg" alt="thumb" />
-                    </div>
-                  </div>
-                  <div class="team-content">
-                    <h4><a href="#">How to Book</a></h4>
-
-                    <div class="team-social text-justify text-start">
-                      <span>Appointments can be booked by calling (02) 4341 7722 or by clicking the “Book Appointment”
-                        button on our website. Online bookings are made through HotDoc. We offer flexible options so you
-                        can schedule your visit easily, whether by phone or online—whatever works best for your time and
-                        comfort.</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-3">
-                <div class="team-item wow fadeInUp" data-wow-delay=".8s">
-                  <div class="team-img">
-                    <div class="ani-img">
-                      <img src="assets/img/team/afterhourscare.jpg" alt="thumb" />
-                    </div>
-                  </div>
-                  <div class="team-content">
-                    <h4><a href="#">After Hours Care</a></h4>
-
-                    <div class="team-social about-text text-justify text-start">
-                      <span>If you are experiencing a medical emergency, please call 000 immediately. For urgent care
-                        outside of normal clinic hours, contact the National Home Doctor Service on 13SICK (13 7425).
-                        After-hours doctors are available to visit your home and provide medical care when your regular
-                        GP clinic is closed.</span>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-
-        <!-- service area end -->
-
-        <!-- 
-sesssss -->
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!-- Info Grid Area -->
+     <div class="team-area"> <!-- මෙතන තිබුණු style එක අයින් කළා -->
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="team-item wow fadeInUp" data-wow-delay=".2s">
+          <div class="team-img">
+            <div class="ani-img">
+              <img src="assets/img/team/conveniently-located.jpg" alt="thumb" />
+            </div>
+          </div>
+          <div class="team-content">
+            <h4><a href="#">Conveniently Located</a></h4>
+            <div class="team-social text-justify text-start">
+              <span>Sapphire GP is conveniently located on Sapphire Street in Wyoming. We proudly serve
+                individuals and families across Wyoming and nearby suburbs including Gosford, Woy Woy, Narara,
+                Lisarow, and Tumbi Umbi. With local parking and easy access, visiting your trusted local doctors
+                is simple and stress-free.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="team-item wow fadeInUp" data-wow-delay=".4s">
+          <div class="team-img">
+            <div class="ani-img">
+              <img src="assets/img/team/opening-hours.jpg" alt="thumb" />
+            </div>
+          </div>
+          <div class="team-content">
+            <h4><a href="#">Opening Hours</a></h4>
+            <div class="team-social text-justify text-start">
+              <span>The clinic is open Monday to Friday from 9:00 AM to 5:00 PM. We are closed on weekends and
+                Public Holidays. Our friendly team provides professional care in a warm, welcoming environment —
+                ensuring your health needs are met during the week with compassion, attention, and commitment to
+                your wellbeing.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="team-item wow fadeInUp" data-wow-delay=".6s">
+          <div class="team-img">
+            <div class="ani-img">
+              <img src="assets/img/team/how-to-book.jpg" alt="thumb" />
+            </div>
+          </div>
+          <div class="team-content">
+            <h4><a href="#">How to Book</a></h4>
+            <div class="team-social text-justify text-start">
+              <span>Appointments can be booked by calling (02) 4341 7722 or by clicking the “Book Appointment”
+                button on our website. Online bookings are made through HotDoc. We offer flexible options so you
+                can schedule your visit easily, whether by phone or online—whatever works best for your time and
+                comfort.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="team-item wow fadeInUp" data-wow-delay=".8s">
+          <div class="team-img">
+            <div class="ani-img">
+              <img src="assets/img/team/afterhourscare.jpg" alt="thumb" />
+            </div>
+          </div>
+          <div class="team-content">
+            <h4><a href="#">After Hours Care</a></h4>
+            <div class="team-social about-text text-justify text-start">
+              <span>If you are experiencing a medical emergency, please call 000 immediately. For urgent care
+                outside of normal clinic hours, contact the National Home Doctor Service on 13SICK (13 7425).
+                After-hours doctors are available to visit your home and provide medical care when your regular
+                GP clinic is closed.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        <!-- Services Section -->
         <section class="services-section" style="margin-top: -1%;">
           <div class="container">
-
             <div class="text-center mb-5">
               <h2 class="site-title-tagline wow fadeInUp d-inline-block mb-4"
-                style="color: #551228; font-weight: 200; font-size: 2.2rem; ">
+                style="color: #551228; font-weight: 200; font-size: 2.2rem;">
                 <i class="far fa-butterfly me-0"></i>Health & Medical Support
               </h2>
               <h3 class="site-title ani-text-1"
@@ -920,86 +759,68 @@ sesssss -->
               </h3>
             </div>
 
-            <!-- Services Grid -->
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
-
-              <!-- Card 1 -->
+              <!-- Service Cards -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('assets/img/service/1-GENERAL-HEALTH.jpg');">
-                    </div>
-                    <!-- Overlay eka methanata add kala -->
+                      style="background-image: url('assets/img/service/1-GENERAL-HEALTH.jpg');"></div>
                     <div class="card-overlay"></div>
                   </div>
                   <div class="card-text-wrapper">
-                    <h4 class="service-title-text ">General Health</h4>
+                    <h4 class="service-title-text text-uppercase">General Health</h4>
                   </div>
                 </a>
               </div>
-
-              <!-- Card 2 -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('assets/img/service/2-CHILDREN\'S-CARE.jpg');">
-                    </div>
+                      style="background-image: url('assets/img/service/2-CHILDREN%27S-CARE.jpg');"></div>
                     <div class="card-overlay"></div>
                   </div>
                   <div class="card-text-wrapper">
-                    <h4 class="service-title-text">Children's Care</h4>
+                    <h4 class="service-title-text text-uppercase">Children's Care</h4>
                   </div>
                 </a>
               </div>
-
-              <!-- Card 3 -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('assets/img/service/3-WOMEN\'S-HEALTH.jpg');">
-                    </div>
+                      style="background-image: url('assets/img/service/3-WOMEN%27S-HEALTH.jpg');"></div>
                     <div class="card-overlay"></div>
                   </div>
                   <div class="card-text-wrapper">
-                    <h4 class="service-title-text">Women's Health</h4>
+                    <h4 class="service-title-text text-uppercase">Women's Health</h4>
                   </div>
                 </a>
               </div>
-
-              <!-- Card 4 -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('assets/img/service/4-MEN\'S-HEALTH.jpg');">
-                    </div>
+                      style="background-image: url('assets/img/service/4-MEN%27S-HEALTH.jpg');"></div>
                     <div class="card-overlay"></div>
                   </div>
                   <div class="card-text-wrapper">
-                    <h4 class="service-title-text">Men's Health</h4>
+                    <h4 class="service-title-text text-uppercase">Men's Health</h4>
                   </div>
                 </a>
               </div>
-
-              <!-- Card 5 -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('assets/img/service/5-MENTAL-HEALTH.jpg');">
-                    </div>
+                      style="background-image: url('assets/img/service/5-MENTAL-HEALTH.jpg');"></div>
                     <div class="card-overlay"></div>
                   </div>
                   <div class="card-text-wrapper">
-                    <h4 class="service-title-text">Mental Health</h4>
+                    <h4 class="service-title-text text-uppercase">Mental Health</h4>
                   </div>
                 </a>
               </div>
-
-              <!-- Card 6 -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
@@ -1008,27 +829,22 @@ sesssss -->
                     <div class="card-overlay"></div>
                   </div>
                   <div class="card-text-wrapper">
-                    <h4 class="service-title-text">Immunisation</h4>
+                    <h4 class="service-title-text text-uppercase">Immunisation</h4>
                   </div>
                 </a>
               </div>
-
-              <!-- Card 7 -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('assets/img/service/7-TRAVEL-MEDICINE.jpg');">
-                    </div>
+                      style="background-image: url('assets/img/service/7-TRAVEL-MEDICINE.jpg');"></div>
                     <div class="card-overlay"></div>
                   </div>
                   <div class="card-text-wrapper">
-                    <h4 class="service-title-text">Travel Medicine</h4>
+                    <h4 class="service-title-text text-uppercase">Travel Medicine</h4>
                   </div>
                 </a>
               </div>
-
-              <!-- Card 8 -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
@@ -1037,12 +853,10 @@ sesssss -->
                     <div class="card-overlay"></div>
                   </div>
                   <div class="card-text-wrapper">
-                    <h4 class="service-title-text">Care Plans</h4>
+                    <h4 class="service-title-text text-uppercase">Care Plans</h4>
                   </div>
                 </a>
               </div>
-
-              <!-- Card 9 -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
@@ -1050,43 +864,35 @@ sesssss -->
                     </div>
                     <div class="card-overlay"></div>
                   </div>
-                  <div class="card-text-wrapper ">
-                    <h4 class="service-title-text">Skin Checks</h4>
+                  <div class="card-text-wrapper">
+                    <h4 class="service-title-text text-uppercase">Skin Checks</h4>
                   </div>
                 </a>
               </div>
-
-              <!-- Card 10 -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('assets/img/service/10-SKIN-CANCER-MANAGEMENT.jpg');">
-                    </div>
+                      style="background-image: url('assets/img/service/10-SKIN-CANCER-MANAGEMENT.jpg');"></div>
                     <div class="card-overlay"></div>
                   </div>
                   <div class="card-text-wrapper">
-                    <h4 class="service-title-text">Skin Cancer<br>Management</h4>
+                    <h4 class="service-title-text text-uppercase">Skin Cancer<br>Management</h4>
                   </div>
                 </a>
               </div>
-
-              <!-- Card 11 -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('assets/img/service/11-MINOR-PROCEDURES.jpg');">
-                    </div>
+                      style="background-image: url('assets/img/service/11-MINOR-PROCEDURES.jpg');"></div>
                     <div class="card-overlay"></div>
                   </div>
                   <div class="card-text-wrapper">
-                    <h4 class="service-title-text">Minor Procedures</h4>
+                    <h4 class="service-title-text text-uppercase">Minor Procedures</h4>
                   </div>
                 </a>
               </div>
-
-              <!-- Card 12 -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
@@ -1095,27 +901,22 @@ sesssss -->
                     <div class="card-overlay"></div>
                   </div>
                   <div class="card-text-wrapper">
-                    <h4 class="service-title-text">Dermatology</h4>
+                    <h4 class="service-title-text text-uppercase">Dermatology</h4>
                   </div>
                 </a>
               </div>
-
-              <!-- Card 13 -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('assets/img/service/13-PRE-EMPLOYMENT.jpg');">
-                    </div>
+                      style="background-image: url('assets/img/service/13-PRE-EMPLOYMENT.jpg');"></div>
                     <div class="card-overlay"></div>
                   </div>
                   <div class="card-text-wrapper">
-                    <h4 class="service-title-text">Pre-Employment</h4>
+                    <h4 class="service-title-text text-uppercase">Pre-Employment</h4>
                   </div>
                 </a>
               </div>
-
-              <!-- Card 14 -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
@@ -1128,101 +929,67 @@ sesssss -->
                   </div>
                 </a>
               </div>
-
-              <!-- Card 15 -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('assets/img/service/15-SEXUAL-HEALTH.jpg');">
-                    </div>
+                      style="background-image: url('assets/img/service/15-SEXUAL-HEALTH.jpg');"></div>
                     <div class="card-overlay"></div>
                   </div>
                   <div class="card-text-wrapper">
-                    <h4 class="service-title-text">Sexual Health</h4>
+                    <h4 class="service-title-text text-uppercase">Sexual Health</h4>
                   </div>
                 </a>
               </div>
-
-              <!-- Card 16 -->
               <div class="col">
                 <a href="#" class="service-card-new">
                   <div class="img-wrapper">
                     <div class="card-img-layer"
-                      style="background-image: url('assets/img/service/16\ CHRONIC-DISEASE-MANAGEMENT.jpg');">
-                    </div>
+                      style="background-image: url('assets/img/service/16%20CHRONIC-DISEASE-MANAGEMENT.jpg');"></div>
                     <div class="card-overlay"></div>
                   </div>
                   <div class="card-text-wrapper">
-                    <h4 class="service-title-text">Chronic Disease<br>Management</h4>
+                    <h4 class="service-title-text text-uppercase">Chronic Disease <br> Management</h4>
                   </div>
                 </a>
               </div>
-
             </div>
           </div>
         </section>
 
-
-        <!-- about area -->
-
-        <!-- about area end -->
-
-
+        <!-- About Area 2 -->
         <div class="about-area2 mt-60 py-50">
           <div class="container">
             <div class="row align-items-center g-5">
-
-              <!-- Left Side: Images, Call Box & Button -->
               <div class="col-lg-6">
                 <div class="row g-3">
-
-                  <!-- Column 1: Image 1 & Book Appointment Button -->
-                  <div class="col-6 d-flex flex-column gap-3 ">
+                  <div class="col-6 d-flex flex-column gap-3">
                     <img src="assets/img/about/4.png" alt="Doctor and Patient"
                       class="img-fluid rounded-4 w-100 shadow-sm"
                       style="object-fit: cover; flex-grow: 1; min-height: 100px;">
-
-                    <!-- Custom Button Box (Replacing Flags) -->
-                    <div class="d-flex justify-content-center align-items-center "
+                    <div class="d-flex justify-content-center align-items-center"
                       style="background-color: #ffffff; border: 1px solid #ffffff; padding: 15px 8px; min-height: 150px;">
-
-
-                      <div class="hero-btn wow fadeInUp" data-wow-delay=".8s">
+                      <div class="about-btn-appoiment wow fadeInUp" data-wow-delay=".8s">
                         <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
                           class="appointment-btn">
-
-                          <!-- Inline SVG Medical Icon -->
                           <div class="svg-icon-wrapper">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
-                              <!-- White background circle with dark green border -->
                               <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#4a7c38" stroke-width="6" />
-
-                              <!-- Light green cross with dark green border -->
                               <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z" fill="#83ba48"
                                 stroke="#4a7c38" stroke-width="5" stroke-linejoin="round" />
                             </svg>
                           </div>
-
                           BOOK AN APPOINTMENT
-
-                          <!-- Font Awesome Right Arrow -->
                           <i class="fas fa-arrow-circle-right right-arrow"></i>
                         </a>
-
                       </div>
-
                     </div>
                   </div>
-
-                  <!-- Column 2: Call Box & Image 2 -->
                   <div class="col-6 d-flex flex-column gap-3">
-
-                    <!-- Call Now Box -->
                     <div
                       class="rounded-4 d-flex flex-column align-items-center justify-content-center shadow-sm text-center"
                       style="background-color: #eef5f4; padding: 20px 10px; min-height: 150px;">
-                      <div class=" d-flex justify-content-center align-items-center mb-2"
+                      <div class="d-flex justify-content-center align-items-center mb-2"
                         style="width: 45px; height: 45px; background-color: #1b2641; color: white; font-size: 18px;">
                         <i class="fas fa-phone-alt"></i>
                       </div>
@@ -1230,39 +997,25 @@ sesssss -->
                       <a href="tel:0275005858" class="text-decoration-none"
                         style="font-size: 15px; font-weight: 800; color: #111;">02 7500 5858</a>
                     </div>
-
-                    <!-- Image 2 -->
-                    <img src="assets/img/about/aboriginal-&-Torres2.jpg" alt="Patient"
-                      class="img-fluid rounded-4 w-100 "
+                    <img src="assets/img/about/aboriginal-&-Torres2.jpg" alt="Patient" class="img-fluid rounded-4 w-100"
                       style="object-fit: cover; flex-grow: 1; min-height: 200px;">
                   </div>
-
                 </div>
               </div>
-
-              <!-- Right Side: Text Content -->
-              <div class="col-lg-6">
+              <div class="col-lg-6 mb-10">
                 <div class="about-right">
-
-                  <!-- Title -->
                   <h3 class="fw-bold mb-4" style="color: #111; font-size: 28px;">Aboriginal & Torres Strait Islander
                     Health</h3>
-
-                  <!-- Paragraph 1 -->
                   <p style="text-align: justify; line-height: 1.7; color: #555; font-size: 15px;">
                     Our dedicated health team is committed to providing safe health checks and ongoing support for
                     Aboriginal and Torres Strait Islander people of all ages. We aim to ensure everyone receives the
                     care they need, respecting their unique cultural backgrounds. Our goal is to create a welcoming
                     environment where community members feel valued as they access essential health services.
                   </p>
-
-                  <!-- Paragraph 2 -->
                   <p style="text-align: justify; line-height: 1.7; color: #555; font-size: 15px;">
                     We acknowledge the Aboriginal and Torres Strait Islander Traditional Custodians of the land on which
                     we work, live and dream. We pay respect to Elders past, present and emerging.
                   </p>
-
-                  <!-- Bullet List -->
                   <ul style="list-style: none; padding-left: 0; margin-top: 20px;">
                     <li style="margin-bottom: 12px; color: #555; font-size: 15px; display: flex; align-items: center;">
                       <i class="fas fa-angle-double-right me-3" style="color: #e59a67; font-size: 14px;"></i>Annual
@@ -1285,8 +1038,6 @@ sesssss -->
                       visits when needed
                     </li>
                   </ul>
-
-                  <!-- Flags Container -->
                   <div class="d-flex align-items-center gap-3 mt-4">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Gay_Pride_Flag.svg" alt="Pride Flag"
                       class="rounded shadow-sm" style="width: 45px; height: 30px; object-fit: cover;" />
@@ -1298,50 +1049,31 @@ sesssss -->
                       alt="Torres Strait Islander Flag" class="rounded shadow-sm"
                       style="width: 45px; height: 30px; object-fit: cover;" />
                   </div>
-
                 </div>
               </div>
-
             </div>
           </div>
         </div>
 
-
-
-        <!-- process area -->
+        <!-- App Download Area -->
         <div class="app-download-area py-5 mt-60" style="background-color: #f8f9fa;">
           <div class="container">
-            <!-- Dark Blue Background Container -->
-
             <div class="shadow-lg p-4 p-md-5" style="background-color: #111a3a; border-radius: 20px;">
-
-
               <div class="row align-items-center justify-content-between g-4">
-
-                <!-- Left Side: Mobile Phone Image -->
                 <div class="col-lg-5 text-center">
-                  <!-- Phone 2කම තියෙන තනි පින්තූරය මෙහි දමන්න -->
                   <img src="assets/img/about/mobile.png" alt="HotDoc App Phones" class="img-fluid"
                     style="max-height: 720px; object-fit: contain;" />
                 </div>
-
-                <!-- Right Side: White Content Card -->
                 <div class="col-lg-7 col-xl-6">
-
                   <div class="bg-white shadow custom-margin-lg" style="border-radius: 15px; padding: 40px;">
-
                     <h3 class="mb-4" style="color: #d81b60; font-weight: 600; font-size: 1.6rem; line-height: 1.4;">
                       Use App To Get Access To Exceptional Healthcare, At Your Fingertips.
                     </h3>
-
-                    <!-- Text Justified as requested -->
                     <p class="mb-4"
                       style="color: #203c71; font-size: 1.05rem; line-height: 1.7; font-weight: 500; text-align: justify;">
                       We are please to advise that you can now self check in for your appointments via the HotDoc app.
                       Simply go to Apple App Store or the Google Play store and down load the HotDoc app.
                     </p>
-
-                    <!-- App Store Buttons -->
                     <div class="d-flex flex-wrap gap-3 mt-4">
                       <a href="#" class="text-decoration-none transition-hover">
                         <img
@@ -1353,31 +1085,16 @@ sesssss -->
                           alt="Get it on Google Play" style="height: 45px;" />
                       </a>
                     </div>
-
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
-        <!-- process area end -->
 
-
-        <!-- team-area end -->
-
-
-
-
-
-
-
-
-        <!-- testimonial-area -->
+        <!-- Testimonial Area -->
         <div class="testimonial-area pb-120 mt-100">
           <div class="container">
-
-            <!-- Heading -->
             <div class="row">
               <div class="col-lg-8 mx-auto">
                 <div class="site-heading text-center mb-5">
@@ -1386,8 +1103,8 @@ sesssss -->
                     <i class="far fa-comment-dots me-2"></i> Testimonials
                   </span>
                   <h3 class="site-title ani-text-1 mt-2">Hear from our Patients</h3>
-                  <span class=" wow fadeInUp mt-4"
-                    style="color: #020202; text-transform: uppercase; letter-spacing: 1px; text-align: justify; display: block; ">
+                  <span class="wow fadeInUp mt-4"
+                    style="color: #020202; text-transform: uppercase; letter-spacing: 1px; text-align: justify; display: block;">
                     To improve our healthcare services, we prioritize listening to our patients. By gaining insights
                     into their needs and expectations, we reinforce our commitment to exceptional care. Patient feedback
                     is vital in shaping our services, allowing us to better tailor them to individual circumstances and
@@ -1396,15 +1113,9 @@ sesssss -->
                 </div>
               </div>
             </div>
-
-            <!-- Testimonial Slider -->
             <div class="testimonial-slider owl-carousel owl-theme" style="margin-top: -30px;">
-
-              <!-- Testimonial Item 1 -->
               <div class="testimonial-item p-3">
                 <div class="content p-4 bg-white shadow" style="border-radius: 15px;">
-
-                  <!-- Quotes and Justified Text -->
                   <div class="quote-wrapper d-flex flex-column mb-3">
                     <i class="fas fa-quote-left fs-2 mb-2" style="color: #b07d4b; align-self: flex-start;"></i>
                     <p style="font-size: 1.05rem; line-height: 1.7; color: #555; text-align: justify; margin: 0 15px;">
@@ -1413,25 +1124,17 @@ sesssss -->
                     </p>
                     <i class="fas fa-quote-right fs-2 mt-2" style="color: #b07d4b; align-self: flex-end;"></i>
                   </div>
-
-                  <!-- Author Info with Initials Circle -->
                   <div class="author d-flex align-items-center justify-content-center mt-3">
                     <div class="initials-circle me-3 d-flex align-items-center justify-content-center rounded-circle"
                       style="width: 45px; height: 45px; background-color: #333; color: #fff; font-weight: bold; font-size: 1.1rem;">
-                      BL
-                    </div>
+                      BL</div>
                     <h4 class="mb-0"
-                      style="font-size: 1.05rem; font-weight: 600; color: #333; text-transform: uppercase;">
-                      Patient
-                    </h4>
+                      style="font-size: 1.05rem; font-weight: 600; color: #333; text-transform: uppercase;">Patient</h4>
                   </div>
                 </div>
               </div>
-
-              <!-- Testimonial Item 2 -->
               <div class="testimonial-item p-3">
                 <div class="content p-4 bg-white shadow" style="border-radius: 15px;">
-
                   <div class="quote-wrapper d-flex flex-column mb-3">
                     <i class="fas fa-quote-left fs-2 mb-2" style="color: #b07d4b; align-self: flex-start;"></i>
                     <p style="font-size: 1.05rem; line-height: 1.7; color: #555; text-align: justify; margin: 0 15px;">
@@ -1440,24 +1143,17 @@ sesssss -->
                     </p>
                     <i class="fas fa-quote-right fs-2 mt-2" style="color: #b07d4b; align-self: flex-end;"></i>
                   </div>
-
                   <div class="author d-flex align-items-center justify-content-center mt-3">
                     <div class="initials-circle me-3 d-flex align-items-center justify-content-center rounded-circle"
                       style="width: 45px; height: 45px; background-color: #333; color: #fff; font-weight: bold; font-size: 1.1rem;">
-                      CL
-                    </div>
+                      CL</div>
                     <h4 class="mb-0"
-                      style="font-size: 1.05rem; font-weight: 600; color: #333; text-transform: uppercase;">
-                      Chris
-                    </h4>
+                      style="font-size: 1.05rem; font-weight: 600; color: #333; text-transform: uppercase;">Chris</h4>
                   </div>
                 </div>
               </div>
-
-              <!-- Testimonial Item 3 -->
               <div class="testimonial-item p-3">
                 <div class="content p-4 bg-white shadow" style="border-radius: 15px;">
-
                   <div class="quote-wrapper d-flex flex-column mb-3">
                     <i class="fas fa-quote-left fs-2 mb-2" style="color: #b07d4b; align-self: flex-start;"></i>
                     <p style="font-size: 1.05rem; line-height: 1.7; color: #555; text-align: justify; margin: 0 15px;">
@@ -1466,88 +1162,74 @@ sesssss -->
                     </p>
                     <i class="fas fa-quote-right fs-2 mt-2" style="color: #b07d4b; align-self: flex-end;"></i>
                   </div>
-
                   <div class="author d-flex align-items-center justify-content-center mt-3">
                     <div class="initials-circle me-3 d-flex align-items-center justify-content-center rounded-circle"
                       style="width: 45px; height: 45px; background-color: #333; color: #fff; font-weight: bold; font-size: 1.1rem;">
-                      WD
-                    </div>
+                      WD</div>
                     <h4 class="mb-0"
-                      style="font-size: 1.05rem; font-weight: 600; color: #333; text-transform: uppercase;">
-                      Patient
-                    </h4>
+                      style="font-size: 1.05rem; font-weight: 600; color: #333; text-transform: uppercase;">Patient</h4>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
-        <!-- testimonial-area end -->
 
-        <!-- Team / Staff Section -->
-        <section class="team-section py-5" style="background-color: #f8f9fa;  ">
+        <!-- Team Section -->
+        <section class="team-section py-5" style="background-color: #f8f9fa;">
           <div class="container">
-            <!-- Section Heading -->
             <div class="text-center mb-5">
               <span class="fw-bold text-uppercase" style="color: #551228; letter-spacing: 2px; font-size: 14px;">Our
                 Dedicated Team</span>
               <h2 class="fw-bold mt-2" style="color: #1b2641; font-size: 32px;">Meet Our Experienced Doctors</h2>
-              <p class="text-muted mt-2 mx-auto" style="max-width: 600px;">
+
+              <!-- Main description justified -->
+              <p class="text-muted mt-2 mx-auto" style="max-width: 600px; text-align: justify;">
                 We take pride in our highly skilled professionals who are dedicated to providing the best healthcare
                 services for you and your family.
               </p>
             </div>
 
-            <!-- Team Grid -->
             <div class="row justify-content-center g-4">
-
-              <!-- Staff Member 1 -->
               <div class="col-12 col-sm-6 col-lg-4">
                 <div class="team-card card h-100 border-0 shadow-sm text-center p-4">
                   <div class="img-container mx-auto mb-4">
-                    <!-- පළමු පින්තූරය මෙතනට -->
                     <img src="assets/img/testimonial/Dr.Reza.jpg" alt="Dr. Reza"
                       class="img-fluid rounded-circle shadow-sm">
                   </div>
                   <h4 class="fw-bold mb-1" style="color: #1b2641;">Dr. Reza</h4>
                   <p class="text-muted mb-3 fw-semibold" style="color: #e59a67 !important;">General Practitioner</p>
-                  <p class="small text-secondary mb-4" style="line-height: 1.6;">
+
+                  <!-- Doctor 1 description justified -->
+                  <p class="small text-secondary mb-4" style="line-height: 1.6; text-align: justify;">
                     With over 15 years of experience, Dr. Reza specializes in comprehensive family medicine and chronic
                     disease management.
                   </p>
-
                 </div>
               </div>
 
-              <!-- Staff Member 2 -->
               <div class="col-12 col-sm-6 col-lg-4">
                 <div class="team-card card h-100 border-0 shadow-sm text-center p-4">
                   <div class="img-container mx-auto mb-4">
-                    <!-- දෙවන පින්තූරය මෙතනට -->
                     <img src="assets/img/testimonial/Dr.Reza2.jpg" alt="Doctor"
                       class="img-fluid rounded-circle shadow-sm">
                   </div>
                   <h4 class="fw-bold mb-1" style="color: #1b2641;">Dr. Sarah</h4>
                   <p class="text-muted mb-3 fw-semibold" style="color: #e59a67 !important;">Senior Medical Officer</p>
-                  <p class="small text-secondary mb-4" style="line-height: 1.6;">
+
+                  <!-- Doctor 2 description justified -->
+                  <p class="small text-secondary mb-4" style="line-height: 1.6; text-align: justify;">
                     Dedicated to women's health, pediatrics, and providing compassionate care tailored to individual
                     patient needs.
                   </p>
-
                 </div>
               </div>
-
             </div>
           </div>
         </section>
 
-
-
-
-
-        <!-- quote-area -->
-        <div class="quote-area  mb-10">
+        <!-- Quote Area -->
+        <div class="quote-area mb-10">
           <div class="container-fluid">
             <div class="quote-wrap py-100">
               <div class="container">
@@ -1556,18 +1238,33 @@ sesssss -->
                   <div class="col-lg-6">
                     <div class="quote-content">
                       <div class="site-heading">
-
                         <h3 class="site-title text-white ani-text-1">Need help? we are just a message away</h3>
-
                       </div>
                       <div class="quote-contact wow fadeInUp mb-100" data-wow-delay="0.4s">
                         <div class="top">
-                          <h4>Feel free to contact us</h4>
-                          <p>If you are going to use passage you need sure there in the middle of text.</p>
+                          <h4>ONLINE BOOKING</h4>
+                          <p>Book an appointment with your preferred doctor and see up to date availability and book
+                            instantly.</p>
+                          <p>we also accept walk-in appointments when available.</p>
                         </div>
                         <ul class="info">
-                          <li><i class="far fa-phone-volume"></i><a href="tel:+21236547898">02 4341 7722</a></li>
-
+                          <div class="d-flex justify-content-center align-items-center">
+                            <div class="about-btn-appoiment wow fadeInUp" data-wow-delay=".8s">
+                              <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                                class="appointment-btn">
+                                <div class="svg-icon-wrapper">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%"
+                                    height="100%">
+                                    <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#4a7c38" stroke-width="6" />
+                                    <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z"
+                                      fill="#83ba48" stroke="#4a7c38" stroke-width="5" stroke-linejoin="round" />
+                                  </svg>
+                                </div>
+                                BOOK AN APPOINTMENT
+                                <i class="fas fa-arrow-circle-right right-arrow"></i>
+                              </a>
+                            </div>
+                          </div>
                         </ul>
                       </div>
                     </div>
@@ -1576,7 +1273,6 @@ sesssss -->
                     <div class="quote-form wow fadeInUp" data-wow-delay="0.2s">
                       <div class="quote-header">
                         <h4>Contact us</h4>
-
                       </div>
                       <form action="#" style="margin-top: -10%;">
                         <div class="row">
@@ -1595,8 +1291,6 @@ sesssss -->
                               <input type="text" name="phone" class="form-control" placeholder="Your Phone" />
                             </div>
                           </div>
-
-
                         </div>
                         <div class="form-group">
                           <textarea name="message" class="form-control" placeholder="Type Message" rows="3"></textarea>
@@ -1610,25 +1304,16 @@ sesssss -->
             </div>
           </div>
         </div>
-        <!-- quote-area end -->
-
-
-
-
-
 
       </main>
 
-      <!-- footer area -->
+      <!-- Footer -->
+   <!-- Footer -->
       <footer class="footer-area py-5" style="background-color: #5c0322;">
         <div class="container">
-          <!-- Footer Top: 3 Columns -->
           <div class="row g-4 g-lg-5">
-
-            <!-- Column 1: Logo & Contact Info -->
             <div class="col-lg-4 col-md-6 col-12 text-start">
               <a href="index.html" class="d-block mb-4">
-                <!-- ඔයාගේ නිවැරදි logo පින්තූරයේ නම මෙතනට දෙන්න -->
                 <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="img-fluid"
                   style="max-width: 300px;">
               </a>
@@ -1644,35 +1329,43 @@ sesssss -->
                 </li>
               </ul>
             </div>
-
-            <!-- Column 2: Opening Hours -->
-            <div class="col-lg-4 col-md-6 col-12 text-start">
+        <div class="col-lg-4 col-md-6 col-12 text-start">
               <h5 class="text-white mb-3" style="text-transform: uppercase; font-size: 17px; letter-spacing: 1px;">
-                Opening Hours
-              </h5>
+                Opening Hours</h5>
               <ul class="list-unstyled mb-0" style="color: #fff; font-size: 17px;">
-                <li class="d-flex justify-content-between mb-3">
-                  <span><span style="color: #ffffff; margin-right: 8px;">&raquo;</span>Monday - Friday</span>
-                  <span>9AM - 6PM</span>
+                <!-- Monday - Friday -->
+                <li class="row align-items-start mb-3">
+                  <div class="col-7 col-md-auto pe-1">
+                    <span style="color: #ffffff; margin-right: 8px;">&raquo;</span>Monday - Friday
+                  </div>
+                  <div class="col-5 col-md-auto ms-md-auto text-start text-md-end ps-0">
+                    9AM - 6PM
+                  </div>
                 </li>
-                <li class="d-flex justify-content-between mb-3">
-                  <span><span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Saturday</span>
-                  <span style="color: #f8f7f8;">CLOSED</span>
+                <!-- Saturday -->
+                <li class="row align-items-start mb-3">
+                  <div class="col-7 col-md-auto pe-1">
+                    <span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Saturday
+                  </div>
+                  <div class="col-5 col-md-auto ms-md-auto text-start text-md-end ps-0" style="color: #f8f7f8;">
+                    CLOSED
+                  </div>
                 </li>
-                <li class="d-flex justify-content-between mb-3">
-                  <span><span style="color: #ffffff; margin-right: 8px;">&raquo;</span>Sunday and Public Holidays</span>
-                  <span style="color: #f7f7f7;">CLOSED</span>
+                <!-- Sunday and Public Holidays -->
+                <li class="row align-items-start mb-3">
+                  <div class="col-7 col-md-auto pe-1">
+                    <span style="color: #ffffff; margin-right: 8px;">&raquo;</span>Sunday and Public Holidays
+                  </div>
+                  <div class="col-5 col-md-auto ms-md-auto text-start text-md-end ps-0" style="color: #f7f7f7;">
+                    CLOSED
+                  </div>
                 </li>
               </ul>
             </div>
-
-            <!-- Column 3: Quick Links -->
             <div class="col-lg-4 col-md-12 col-12 text-start">
-              <h5 class="text-white mb-4" style="text-transform: uppercase; font-size: 17px; letter-spacing: 1px;">
-                Quick Links
-              </h5>
+              <h5 class="text-white mb-4" style="text-transform: uppercase; font-size: 17px; letter-spacing: 1px;">Quick
+                Links</h5>
               <div class="row">
-                <!-- Quick Links: Left Sub-column -->
                 <div class="col-6">
                   <ul class="list-unstyled mb-0" style="font-size: 17px;">
                     <li class="mb-3"><a href="index.html" class="text-white text-decoration-none"><span
@@ -1683,7 +1376,6 @@ sesssss -->
                           style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Services</a></li>
                   </ul>
                 </div>
-                <!-- Quick Links: Right Sub-column -->
                 <div class="col-6">
                   <ul class="list-unstyled mb-0" style="font-size: 17px;">
                     <li class="mb-3"><a href="billing.html" class="text-white text-decoration-none"><span
@@ -1696,43 +1388,31 @@ sesssss -->
                 </div>
               </div>
             </div>
-
           </div>
         </div>
-
-        <!-- Copyright Section (Split into two sides) -->
         <div class="container mt-5 pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
           <div class="row align-items-center">
-            <!-- Left Side -->
-            <div class="col-md-6 col-12 text-center text-md-start mb-2 mb-md-0">
+            <!-- Changed text-center to text-start for mobile -->
+            <div class="col-md-6 col-12 text-start mb-2 mb-md-0">
               <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
                 Copyright 2026 &copy; All Right Reserved Sapphire General Practice
               </p>
             </div>
-            <!-- Right Side -->
-            <div class="col-md-6 col-12 text-center text-md-end">
+            <!-- Changed text-center to text-start for mobile, kept text-md-end for desktop -->
+            <div class="col-md-6 col-12 text-start text-md-end mt-2 mt-md-0">
               <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
                 <a href="https://www.anzwebdesign.com.au/" target="_blank" class="text-decoration-none"
                   style="color: #ffffff;">Web Design Marketing Australia</a>
-
               </p>
             </div>
           </div>
         </div>
       </footer>
-      <!-- footer area end -->
     </div>
-
-
-
-
   </div>
-
-
 
   <!-- scroll-top -->
   <a href="#" id="scroll-top"><i class="fas fa-arrow-up"></i></a>
-  <!-- scroll-top end -->
 
   <!-- js -->
   <script src="assets/js/jquery-3.7.1.min.js"></script>
@@ -1748,7 +1428,5 @@ sesssss -->
   <script src="assets/js/gsap-custom.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
-
-<!-- Mirrored from live.themewild.com/SAPPHIRE/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Sep 2026 08:00:22 GMT -->
 
 </html>
