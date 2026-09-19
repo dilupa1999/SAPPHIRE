@@ -2666,8 +2666,8 @@ label {
 }
 .about-content .about-item {
   display: flex;
-  gap: 20px;
-  border-bottom: 1px solid var(--border-info-color);
+  gap: 10px;
+  border-bottom: 0px solid var(--border-info-color);
   padding-bottom: 30px;
   margin-bottom: 30px;
 }

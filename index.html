@@ -88,7 +88,7 @@
        Services Section Styles
        ============================================================== */
     .services-section {
-      background-color: #f4f8fb;
+      background-color: #fafafa;
       padding: 80px 0;
     }
 
@@ -138,7 +138,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
+      background: rgba(255, 255, 255, 0);
       z-index: 2;
       transition: all 0.3s ease;
     }
@@ -304,7 +304,7 @@
 
     @media (max-width: 1199px) {
       .team-section {
-        margin-top: -8%;
+        margin-top: -1%;
       }
     }
 
@@ -491,14 +491,28 @@
 
 
 
-     
-        @media (min-width: 992px) {
-          .footer-title-wrapper {
-            min-height: 85px; 
-            display: flex;
-            align-items: flex-start; 
-          }
-        }
+
+    @media (min-width: 992px) {
+      .footer-title-wrapper {
+        min-height: 85px;
+        display: flex;
+        align-items: flex-start;
+      }
+    }
+
+
+
+    .btn-brown {
+      background-color: #4b0505;
+      color: #ffffff !important;
+      transition: all 0.3s ease;
+    }
+
+    .btn-brown:hover {
+      background-color: #0b003a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
   </style>
 
 </head>
@@ -565,9 +579,9 @@
                 </li>
                 <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Our Team</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="about.html">Billing Policy</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Skin</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Billing Policy</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://sapphireskinlaserclinic.com.au/">Skin</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Telehealth</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
               </ul>
@@ -639,7 +653,7 @@
                 </div>
               </div>
               <div class="col-lg-6">
-                <div class="about-right ps-lg-4">
+                <div class="about-right ps-lg-4 ">
                   <div class="site-heading mb-3">
                     <h3 class="site-title ani-text-1" style="font-size: 1.50rem; font-weight: 600; color: #1a202c;">
                       Welcome to Sapphire General Practice
@@ -647,7 +661,7 @@
                   </div>
                   <p class="wow fadeInUp about-text text-justify" data-wow-delay=".2s"
                     style="text-align: justify; line-height: 1.7; color: #4a5568; margin-bottom: 15px;">
-                    At Renwick GP, our team has provided care across the NSW East Coast for the past decade and our
+                    At Sapphire GP, our team has provided care across the NSW East Coast for the past decade and our
                     mission is to provide the highest standard of care to our community. We are a General Practice with
                     2 GP Fellows who have a special interest in a range of concerns including Chronic Care Management,
                     Women’s Health, Skin Cancer Management, Childrens Health and Mental Health.
@@ -659,34 +673,37 @@
                     the doctor. Non-rebatable fees apply for all clinical procedures.
                   </p>
                   <div class="about-content wow fadeInUp" data-wow-delay=".4s">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="about-item">
-                          <div class="icon">
-                            <img src="assets/img/icon/checkup.svg" alt="" />
-                          </div>
-                          <div class="content">
-                            <h4>Free Checkup</h4>
-                            <p>It is a long established fact that reader will some layout.</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="about-item">
-                          <div class="icon">
-                            <img src="assets/img/icon/doctor-svgrepo-com.svg" alt="" />
-                          </div>
-                          <div class="content">
-                            <h4>Highly Professional</h4>
-                            <p>It is a long established fact that reader will some layout.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="wow fadeInUp" style="margin-top: -20px;" data-wow-delay=".5s">
-                      <a href="about.html" class="theme-btn">READ MORE<i class="fas fa-arrow-circle-right ms-2"></i></a>
-                    </div>
-                  </div>
+  <!-- ග්‍රිඩ් අතර කුඩා සමබර පරතරයක් තබා ගැනීමට g-2 භාවිතා කර ඇත -->
+  <div class="row g-2">
+    <div class="col-lg-6">
+      <!-- Theme එකේ default margin මකා දැමීමට mb-0 සහ !important යොදා ඇත -->
+      <div class="about-item d-flex align-items-center mb-0" style="margin-bottom: 0 !important;">
+        <div class="icon me-0">
+          <img src="assets/img/icon/checkup.svg" alt="Checkup Icon" />
+        </div>
+        <div class="content">
+          <h4 class="mb-0">Free Checkup</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="about-item d-flex align-items-center mb-0" style="margin-bottom: 0 !important;">
+        <div class="icon me-0">
+          <img src="assets/img/icon/doctor-svgrepo-com.svg" alt="" />
+        </div>
+        <div class="content">
+          <h4 class="m-0">Highly Professional</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- බොත්තම උඩින් තිබූ විශාල පරතරය (mt-3) කුඩා පරතරයක් (mt-2) බවට වෙනස් කර ඇත -->
+  <div class="wow fadeInUp mt-2" data-wow-delay=".5s">
+    <a href="about.html" class="theme-btn">READ MORE<i class="fas fa-arrow-circle-right ms-2"></i></a>
+  </div>
+</div>
                 </div>
               </div>
             </div>
@@ -781,7 +798,7 @@
                 <i class="far fa-butterfly me-0"></i>Health & Medical Support
               </h2>
               <h3 class="site-title ani-text-1"
-                style="color: #1a202c; font-size: 1.2rem; font-weight: 700; text-align: justify;">
+                style="color: #1a202c; font-size: 1.2rem; font-weight: 700; text-align: center; ">
                 Gain access to a comprehensive range of services and experienced doctors across all areas of general
                 practice.
               </h3>
@@ -986,7 +1003,7 @@
         </section>
 
         <!-- About Area 2 -->
-        <div class="about-area2 mt-60 py-50">
+        <div class="about-area2 mt-0 py-50">
           <div class="container">
             <div class="row align-items-center g-5">
               <div class="col-lg-6">
@@ -1014,8 +1031,9 @@
                     </div>
                   </div>
                   <div class="col-6 d-flex flex-column gap-3">
-                    <div
-                      class="rounded-4 d-flex flex-column align-items-center justify-content-center shadow-sm text-center"
+
+                    <!-- Call Now Box -->
+                    <div class="d-flex flex-column align-items-center justify-content-center shadow-sm text-center"
                       style="background-color: #eef5f4; padding: 20px 10px; min-height: 150px;">
                       <div class="d-flex justify-content-center align-items-center mb-2"
                         style="width: 45px; height: 45px; background-color: #1b2641; color: white; font-size: 18px;">
@@ -1025,8 +1043,11 @@
                       <a href="tel:0275005858" class="text-decoration-none"
                         style="font-size: 15px; font-weight: 800; color: #111;">02 4341 7722</a>
                     </div>
-                    <img src="assets/img/about/aboriginal-&-Torres2.jpg" alt="Patient" class="img-fluid rounded-4 w-100"
+
+                    <!-- Image Section (Fixed with !important) -->
+                    <img src="assets/img/about/06.jpg" alt="Patient" class="img-fluid w-100 "
                       style="object-fit: cover; flex-grow: 1; min-height: 200px;">
+
                   </div>
                 </div>
               </div>
@@ -1084,7 +1105,7 @@
         </div>
 
         <!-- App Download Area -->
-        <div class="app-download-area py-5 mt-60" style="background-color: #f8f9fa;">
+        <div class="app-download-area py-5 mt-0" style="background-color: #f8f9fa;">
           <div class="container">
             <div class="shadow-lg p-4 p-md-5" style="background-color: #111a3a; border-radius: 20px;">
               <div class="row align-items-center justify-content-between g-4">
@@ -1121,7 +1142,7 @@
         </div>
 
         <!-- Testimonial Area -->
-        <div class="testimonial-area pb-120 mt-100">
+        <div class="testimonial-area pb-120 mt-0">
           <div class="container">
             <div class="row">
               <div class="col-lg-8 mx-auto">
@@ -1131,19 +1152,19 @@
                     <i class="far fa-comment-dots me-2"></i> Testimonials
                   </span>
                   <h3 class="site-title ani-text-1 mt-2">Hear from our Patients</h3>
-                  <span class="wow fadeInUp mt-4"
+                  <!-- <span class="wow fadeInUp mt-4"
                     style="color: #020202; text-transform: uppercase; letter-spacing: 1px; text-align: justify; display: block;">
                     To improve our healthcare services, we prioritize listening to our patients. By gaining insights
                     into their needs and expectations, we reinforce our commitment to exceptional care. Patient feedback
                     is vital in shaping our services, allowing us to better tailor them to individual circumstances and
                     enhance their overall experience.
-                  </span>
+                  </span> -->
                 </div>
               </div>
             </div>
             <div class="testimonial-slider owl-carousel owl-theme" style="margin-top: -30px;">
-              <div class="testimonial-item p-3">
-                <div class="content p-4 bg-white shadow" style="border-radius: 15px;">
+              <div class="testimonial-item p-2">
+                <div class="content p-3 bg-white shadow" style="border-radius: 15px;">
                   <div class="quote-wrapper d-flex flex-column mb-3">
                     <i class="fas fa-quote-left fs-2 mb-2" style="color: #b07d4b; align-self: flex-start;"></i>
                     <p style="font-size: 1.05rem; line-height: 1.7; color: #555; text-align: justify; margin: 0 15px;">
@@ -1161,8 +1182,8 @@
                   </div>
                 </div>
               </div>
-              <div class="testimonial-item p-3">
-                <div class="content p-4 bg-white shadow" style="border-radius: 15px;">
+              <div class="testimonial-item p-2">
+                <div class="content p-3 bg-white shadow" style="border-radius: 15px;">
                   <div class="quote-wrapper d-flex flex-column mb-3">
                     <i class="fas fa-quote-left fs-2 mb-2" style="color: #b07d4b; align-self: flex-start;"></i>
                     <p style="font-size: 1.05rem; line-height: 1.7; color: #555; text-align: justify; margin: 0 15px;">
@@ -1180,8 +1201,8 @@
                   </div>
                 </div>
               </div>
-              <div class="testimonial-item p-3">
-                <div class="content p-4 bg-white shadow" style="border-radius: 15px;">
+              <div class="testimonial-item p-2">
+                <div class="content p-3 bg-white shadow" style="border-radius: 15px;">
                   <div class="quote-wrapper d-flex flex-column mb-3">
                     <i class="fas fa-quote-left fs-2 mb-2" style="color: #b07d4b; align-self: flex-start;"></i>
                     <p style="font-size: 1.05rem; line-height: 1.7; color: #555; text-align: justify; margin: 0 15px;">
@@ -1212,11 +1233,13 @@
               <h2 class="fw-bold mt-2" style="color: #1b2641; font-size: 32px;">Meet Our Experienced Doctors</h2>
 
               <!-- Main description justified -->
-              <p class="text-muted mt-2 mx-auto" style="max-width: 600px; text-align: justify;">
+              <p class="text-muted mt-2 mx-auto" style="max-width: 1000px; text-align: justify;">
                 We take pride in our highly skilled professionals who are dedicated to providing the best healthcare
                 services for you and your family.
               </p>
             </div>
+
+
 
             <div class="row justify-content-center g-4">
               <div class="col-12 col-sm-6 col-lg-4">
@@ -1233,6 +1256,11 @@
                     With over 15 years of experience, Dr. Reza specializes in comprehensive family medicine and chronic
                     disease management.
                   </p>
+
+                  <!-- Read More Button -->
+                  <div class="mt-auto">
+                    <a href="#" class="btn btn-brown rounded-pill px-4 py-2 fw-semibold">Read More</a>
+                  </div>
                 </div>
               </div>
 
@@ -1250,6 +1278,12 @@
                     Dedicated to women's health, pediatrics, and providing compassionate care tailored to individual
                     patient needs.
                   </p>
+
+                  <!-- Read More Button -->
+                  <div class="mt-auto">
+                    <a href="#" class="btn btn-brown rounded-pill px-4 py-2 fw-semibold">Read More</a>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -1266,15 +1300,17 @@
                   <div class="col-lg-6">
                     <div class="quote-content">
                       <div class="site-heading">
-                        <h3 class="site-title text-white ani-text-1 " style="margin-top: 19px;">Need help? we are just a
+                        <h3 class="site-title text-white ani-text-1 " style="margin-top: 19px;">Need help? <br> </h3>
+                        <h3 class="site-title text-white" style="font-size: 38px; margin-top: 19px;">We are just a
                           message away</h3>
+
                       </div>
                       <div class="quote-contact wow fadeInUp mb-100" data-wow-delay="0.4s">
                         <div class="top">
                           <h4>ONLINE BOOKING</h4>
                           <p>Book an appointment with your preferred doctor and see up to date availability and book
-                            instantly.</p>
-                          <p>we also accept walk-in appointments when available.</p>
+                            instantly. We also accept walk-in appointments when available.</p>
+                          <p></p>
                         </div>
                         <ul class="info">
                           <div class="d-flex justify-content-center align-items-center">
@@ -1338,14 +1374,14 @@
 
       <!-- Footer -->
       <!-- Footer -->
-     <!-- Footer -->
-    <!-- Footer -->
-      
-      
+      <!-- Footer -->
+      <!-- Footer -->
+
+
       <footer class="footer-area py-5" style="background-color: #5c0322;">
         <div class="container">
           <div class="row g-4 g-lg-5">
-            
+
             <!-- 1st Column (Logo & Contact) -->
             <div class="col-lg-4 col-md-6 col-12 text-start">
               <div class="footer-title-wrapper mb-4">
@@ -1367,12 +1403,13 @@
                 </li>
               </ul>
             </div>
-            
+
             <!-- 2nd Column (Opening Hours) -->
             <div class="col-lg-4 col-md-6 col-12 text-start">
               <div class="footer-title-wrapper mb-4">
                 <!-- මෙතන margin-top: 30px; ලෙස වෙනස් කර ඇත -->
-                <h5 class="text-white mb-0" style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
+                <h5 class="text-white mb-0"
+                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
                   Opening Hours
                 </h5>
               </div>
@@ -1407,12 +1444,13 @@
                 </li>
               </ul>
             </div>
-            
+
             <!-- 3rd Column (Quick Links) -->
             <div class="col-lg-4 col-md-12 col-12 text-start">
               <div class="footer-title-wrapper mb-4">
                 <!-- මෙතන margin-top: 30px; ලෙස වෙනස් කර ඇත -->
-                <h5 class="text-white mb-0" style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
+                <h5 class="text-white mb-0"
+                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
                   Quick Links
                 </h5>
               </div>
@@ -1439,7 +1477,7 @@
                 </div>
               </div>
             </div>
-            
+
           </div>
         </div>
         <div class="container mt-5 pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
