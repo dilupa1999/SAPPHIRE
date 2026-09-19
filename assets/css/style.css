@@ -6619,3 +6619,495 @@ label {
 }
 
 /* =================== END ================== *//*# sourceMappingURL=style.css.map */
+
+
+
+
+
+    /* ==============================================================
+       General Styles
+       ============================================================== */
+    .appointment-btn {
+      background-color: #5c172a;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      padding: 8px 24px 8px 8px;
+      border-radius: 50px;
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 4px 10px rgba(92, 23, 42, 0.2);
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+
+    .appointment-btn:hover {
+      background-color: #45101f;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 15px rgba(92, 23, 42, 0.3);
+    }
+
+    .svg-icon-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+    }
+
+    .right-arrow {
+      font-size: 20px;
+      color: #ffffff;
+      transform: rotate(-45deg);
+      transition: transform 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .appointment-btn:hover .right-arrow {
+      transform: rotate(-45deg) translate(2px, -2px);
+    }
+
+    .hero-title,
+    .ani-text-3 {
+      color: #ffffff !important;
+      -webkit-text-stroke: 0px transparent !important;
+      text-shadow: none !important;
+      font-size: 6px;
+      font-weight: 800;
+      line-height: 1.4;
+    }
+
+    /* ==============================================================
+       Services Section Styles
+       ============================================================== */
+    .services-section {
+      background-color: #fafafa;
+      padding: 80px 0;
+    }
+
+    .service-card-new {
+      display: block;
+      text-decoration: none;
+      background-color: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+      height: 100%;
+      border: 1.5px solid transparent;
+    }
+
+    .service-card-new:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+      border-color: #551228;
+      background-color: #551228;
+    }
+
+    .img-wrapper {
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      background-color: #551228;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+
+    .card-img-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.5s ease;
+      z-index: 1;
+    }
+
+    .card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0);
+      z-index: 2;
+      transition: all 0.3s ease;
+    }
+
+    .service-card-new:hover .card-img-layer {
+      transform: scale(1.1);
+    }
+
+    .service-card-new:hover .card-overlay {
+      background: rgba(48, 15, 33, 0.452);
+    }
+
+    .card-text-wrapper {
+      padding: 20px 15px;
+      text-align: center;
+      background-color: #ffffff;
+      position: relative;
+      z-index: 3;
+      transition: background-color 0.3s ease;
+    }
+
+    .service-card-new:hover .card-text-wrapper {
+      background-color: #551228;
+    }
+
+    .service-title-text {
+      color: #4e1535;
+      font-size: 1.01rem;
+      font-weight: 400;
+      margin: 0;
+      transition: color 0.3s ease;
+    }
+
+    .service-card-new:hover .service-title-text {
+      color: #ffffff;
+    }
+
+    /* ==============================================================
+       Team Section Styles
+       ============================================================== */
+    .team-section {
+      background-color: #f4f8fb;
+      margin-top: -8%;
+    }
+
+    .team-card {
+      border-radius: 20px;
+      background-color: #ffffff;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .team-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(27, 38, 65, 0.08) !important;
+    }
+
+    .team-card .img-container {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      padding: 6px;
+      background: linear-gradient(135deg, #551228, #e59a67);
+      transition: transform 0.4s ease;
+    }
+
+    .team-card .img-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 4px solid #ffffff;
+    }
+
+    .team-card:hover .img-container {
+      transform: scale(1.05);
+    }
+
+    .btn-outline-team {
+      color: #551228;
+      border: 2px solid #551228;
+      font-weight: 700;
+      font-size: 14px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-outline-team:hover {
+      background-color: #551228;
+      color: #ffffff;
+      border-color: #551228;
+    }
+
+    .team-item {
+      position: relative;
+      overflow: hidden;
+      height: 380px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-img {
+      height: 100%;
+    }
+
+    .team-img .ani-img,
+    .team-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .team-content {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 75px;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 22px 15px;
+      transition: all 0.4s ease-in-out;
+      overflow: hidden;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+    }
+
+    .team-item:hover .team-content {
+      height: 100%;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    .team-content h4 {
+      margin: 0 0 20px 0;
+      text-align: center;
+      font-size: 1.15rem;
+    }
+
+    .team-content h4 a {
+      color: #1b2641;
+      text-decoration: none;
+    }
+
+    .team-social {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all 0.4s ease-in-out;
+      text-align: justify !important;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .team-item:hover .team-social {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* ==============================================================
+       Responsive Media Queries
+       ============================================================== */
+
+    @media (max-width: 1199px) {
+      .team-section {
+        margin-top: -1%;
+      }
+    }
+
+    @media (max-width: 991px) {
+      .team-section {
+        margin-top: -50%;
+      }
+
+      .quote-area .quote-wrap {
+        padding-top: 20px !important;
+        padding-bottom: 30px !important;
+      }
+
+      .quote-area .quote-content,
+      .quote-area .site-heading,
+      .quote-area .site-title {
+        margin-top: 0 !important;
+        padding-top: 0 !important;
+      }
+
+      .quote-contact.mb-100 {
+        margin-bottom: 30px !important;
+      }
+    }
+
+    /* Mobile Responsive Area */
+    @media only screen and (max-width: 767px) {
+      .team-section {
+        margin-top: -45%;
+      }
+
+      .hero-title {
+        font-size: 18px;
+        white-space: nowrap;
+        line-height: 1.5;
+      }
+
+      /* Hero Buttons */
+      .hero-btn {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+      }
+
+      .hero-btn .appointment-btn,
+      .hero-btn .theme-btn2 {
+        white-space: nowrap;
+        width: max-content;
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 35px !important;
+        min-height: 55px !important;
+        border-radius: 50px !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+      }
+
+      .hero-btn .appointment-btn .svg-icon-wrapper {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+        display: flex;
+        align-items: center;
+      }
+
+      /* About Section Appointment Button (Left Aligned Fixes) */
+      .about-btn-appoiment {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+
+      .about-btn-appoiment .appointment-btn {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        padding: 12px 20px 12px 10px !important;
+        /* වම් පැත්තේ padding එක පොඩ්ඩක් අඩු කළා අයිකන් එකට ඉඩ දෙන්න */
+        border-radius: 50px !important;
+        box-sizing: border-box !important;
+        white-space: normal !important;
+        text-align: left !important;
+        line-height: 1.3 !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        gap: 12px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        /* අමතර ආරක්ෂාවක් විදිහට බොත්තමෙන් එළියට පනින දේවල් කපලා දාන්න */
+      }
+
+      /* අයිකන් එක අනිවාර්යයෙන්ම බොත්තම ඇතුළට ගැනීම */
+      .about-btn-appoiment .appointment-btn .svg-icon-wrapper {
+        position: static !important;
+        /* Theme එකෙන් absolute කරලා තිබ්බොත් ඒක අයින් කරන්න */
+        left: 0 !important;
+        top: 0 !important;
+        transform: translateX(0) !important;
+        /* Theme එකෙන් අයිකන් එක එළියට ඇදලා තියෙනවා නම් ඒක අයින් කරන්න */
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        min-width: 24px !important;
+        width: 24px !important;
+        height: 24px !important;
+        flex-shrink: 0 !important;
+      }
+
+      .about-btn-appoiment .appointment-btn .right-arrow {
+        position: relative !important;
+        right: auto !important;
+        transform: none !important;
+        margin: 0 !important;
+        flex-shrink: 0 !important;
+      }
+    }
+
+    @media (max-width: 575px) {
+      .team-section {
+        margin-top: -40%;
+      }
+
+      .appointment-btn {
+        font-size: 11px;
+        padding: 5px 14px 5px 5px;
+        gap: 8px;
+      }
+
+      .svg-icon-wrapper {
+        width: 24px;
+        height: 24px;
+      }
+
+      .right-arrow {
+        font-size: 14px;
+      }
+    }
+
+
+    /* Desktop සඳහා සාමාන්‍ය margin එක (-5%) */
+    .team-area {
+      margin-top: -5%;
+    }
+
+    /* Medium Devices (Tablets, Laptops කුඩා තිර - 991px ට අඩු) සඳහා */
+    @media (max-width: 991px) {
+      .team-area {
+        margin-top: -25%;
+        /* පරතරය ඕනෙම නම් මෙතනට 10px වගේ අගයක් දෙන්න පුළුවන් */
+      }
+    }
+
+    /* Mobile Devices (767px ට අඩු) සඳහා */
+    @media (max-width: 767px) {
+      .team-area {
+        margin-top: -25%;
+      }
+    }
+
+    @media (max-width: 991px) {
+
+      /* Mobile එකේදී Text එක පහළට ගැනීම */
+      .quote-mobile-balance .site-heading .site-title {
+        margin-top: 80px !important;
+      }
+
+      /* Title එක සහ Online Booking Card එක අතර ඉඩ */
+      .quote-mobile-balance .site-heading {
+        margin-bottom: 24px !important;
+      }
+
+      /* යටම තියෙන Contact Us Card එකට තියෙන ඉඩ සමාන කිරීම */
+      .quote-mobile-balance .quote-contact {
+        margin-bottom: 0px !important;
+      }
+    }
+
+
+
+
+    @media (min-width: 992px) {
+      .footer-title-wrapper {
+        min-height: 85px;
+        display: flex;
+        align-items: flex-start;
+      }
+    }
+
+
+
+    .btn-brown {
+      background-color: #4b0505;
+      color: #ffffff !important;
+      transition: all 0.3s ease;
+    }
+
+    .btn-brown:hover {
+      background-color: #0b003a;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+  
