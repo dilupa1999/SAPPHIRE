@@ -139,7 +139,7 @@ Table of contents
   --border-white-color: rgba(255, 255, 255, 0.08);
   --border-white-color2: rgba(255, 255, 255, 0.15);
   --footer-bg: #501124;
-  --footer-text-color: #f5faff;
+  --footer-text-color: #ffffff;
 }
 
 /*====================
@@ -6072,7 +6072,7 @@ label {
 .quote-header {
   margin-bottom: 30px;
   padding-bottom: 20px;
-  border-bottom: 1px solid var(--border-info-color);
+ 
 }
 .quote-header h4 {
   font-size: 32px;
