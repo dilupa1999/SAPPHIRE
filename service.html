@@ -1,0 +1,975 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- meta tags -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sapphire General Practice - Comprehensive Medical Services" />
+  <meta name="keywords"
+    content="GP, medical clinic, childhood immunisation, chronic disease, womens health, mens health, skin cancer, Wyoming" />
+
+  <!-- title -->
+  <title>Services - Sapphire General Practice</title>
+
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png" />
+
+  <!-- css -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/all-fontawesome.min.css" />
+  <link rel="stylesheet" href="assets/css/animate.min.css" />
+  <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
+  <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    /* Custom Styling for Interactive Service Switcher */
+    .service-nav-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 18px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      background: #f8f9fa;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+      cursor: pointer;
+    }
+
+    .service-nav-item i {
+      margin-right: 12px;
+      color: #5c0322;
+      transition: transform 0.3s ease;
+    }
+
+    .service-nav-item:hover,
+    .service-nav-item.active {
+      background: #5c0322 !important;
+      color: #ffffff !important;
+      border-left-color: #ffb3c1;
+      transform: translateX(4px);
+    }
+
+    .service-nav-item:hover i,
+    .service-nav-item.active i {
+      color: #ffffff !important;
+      transform: translateX(4px);
+    }
+
+    /* Detail Pane animation */
+    .service-detail-pane {
+      display: none;
+      animation: fadeInService 0.4s ease-in-out;
+    }
+
+    .service-detail-pane.active {
+      display: block;
+    }
+
+    @keyframes fadeInService {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .service-main-img-box {
+      max-height: 480px;
+      overflow: hidden;
+      border-radius: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+    }
+
+    .service-main-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-subtitle {
+      color: #5c0322;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 15px;
+      display: block;
+      font-size: 1.1rem;
+    }
+
+    .feature-box-highlight {
+      background: #fdf2f4;
+      border-left: 4px solid #5c0322;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 25px 0;
+    }
+
+    .feature-box-highlight h5 {
+      color: #5c0322;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    /* Pink Special Banner Styling for Women's Health Needs */
+    .womens-health-banner {
+      background: #ffe6ec;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-left: 5px solid #46122c;
+    }
+
+    .service-details p {
+      text-align: justify;
+      line-height: 1.8;
+      margin-bottom: 16px;
+      color: #555;
+    }
+
+    .service-list-check {
+      list-style: none;
+      padding-left: 0;
+      margin: 20px 0;
+    }
+
+    .service-list-check li {
+      position: relative;
+      padding-left: 30px;
+      margin-bottom: 10px;
+      color: #444;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .service-list-check li i {
+      position: absolute;
+      left: 0;
+      top: 4px;
+      color: #5c0322;
+      font-size: 16px;
+    }
+
+    .checklist-2-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 10px;
+    }
+
+    @media (max-width: 991.98px) {
+      .service-main-img-box {
+        max-height: 320px;
+        border-radius: 25px;
+      }
+
+      .service-sidebar {
+        margin-bottom: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body class="h-bg">
+  <!-- preloader -->
+  <div class="preloader">
+    <div class="loader-ripple">
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+  <!-- preloader end -->
+
+  <!-- header area -->
+  <header class="header hd-1">
+    <div class="header-top">
+      <div class="container px-lg-0">
+        <div class="header-top-wrap">
+          <div class="header-top-left">
+            <div class="header-top-social"></div>
+          </div>
+          <div class="header-top-left">
+            <div class="header-top-list">
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- navbar -->
+    <div class="main-navigation">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container position-relative">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/img/logo/logo.png" style="max-width: 100%; height: 80%; margin-left: 40px;" alt="logo" />
+          </a>
+          <div class="mobile-menu-right">
+            <div class="mobile-menu-btn">
+              <button type="button" class="nav-right-link search-box-outer"><i class="far fa-search"></i></button>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+              aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar">
+            <div class="offcanvas-header">
+              <a href="index.html" class="offcanvas-brand" id="offcanvasNavbarLabel">
+                <img src="assets/img/logo/logo.png" alt="" />
+              </a>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="far fa-xmark"></i>
+              </button>
+            </div>
+            <div class="offcanvas-body gap-xl-4">
+              <ul class="navbar-nav justify-content-end gap-1 flex-grow-1">
+                <li class="nav-item dropdown"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
+                <li class="nav-item"><a class="nav-link active" href="service.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="billing.html">Billing Policy</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://sapphireskinlaserclinic.com.au/">Skin</a></li>
+                <li class="nav-item"><a class="nav-link" href="telehealth.html">Telehealth</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+              </ul>
+              <div class="nav-right">
+                <div class="nav-btn">
+                  <a href="#" class="theme-btn">Appointment<i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- header area end -->
+
+  <div id="smooth-wrapper">
+    <div id="smooth-content">
+      <main class="main">
+        <!-- breadcrumb -->
+        <div class="site-breadcrumb" style="background: url(assets/img/breadcrumb/01.jpg)">
+          <div class="container">
+            <h3 class="breadcrumb-title" id="breadcrumb-service-title">Our Services</h3>
+          </div>
+        </div>
+        <!-- breadcrumb end -->
+
+        <!-- service-single -->
+        <div class="service-single py-120">
+          <div class="container">
+            <div class="service-single-wrap">
+              <div class="row">
+
+                <!-- SIDEBAR: All Services List -->
+                <div class="col-xl-4 col-lg-4">
+                  <div class="service-sidebar">
+                    <div class="widget">
+                      <h4 class="title">All Services</h4>
+                      <div class="category service-menu-list">
+                        <a href="javascript:void(0)" class="service-nav-item active"
+                          data-target="service-childhood-immunisation">
+                          <i class="far fa-angle-double-right"></i>Gp services overview
+                        </a>
+                        <a href="javascript:void(0)" class="service-nav-item" data-target="service-chronic-disease">
+                          <i class="far fa-angle-double-right"></i> Chronic Disease Management
+                        </a>
+                        <a href="javascript:void(0)" class="service-nav-item" data-target="service-womens-health">
+                          <i class="far fa-angle-double-right"></i>Women’s Health
+                        </a>
+                        <a href="javascript:void(0)" class="service-nav-item" data-target="service-childrens-health">
+                          <i class="far fa-angle-double-right"></i>Children’s Health
+                        </a>
+                        <a href="javascript:void(0)" class="service-nav-item" data-target="service-asthma-management">
+                          <i class="far fa-angle-double-right"></i>Asthma Management
+                        </a>
+                        <a href="javascript:void(0)" class="service-nav-item" data-target="service-health-examinations">
+                          <i class="far fa-angle-double-right"></i>Diabetes Management
+                        </a>
+                        <a href="javascript:void(0)" class="service-nav-item" data-target="service-mental-health">
+                          <i class="far fa-angle-double-right"></i> Mental Health
+                        </a>
+                        <a href="javascript:void(0)" class="service-nav-item" data-target="service-mens-health">
+                          <i class="far fa-angle-double-right"></i>Men’s Health
+                        </a>
+                        <a href="javascript:void(0)" class="service-nav-item" data-target="service-skin-cancer">
+                          <i class="far fa-angle-double-right"></i> Skin Checks & Skin Cancer
+                        </a>
+                        <a href="javascript:void(0)" class="service-nav-item" data-target="service-wound-care">
+                          <i class="far fa-angle-double-right"></i>MINOR PROCEDURES Minor Procedures
+                        </a>
+                        <a href="javascript:void(0)" class="service-nav-item" data-target="service-travel-medicine">
+                          <i class="far fa-angle-double-right"></i>Travel Health
+                        </a>
+                        <a href="javascript:void(0)" class="service-nav-item" data-target="service-immunisation">
+                          <i class="far fa-angle-double-right"></i>Immunisation
+                        </a>
+
+
+
+
+
+                        <a href="javascript:void(0)" class="service-nav-item" data-target="">
+                     
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="widget" style="margin-top: -16%;">
+                      <!-- <h4 class="title">Need Assistance?</h4> -->
+                      <div class="p-1 bg-light rounded text-center">
+                        <!-- Womens Health Needs -->
+                        <a href="javascript:void(0)"
+                          class="theme-btn w-100 text-uppercase service-nav-item d-flex justify-content-center align-items-center mb-2"
+                          data-target="service-womens-health-needs">
+                          <i class="fas fa-female me-2"></i> Womens health needs
+                        </a>
+
+                        <!-- Health Checks -->
+                        <a href="javascript:void(0)"
+                          class="theme-btn w-100 text-uppercase service-nav-item d-flex justify-content-center align-items-center"
+                          data-target="service-health-checks">
+                          <i class="fas fa-heartbeat me-2"></i> HEALTH CHECKS
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- CONTENT AREA: Dynamic Service Details -->
+                <div class="col-xl-8 col-lg-8">
+                  <div class="service-details">
+
+                    <!-- 1. Childhood Immunisation / GP Services Overview -->
+                    <div class="service-detail-pane active" id="service-childhood-immunisation">
+                      <div class="service-main-img-box">
+                        <img
+                          src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?auto=format&fit=crop&w=1200&q=80"
+                          alt="Childhood Immunisation" />
+                      </div>
+                      <div class="content">
+                        <h3 class="mb-20">Our first point of care.</h3>
+                        <p>
+                          Our GPs offer care for people of all ages and backgrounds. With over a decade of training,
+                          they treat a wide range of medical concerns and focus on prevention.
+                        </p>
+                        <p>
+                          GPs manage chronic conditions, provide referrals, and coordinate your overall care. They build
+                          long-term relationships to offer personalised, effective health support throughout life.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- 2. Chronic Disease Management -->
+                    <div class="service-detail-pane" id="service-chronic-disease">
+                      <div class="service-main-img-box">
+                        <img
+                          src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80"
+                          alt="Chronic Disease Management" />
+                      </div>
+                      <div class="content">
+                        <h3 class="mb-20">Live well, stay supported.</h3>
+                        <p>
+                          Our GPs help manage long-term conditions like heart disease, asthma, diabetes, arthritis, and
+                          more. Chronic illnesses can impact many areas of life, and early, proactive care is essential.
+                        </p>
+                        <p>
+                          We work with you to create tailored care plans, provide regular reviews, and coordinate with
+                          allied health professionals and specialists. Our goal is to help you maintain independence,
+                          improve quality of life, and stay in control of your health — every step of the way.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- 3. Women's Health -->
+                    <div class="service-detail-pane" id="service-womens-health">
+                      <div class="service-main-img-box">
+                        <img
+                          src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=80"
+                          alt="Women's Health" />
+                      </div>
+                      <div class="content">
+                        <span class="service-subtitle">Personalised care for every stage of life.</span>
+                        <h3 class="mb-20">Women’s Health</h3>
+                        <p>
+                          Our wonderful female GP, Dr San Keshavarzi specialises and takes a keen interest in women’s
+                          health. Certainly, women’s emotional and physical health needs are broad and complex –
+                          evolving with age, fertility and our environment.
+                        </p>
+                        <p>
+                          We offer health services to help women avoid future long-term health problems, improve their
+                          reproductive health and improve their well-being.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- 4. Health Assessments & Medicals -->
+                    <div class="service-detail-pane" id="service-health-assessments">
+                      <div class="service-main-img-box">
+                        <img
+                          src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1200&q=80"
+                          alt="Health Assessments" />
+                      </div>
+                      <div class="content">
+                        <h3 class="mb-20">Comprehensive Health Assessments</h3>
+                        <p>
+                          The benefits of our Health Assessments are clear: early detection helps prevent health
+                          problems from escalating, personalized lifestyle advice empowers better choices, and
+                          comprehensive tracking over time gives you peace of mind regarding your long-term vitality.
+                        </p>
+                        <p>
+                          Our Health Assessments are structured into three key steps: Review of Medical History,
+                          Comprehensive Examination, and Clear Recommendations. You are eligible for a Comprehensive
+                          Health Assessment if you are 75 years or older, or between 45 to 49 years with identified
+                          chronic disease risk factors. Eligible health assessments are bulk-billed under Medicare.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- 5. Children's Health -->
+                    <div class="service-detail-pane" id="service-childrens-health">
+                      <div class="service-main-img-box">
+                        <img
+                          src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80"
+                          alt="Children's Health" />
+                      </div>
+                      <div class="content">
+                        <h3 class="mb-20">Healthy kids, happy families.</h3>
+                        <p>
+                          From newborns to teens, our GPs provide expert care for every stage of childhood. We offer
+                          immunisations, developmental checks, treatment for common illnesses, and support for
+                          behavioural or emotional concerns.
+                        </p>
+                        <p>
+                          Our goal is to partner with families to ensure children grow up healthy, confident, and
+                          thriving — with care you can count on.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- 6. Asthma Management -->
+                    <div class="service-detail-pane" id="service-asthma-management">
+                      <div class="service-main-img-box">
+                        <img
+                          src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80"
+                          alt="Asthma Management" />
+                      </div>
+                      <div class="content">
+                        <h3 class="mb-20">Breathe easier with expert care.</h3>
+                        <p>
+                          Asthma affects people of all ages, but with the right support, it can be managed effectively.
+                          Our GPs offer individualised asthma action plans, inhaler technique training, and regular
+                          reviews to keep symptoms under control.
+                        </p>
+                        <p>
+                          We help identify triggers and reduce flare-ups so you can breathe easier and live more freely,
+                          every day.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- 7. Diabetes Management -->
+                    <div class="service-detail-pane" id="service-health-examinations">
+                      <div class="service-main-img-box">
+                        <img
+                          src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=1200&q=80"
+                          alt="Health Examinations" />
+                      </div>
+                      <div class="content">
+                        <h3 class="mb-20">Stay in control of your diabetes.</h3>
+                        <p>
+                          Living with diabetes requires regular support and guidance. Our GPs help manage type 1, type
+                          2, and gestational diabetes with personalised plans, blood sugar monitoring, medication
+                          reviews, and lifestyle coaching.
+                        </p>
+                        <p>
+                          We collaborate with dietitians and other specialists to help you maintain health and avoid
+                          long-term complications
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- 8. Mental Health -->
+                    <div class="service-detail-pane" id="service-mental-health">
+                      <div class="service-main-img-box">
+                        <img
+                          src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80"
+                          alt="Mental Health" />
+                      </div>
+                      <div class="content">
+                        <h3 class="mb-20">Your mental wellbeing matters.</h3>
+                        <p>
+                          Mental health is just as important as physical health. Our GPs support you through challenges
+                          like anxiety, depression, stress, or sleep issues.
+                        </p>
+                        <p>
+                          We offer personalised mental health care plans, referrals to psychologists, and regular
+                          check-ins — helping you feel supported, heard, and better equipped to navigate life.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Men's Health -->
+                    <div class="service-detail-pane" id="service-mens-health">
+                      <div class="service-main-img-box">
+                        <img
+                          src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=1200&q=80"
+                          alt="Men's Health" />
+                      </div>
+                      <div class="content">
+                        <h3 class="mb-20">Supporting men at every stage.</h3>
+                        <p>
+                          Men’s health needs change over time. Our GPs offer support for issues like blood pressure,
+                          mental health, sexual health, and lifestyle. We also provide prostate health checks and cancer
+                          screening.
+                        </p>
+                        <p>
+                          Whether you’re here for prevention or treatment, we’re ready to help you take control of your
+                          health and live well.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- 9. Skin Cancer Checks -->
+                    <div class="service-detail-pane" id="service-skin-cancer">
+                      <div class="service-main-img-box">
+                        <img
+                          src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
+                          alt="Skin Cancer Checks" />
+                      </div>
+                      <div class="content">
+                        <h3 class="mb-20">Protect your skin, protect your health.</h3>
+                        <p>
+                          Skin cancer is common in Australia, but early detection saves lives. Our GPs offer full-body
+                          skin checks, mole mapping, and minor procedures using advanced tools.
+                        </p>
+                        <p>
+                          With specialised training in skin cancer management, we provide thorough, proactive care. If
+                          you notice changes in your skin, don’t delay — book a check today.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- 10. Minor Procedures -->
+                    <div class="service-detail-pane" id="service-wound-care">
+                      <div class="service-main-img-box">
+                        <img
+                          src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80"
+                          alt="Wound Care" />
+                      </div>
+                      <div class="content">
+                        <h3 class="mb-20">Minor procedures, major care.</h3>
+                        <p>
+                          We provide safe, in-clinic procedures like mole and cyst removal, IUD and pessary
+                          insertion/removal, biopsies, wound care, and ingrown toenail treatment.
+                        </p>
+                        <p>
+                          Our doctors follow strict clinical guidelines. Some procedures may attract private fees — for
+                          more info, visit our Billings page or speak with our reception team.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- 11. Travel Medicine -->
+                    <div class="service-detail-pane" id="service-travel-medicine">
+                      <div class="service-main-img-box">
+                        <img
+                          src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80"
+                          alt="Travel Medicine" />
+                      </div>
+                      <div class="content">
+                        <h3 class="mb-20">Travel well with peace of mind.</h3>
+                        <p>
+                          Planning a trip? Book a travel consult with our GPs. We provide tailored advice, vaccinations,
+                          and preventative medications based on your destination.
+                        </p>
+                        <p>
+                          From tropical regions to remote locations, we’ll help protect your health and ensure you’re
+                          fully prepared for a safe, healthy journey — no matter where you go.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- 12. Family & Adult Immunisation -->
+                    <div class="service-detail-pane" id="service-immunisation">
+                      <div class="service-main-img-box">
+                        <img
+                          src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80"
+                          alt="Immunisation" />
+                      </div>
+                      <div class="content">
+                        <h3 class="mb-20">Protection through every season.</h3>
+                        <p>
+                          We offer immunisations for children and adults, including routine, flu, travel, and
+                          pregnancy-related vaccines. Your GP may issue a script for some vaccines not stocked onsite.
+                        </p>
+                        <p>
+                          Join our flu clinic each year or speak with our team to plan your vaccinations. For full info,
+                          visit the NSW Immunisation Program.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- ========================================================
+                         NEW PANE 1: Womens health needs (From Blue Box 1)
+                         ======================================================== -->
+                    <div class="service-detail-pane" id="service-womens-health-needs">
+                      <div class="service-main-img-box">
+                        <!-- High quality aesthetic image matching the pink stethoscope theme -->
+                        <img
+                          src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80"
+                          alt="Womens health needs" />
+                      </div>
+                      <div class="content">
+                        <span class="service-subtitle">Compassionate & Comprehensive Care</span>
+                        <h3 class="mb-20">Womens Health Needs</h3>
+
+                        <!-- Pink Callout Banner from the image -->
+                        <div class="womens-health-banner">
+                          <h4 style="color: #5c0322; font-weight: 700; margin-bottom: 20px;">
+                            Our GPs can support you with the following women's health needs:
+                          </h4>
+                          <ul class="service-list-check checklist-2-col mb-0">
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Breast checks</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Cervical screening
+                              (preventative cervical cancer screening)</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Family planning / pregnancy
+                              care</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Pregnancy decision-making
+                            </li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Contraception options
+                              (implants, injections, oral contraception)</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Fertility advice</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Menopause / perimenopause
+                              support</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Period problems & menstrual
+                              disorders</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Sexual health checks</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Heavy menstrual bleeding
+                            </li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Polycystic Ovary Syndrome
+                              (PCOS)</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Postnatal care & checks</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Iron deficiency management
+                            </li>
+                          </ul>
+                        </div>
+
+                        <p>
+                          Our doctors understand that women’s health evolves throughout different life stages, from
+                          adolescence and fertility planning to menopause and beyond. We offer thorough, compassionate
+                          consultations tailored to your individual physical and emotional health requirements.
+                        </p>
+                        <p>
+                          Whether you require confidential contraceptive counselling, advice regarding irregular
+                          menstrual cycles, or long-term management of menopause symptoms, our friendly clinical team is
+                          here to support you in a comfortable, private environment.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- ========================================================
+                         NEW PANE 2: HEALTH CHECKS (From Blue Box 2)
+                         ======================================================== -->
+                    <div class="service-detail-pane" id="service-health-checks">
+                      <div class="service-main-img-box">
+                        <img
+                          src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1200&q=80"
+                          alt="Health Checks & Assessments" />
+                      </div>
+                      <div class="content">
+                        <span class="service-subtitle">Dedicated evaluations to safeguard your vitality</span>
+                        <h3 class="mb-20">Health Checks & Comprehensive Health Assessments</h3>
+
+                        <p>
+                          The true value of our Health Assessments lies in their proactive, preventative nature.
+                          Supported by the latest medical research, scheduling an assessment is the best way to
+                          safeguard your future well-being. It is recommended that you undergo an assessment if you are
+                          75 or older, or between 45 to 49 years old.
+                        </p>
+                        <p>
+                          Our Health Assessments are structured into three key steps: <strong>Review of Medical
+                            History</strong>, <strong>Comprehensive Examination</strong>, and <strong>Clear
+                            Recommendations</strong>.
+                        </p>
+
+                        <div class="feature-box-highlight">
+                          <h5>If you are aged 75 or over, we recommend an annual comprehensive health assessment,
+                            bulk-billed under Medicare.</h5>
+                          <p class="mb-2"><strong>The assessment of 45–49 year olds is designed to prevent chronic
+                              diseases:</strong></p>
+                          <ul class="service-list-check mb-0">
+                            <li><i class="far fa-check-double"></i> Early detection helps identify potential health
+                              concerns before symptoms develop.</li>
+                            <li><i class="far fa-check-double"></i> Personalized lifestyle advice empowers you to make
+                              informed decisions about your health.</li>
+                            <li><i class="far fa-check-double"></i> Comprehensive monitoring over time provides vital
+                              tracking of cardiovascular and metabolic markers.</li>
+                          </ul>
+                        </div>
+
+                        <h4 class="mb-3" style="color: #5c0322; font-weight: 700;">The Three Steps of a Health
+                          Assessment:</h4>
+
+                        <div class="mb-4">
+                          <h5 class="fw-bold text-dark mb-2">Step 1: Review of Medical History</h5>
+                          <ul class="service-list-check">
+                            <li><i class="far fa-angle-right"></i> Detailed lifestyle review, including physical
+                              activity, nutrition, and sleep hygiene.</li>
+                            <li><i class="far fa-angle-right"></i> Evaluation of family health history to identify
+                              potential predispositions to heart disease, stroke, or diabetes.</li>
+                            <li><i class="far fa-angle-right"></i> Comprehensive review of all current prescription
+                              medications, over-the-counter supplements, and immunisation status.</li>
+                          </ul>
+                        </div>
+
+                        <div class="mb-4">
+                          <h5 class="fw-bold text-dark mb-2">Step 2: Comprehensive Clinical Examination</h5>
+                          <ul class="service-list-check">
+                            <li><i class="far fa-angle-right"></i> Routine vital signs check: blood pressure, resting
+                              pulse, and oxygen saturation.</li>
+                            <li><i class="far fa-angle-right"></i> Physical health screening: height, weight, Body Mass
+                              Index (BMI), and waist circumference.</li>
+                            <li><i class="far fa-angle-right"></i> Cardiovascular and respiratory evaluation, along with
+                              joint mobility, vision, and hearing checks.</li>
+                            <li><i class="far fa-angle-right"></i> Pathology investigations including fasting blood
+                              glucose, full lipid profile, kidney and liver function, and urinalysis.</li>
+                          </ul>
+                        </div>
+
+                        <div class="mb-4">
+                          <h5 class="fw-bold text-dark mb-2">Step 3: Clear Findings & Practical Recommendations</h5>
+                          <p>
+                            Following your assessment, your GP will discuss the findings in detail and formulate a
+                            personalized Health Management Plan. This may include lifestyle modifications, nutritional
+                            guidance, medication adjustments, or referrals to allied health specialists (e.g.,
+                            dietitians, physiotherapists) under Medicare-supported Team Care Arrangements.
+                          </p>
+                        </div>
+
+                        <div class="alert alert-light border p-3 rounded">
+                          <strong style="color: #5c0322;">Medicare Eligibility & Bulk Billing:</strong>
+                          <p class="mb-0 mt-1" style="font-size: 15px;">
+                            Health Assessments for patients aged 75 and over, and eligible patients aged 45 to 49 with
+                            chronic disease risk factors, are bulk-billed under Medicare with no out-of-pocket costs.
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- service-single end -->
+      </main>
+
+      <!-- footer area -->
+      <footer class="footer-area py-5" style="background-color: #5c0322;">
+        <div class="container">
+          <div class="row g-4 g-lg-5">
+
+            <!-- 1st Column (Logo & Contact) -->
+            <div class="col-lg-4 col-md-6 col-12 text-start">
+              <div class="footer-title-wrapper mb-4">
+                <a href="index.html" class="d-block w-100">
+                  <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="img-fluid"
+                    style="max-width: 300px;">
+                </a>
+              </div>
+              <ul class="list-unstyled mb-0" style="color: #fff; font-size: 16px;">
+                <li class="mb-3 d-flex align-items-center text-white">
+                  <i class="fas fa-phone-alt me-3"></i> Call us on :
+                  <a href="tel:0243417722" class="text-white text-decoration-none ms-1">02 4341 7722</a>
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                  <i class="fas fa-map-marker-alt me-3"></i>Address: 6 Sapphire Street, Wyoming, NSW 2250
+                </li>
+                <li class="mb-3 d-flex align-items-center">
+                  <i class="fas fa-envelope me-3"></i> admin@sapphiregp.com.au
+                </li>
+              </ul>
+            </div>
+
+            <!-- 2nd Column (Opening Hours) -->
+            <div class="col-lg-4 col-md-6 col-12 text-start">
+              <div class="footer-title-wrapper mb-4">
+                <h5 class="text-white mb-0"
+                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
+                  Opening Hours
+                </h5>
+              </div>
+              <ul class="list-unstyled mb-0" style="color: #fff; font-size: 17px;">
+                <!-- Monday - Friday -->
+                <li class="row align-items-start mb-3">
+                  <div class="col-7 col-md-auto pe-1">
+                    <span style="color: #ffffff; margin-right: 8px;">&raquo;</span>Monday - Friday
+                  </div>
+                  <div class="col-5 col-md-auto ms-md-auto text-start text-md-end ps-0">
+                    9AM - 6PM
+                  </div>
+                </li>
+                <!-- Saturday -->
+                <li class="row align-items-start mb-3">
+                  <div class="col-7 col-md-auto pe-1">
+                    <span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Saturday
+                  </div>
+                  <div class="col-5 col-md-auto ms-md-auto text-start text-md-end ps-0" style="color: #f8f7f8;">
+                    CLOSED
+                  </div>
+                </li>
+                <!-- Sunday and Public Holidays -->
+                <li class="row align-items-start mb-3">
+                  <div class="col-7 col-md-auto pe-1 d-flex">
+                    <span style="color: #ffffff; margin-right: 8px;">&raquo;</span>
+                    <span>Sunday and Public Holidays</span>
+                  </div>
+                  <div class="col-5 col-md-auto ms-md-auto text-start text-md-end ps-0" style="color: #f7f7f7;">
+                    CLOSED
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- 3rd Column (Quick Links) -->
+            <div class="col-lg-4 col-md-12 col-12 text-start">
+              <div class="footer-title-wrapper mb-4">
+                <h5 class="text-white mb-0"
+                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
+                  Quick Links
+                </h5>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <ul class="list-unstyled mb-0" style="font-size: 17px;">
+                    <li class="mb-3"><a href="index.html" class="text-white text-decoration-none"><span
+                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Home</a></li>
+                    <li class="mb-3"><a href="about.html" class="text-white text-decoration-none"><span
+                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>About Us</a></li>
+                    <li class="mb-3"><a href="service.html" class="text-white text-decoration-none"><span
+                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Services</a></li>
+                  </ul>
+                </div>
+                <div class="col-6">
+                  <ul class="list-unstyled mb-0" style="font-size: 17px;">
+                    <li class="mb-3"><a href="billing.html" class="text-white text-decoration-none"><span
+                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Billing Policy</a></li>
+                    <li class="mb-3"><a href="https://sapphireskinlaserclinic.com.au/"
+                        class="text-white text-decoration-none"><span
+                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Skin</a></li>
+                    <li class="mb-3"><a href="telehealth.html" class="text-white text-decoration-none"><span
+                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Telehealth</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="container mt-5 pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
+          <div class="row align-items-center">
+            <div class="col-md-6 col-12 text-start mb-2 mb-md-0">
+              <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
+                Copyright 2026 &copy; All Right Reserved Sapphire General Practice
+              </p>
+            </div>
+            <div class="col-md-6 col-12 text-start text-md-end mt-2 mt-md-0">
+              <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
+                <a href="https://www.anzwebdesign.com.au/" target="_blank" class="text-decoration-none"
+                  style="color: #ffffff;">Web Design Marketing Australia</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer area end -->
+    </div>
+  </div>
+
+  <!-- scroll-top -->
+  <a href="#" id="scroll-top"><i class="fas fa-arrow-up"></i></a>
+  <!-- scroll-top end -->
+
+  <!-- js -->
+  <script src="assets/js/jquery-3.7.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/jquery.magnific-popup.min.js"></script>
+  <script src="assets/js/isotope.pkgd.min.js"></script>
+  <script src="assets/js/jquery.appear.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/counter-up.js"></script>
+  <script src="assets/js/beforeafter.jquery.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/gsap-custom.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Interactive Dynamic Service Switcher Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navItems = document.querySelectorAll(".service-nav-item");
+      const detailPanes = document.querySelectorAll(".service-detail-pane");
+      const breadcrumbTitle = document.getElementById("breadcrumb-service-title");
+
+      navItems.forEach(function (item) {
+        item.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          // 1. Remove active state from all nav items
+          navItems.forEach(function (nav) {
+            nav.classList.remove("active");
+          });
+
+          // 2. Add active state to clicked item
+          this.classList.add("active");
+
+          // 3. Hide all detail panes
+          detailPanes.forEach(function (pane) {
+            pane.classList.remove("active");
+            pane.style.display = "none";
+          });
+
+          // 4. Show corresponding pane
+          const targetId = this.getAttribute("data-target");
+          const targetPane = document.getElementById(targetId);
+          if (targetPane) {
+            targetPane.style.display = "block";
+            targetPane.classList.add("active");
+
+            // Update Breadcrumb text
+            const titleElem = targetPane.querySelector("h3");
+            if (titleElem && breadcrumbTitle) {
+              breadcrumbTitle.innerText = titleElem.innerText;
+            }
+
+            // Smooth scroll on mobile screens so the user sees the updated content directly
+            if (window.innerWidth < 992) {
+              targetPane.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

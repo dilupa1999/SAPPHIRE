@@ -855,8 +855,8 @@ label {
   background-size: cover !important;
   text-align: center;
   position: relative;
-  padding-top: 340px;
-  padding-bottom: 120px;
+  padding-top: 140px;
+  padding-bottom: 70px;
   z-index: 1;
 }
 .site-breadcrumb::before {
