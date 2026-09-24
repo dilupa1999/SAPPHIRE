@@ -12,10 +12,10 @@
   <meta name="keywords" content="" />
 
   <!-- title -->
-  <title>Denox - Dentist and Dental Clinic HTML5 Template</title>
+  <title>Contact Us</title>
 
   <!-- favicon -->
-  <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="assets/img/logo/logoicon.png" />
 
   <!-- css -->
   <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -24,6 +24,68 @@
   <link rel="stylesheet" href="assets/css/magnific-popup.min.css" />
   <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <style>
+    /* සියලුම ඡේද සහ විස්තර Justify කිරීම */
+    p, 
+    .about-text, 
+    .contact-content p, 
+    .contact-form-header p, 
+    .accessibility-info p, 
+    .emergencies-box p {
+      text-align: justify !important;
+      text-justify: inter-word;
+    }
+
+    /* Sections අතර ඉඩ ඒකාකාරීව සහ අඩු ලෙස සකස් කිරීම (Uniform Spacing) */
+  
+
+    .contact-area.py-120 {
+      padding-top: 50px !important;
+      padding-bottom: 50px !important;
+    }
+
+    .contact-map.pb-120 {
+      padding-bottom: 50px !important;
+    }
+
+    .footer-area.py-5 {
+      padding-top: 45px !important;
+      padding-bottom: 45px !important;
+    }
+
+    /* ඇතුළත අයිතම අතර පරතරය අඩු කිරීම */
+    .site-heading {
+      margin-bottom: 20px !important;
+    }
+
+    .contact-info {
+      margin-bottom: 16px !important;
+    }
+
+    .contact-form-header {
+      margin-bottom: 20px !important;
+    }
+
+    .form-group {
+      margin-bottom: 14px !important;
+    }
+
+    .accessibility-info {
+      margin-top: 20px !important;
+      padding-top: 10px !important;
+    }
+
+    .emergencies-box {
+      margin-top: 20px !important;
+      padding-top: 15px !important;
+    }
+
+    /* Footer තීරු ඉහළින් සමපාත කිරීම */
+    .footer-title-wrapper h5 {
+      margin-top: 0 !important;
+    }
+  </style>
 </head>
 
 <body class="h-bg">
@@ -107,17 +169,7 @@
   </header>
   <!-- header area end -->
 
-  <!-- popup search -->
-  <div class="search-popup">
-    <button class="close-search"><span class="far fa-times"></span></button>
-    <form action="#">
-      <div class="form-group">
-        <input type="search" name="search-field" class="form-control" placeholder="Search Here..." required />
-        <button type="submit"><i class="far fa-search"></i></button>
-      </div>
-    </form>
-  </div>
-  <!-- popup search end -->
+
 
   <div id="smooth-wrapper">
     <div id="smooth-content">
@@ -126,7 +178,6 @@
         <div class="site-breadcrumb" style="background: url(assets/img/breadcrumb/01.jpg)">
           <div class="container">
             <h3 class="breadcrumb-title">Contact Us</h3>
-
           </div>
         </div>
         <!-- breadcrumb end -->
@@ -135,107 +186,122 @@
         <div class="contact-area bg py-120">
           <div class="container">
             <div class="row g-4">
+              <!-- Left Column: Information -->
               <div class="col-lg-5">
                 <div class="contact-content">
-                  <div class="site-heading mb-3">
-
-                    <h3 class="site-title">We're Here to Help You Stay Healthy</h3>
-                    <p class="about-text">
-                      At Renwick GP, your health and well-being are our top priorities. Whether you’re booking an
+                  <div class="site-heading">
+                    <h3 class="site-title mb-3 ani-text-1">WE'RE HERE TO HELP YOU STAY HEALTHY</h3>
+                    <p class="about-text mb-2">
+                      At Sapphire GP, your health and well-being are our top priorities. Whether you’re booking an
                       appointment, need medical advice, or simply have a question about our services, we’re always here
                       to support you.
                     </p>
-                    <p class="about-text mt-10">
+                    <p class="about-text">
                       Our friendly and experienced team is ready to assist you with general health concerns, chronic
                       condition management, immunisations, mental health support, women’s and men’s health, and much
                       more.
                     </p>
                   </div>
-                  <div class="contact-info">
-                    <div class="icon">
-                      <img src="assets/img/icon/address.svg" alt="" />
-                    </div>
-                    <div class="content">
-                      <h4>Office Address</h4>
-                      <p>Address: 6 Renwick Street, Wyoming, NSW 2250</p>
-                    </div>
-                  </div>
+
+                  <h4 class="mb-3" style="font-weight: 700; text-transform: uppercase;">GET IN TOUCH</h4>
+
                   <div class="contact-info">
                     <div class="icon">
                       <img src="assets/img/icon/call.svg" alt="" />
                     </div>
                     <div class="content">
-                      <h4>Call Us</h4>
-                      <p><a href="tel:+21234565789">
-                          02 4341 7722</a></p>
+                      <h4><a href="tel:0243417722">(02) 4341 7722</a></h4>
+                      <p>Call us during business hours to speak directly with one of our helpful receptionists.</p>
                     </div>
                   </div>
+
                   <div class="contact-info">
                     <div class="icon">
                       <img src="assets/img/icon/email.svg" alt="" />
                     </div>
                     <div class="content">
-                      <h4>Email Us</h4>
-                      <p><a href="mailto:admin@sapphiregp.com.au">admin@sapphiregp.com.au</a></p>
+                      <h4><a href="mailto:admin@sapphire.com.au">admin@sapphire.com.au</a></h4>
+                      <p>Feel free to email us for non-urgent inquiries. We'll get back to you as soon as possible.</p>
                     </div>
                   </div>
-                  <!-- <div class="contact-info">
-                    <div class="icon">
-                      <img src="assets/img/icon/clock.svg" alt="" />
-                    </div>
-                    <div class="content">
-                      <h4>Open Time</h4>
-                      <p>Mon - Sat (10.00AM - 05.30PM)</p>
-                    </div>
-                  </div> -->
+
+                  <div class="accessibility-info">
+                    <h4 class="mb-2" style="font-weight: 700; text-transform: uppercase;">ACCESSIBILITY</h4>
+                    <p class="about-text mb-0">
+                      Sapphire GP is wheelchair accessible and designed to accommodate patients of all ages and
+                      abilities. Please let us know if you need any special assistance when visiting.
+                    </p>
+                  </div>
                 </div>
               </div>
+
+              <!-- Right Column: Form & Online Section -->
               <div class="col-lg-7">
                 <div class="contact-form">
                   <div class="contact-form-header">
-                    <h3>Get In Touch</h3>
-                    <p>
-                      It is a long established fact that a reader will be distracted by the readable content of a page
-                      randomised words
-                      which don't look even slightly when looking at its layout.
+                    <h3 style="text-transform: uppercase;">PREFER TO GET IN TOUCH ONLINE?</h3>
+                    <p class="mb-2">
+                      Fill out the form below and a member of our team will get back to you as soon as possible.
+                    </p>
+                    <p class="mb-3">
+                      Please use this form for general enquiries, appointment requests, or feedback. Do not submit any
+                      urgent medical issues or sensitive personal information.
+                    </p>
+
+                    <h5 class="mt-3 mb-2" style="font-weight: 700; text-transform: uppercase;">FEEDBACK &amp; SUGGESTIONS</h5>
+                    <p class="mb-0">
+                      We value your feedback. Your experience helps us improve and deliver better care. If you have any
+                      compliments, suggestions, or concerns, please don't hesitate to reach out. You may also provide
+                      feedback directly through our contact form or by speaking with our practice manager.
                     </p>
                   </div>
+
                   <div class="form-message"></div>
-                  <form method="post" action="https://live.themewild.com/denox/assets/php/contact.php"
-                    id="contact-form">
+                  <form method="post" action="https://live.themewild.com/denox/assets/php/contact.php" id="contact-form">
                     <div class="row">
-                      <div class="col-md-6">
+                      <div class="col-md-12">
                         <div class="form-group">
                           <div class="form-icon">
-                            <i class="far fa-user-tie"></i>
-                            <input type="text" class="form-control" name="name" placeholder="Your Name" required />
+                            <i class="far fa-user"></i>
+                            <input type="text" class="form-control" name="name" placeholder="NAME" required />
                           </div>
                         </div>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <div class="form-icon">
+                            <i class="far fa-phone"></i>
+                            <input type="tel" class="form-control" name="phone" placeholder="PHONE" required />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-12">
                         <div class="form-group">
                           <div class="form-icon">
                             <i class="far fa-envelope"></i>
-                            <input type="email" class="form-control" name="email" placeholder="Your Email" required />
+                            <input type="email" class="form-control" name="email" placeholder="EMAIL" required />
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="form-icon">
-                        <i class="far fa-pen"></i>
-                        <input type="text" class="form-control" name="subject" placeholder="Your Subject" required />
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <div class="form-icon">
+                            <i class="far fa-comment-lines"></i>
+                            <textarea name="message" cols="30" rows="4" class="form-control" placeholder="MESSAGE" required></textarea>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12">
+                        <button type="submit" class="theme-btn">SEND <i class="far fa-paper-plane"></i></button>
                       </div>
                     </div>
-                    <div class="form-group">
-                      <div class="form-icon">
-                        <i class="far fa-comment-lines"></i>
-                        <textarea name="message" cols="30" rows="5" class="form-control"
-                          placeholder="Write Your Message" required></textarea>
-                      </div>
-                    </div>
-                    <button type="submit" class="theme-btn">Send Message <i class="far fa-paper-plane"></i></button>
                   </form>
+
+                  <!-- <div class="emergencies-box border-top">
+                    <h5 style="color: #d90429; font-weight: 700; text-transform: uppercase; margin-bottom: 4px;">EMERGENCIES</h5>
+                    <p class="mb-1" style="font-weight: 600;">Please note: We are not an emergency service.</p>
+                    <p class="mb-0" style="color: #d90429; font-weight: 500;">For any medical emergencies, call 000 or visit your nearest hospital.</p>
+                  </div> -->
                 </div>
               </div>
             </div>
@@ -249,7 +315,6 @@
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3330.758642372381!2d151.348134776422!3d-33.403460495108654!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b72cae8245e1503%3A0x2e909c91db8ca137!2s6%20Renwick%20St%2C%20Wyoming%20NSW%202250%2C%20Australia!5e0!3m2!1sen!2slk!4v1790223478655!5m2!1sen!2slk"
               style="border: 0" allowfullscreen="" loading="lazy"></iframe>
-
           </div>
         </div>
         <!-- map end -->
@@ -285,9 +350,8 @@
             <!-- 2nd Column (Opening Hours) -->
             <div class="col-lg-4 col-md-6 col-12 text-start">
               <div class="footer-title-wrapper mb-4">
-                <!-- මෙතන margin-top: 30px; ලෙස වෙනස් කර ඇත -->
                 <h5 class="text-white mb-0"
-                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
+                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">
                   Opening Hours
                 </h5>
               </div>
@@ -326,9 +390,8 @@
             <!-- 3rd Column (Quick Links) -->
             <div class="col-lg-4 col-md-12 col-12 text-start">
               <div class="footer-title-wrapper mb-4">
-                <!-- මෙතන margin-top: 30px; ලෙස වෙනස් කර ඇත -->
                 <h5 class="text-white mb-0"
-                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
+                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">
                   Quick Links
                 </h5>
               </div>
@@ -359,7 +422,7 @@
 
           </div>
         </div>
-        <div class="container mt-5 pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
+        <div class="container mt-4 pt-3 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
           <div class="row align-items-center">
             <div class="col-md-6 col-12 text-start mb-2 mb-md-0">
               <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
@@ -398,7 +461,5 @@
   <script src="assets/js/contact-form.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
-
-<!-- Mirrored from live.themewild.com/denox/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Sep 2026 08:00:39 GMT -->
 
 </html>

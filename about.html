@@ -24,8 +24,65 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
-    
+    /* Mobile සහ Desktop දෙකටම Text Justify කිරීම */
+    p, 
+    .about-text, 
+    .about-right p, 
+    .site-heading p, 
+    .site-title,
+    .accessibility-section p {
+      text-align: justify !important;
+      text-justify: inter-word;
+    }
+
+    /* Desktop View Spacing: Sections අතර ඉඩ ඒකාකාරීව සහ අඩු කිරීම */
+    .site-breadcrumb {
+      padding: 50px 0 !important;
+    }
+
+    .about-area.py-120 {
+      padding-top: 50px !important;
+      padding-bottom: 50px !important;
+    }
+
+    .about-section-row {
+      margin-bottom: 35px !important;
+      padding-bottom: 0 !important;
+    }
+
+    .about-right p {
+      margin-bottom: 14px !important;
+    }
+
+    .about-right p:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    .accessibility-section {
+      margin-top: 0 !important;
+      padding-top: 0 !important;
+    }
+
+    .footer-area.py-5 {
+      padding-top: 45px !important;
+      padding-bottom: 45px !important;
+    }
+
+    /* Footer තීරු මුදුනින් සමපාත කිරීම */
+    .footer-title-wrapper h5 {
+      margin-top: 0 !important;
+    }
+
+    /* Mobile View Spacing (max-width: 991.98px) */
     @media (max-width: 991.98px) {
+      .site-breadcrumb {
+        padding: 35px 0 !important;
+      }
+
+      .about-area.py-120 {
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
+      }
 
       .about-left,
       .about-right,
@@ -37,43 +94,35 @@
         padding-bottom: 0 !important;
       }
 
-    
       .about-img-box {
         margin-bottom: 18px !important;
       }
 
-     
       .about-section-row {
         margin-bottom: 25px !important;
         padding-bottom: 0 !important;
       }
 
-   
       .about-right p {
         margin-bottom: 12px !important;
       }
-      .about-right p:last-child {
-        margin-bottom: 0 !important;
-      }
-
 
       .site-heading {
-        margin-bottom: 10px !important;
-      }
-      .site-heading .site-title {
-        margin-bottom: 0 !important;
+        margin-bottom: 12px !important;
       }
 
-  
+      .site-heading .site-title {
+        margin-bottom: 8px !important;
+      }
+
       .accessibility-section {
         margin-top: 0 !important;
         padding-top: 0 !important;
       }
 
-   
-      .about-area.py-120 {
-        padding-top: 40px !important;
-        padding-bottom: 40px !important;
+      .footer-area.py-5 {
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
       }
     }
   </style>
@@ -176,7 +225,7 @@
           <div class="container">
             
             <!-- First Section -->
-            <div class="row align-items-center gx-lg-5 about-section-row mb-lg-5 pb-lg-4">
+            <div class="row align-items-center gx-lg-5 about-section-row">
               <div class="col-lg-6 col-md-12 about-img-box mb-lg-0">
                 <div class="about-left wow fadeInLeft" data-wow-delay=".2s">
                   <div class="about-img">
@@ -195,16 +244,16 @@
               <div class="col-lg-6 col-md-12">
                 <div class="about-right">
                   <div class="site-heading mb-3">
-                    <h4 class="site-title ani-text-1" style="text-align: justify;">Caring for our community with compassion, expertise, and a personal touch.</h4>
+                    <h4 class="site-title ani-text-1">Caring for our community with compassion, expertise, and a personal touch.</h4>
                   </div>
-                  <p class="about-text wow fadeInUp" data-wow-delay=".2s" style="text-align: justify;">
+                  <p class="about-text wow fadeInUp" data-wow-delay=".2s">
                     There are many variations of passages orem psum available, but the majority have suffered alteration
                     in some form by
                     At Sapphire General Practice, our mission is to provide our community with exceptional medical care
                     that puts your wellbeing first. We believe every patient deserves to feel heard, respected, and
                     supported—no matter their stage of life or health needs
                   </p>
-                  <p style="text-align: justify;">Our team consists of both female and male doctors, allowing you to choose the GP you feel most
+                  <p>Our team consists of both female and male doctors, allowing you to choose the GP you feel most
                     comfortable with. Our female GP specialises in women’s health and reproductive health, ensuring
                     tailored care for all aspects of women’s wellbeing. We also offer a broad range of general practice
                     services to support individuals and families in our community.</p>
@@ -213,7 +262,7 @@
             </div>
 
             <!-- Second Section -->
-            <div class="row align-items-center gx-lg-5 about-section-row mb-lg-5 pb-lg-4">
+            <div class="row align-items-center gx-lg-5 about-section-row">
               <!-- Image section ordered first on Mobile, second on Desktop -->
               <div class="col-lg-6 col-md-12 order-1 order-lg-2 about-img-box mb-lg-0">
                 <div class="about-left wow fadeInRight" data-wow-delay=".2s">
@@ -233,16 +282,16 @@
               <!-- Text section ordered second on Mobile, first on Desktop -->
               <div class="col-lg-6 col-md-12 order-2 order-lg-1">
                 <div class="about-right">
-                  <p class="about-text wow fadeInUp" data-wow-delay=".2s" style="text-align: justify;">
+                  <p class="about-text wow fadeInUp" data-wow-delay=".2s">
                     Conveniently located at 6 Sapphire Street, Wyoming, just off the Pacific Highway, our clinic offers
                     on-site parking for patients, including accessible parking spaces and wheelchair ramps for easy
                     access.
                   </p>
-                  <p style="text-align: justify;">We are proud to welcome new patients, and walk-in appointments are accepted whenever possible. From
+                  <p>We are proud to welcome new patients, and walk-in appointments are accepted whenever possible. From
                     the moment you are greeted by our friendly reception team to your consultation with one of our
                     approachable GPs or our experienced practice nurse, we strive to make every visit comfortable,
                     caring, and supportive.</p>
-                  <p style="text-align: justify;">Choose Sapphire General Practice for high-quality, personalised medical care, right in the heart of
+                  <p>Choose Sapphire General Practice for high-quality, personalised medical care, right in the heart of
                     your community.</p>
                 </div>
               </div>
@@ -255,7 +304,7 @@
                   <div class="site-heading mb-3">
                     <h3 class="site-title ani-text-1">Accessibility.</h3>
                   </div>
-                  <p class="about-text wow fadeInUp mb-0" data-wow-delay=".2s" style="text-align: justify;">
+                  <p class="about-text wow fadeInUp mb-0" data-wow-delay=".2s">
                     Sapphire GP is wheelchair accessible and designed to accommodate patients of all ages and abilities.
                     Please let us know if you need any special assistance when visiting.
                   </p>
@@ -298,7 +347,7 @@
             <div class="col-lg-4 col-md-6 col-12 text-start">
               <div class="footer-title-wrapper mb-4">
                 <h5 class="text-white mb-0"
-                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
+                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">
                   Opening Hours
                 </h5>
               </div>
@@ -338,7 +387,7 @@
             <div class="col-lg-4 col-md-12 col-12 text-start">
               <div class="footer-title-wrapper mb-4">
                 <h5 class="text-white mb-0"
-                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
+                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">
                   Quick Links
                 </h5>
               </div>
@@ -369,7 +418,7 @@
 
           </div>
         </div>
-        <div class="container mt-5 pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
+        <div class="container mt-4 pt-3 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
           <div class="row align-items-center">
             <div class="col-md-6 col-12 text-start mb-2 mb-md-0">
               <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
