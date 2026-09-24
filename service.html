@@ -25,7 +25,136 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
-    /* Custom Styling for Interactive Service Switcher */
+    /* ========================================================
+       1. Breadcrumb Spacing & Title Fix (Navbar එකට යට නොවී පෙනීමට)
+       ======================================================== */
+    .site-breadcrumb {
+      position: relative !important;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      padding-top: 170px !important; /* Navbar එකට ඉඩ තබා Breadcrumb එක පහළට ගැනීම */
+      padding-bottom: 70px !important;
+      margin-bottom: 0 !important;
+      text-align: center !important;
+    }
+
+    .site-breadcrumb::before {
+      content: "" !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      background: rgba(0, 0, 0, 0.45) !important;
+      z-index: 1 !important;
+    }
+
+    .site-breadcrumb .container {
+      position: relative !important;
+      z-index: 2 !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .site-breadcrumb .breadcrumb-title {
+      color: #ffffff !important;
+      font-size: 36px !important;
+      font-weight: 700 !important;
+      margin: 0 !important;
+      display: block !important;
+      visibility: visible !important;
+      text-transform: capitalize !important;
+    }
+
+    /* ========================================================
+       2. Content Text Justify (Service විස්තර සඳහා පමණක්)
+       ======================================================== */
+    .service-details p,
+    .service-list-check li,
+    .feature-box-highlight p,
+    .womens-health-banner p,
+    .alert p {
+      text-align: justify !important;
+      text-justify: inter-word;
+    }
+
+    /* ========================================================
+       3. Desktop View Spacing: Sections අතර ඉඩ ඒකාකාරීව අඩු කිරීම
+       ======================================================== */
+    .service-single.py-120 {
+      padding-top: 50px !important;
+      padding-bottom: 50px !important;
+    }
+
+    .service-main-img-box {
+      max-height: 450px;
+      overflow: hidden;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      margin-bottom: 20px !important;
+    }
+
+    .service-main-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-details .mb-20 {
+      margin-bottom: 12px !important;
+    }
+
+    .feature-box-highlight {
+      background: #fdf2f4;
+      border-left: 4px solid #5c0322;
+      padding: 18px !important;
+      border-radius: 8px;
+      margin: 20px 0 !important;
+    }
+
+    .feature-box-highlight h5 {
+      color: #5c0322;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .womens-health-banner {
+      background: #ffe6ec;
+      border-radius: 16px;
+      padding: 24px !important;
+      margin-bottom: 22px !important;
+      border-left: 5px solid #46122c;
+    }
+
+    /* ========================================================
+       4. Footer & Copyright Bar Alignment Fix
+       ======================================================== */
+    .footer-area.py-5 {
+      padding-top: 45px !important;
+      padding-bottom: 45px !important;
+    }
+
+    .footer-title-wrapper h5 {
+      margin-top: 0 !important;
+    }
+
+    .footer-area p {
+      text-align: left !important;
+    }
+
+    @media (min-width: 768px) {
+      .footer-area .text-md-end,
+      .footer-area .text-md-end p {
+        text-align: right !important;
+      }
+    }
+
+    /* ========================================================
+       5. Interactive Service Switcher & Styles
+       ======================================================== */
     .service-nav-item {
       display: flex;
       align-items: center;
@@ -61,7 +190,6 @@
       transform: translateX(4px);
     }
 
-    /* Detail Pane animation */
     .service-detail-pane {
       display: none;
       animation: fadeInService 0.4s ease-in-out;
@@ -76,77 +204,37 @@
         opacity: 0;
         transform: translateY(10px);
       }
-
       to {
         opacity: 1;
         transform: translateY(0);
       }
     }
 
-    .service-main-img-box {
-      max-height: 480px;
-      overflow: hidden;
-      border-radius: 40px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      margin-bottom: 30px;
-    }
-
-    .service-main-img-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
     .service-subtitle {
       color: #5c0322;
       font-weight: 600;
       font-style: italic;
-      margin-bottom: 15px;
-      display: block;
-      font-size: 1.1rem;
-    }
-
-    .feature-box-highlight {
-      background: #fdf2f4;
-      border-left: 4px solid #5c0322;
-      padding: 20px;
-      border-radius: 8px;
-      margin: 25px 0;
-    }
-
-    .feature-box-highlight h5 {
-      color: #5c0322;
-      font-weight: 700;
       margin-bottom: 12px;
-    }
-
-    /* Pink Special Banner Styling for Women's Health Needs */
-    .womens-health-banner {
-      background: #ffe6ec;
-      border-radius: 20px;
-      padding: 30px;
-      margin-bottom: 30px;
-      border-left: 5px solid #46122c;
+      display: block;
+      font-size: 1.05rem;
     }
 
     .service-details p {
-      text-align: justify;
       line-height: 1.8;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       color: #555;
     }
 
     .service-list-check {
       list-style: none;
       padding-left: 0;
-      margin: 20px 0;
+      margin: 16px 0;
     }
 
     .service-list-check li {
       position: relative;
-      padding-left: 30px;
-      margin-bottom: 10px;
+      padding-left: 28px;
+      margin-bottom: 8px;
       color: #444;
       font-weight: 500;
       line-height: 1.6;
@@ -166,14 +254,51 @@
       gap: 10px;
     }
 
+    /* ========================================================
+       6. Mobile Responsive Spacing (max-width: 991.98px)
+       ======================================================== */
     @media (max-width: 991.98px) {
-      .service-main-img-box {
-        max-height: 320px;
-        border-radius: 25px;
+      .site-breadcrumb {
+        padding-top: 125px !important;
+        padding-bottom: 45px !important;
+      }
+
+      .site-breadcrumb .breadcrumb-title {
+        font-size: 28px !important;
+      }
+
+      .service-single.py-120 {
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
       }
 
       .service-sidebar {
-        margin-bottom: 40px;
+        margin-bottom: 30px !important;
+      }
+
+      .widget-extra-buttons {
+        margin-top: 15px !important;
+      }
+
+      .service-main-img-box {
+        max-height: 280px !important;
+        border-radius: 20px !important;
+        margin-bottom: 18px !important;
+      }
+
+      .womens-health-banner {
+        padding: 18px !important;
+        margin-bottom: 18px !important;
+      }
+
+      .feature-box-highlight {
+        padding: 15px !important;
+        margin: 16px 0 !important;
+      }
+
+      .footer-area.py-5 {
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
       }
     }
   </style>
@@ -190,7 +315,7 @@
   <!-- preloader end -->
 
   <!-- header area -->
-  <header class="header hd-1">
+    <header class="header hd-1">
     <div class="header-top">
       <div class="container px-lg-0">
         <div class="header-top-wrap">
@@ -237,11 +362,12 @@
             </div>
             <div class="offcanvas-body gap-xl-4">
               <ul class="navbar-nav justify-content-end gap-1 flex-grow-1">
-                <li class="nav-item dropdown"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item dropdown"><a class="nav-link active" href="#" data-bs-toggle="dropdown">Home</a>
+                </li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
-                <li class="nav-item"><a class="nav-link active" href="service.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="billing.html">Billing Policy</a></li>
+                <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="privacy.html">Billing Policy</a></li>
                 <li class="nav-item"><a class="nav-link" href="https://sapphireskinlaserclinic.com.au/">Skin</a></li>
                 <li class="nav-item"><a class="nav-link" href="telehealth.html">Telehealth</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
@@ -263,9 +389,9 @@
     <div id="smooth-content">
       <main class="main">
         <!-- breadcrumb -->
-        <div class="site-breadcrumb" style="background: url(assets/img/breadcrumb/01.jpg)">
+        <div class="site-breadcrumb" style="background: url(assets/img/breadcrumb/01.png)">
           <div class="container">
-            <h3 class="breadcrumb-title" id="breadcrumb-service-title">Our Services</h3>
+            <h3 class="breadcrumb-title" id="">Our Services</h3>
           </div>
         </div>
         <!-- breadcrumb end -->
@@ -279,7 +405,7 @@
                 <!-- SIDEBAR: All Services List -->
                 <div class="col-xl-4 col-lg-4">
                   <div class="service-sidebar">
-                    <div class="widget">
+                    <div class="widget mb-4">
                       <h4 class="title">All Services</h4>
                       <div class="category service-menu-list">
                         <a href="javascript:void(0)" class="service-nav-item active"
@@ -319,19 +445,10 @@
                         <a href="javascript:void(0)" class="service-nav-item" data-target="service-immunisation">
                           <i class="far fa-angle-double-right"></i>Immunisation
                         </a>
-
-
-
-
-
-                        <a href="javascript:void(0)" class="service-nav-item" data-target="">
-                     
-                        </a>
                       </div>
                     </div>
 
-                    <div class="widget" style="margin-top: -16%;">
-                      <!-- <h4 class="title">Need Assistance?</h4> -->
+                    <div class="widget widget-extra-buttons">
                       <div class="p-1 bg-light rounded text-center">
                         <!-- Womens Health Needs -->
                         <a href="javascript:void(0)"
@@ -625,12 +742,9 @@
                       </div>
                     </div>
 
-                    <!-- ========================================================
-                         NEW PANE 1: Womens health needs (From Blue Box 1)
-                         ======================================================== -->
+                    <!-- NEW PANE 1: Womens health needs -->
                     <div class="service-detail-pane" id="service-womens-health-needs">
                       <div class="service-main-img-box">
-                        <!-- High quality aesthetic image matching the pink stethoscope theme -->
                         <img
                           src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80"
                           alt="Womens health needs" />
@@ -639,9 +753,8 @@
                         <span class="service-subtitle">Compassionate & Comprehensive Care</span>
                         <h3 class="mb-20">Womens Health Needs</h3>
 
-                        <!-- Pink Callout Banner from the image -->
                         <div class="womens-health-banner">
-                          <h4 style="color: #5c0322; font-weight: 700; margin-bottom: 20px;">
+                          <h4 style="color: #5c0322; font-weight: 700; margin-bottom: 16px;">
                             Our GPs can support you with the following women's health needs:
                           </h4>
                           <ul class="service-list-check checklist-2-col mb-0">
@@ -650,8 +763,7 @@
                               (preventative cervical cancer screening)</li>
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Family planning / pregnancy
                               care</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Pregnancy decision-making
-                            </li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Pregnancy decision-making</li>
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Contraception options
                               (implants, injections, oral contraception)</li>
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Fertility advice</li>
@@ -660,13 +772,11 @@
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Period problems & menstrual
                               disorders</li>
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Sexual health checks</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Heavy menstrual bleeding
-                            </li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Heavy menstrual bleeding</li>
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Polycystic Ovary Syndrome
                               (PCOS)</li>
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Postnatal care & checks</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Iron deficiency management
-                            </li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Iron deficiency management</li>
                           </ul>
                         </div>
 
@@ -683,9 +793,7 @@
                       </div>
                     </div>
 
-                    <!-- ========================================================
-                         NEW PANE 2: HEALTH CHECKS (From Blue Box 2)
-                         ======================================================== -->
+                    <!-- NEW PANE 2: HEALTH CHECKS -->
                     <div class="service-detail-pane" id="service-health-checks">
                       <div class="service-main-img-box">
                         <img
@@ -726,7 +834,7 @@
                         <h4 class="mb-3" style="color: #5c0322; font-weight: 700;">The Three Steps of a Health
                           Assessment:</h4>
 
-                        <div class="mb-4">
+                        <div class="mb-3">
                           <h5 class="fw-bold text-dark mb-2">Step 1: Review of Medical History</h5>
                           <ul class="service-list-check">
                             <li><i class="far fa-angle-right"></i> Detailed lifestyle review, including physical
@@ -738,7 +846,7 @@
                           </ul>
                         </div>
 
-                        <div class="mb-4">
+                        <div class="mb-3">
                           <h5 class="fw-bold text-dark mb-2">Step 2: Comprehensive Clinical Examination</h5>
                           <ul class="service-list-check">
                             <li><i class="far fa-angle-right"></i> Routine vital signs check: blood pressure, resting
@@ -752,7 +860,7 @@
                           </ul>
                         </div>
 
-                        <div class="mb-4">
+                        <div class="mb-3">
                           <h5 class="fw-bold text-dark mb-2">Step 3: Clear Findings & Practical Recommendations</h5>
                           <p>
                             Following your assessment, your GP will discuss the findings in detail and formulate a
@@ -814,7 +922,7 @@
             <div class="col-lg-4 col-md-6 col-12 text-start">
               <div class="footer-title-wrapper mb-4">
                 <h5 class="text-white mb-0"
-                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
+                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">
                   Opening Hours
                 </h5>
               </div>
@@ -854,7 +962,7 @@
             <div class="col-lg-4 col-md-12 col-12 text-start">
               <div class="footer-title-wrapper mb-4">
                 <h5 class="text-white mb-0"
-                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
+                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">
                   Quick Links
                 </h5>
               </div>
@@ -885,7 +993,7 @@
 
           </div>
         </div>
-        <div class="container mt-5 pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
+        <div class="container mt-4 pt-3 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
           <div class="row align-items-center">
             <div class="col-md-6 col-12 text-start mb-2 mb-md-0">
               <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">

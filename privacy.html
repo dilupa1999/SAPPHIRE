@@ -10,7 +10,7 @@
   <meta name="keywords" content="" />
 
   <!-- title -->
-  <title>About Us</title>
+  <title>Billing Policy</title>
 
   <!-- favicon -->
   <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png" />
@@ -24,170 +24,140 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
-    /* ========================================================
-       1. Breadcrumb Spacing & Title Fix (Navbar එකට යට නොවී පෙනීමට)
-       ======================================================== */
-    .site-breadcrumb {
-      position: relative !important;
-      background-size: cover !important;
-      background-position: center !important;
-      background-repeat: no-repeat !important;
-      padding-top: 170px !important;
-      /* Navbar එකට ඉඩ තබා Breadcrumb එක පහළට ගැනීම */
-      padding-bottom: 70px !important;
-      margin-bottom: 0 !important;
-      text-align: center !important;
+    /* Spacing mattu Justify alignment styling */
+    .billing-section {
+      padding-top: 45px;
+      padding-bottom: 45px;
     }
 
-    .site-breadcrumb::before {
-      content: "" !important;
-      position: absolute !important;
-      top: 0 !important;
-      left: 0 !important;
-      width: 100% !important;
-      height: 100% !important;
-      background: rgba(0, 0, 0, 0.45) !important;
-      z-index: 1 !important;
+    .billing-content-box {
+      margin-bottom: 35px;
     }
 
-    .site-breadcrumb .container {
-      position: relative !important;
-      z-index: 2 !important;
-      display: block !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-    }
-
-    .site-breadcrumb .breadcrumb-title {
-      color: #ffffff !important;
-      font-size: 36px !important;
-      font-weight: 700 !important;
-      margin: 0 !important;
-      display: block !important;
-      visibility: visible !important;
-      text-transform: capitalize !important;
-    }
-
-    /* ========================================================
-       2. Content Text Justify (About Area සඳහා පමණක්)
-       ======================================================== */
-    .about-area p,
-    .about-text,
-    .about-right p,
-    .site-heading p,
-    .accessibility-section p {
-      text-align: justify !important;
+    .billing-text-justify {
+      text-align: justify;
       text-justify: inter-word;
+      line-height: 1.7;
+      color: #555555;
+      margin-bottom: 15px;
     }
 
-    /* ========================================================
-       3. Desktop View Spacing: Sections අතර ඉඩ ඒකාකාරීව අඩු කිරීම
-       ======================================================== */
-    .about-area.py-120 {
-      padding-top: 50px !important;
-      padding-bottom: 50px !important;
+    .billing-title {
+      color: #5c0322;
+      font-weight: 700;
+      margin-bottom: 15px;
     }
 
-    .about-section-row {
-      margin-bottom: 35px !important;
-      padding-bottom: 0 !important;
+    .billing-subtitle {
+      color: #333333;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 12px;
     }
 
-    .about-right p {
-      margin-bottom: 14px !important;
+    .eligibility-list {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 20px;
     }
 
-    .about-right p:last-child {
-      margin-bottom: 0 !important;
+    .eligibility-list li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 10px;
+      color: #555555;
+      text-align: justify;
     }
 
-    .accessibility-section {
-      margin-top: 0 !important;
-      padding-top: 0 !important;
+    .eligibility-list li i {
+      position: absolute;
+      left: 0;
+      top: 4px;
+      color: #5c0322;
+      font-size: 15px;
     }
 
-    /* ========================================================
-       4. Footer & Copyright Bar Alignment Fix
-       ======================================================== */
-    .footer-area.py-5 {
-      padding-top: 45px !important;
-      padding-bottom: 45px !important;
+    /* Fee Cards Styling */
+    .fee-card-row {
+      background: #ffffff;
+      border: 1px solid #ebebeb;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+      margin-bottom: 30px;
     }
 
-    .footer-title-wrapper h5 {
-      margin-top: 0 !important;
+    .fee-banner-col {
+      background: linear-gradient(135deg, #4a0d24 0%, #6e1336 100%);
+      color: #ffffff;
+      padding: 35px 25px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
     }
 
-    .footer-area p {
-      text-align: left !important;
+    .fee-banner-col h3 {
+      color: #ffffff;
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
     }
 
-    @media (min-width: 768px) {
-
-      .footer-area .text-md-end,
-      .footer-area .text-md-end p {
-        text-align: right !important;
-      }
+    .fee-banner-col p {
+      color: #fce8ee;
+      font-size: 13px;
+      margin-bottom: 0;
     }
 
-    /* ========================================================
-       5. Mobile View Spacing (max-width: 991.98px)
-       ======================================================== */
-    @media (max-width: 991.98px) {
-      .site-breadcrumb {
-        padding-top: 125px !important;
-        padding-bottom: 45px !important;
-      }
+    .fee-list-col {
+      padding: 30px 35px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-      .site-breadcrumb .breadcrumb-title {
-        font-size: 28px !important;
-      }
+    .fee-item-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px dashed #dcdcdc;
+    }
 
-      .about-area.py-120 {
-        padding-top: 35px !important;
-        padding-bottom: 35px !important;
-      }
+    .fee-item-row:last-child {
+      border-bottom: none;
+    }
 
-      .about-left,
-      .about-right,
-      .about-img,
-      .about-img-box {
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-        padding-top: 0 !important;
-        padding-bottom: 0 !important;
-      }
+    .fee-item-title {
+      font-weight: 600;
+      color: #333333;
+      margin-bottom: 0;
+    }
 
-      .about-img-box {
-        margin-bottom: 18px !important;
-      }
+    .fee-item-time {
+      font-size: 13px;
+      color: #777777;
+      display: block;
+      margin-top: 2px;
+    }
 
-      .about-section-row {
-        margin-bottom: 25px !important;
-        padding-bottom: 0 !important;
-      }
+    .fee-item-price {
+      font-weight: 700;
+      color: #5c0322;
+      font-size: 18px;
+      white-space: nowrap;
+      margin-left: 15px;
+    }
 
-      .about-right p {
-        margin-bottom: 12px !important;
-      }
-
-      .site-heading {
-        margin-bottom: 12px !important;
-      }
-
-      .site-heading .site-title {
-        margin-bottom: 8px !important;
-      }
-
-      .accessibility-section {
-        margin-top: 0 !important;
-        padding-top: 0 !important;
-      }
-
-      .footer-area.py-5 {
-        padding-top: 35px !important;
-        padding-bottom: 35px !important;
-      }
+    .fee-note-text {
+      color: #555555;
+      font-size: 14.5px;
+      line-height: 1.6;
+      text-align: justify;
+      margin-bottom: 15px;
     }
   </style>
 </head>
@@ -273,117 +243,141 @@
   </header>
   <!-- header area end -->
 
+  
+
   <div id="smooth-wrapper">
     <div id="smooth-content">
       <main class="main">
         <!-- breadcrumb -->
         <div class="site-breadcrumb" style="background: url(assets/img/breadcrumb/01.png)">
           <div class="container">
-            <h3 class="breadcrumb-title">About Us</h3>
+            <h3 class="breadcrumb-title">Billing Policy</h3>
           </div>
         </div>
         <!-- breadcrumb end -->
 
-        <!-- about area -->
-        <div class="about-area py-120">
+        <!-- billing content area -->
+        <div class="billing-section">
           <div class="container">
 
-            <!-- First Section -->
-            <div class="row align-items-center gx-lg-5 about-section-row">
-              <div class="col-lg-6 col-md-12 about-img-box mb-lg-0">
-                <div class="about-left wow fadeInLeft" data-wow-delay=".2s">
-                  <div class="about-img">
-                    <div class="row g-0">
-                      <div class="col-12">
-                        <div class="img-3"
-                          style="max-height: 550px; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: 80px;">
-                          <div class="ani-img reveal w-100">
-                            <img src="assets/img/about/sapphire-clinic-portrait.png" alt="" class="w-100"
-                              style="object-fit: cover; min-height: 100%;" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <!-- Top Header & Introduction -->
+            <div class="row justify-content-center billing-content-box">
+              <div class="col-lg-10 text-center">
+                <h3 class="billing-title ani-text-1">Sapphire General Practice Fees</h3>
+                <p class="billing-text-justify">
+                  We are a mixed billing practice - your billing type is up to the discretion of the doctors and is dependent on your consultation type. If you are billed privately, we will process your Medicare rebate at the end of your visit.
+                </p>
+                <p class="billing-text-justify">
+                  If you are privately billed, we will process your Medicare rebate at the end of your visit, making it easier for you to claim your entitled refund.
+                </p>
               </div>
-              <div class="col-lg-6 col-md-12">
-                <div class="about-right">
-                  <div class="site-heading mb-3">
-                    <h4 class="site-title ani-text-1" style="font-size: x-large;   color: #5c0322;">
-                      Expert Care with a Personal Touch.
-                    </h4>
+            </div>
+
+            <!-- Policy & Bulk Billing Eligibility with Image -->
+            <div class="row align-items-center billing-content-box">
+              <div class="col-lg-5 mb-4 mb-lg-0 text-center">
+                <img src="assets/img/service/01.jpg" alt="Doctor examining child" class="img-fluid rounded-4 shadow-sm" style="max-height: 480px; width: 100%; object-fit: cover;" />
+              </div>
+              <div class="col-lg-7">
+                <h4 class="billing-title">Billing Policy</h4>
+                <p class="billing-text-justify">
+                  At Sapphire General Practice, we are a mixed billing clinic. This means that while some consultations and patients are bulk billed, others may incur a private fee. Your billing type is determined at the discretion of the treating doctor and depends on the nature and length of your consultation.
+                </p>
+                <p class="billing-text-justify">
+                  If you are privately billed, we will process your Medicare rebate at the end of your visit, making it easier for you to claim your entitled refund.
+                </p>
+
+                <h5 class="billing-subtitle">Bulk Billing Eligibility</h5>
+                <p class="mb-2" style="color: #444; font-weight: 500;">The Following Patients Are Bulk Billed At Our Practice:</p>
+                <ul class="eligibility-list">
+                  <li><i class="fas fa-check"></i> Children under the age of 16</li>
+                  <li><i class="fas fa-check"></i> Mental health consultations</li>
+                  <li><i class="fas fa-check"></i> GP Management Plans (Care Plans)</li>
+                  <li><i class="fas fa-check"></i> Aboriginal and Torres Strait Islander patients (under the CTG program)</li>
+                  <li><i class="fas fa-check"></i> Some pension card holders (as determined by the doctor)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Consultation Fees Card -->
+            <div class="row fee-card-row">
+              <div class="col-lg-4 fee-banner-col">
+                <h3>Consultation Fees</h3>
+                <p>(Prices Shown Are Before Medicare Rebate. Updated May 2025)</p>
+              </div>
+              <div class="col-lg-8 fee-list-col">
+                <div class="fee-item-row">
+                  <div>
+                    <span class="fee-item-title">Short Consultation</span>
+                    <span class="fee-item-time">(&lt;5 mins)</span>
                   </div>
-                  <p class="about-text wow fadeInUp" data-wow-delay=".2s">
-                    There are many variations of passages orem psum available, but the majority have suffered alteration
-                    in some form by
-                    At Sapphire General Practice, our mission is to provide our community with exceptional medical care
-                    that puts your wellbeing first. We believe every patient deserves to feel heard, respected, and
-                    supported—no matter their stage of life or health needs
-                  </p>
-                  <p>Our team consists of both female and male doctors, allowing you to choose the GP you feel most
-                    comfortable with. Our female GP specialises in women’s health and reproductive health, ensuring
-                    tailored care for all aspects of women’s wellbeing. We also offer a broad range of general practice
-                    services to support individuals and families in our community.</p>
+                  <div class="fee-item-price">$60</div>
+                </div>
+                <div class="fee-item-row">
+                  <div>
+                    <span class="fee-item-title">Standard Consultation</span>
+                    <span class="fee-item-time">(&lt;20 mins)</span>
+                  </div>
+                  <div class="fee-item-price">$95</div>
+                </div>
+                <div class="fee-item-row">
+                  <div>
+                    <span class="fee-item-title">Long Consultation</span>
+                    <span class="fee-item-time">(&gt;20 mins)</span>
+                  </div>
+                  <div class="fee-item-price">$140</div>
+                </div>
+                <div class="fee-item-row">
+                  <div>
+                    <span class="fee-item-title">Prolonged Consultation</span>
+                    <span class="fee-item-time">(&gt;40 mins)</span>
+                  </div>
+                  <div class="fee-item-price">$190</div>
                 </div>
               </div>
             </div>
 
-            <!-- Second Section -->
-            <div class="row align-items-center gx-lg-5 about-section-row">
-              <!-- Image section ordered first on Mobile, second on Desktop -->
-              <div class="col-lg-6 col-md-12 order-1 order-lg-2 about-img-box mb-lg-0">
-                <div class="about-left wow fadeInRight" data-wow-delay=".2s">
-                  <div class="about-img">
-                    <div class="row g-0">
-                      <div class="col-12">
-                        <div class="img-3"
-                          style="max-height: 450px; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: 80px;">
-                          <div class="ani-img reveal w-100">
-                            <img src="assets/img/about/injexenimg.png" alt="" class="w-100"
-                              style="object-fit: cover; min-height: 100%;" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <!-- Procedure Fees Card -->
+            <div class="row fee-card-row">
+              <div class="col-lg-4 fee-banner-col">
+                <h3>Procedure Fees</h3>
               </div>
-              <!-- Text section ordered second on Mobile, first on Desktop -->
-              <div class="col-lg-6 col-md-12 order-2 order-lg-1">
-                <div class="about-right">
-                  <p class="about-text wow fadeInUp" data-wow-delay=".2s">
-                    Conveniently located at 6 Sapphire Street, Wyoming, just off the Pacific Highway, our clinic offers
-                    on-site parking for patients, including accessible parking spaces and wheelchair ramps for easy
-                    access.
-                  </p>
-                  <p>We are proud to welcome new patients, and walk-in appointments are accepted whenever possible. From
-                    the moment you are greeted by our friendly reception team to your consultation with one of our
-                    approachable GPs or our experienced practice nurse, we strive to make every visit comfortable,
-                    caring, and supportive.</p>
-                  <p>Choose Sapphire General Practice for high-quality, personalised medical care, right in the heart of
-                    your community.</p>
+              <div class="col-lg-8 fee-list-col">
+                <p class="fee-note-text">
+                  Please note the following facility fees apply to certain procedures, in addition to any consultation fees:
+                </p>
+                <div class="fee-item-row">
+                  <div>
+                    <span class="fee-item-title">Surgical Procedures</span>
+                    <span class="fee-item-time">facility fee</span>
+                  </div>
+                  <div class="fee-item-price">$120</div>
+                </div>
+                <div class="fee-item-row">
+                  <div>
+                    <span class="fee-item-title">Clinical Procedures</span>
+                    <span class="fee-item-time">facility fee (excluding cervical screening)</span>
+                  </div>
+                  <div class="fee-item-price">$40 - $80</div>
                 </div>
               </div>
             </div>
 
-            <!-- Third Section (Accessibility) -->
-            <div class="row accessibility-section">
-              <div class="col-lg-12">
-                <div class="about-right">
-                  <div class="site-heading mb-3">
-                    <h3 class="site-title ani-text-1" style="font-size: x-large;   color: #5c0322;">Accessibility.</h3>
-                  </div>
-                  <p class="about-text wow fadeInUp mb-0" data-wow-delay=".2s">
-                    Sapphire GP is wheelchair accessible and designed to accommodate patients of all ages and abilities.
-                    Please let us know if you need any special assistance when visiting.
-                  </p>
-                </div>
+            <!-- Bottom Disclaimer / Note -->
+            <div class="row justify-content-center mt-4">
+              <div class="col-lg-11">
+                <p class="billing-text-justify">
+                  For further details about fees or Medicare rebates, please speak with our reception team. We are happy to assist you in understanding your billing and payment options.
+                </p>
+                <p class="billing-text-justify">
+                  If you are privately billed, we will process your Medicare rebate at the end of your visit, making it easier for you to claim your entitled refund.
+                </p>
               </div>
             </div>
 
           </div>
         </div>
+        <!-- billing content area end -->
       </main>
 
       <!-- footer area -->
@@ -405,7 +399,7 @@
                   <a href="tel:0243417722" class="text-white text-decoration-none ms-1">02 4341 7722</a>
                 </li>
                 <li class="mb-3 d-flex align-items-center">
-                  <i class="fas fa-map-marker-alt me-3"></i>Address: 6 Sapphire Street, Wyoming, NSW 2250
+                  <i class="fas fa-map-marker-alt me-3"></i>Address: 6 Renwick Street, Wyoming, NSW 2250
                 </li>
                 <li class="mb-3 d-flex align-items-center">
                   <i class="fas fa-envelope me-3"></i> admin@sapphiregp.com.au
@@ -416,7 +410,8 @@
             <!-- 2nd Column (Opening Hours) -->
             <div class="col-lg-4 col-md-6 col-12 text-start">
               <div class="footer-title-wrapper mb-4">
-                <h5 class="text-white mb-0" style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">
+                <h5 class="text-white mb-0"
+                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
                   Opening Hours
                 </h5>
               </div>
@@ -455,7 +450,8 @@
             <!-- 3rd Column (Quick Links) -->
             <div class="col-lg-4 col-md-12 col-12 text-start">
               <div class="footer-title-wrapper mb-4">
-                <h5 class="text-white mb-0" style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">
+                <h5 class="text-white mb-0"
+                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
                   Quick Links
                 </h5>
               </div>
@@ -466,7 +462,7 @@
                           style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Home</a></li>
                     <li class="mb-3"><a href="about.html" class="text-white text-decoration-none"><span
                           style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>About Us</a></li>
-                    <li class="mb-3"><a href="service.html" class="text-white text-decoration-none"><span
+                    <li class="mb-3"><a href="services.html" class="text-white text-decoration-none"><span
                           style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Services</a></li>
                   </ul>
                 </div>
@@ -474,8 +470,7 @@
                   <ul class="list-unstyled mb-0" style="font-size: 17px;">
                     <li class="mb-3"><a href="billing.html" class="text-white text-decoration-none"><span
                           style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Billing Policy</a></li>
-                    <li class="mb-3"><a href="https://sapphireskinlaserclinic.com.au/"
-                        class="text-white text-decoration-none"><span
+                    <li class="mb-3"><a href="https://sapphireskinlaserclinic.com.au/" class="text-white text-decoration-none"><span
                           style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Skin</a></li>
                     <li class="mb-3"><a href="telehealth.html" class="text-white text-decoration-none"><span
                           style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Telehealth</a></li>

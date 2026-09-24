@@ -37,9 +37,18 @@
       text-justify: inter-word;
     }
 
-    /* Sections අතර ඉඩ ඒකාකාරීව සහ අඩු ලෙස සකස් කිරීම (Uniform Spacing) */
-  
+    /* Footer Copyright Bar එකේ alignment නිවැරදි කිරීම */
+    .footer-copyright-left,
+    .footer-copyright-left p {
+      text-align: left !important;
+    }
 
+    .footer-copyright-right,
+    .footer-copyright-right p {
+      text-align: right !important;
+    }
+
+    /* Sections අතර ඉඩ ඒකාකාරීව සහ අඩු ලෙස සකස් කිරීම (Uniform Spacing) */
     .contact-area.py-120 {
       padding-top: 50px !important;
       padding-bottom: 50px !important;
@@ -151,10 +160,10 @@
                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
                 <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Billing Policy</a></li>
+                <li class="nav-item"><a class="nav-link" href="privacy.html">Billing Policy</a></li>
                 <li class="nav-item"><a class="nav-link" href="https://sapphireskinlaserclinic.com.au/">Skin</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Telehealth</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="telehealth.html">Telehealth</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
               </ul>
               <div class="nav-right">
                 <div class="nav-btn">
@@ -169,13 +178,11 @@
   </header>
   <!-- header area end -->
 
-
-
   <div id="smooth-wrapper">
     <div id="smooth-content">
       <main class="main">
         <!-- breadcrumb -->
-        <div class="site-breadcrumb" style="background: url(assets/img/breadcrumb/01.jpg)">
+        <div class="site-breadcrumb" style="background: url(assets/img/breadcrumb/01.png)">
           <div class="container">
             <h3 class="breadcrumb-title">Contact Us</h3>
           </div>
@@ -190,7 +197,7 @@
               <div class="col-lg-5">
                 <div class="contact-content">
                   <div class="site-heading">
-                    <h3 class="site-title mb-3 ani-text-1">WE'RE HERE TO HELP YOU STAY HEALTHY</h3>
+                    <h3 class="site-title mb-3 ani-text-1" style="font-size: large;">We're here to help you stay healthy</h3>
                     <p class="about-text mb-2">
                       At Sapphire GP, your health and well-being are our top priorities. Whether you’re booking an
                       appointment, need medical advice, or simply have a question about our services, we’re always here
@@ -203,7 +210,7 @@
                     </p>
                   </div>
 
-                  <h4 class="mb-3" style="font-weight: 700; text-transform: uppercase;">GET IN TOUCH</h4>
+                  <h4 class="mb-3" style="font-weight: 700; text-transform: uppercase;">Get in touch</h4>
 
                   <div class="contact-info">
                     <div class="icon">
@@ -226,7 +233,7 @@
                   </div>
 
                   <div class="accessibility-info">
-                    <h4 class="mb-2" style="font-weight: 700; text-transform: uppercase;">ACCESSIBILITY</h4>
+                    <h4 class="mb-2" style="font-weight: 700;">Accessibility</h4>
                     <p class="about-text mb-0">
                       Sapphire GP is wheelchair accessible and designed to accommodate patients of all ages and
                       abilities. Please let us know if you need any special assistance when visiting.
@@ -239,7 +246,7 @@
               <div class="col-lg-7">
                 <div class="contact-form">
                   <div class="contact-form-header">
-                    <h3 style="text-transform: uppercase;">PREFER TO GET IN TOUCH ONLINE?</h3>
+                    <h3>Prefer to get in touch online?</h3>
                     <p class="mb-2">
                       Fill out the form below and a member of our team will get back to you as soon as possible.
                     </p>
@@ -248,7 +255,7 @@
                       urgent medical issues or sensitive personal information.
                     </p>
 
-                    <h5 class="mt-3 mb-2" style="font-weight: 700; text-transform: uppercase;">FEEDBACK &amp; SUGGESTIONS</h5>
+                    <h5 class="mt-3 mb-2" style="font-weight: 700;">Feedback &amp; Suggestions</h5>
                     <p class="mb-0">
                       We value your feedback. Your experience helps us improve and deliver better care. If you have any
                       compliments, suggestions, or concerns, please don't hesitate to reach out. You may also provide
@@ -296,12 +303,6 @@
                       </div>
                     </div>
                   </form>
-
-                  <!-- <div class="emergencies-box border-top">
-                    <h5 style="color: #d90429; font-weight: 700; text-transform: uppercase; margin-bottom: 4px;">EMERGENCIES</h5>
-                    <p class="mb-1" style="font-weight: 600;">Please note: We are not an emergency service.</p>
-                    <p class="mb-0" style="color: #d90429; font-weight: 500;">For any medical emergencies, call 000 or visit your nearest hospital.</p>
-                  </div> -->
                 </div>
               </div>
             </div>
@@ -422,14 +423,16 @@
 
           </div>
         </div>
+
+        <!-- Copyright Bar -->
         <div class="container mt-4 pt-3 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
           <div class="row align-items-center">
-            <div class="col-md-6 col-12 text-start mb-2 mb-md-0">
+            <div class="col-md-6 col-12 footer-copyright-left mb-2 mb-md-0">
               <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
                 Copyright 2026 &copy; All Right Reserved Sapphire General Practice
               </p>
             </div>
-            <div class="col-md-6 col-12 text-start text-md-end mt-2 mt-md-0">
+            <div class="col-md-6 col-12 footer-copyright-right text-end mt-2 mt-md-0">
               <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
                 <a href="https://www.anzwebdesign.com.au/" target="_blank" class="text-decoration-none"
                   style="color: #ffffff;">Web Design Marketing Australia</a>
