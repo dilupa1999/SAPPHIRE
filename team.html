@@ -68,7 +68,7 @@
     }
 
     /* ========================================================
-       2. Team Area & "Meet the Heart" Text Position Fix
+       2. Team Area & "Meet the Heart" Layout Fix
        ======================================================== */
     .team-area {
       margin-top: 0 !important;
@@ -78,7 +78,7 @@
     }
 
     .team-area.py-120 {
-      padding-top: 60px !important; /* Text kelagakke baralu spacing */
+      padding-top: 60px !important;
       padding-bottom: 50px !important;
       margin-top: 0 !important;
     }
@@ -94,10 +94,32 @@
     .team-area .site-heading .site-title {
       margin-top: 0 !important;
       margin-bottom: 14px !important;
-      color: #111111 !important;
+      color: #5c0322 !important;
       position: relative !important;
       top: 0 !important;
       transform: none !important;
+      font-size: 28px !important;
+      font-weight: 700 !important;
+    }
+
+    .team-header-img-wrapper {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(92, 3, 34, 0.1);
+    }
+
+    .team-header-img-wrapper img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      display: block;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .team-header-img-wrapper:hover img {
+      transform: scale(1.03);
     }
 
     /* ========================================================
@@ -231,6 +253,34 @@
       margin-bottom: 0 !important;
     }
 
+    /* Read More Expandable Styles */
+    .bio-more-content {
+      display: none;
+    }
+
+    .btn-read-more {
+      background: transparent;
+      border: none;
+      padding: 6px 0 0 0;
+      margin-top: 4px;
+      color: #5c0322;
+      font-weight: 600;
+      font-size: 13.5px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      outline: none;
+      transition: color 0.25s ease;
+      align-self: flex-start;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .btn-read-more:hover {
+      color: #a0103f;
+    }
+
     /* ========================================================
        5. Footer & Copyright Bar Alignment Fix
        ======================================================== */
@@ -285,6 +335,10 @@
         padding: 16px !important;
       }
 
+      .team-header-img-wrapper img {
+        height: 240px;
+      }
+
       .footer-area.py-5 {
         padding-top: 35px !important;
         padding-bottom: 35px !important;
@@ -304,7 +358,7 @@
   <!-- preloader end -->
 
   <!-- header area -->
-   <header class="header hd-1">
+  <header class="header hd-1">
     <div class="header-top">
       <div class="container px-lg-0">
         <div class="header-top-wrap">
@@ -332,7 +386,6 @@
             <img src="assets/img/logo/logo.png" style="max-width: 100%; height: 80%; margin-left: 40px;" alt="logo" />
           </a>
           <div class="mobile-menu-right">
-     
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
               aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
               <span></span><span></span><span></span>
@@ -398,10 +451,17 @@
         <!-- team-area -->
         <div class="team-area py-120">
           <div class="container">
-            <div class="row">
-              <div class="col-lg-8 mx-auto">
-                <div class="site-heading text-center">
-                  <h3 class="site-title ani-text-1" style="font-size: x-large;   color: #5c0322;" >Meet the Heart of Sapphire GP</h3>
+            
+            <!-- Team Intro Section with Image on Left & Text on Right -->
+            <div class="row align-items-center mb-5 g-4">
+              <div class="col-lg-5 col-md-6">
+                <div class="team-header-img-wrapper wow fadeInLeft" data-wow-delay=".2s">
+                  <img src="assets/img/team/successful-happy-business-team_53876-74892.avif" alt="Sapphire GP Team" />
+                </div>
+              </div>
+              <div class="col-lg-7 col-md-6">
+                <div class="site-heading mb-0 text-start wow fadeInRight" data-wow-delay=".3s">
+                  <h3 class="site-title ani-text-1">Meet the Heart of Sapphire GP</h3>
                   <span>At Sapphire GP, our team is more than just a group of healthcare professionals—we’re a family
                     dedicated to your wellbeing. Each member brings unique skills, passion, and years of experience to
                     ensure you receive personalised, compassionate care at every visit. Whether you’re here for a
@@ -412,6 +472,7 @@
               </div>
             </div>
 
+            <!-- Team Members Grid -->
             <div class="row g-4 justify-content-center">
               
               <!-- Team Member 1: Dr Sanoubar Keshavarzi -->
@@ -421,7 +482,7 @@
                   <div class="team-item wow fadeInUp" data-wow-delay=".2s">
                     <div class="team-img">
                       <div class="ani-img">
-                        <img src="assets/img/team/01.jpg" alt="Dr Sanoubar Keshavarzi" />
+                        <img src="assets/img/testimonial/Dr.Reza2.jpg" alt="Dr Sanoubar Keshavarzi" />
                       </div>
                     </div>
                     <div class="team-content">
@@ -430,12 +491,16 @@
                     </div>
                   </div>
 
-                  <!-- Details Underneath the Card -->
+                  <!-- Details Underneath the Card with Read More / Read Less -->
                   <div class="team-bio-details">
-                    <h4 class="team-bio-name">Dr Sanoubar Keshavarzi</h4>
                     <p>Dr Sanoubar Keshavarzi is a highly experienced General Practitioner and a Fellow of the Royal Australian College of General Practitioners. She has been practising since 1994 and provides comprehensive GP care with a focus on holistic and preventative health.</p>
-                    <p>Dr Keshavarzi holds certifications in Women's Reproductive Health, Sexual Health, and Family Planning, along with a diploma in Public Health. She has a special interest in Women's Health and Mental Health, offering services including cervical screening, Implanon and Mirena insertion and removal, and broad care in children's and mental health.</p>
-                    <p>Dr Keshavarzi is currently welcoming new patients.</p>
+                    
+                    <div class="bio-more-content">
+                      <p>Dr Keshavarzi holds certifications in Women's Reproductive Health, Sexual Health, and Family Planning, along with a diploma in Public Health. She has a special interest in Women's Health and Mental Health, offering services including cervical screening, Implanon and Mirena insertion and removal, and broad care in children's and mental health.</p>
+                      <p>Dr Keshavarzi is currently welcoming new patients.</p>
+                    </div>
+
+                    <button type="button" class="btn-read-more">Read More <i class="fas fa-angle-down"></i></button>
                   </div>
                 </div>
               </div>
@@ -447,7 +512,7 @@
                   <div class="team-item wow fadeInUp" data-wow-delay=".4s">
                     <div class="team-img">
                       <div class="ani-img">
-                        <img src="assets/img/team/02.jpg" alt="Dr. Reza Meschi" />
+                        <img src="assets/img/testimonial/Dr.Reza.jpg" alt="Dr. Reza Meschi" />
                       </div>
                     </div>
                     <div class="team-content">
@@ -456,12 +521,16 @@
                     </div>
                   </div>
 
-                  <!-- Details Underneath the Card -->
+                  <!-- Details Underneath the Card with Read More / Read Less -->
                   <div class="team-bio-details">
-                    <h4 class="team-bio-name">Dr Reza Meschi</h4>
                     <p>Dr Reza Meschi is an experienced General Practitioner who has been practicing since 1995. He is a Fellow of the Royal Australian College of General Practitioners and a member of the Australian College of Aesthetic Medicine.</p>
-                    <p>Dr Meschi has extensive expertise in skin cancer management and surgery, including advanced techniques such as skin flaps and grafts. He holds Postgraduate Diplomas in Skin Cancer Surgery and in Skin Laser &amp; Cosmetic Procedures. He stays up to date with the latest diagnostic and treatment methods to provide optimal care.</p>
-                    <p>Dr Meschi is currently welcoming new GP patients. His clinical interests include skin cancer care, laser skin tightening, cosmetic injectables, and minor surgical procedures.</p>
+                    
+                    <div class="bio-more-content">
+                      <p>Dr Meschi has extensive expertise in skin cancer management and surgery, including advanced techniques such as skin flaps and grafts. He holds Postgraduate Diplomas in Skin Cancer Surgery and in Skin Laser &amp; Cosmetic Procedures. He stays up to date with the latest diagnostic and treatment methods to provide optimal care.</p>
+                      <p>Dr Meschi is currently welcoming new GP patients. His clinical interests include skin cancer care, laser skin tightening, cosmetic injectables, and minor surgical procedures.</p>
+                    </div>
+
+                    <button type="button" class="btn-read-more">Read More <i class="fas fa-angle-down"></i></button>
                   </div>
                 </div>
               </div>
@@ -473,7 +542,7 @@
                   <div class="team-item wow fadeInUp" data-wow-delay=".6s">
                     <div class="team-img">
                       <div class="ani-img">
-                        <img src="assets/img/team/03.jpg" alt="Tannaz" />
+                        <img src="assets/img/testimonial/non.avif" alt="Tannaz" />
                       </div>
                     </div>
                     <div class="team-content">
@@ -482,12 +551,16 @@
                     </div>
                   </div>
 
-                  <!-- Details Underneath the Card -->
+                  <!-- Details Underneath the Card with Read More / Read Less -->
                   <div class="team-bio-details">
-                    <h4 class="team-bio-name">Tannaz</h4>
-                    <p>Tannaz is a highly skilled Registered Nurse with a Bachelor of Nursing, known for her compassionate approach and dedication to patient care. With extensive experience in both general nursing and the field of cosmetic medicine, she has developed particular expertise in skin care and laser skin treatments. Tannaz is passionate about helping patients achieve healthy, radiant skin, and stays current with the latest advances in laser technology and dermatological care.</p>
-                    <p>In addition to her broad nursing background, Tannaz offers a range of cosmetic and therapeutic skin procedures, working closely with clients to understand their individual needs and develop tailored treatment plans. Her gentle, professional manner puts patients at ease, ensuring they feel comfortable and confident throughout their care.</p>
-                    <p>Tannaz is committed to ongoing professional development and believes in providing evidence-based, high-quality services. She values building lasting relationships with her patients, supporting them at every stage of their health and skincare journey.</p>
+                    <p>Tannaz is a highly skilled Registered Nurse with a Bachelor of Nursing, known for her compassionate approach and dedication to patient care. With extensive experience in both general nursing and the field of cosmetic medicine, she has developed particular expertise in skin care and laser skin treatments.</p>
+                    
+                    <div class="bio-more-content">
+                      <p>Tannaz is passionate about helping patients achieve healthy, radiant skin, and stays current with the latest advances in laser technology and dermatological care. In addition to her broad nursing background, Tannaz offers a range of cosmetic and therapeutic skin procedures, working closely with clients to understand their individual needs and develop tailored treatment plans.</p>
+                      <p>Her gentle, professional manner puts patients at ease, ensuring they feel comfortable and confident throughout their care. Tannaz is committed to ongoing professional development and believes in providing evidence-based, high-quality services. She values building lasting relationships with her patients, supporting them at every stage of their health and skincare journey.</p>
+                    </div>
+
+                    <button type="button" class="btn-read-more">Read More <i class="fas fa-angle-down"></i></button>
                   </div>
                 </div>
               </div>
@@ -534,7 +607,6 @@
                 </h5>
               </div>
               <ul class="list-unstyled mb-0" style="color: #fff; font-size: 17px;">
-                <!-- Monday - Friday -->
                 <li class="row align-items-start mb-3">
                   <div class="col-7 col-md-auto pe-1">
                     <span style="color: #ffffff; margin-right: 8px;">&raquo;</span>Monday - Friday
@@ -543,7 +615,6 @@
                     9AM - 6PM
                   </div>
                 </li>
-                <!-- Saturday -->
                 <li class="row align-items-start mb-3">
                   <div class="col-7 col-md-auto pe-1">
                     <span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Saturday
@@ -552,7 +623,6 @@
                     CLOSED
                   </div>
                 </li>
-                <!-- Sunday and Public Holidays -->
                 <li class="row align-items-start mb-3">
                   <div class="col-7 col-md-auto pe-1 d-flex">
                     <span style="color: #ffffff; margin-right: 8px;">&raquo;</span>
@@ -637,6 +707,27 @@
   <script src="assets/js/gsap.min.js"></script>
   <script src="assets/js/gsap-custom.js"></script>
   <script src="assets/js/main.js"></script>
+
+  <!-- Read More / Read Less Toggle Script -->
+  <script>
+    $(document).ready(function () {
+      $('.btn-read-more').on('click', function (e) {
+        e.preventDefault();
+        var $btn = $(this);
+        var $content = $btn.siblings('.bio-more-content');
+
+        // පහළට සහ ඉහළට මාරුවෙන් මාරුවට Slide වීම
+        $content.stop(true, true).slideToggle(350, function () {
+          // Slide අවසන් වූ පසු Content එක Visible ද බලා අයිකනය සහ ටෙක්ස්ට් එක මාරු කිරීම
+          if ($content.is(':visible')) {
+            $btn.html('Read Less <i class="fas fa-angle-up"></i>');
+          } else {
+            $btn.html('Read More <i class="fas fa-angle-down"></i>');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
