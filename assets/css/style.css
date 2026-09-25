@@ -5182,7 +5182,7 @@ label {
 39. Pricing css 
 ====================== */
 .pricing-area .pricing-item {
-  background: rgb(from var(--theme-color) r g b/0.1);
+  background: white;
   padding: 35px;
   border-radius: 25px;
 }
@@ -5231,7 +5231,7 @@ label {
   background: var(--color-white);
   border-radius: 25px;
   padding: 25px;
-  color: var(--color-dark);
+  color: black;
   font-weight: 700;
   margin: 25px 0;
   box-shadow: var(--box-shadow);

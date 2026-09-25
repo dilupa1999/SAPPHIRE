@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
-    /* Spacing mattu Justify alignment styling */
+    /* Spacing & Justify alignment styling */
     .billing-section {
       padding-top: 45px;
       padding-bottom: 45px;
@@ -67,6 +67,7 @@
       margin-bottom: 10px;
       color: #555555;
       text-align: justify;
+      text-justify: inter-word;
     }
 
     .eligibility-list li i {
@@ -77,87 +78,103 @@
       font-size: 15px;
     }
 
-    /* Fee Cards Styling */
-    .fee-card-row {
-      background: #ffffff;
-      border: 1px solid #ebebeb;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-      margin-bottom: 30px;
-    }
-
-    .fee-banner-col {
-      background: linear-gradient(135deg, #4a0d24 0%, #6e1336 100%);
-      color: #ffffff;
-      padding: 35px 25px;
+    /* Hostinger-style Pricing Cards */
+    .pricing-item {
+      background-color: #ffffff;
+      border: 1px solid #ebdcd0;
+      border-radius: 20px;
+      padding: 40px 32px;
+      box-shadow: 0 12px 35px rgba(65, 36, 17, 0.08), 0 3px 10px rgba(0, 0, 0, 0.03);
+      color: #4a2e1b;
+      /* Rich brown text */
+      text-align: justify;
+      text-justify: inter-word;
+      transition: all 0.35s ease;
+      height: 100%;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
       position: relative;
     }
 
-    .fee-banner-col h3 {
-      color: #ffffff;
-      font-size: 24px;
+    /* Card hover elevation */
+    .pricing-item:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 22px 45px rgba(65, 36, 17, 0.15);
+      border-color: #dabfae;
+    }
+
+    .pricing-icon {
+      width: 60px;
+      height: 60px;
+      background: #fdf8f4;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #f0e1d5;
+      margin-bottom: 20px;
+    }
+
+    .pricing-icon img {
+      max-width: 30px;
+      height: auto;
+    }
+
+    .pricing-header h4 {
+      color: #381e11;
+      /* Deep chocolate brown */
+      font-size: 22px;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
+      line-height: 1.35;
     }
 
-    .fee-banner-col p {
-      color: #fce8ee;
-      font-size: 13px;
-      margin-bottom: 0;
+    .pricing-header p {
+      color: #6c4b35;
+      /* Medium warm brown */
+      font-size: 14.5px;
+      line-height: 1.65;
+      text-align: justify;
+      text-justify: inter-word;
+      margin-bottom: 25px;
     }
 
-    .fee-list-col {
-      padding: 30px 35px;
+    .pricing-content {
+      flex-grow: 1;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-    }
-
-    .fee-item-row {
-      display: flex;
-      align-items: baseline;
       justify-content: space-between;
-      padding: 12px 0;
-      border-bottom: 1px dashed #dcdcdc;
     }
 
-    .fee-item-row:last-child {
+    .pricing-feature ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .pricing-feature ul li {
+      color: #4a2e1b;
+      padding: 14px 0;
+      font-size: 15px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      line-height: 1.55;
+      text-align: justify;
+      text-justify: inter-word;
+      border-bottom: 1px dashed #eddcd0;
+    }
+
+    .pricing-feature ul li:last-child {
       border-bottom: none;
     }
 
-    .fee-item-title {
-      font-weight: 600;
-      color: #333333;
-      margin-bottom: 0;
-    }
-
-    .fee-item-time {
-      font-size: 13px;
-      color: #777777;
-      display: block;
-      margin-top: 2px;
-    }
-
-    .fee-item-price {
-      font-weight: 700;
-      color: #5c0322;
-      font-size: 18px;
-      white-space: nowrap;
-      margin-left: 15px;
-    }
-
-    .fee-note-text {
-      color: #555555;
-      font-size: 14.5px;
-      line-height: 1.6;
-      text-align: justify;
-      margin-bottom: 15px;
+    .pricing-feature ul li i {
+      color: #8c4f24;
+      /* Accent brown checkmark */
+      font-size: 17px;
+      margin-top: 3px;
+      flex-shrink: 0;
     }
   </style>
 </head>
@@ -201,7 +218,6 @@
             <img src="assets/img/logo/logo.png" style="max-width: 100%; height: 80%; margin-left: 40px;" alt="logo" />
           </a>
           <div class="mobile-menu-right">
-        
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
               aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
               <span></span><span></span><span></span>
@@ -218,7 +234,8 @@
             </div>
             <div class="offcanvas-body gap-xl-4">
               <ul class="navbar-nav justify-content-end gap-1 flex-grow-1">
-                <li class="nav-item dropdown"><a class="nav-link active" href="index.html" data-bs-toggle="dropdown">Home</a>
+                <li class="nav-item dropdown"><a class="nav-link active" href="index.html"
+                    data-bs-toggle="dropdown">Home</a>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
@@ -241,8 +258,6 @@
   </header>
   <!-- header area end -->
 
-  
-
   <div id="smooth-wrapper">
     <div id="smooth-content">
       <main class="main">
@@ -260,115 +275,141 @@
 
             <!-- Top Header & Introduction -->
             <div class="row justify-content-center billing-content-box">
-              <div class="col-lg-10 text-center">
+              <div class="col-lg-12 text-center">
                 <h3 class="billing-title ani-text-1">Sapphire General Practice Fees</h3>
-                <p class="billing-text-justify">
-                  We are a mixed billing practice - your billing type is up to the discretion of the doctors and is dependent on your consultation type. If you are billed privately, we will process your Medicare rebate at the end of your visit.
+                <p class="billing-text-justify wow fadeInUp"  >
+                  We are a mixed billing practice - your billing type is up to the discretion of the doctors and is
+                  dependent on your consultation type. If you are billed privately, we will process your Medicare rebate
+                  at the end of your visit. If you are privately billed, we will process your Medicare rebate at the end
+                  of your visit, making it
+                  easier for you to claim your entitled refund.
                 </p>
-                <p class="billing-text-justify">
-                  If you are privately billed, we will process your Medicare rebate at the end of your visit, making it easier for you to claim your entitled refund.
-                </p>
+           
               </div>
             </div>
 
             <!-- Policy & Bulk Billing Eligibility with Image -->
             <div class="row align-items-center billing-content-box">
               <div class="col-lg-5 mb-4 mb-lg-0 text-center">
-                <img src="assets/img/service/01.jpg" alt="Doctor examining child" class="img-fluid rounded-4 shadow-sm" style="max-height: 480px; width: 100%; object-fit: cover;" />
+                <img src="assets/img/service/biilingpolicy.png" alt="Doctor examining child"
+                  class="img-fluid rounded-4 shadow-sm" style="max-height: 880px; width: 100%; object-fit: cover;" />
               </div>
               <div class="col-lg-7">
-                <h4 class="billing-title">Billing Policy</h4>
-                <p class="billing-text-justify">
-                  At Sapphire General Practice, we are a mixed billing clinic. This means that while some consultations and patients are bulk billed, others may incur a private fee. Your billing type is determined at the discretion of the treating doctor and depends on the nature and length of your consultation.
+                <h4 class="billing-title ani-text-1">Billing Policy</h4>
+                <p class="billing-text-justify  wow fadeInUp "  data-wow-delay=".2s">
+                  At Sapphire General Practice, we are a mixed billing clinic. This means that while some consultations
+                  and patients are bulk billed, others may incur a private fee. Your billing type is determined at the
+                  discretion of the treating doctor and depends on the nature and length of your consultation.
                 </p>
-                <p class="billing-text-justify">
-                  If you are privately billed, we will process your Medicare rebate at the end of your visit, making it easier for you to claim your entitled refund.
+                <p class="billing-text-justify  wow fadeInUp "  data-wow-delay=".2s">
+                  If you are privately billed, we will process your Medicare rebate at the end of your visit, making it
+                  easier for you to claim your entitled refund.
                 </p>
 
-                <h5 class="billing-subtitle">Bulk Billing Eligibility</h5>
-                <p class="mb-2" style="color: #444; font-weight: 500;">The Following Patients Are Bulk Billed At Our Practice:</p>
-                <ul class="eligibility-list">
+                <h5 class="billing-subtitle ani-text-2">Bulk Billing Eligibility</h5>
+                <p class="mb-2" style="color: #444; font-weight: 500;">The Following Patients Are Bulk Billed At Our
+                  Practice:</p>
+                <ul class="eligibility-list wow fadeInUp"  data-wow-delay=".2s">
                   <li><i class="fas fa-check"></i> Children under the age of 16</li>
                   <li><i class="fas fa-check"></i> Mental health consultations</li>
                   <li><i class="fas fa-check"></i> GP Management Plans (Care Plans)</li>
-                  <li><i class="fas fa-check"></i> Aboriginal and Torres Strait Islander patients (under the CTG program)</li>
+                  <li><i class="fas fa-check"></i> Aboriginal and Torres Strait Islander patients (under the CTG
+                    program)</li>
                   <li><i class="fas fa-check"></i> Some pension card holders (as determined by the doctor)</li>
                 </ul>
               </div>
             </div>
 
-            <!-- Consultation Fees Card -->
-            <div class="row fee-card-row">
-              <div class="col-lg-4 fee-banner-col">
-                <h3>Consultation Fees</h3>
-                <p>(Prices Shown Are Before Medicare Rebate. Updated May 2025)</p>
-              </div>
-              <div class="col-lg-8 fee-list-col">
-                <div class="fee-item-row">
-                  <div>
-                    <span class="fee-item-title">Short Consultation</span>
-                    <span class="fee-item-time">(&lt;5 mins)</span>
-                  </div>
-                  <div class="fee-item-price">$60</div>
-                </div>
-                <div class="fee-item-row">
-                  <div>
-                    <span class="fee-item-title">Standard Consultation</span>
-                    <span class="fee-item-time">(&lt;20 mins)</span>
-                  </div>
-                  <div class="fee-item-price">$95</div>
-                </div>
-                <div class="fee-item-row">
-                  <div>
-                    <span class="fee-item-title">Long Consultation</span>
-                    <span class="fee-item-time">(&gt;20 mins)</span>
-                  </div>
-                  <div class="fee-item-price">$140</div>
-                </div>
-                <div class="fee-item-row">
-                  <div>
-                    <span class="fee-item-title">Prolonged Consultation</span>
-                    <span class="fee-item-time">(&gt;40 mins)</span>
-                  </div>
-                  <div class="fee-item-price">$190</div>
-                </div>
-              </div>
-            </div>
+            <!-- pricing-area -->
+            <div class="pricing-area py-10">
+              <div class="container px-0">
+                <div class="row g-4 g-xl-5 align-items-stretch">
 
-            <!-- Procedure Fees Card -->
-            <div class="row fee-card-row">
-              <div class="col-lg-4 fee-banner-col">
-                <h3>Procedure Fees</h3>
-              </div>
-              <div class="col-lg-8 fee-list-col">
-                <p class="fee-note-text">
-                  Please note the following facility fees apply to certain procedures, in addition to any consultation fees:
-                </p>
-                <div class="fee-item-row">
-                  <div>
-                    <span class="fee-item-title">Surgical Procedures</span>
-                    <span class="fee-item-time">facility fee</span>
+                  <!-- Card 1: Standard / Short Consultations -->
+                  <div class="col-md-6 d-flex">
+                    <div class="pricing-item wow fadeInUp w-100" data-wow-delay=".2s">
+                      <div class="pricing-header">
+                        <div class="pricing-icon">
+                          <img src="assets/img/icon/money.svg" alt="Dental Icon" />
+                        </div>
+                        <div>
+                          <h4 class="ani-text-2">Our Consultation &amp; Procedure Fees</h4>
+                          <p>(Prices shown are before Medicare rebate. Updated: May 2025)</p>
+                        </div>
+                      </div>
+
+                      <div class="pricing-content">
+                        <div class="pricing-feature">
+                          <ul>
+                            <li>
+                              <i class="fas fa-check-circle"></i>
+                              <span>Short Consultation (&lt;6 mins) - $50</span>
+                            </li>
+                            <li>
+                              <i class="fas fa-check-circle"></i>
+                              <span>Standard Consultation (&lt;20 mins) - $95</span>
+                            </li>
+                            <li>
+                              <i class="fas fa-check-circle"></i>
+                              <span>Long Consultation (&gt;20 mins) - $140</span>
+                            </li>
+                            <li>
+                              <i class="fas fa-check-circle"></i>
+                              <span>Prolonged Consultation (&gt;40 mins) - $190</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="fee-item-price">$120</div>
-                </div>
-                <div class="fee-item-row">
-                  <div>
-                    <span class="fee-item-title">Clinical Procedures</span>
-                    <span class="fee-item-time">facility fee (excluding cervical screening)</span>
+
+                  <!-- Card 2: Procedure Fees -->
+                  <div class="col-md-6 d-flex">
+                    <div class="pricing-item wow fadeInUp w-100" data-wow-delay=".4s">
+                      <div class="pricing-header">
+                        <div class="pricing-icon">
+                          <img src="assets/img/icon/money.svg" alt="Dental Icon" />
+                        </div>
+                        <div>
+                          <h4 class="ani-text-2">Procedure Fees</h4>
+                          <p>For complex, multiple issues or detailed health reviews. Please note the following facility
+                            fees apply to certain procedures, in addition to any consultation fees.</p>
+                        </div>
+                      </div>
+
+                      <div class="pricing-content">
+                        <div class="pricing-feature">
+                          <ul>
+                            <li>
+                              <i class="fas fa-check-circle"></i>
+                              <span>Surgical Procedures (facility fee) - $120</span>
+                            </li>
+                            <li>
+                              <i class="fas fa-check-circle"></i>
+                              <span>Clinical Procedures (facility fee, excluding cervical screening) - $40-$80</span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="fee-item-price">$40 - $80</div>
+
                 </div>
               </div>
             </div>
+            <!-- pricing-area end -->
 
             <!-- Bottom Disclaimer / Note -->
             <div class="row justify-content-center mt-4">
               <div class="col-lg-11">
                 <p class="billing-text-justify">
-                  For further details about fees or Medicare rebates, please speak with our reception team. We are happy to assist you in understanding your billing and payment options.
+                  For further details about fees or Medicare rebates, please speak with our reception team. We are happy
+                  to assist you in understanding your billing and payment options. If you are privately billed, we will
+                  process your Medicare rebate at the end of your visit, making it
+                  easier for you to claim your entitled refund.
                 </p>
                 <p class="billing-text-justify">
-                  If you are privately billed, we will process your Medicare rebate at the end of your visit, making it easier for you to claim your entitled refund.
+
                 </p>
               </div>
             </div>
@@ -468,7 +509,8 @@
                   <ul class="list-unstyled mb-0" style="font-size: 17px;">
                     <li class="mb-3"><a href="billing.html" class="text-white text-decoration-none"><span
                           style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Billing Policy</a></li>
-                    <li class="mb-3"><a href="https://sapphireskinlaserclinic.com.au/" class="text-white text-decoration-none"><span
+                    <li class="mb-3"><a href="https://sapphireskinlaserclinic.com.au/"
+                        class="text-white text-decoration-none"><span
                           style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Skin</a></li>
                     <li class="mb-3"><a href="telehealth.html" class="text-white text-decoration-none"><span
                           style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Telehealth</a></li>

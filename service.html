@@ -26,14 +26,14 @@
 
   <style>
     /* ========================================================
-       1. Breadcrumb Spacing & Title Fix (Navbar එකට යට නොවී පෙනීමට)
+       1. Breadcrumb Spacing & Title Fix
        ======================================================== */
     .site-breadcrumb {
       position: relative !important;
       background-size: cover !important;
       background-position: center !important;
       background-repeat: no-repeat !important;
-      padding-top: 170px !important; /* Navbar එකට ඉඩ තබා Breadcrumb එක පහළට ගැනීම */
+      padding-top: 170px !important;
       padding-bottom: 70px !important;
       margin-bottom: 0 !important;
       text-align: center !important;
@@ -192,7 +192,7 @@
 
     .service-detail-pane {
       display: none;
-      animation: fadeInService 0.4s ease-in-out;
+      animation: fadeInService 0.3s ease-in-out;
     }
 
     .service-detail-pane.active {
@@ -202,11 +202,9 @@
     @keyframes fadeInService {
       from {
         opacity: 0;
-        transform: translateY(10px);
       }
       to {
         opacity: 1;
-        transform: translateY(0);
       }
     }
 
@@ -254,8 +252,37 @@
       gap: 10px;
     }
 
+    /* Mobile Service Toggle Button Style */
+    .mobile-service-toggle-btn {
+      display: none;
+    }
+
     /* ========================================================
-       6. Mobile Responsive Spacing (max-width: 991.98px)
+       6. 'All Services' Underline / Line Removal Fix
+       ======================================================== */
+    .service-sidebar .widget .title,
+    .all-services-header .title {
+      text-decoration: none !important;
+      border-bottom: none !important;
+      padding-bottom: 0 !important;
+    }
+
+    .service-sidebar .widget .title::before,
+    .service-sidebar .widget .title::after,
+    .all-services-header .title::before,
+    .all-services-header .title::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    @media (min-width: 992px) {
+      .all-services-header {
+        margin-bottom: 16px;
+      }
+    }
+
+    /* ========================================================
+       7. Mobile Responsive Spacing (max-width: 991.98px)
        ======================================================== */
     @media (max-width: 991.98px) {
       .site-breadcrumb {
@@ -274,6 +301,45 @@
 
       .service-sidebar {
         margin-bottom: 30px !important;
+      }
+
+      /* Mobile Toggle Accordion Bar */
+      .all-services-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        cursor: pointer;
+        padding: 14px 18px;
+        background: #fdf2f4;
+        border-radius: 10px;
+        border-left: 5px solid #5c0322;
+        margin-bottom: 0 !important;
+        user-select: none;
+      }
+
+      .all-services-header .title {
+        margin-bottom: 0 !important;
+        font-size: 20px;
+        color: #5c0322;
+      }
+
+      .mobile-service-toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: #5c0322;
+        color: #ffffff;
+        border-radius: 50%;
+        font-size: 14px;
+        transition: transform 0.3s ease;
+      }
+
+      /* Mobile එකේදී All Services ලැයිස්තුව මුලින් සඟවා තැබීම */
+      .service-menu-list {
+        display: none;
+        margin-top: 12px;
       }
 
       .widget-extra-buttons {
@@ -301,6 +367,12 @@
         padding-bottom: 35px !important;
       }
     }
+
+    @media (min-width: 992px) {
+      .service-menu-list {
+        display: block !important;
+      }
+    }
   </style>
 </head>
 
@@ -315,7 +387,7 @@
   <!-- preloader end -->
 
   <!-- header area -->
-    <header class="header hd-1">
+  <header class="header hd-1">
     <div class="header-top">
       <div class="container px-lg-0">
         <div class="header-top-wrap">
@@ -343,7 +415,6 @@
             <img src="assets/img/logo/logo.png" style="max-width: 100%; height: 80%; margin-left: 40px;" alt="logo" />
           </a>
           <div class="mobile-menu-right">
-          
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
               aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
               <span></span><span></span><span></span>
@@ -389,7 +460,7 @@
         <!-- breadcrumb -->
         <div class="site-breadcrumb" style="background: url(assets/img/breadcrumb/01.png)">
           <div class="container">
-            <h3 class="breadcrumb-title" id="">Our Services</h3>
+            <h3 class="breadcrumb-title" id="breadcrumb-service-title">Our Services</h3>
           </div>
         </div>
         <!-- breadcrumb end -->
@@ -403,8 +474,16 @@
                 <!-- SIDEBAR: All Services List -->
                 <div class="col-xl-4 col-lg-4">
                   <div class="service-sidebar">
+                    
+                    <!-- All Services Widget with Mobile Dropdown -->
                     <div class="widget mb-4">
-                      <h4 class="title">All Services</h4>
+                      <div class="all-services-header" id="allServicesToggle">
+                        <h4 class="title mb-0 " style="margin-left: 10px;" >All Services</h4>
+                        <span class="mobile-service-toggle-btn">
+                          <i class="fas fa-plus"></i>
+                        </span>
+                      </div>
+                      
                       <div class="category service-menu-list">
                         <a href="javascript:void(0)" class="service-nav-item active"
                           data-target="service-childhood-immunisation">
@@ -474,7 +553,7 @@
                     <div class="service-detail-pane active" id="service-childhood-immunisation">
                       <div class="service-main-img-box">
                         <img
-                          src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?auto=format&fit=crop&w=1200&q=80"
+                          src="https://invidis.com/wp-content/uploads/2025/08/IXR_Enviro_Doc-Patient-SittingExamTable-OAB_SMH_Unity_2110-Website.jpg"
                           alt="Childhood Immunisation" />
                       </div>
                       <div class="content">
@@ -488,6 +567,15 @@
                           long-term relationships to offer personalised, effective health support throughout life.
                         </p>
                       </div>
+                      <div class="feature-box-highlight">
+                          <h5>National Immunisation Program Milestones:</h5>
+                          <ul class="service-list-check mb-0">
+                            <li><i class="far fa-check-double"></i> 6 weeks, 4 months, and 6 months core infant vaccines</li>
+                            <li><i class="far fa-check-double"></i> 12 months and 18 months developmental boosters (MMR, Meningococcal, Varicella)</li>
+                            <li><i class="far fa-check-double"></i> 4 years pre-school booster (DTPa-IPV)</li>
+                            <li><i class="far fa-check-double"></i> Catch-up immunization schedules for new migrants and overdue infants</li>
+                          </ul>
+                        </div>
                     </div>
 
                     <!-- 2. Chronic Disease Management -->
@@ -603,7 +691,7 @@
                       <div class="service-main-img-box">
                         <img
                           src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=1200&q=80"
-                          alt="Health Examinations" />
+                          alt="Diabetes Management" />
                       </div>
                       <div class="content">
                         <h3 class="mb-20">Stay in control of your diabetes.</h3>
@@ -623,7 +711,7 @@
                     <div class="service-detail-pane" id="service-mental-health">
                       <div class="service-main-img-box">
                         <img
-                          src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80"
+                          src="https://i.guim.co.uk/img/media/560e9a76e57f4c5582107841bbe6ea84b3e5979e/309_0_5451_3271/master/5451.jpg?width=465&dpr=1&s=none&crop=none"
                           alt="Mental Health" />
                       </div>
                       <div class="content">
@@ -643,7 +731,7 @@
                     <div class="service-detail-pane" id="service-mens-health">
                       <div class="service-main-img-box">
                         <img
-                          src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=1200&q=80"
+                          src="https://cdn.prod.website-files.com/68a4198525bcfbc38683aea0/68b9260acd0aa7f06323a9a8_mens-health-month-lower-your-risk-of-chronic-diseases.jpeg"
                           alt="Men's Health" />
                       </div>
                       <div class="content">
@@ -925,7 +1013,6 @@
                 </h5>
               </div>
               <ul class="list-unstyled mb-0" style="color: #fff; font-size: 17px;">
-                <!-- Monday - Friday -->
                 <li class="row align-items-start mb-3">
                   <div class="col-7 col-md-auto pe-1">
                     <span style="color: #ffffff; margin-right: 8px;">&raquo;</span>Monday - Friday
@@ -934,7 +1021,6 @@
                     9AM - 6PM
                   </div>
                 </li>
-                <!-- Saturday -->
                 <li class="row align-items-start mb-3">
                   <div class="col-7 col-md-auto pe-1">
                     <span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Saturday
@@ -943,7 +1029,6 @@
                     CLOSED
                   </div>
                 </li>
-                <!-- Sunday and Public Holidays -->
                 <li class="row align-items-start mb-3">
                   <div class="col-7 col-md-auto pe-1 d-flex">
                     <span style="color: #ffffff; margin-right: 8px;">&raquo;</span>
@@ -1029,32 +1114,50 @@
   <script src="assets/js/gsap-custom.js"></script>
   <script src="assets/js/main.js"></script>
 
-  <!-- Interactive Dynamic Service Switcher Script -->
+  <!-- Interactive Dynamic Service Switcher & Mobile Accordion Script -->
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const navItems = document.querySelectorAll(".service-nav-item");
       const detailPanes = document.querySelectorAll(".service-detail-pane");
       const breadcrumbTitle = document.getElementById("breadcrumb-service-title");
+      const allServicesToggle = document.getElementById("allServicesToggle");
+      const serviceMenuList = document.querySelector(".service-menu-list");
+      const toggleIcon = document.querySelector(".mobile-service-toggle-btn i");
 
+      // 1. Mobile-Only "All Services" Dropdown (Plus/Minus Mark Toggle)
+      if (allServicesToggle) {
+        allServicesToggle.addEventListener("click", function () {
+          if (window.innerWidth < 992) {
+            $(serviceMenuList).stop(true, true).slideToggle(300, function () {
+              if ($(this).is(":visible")) {
+                toggleIcon.classList.remove("fa-plus");
+                toggleIcon.classList.add("fa-minus");
+              } else {
+                toggleIcon.classList.remove("fa-minus");
+                toggleIcon.classList.add("fa-plus");
+              }
+            });
+          }
+        });
+      }
+
+      // 2. Service Item Selection Logic
       navItems.forEach(function (item) {
         item.addEventListener("click", function (e) {
           e.preventDefault();
 
-          // 1. Remove active state from all nav items
+          // Active class update
           navItems.forEach(function (nav) {
             nav.classList.remove("active");
           });
-
-          // 2. Add active state to clicked item
           this.classList.add("active");
 
-          // 3. Hide all detail panes
+          // Detail panes update
           detailPanes.forEach(function (pane) {
             pane.classList.remove("active");
             pane.style.display = "none";
           });
 
-          // 4. Show corresponding pane
           const targetId = this.getAttribute("data-target");
           const targetPane = document.getElementById(targetId);
           if (targetPane) {
@@ -1067,9 +1170,30 @@
               breadcrumbTitle.innerText = titleElem.innerText;
             }
 
-            // Smooth scroll on mobile screens so the user sees the updated content directly
+            // Mobile view Handling (Smooth scroll without bounce)
             if (window.innerWidth < 992) {
-              targetPane.scrollIntoView({ behavior: "smooth", block: "start" });
+              // Service එකක් තේරූ පසු mobile dropdown එක smooth ලෙස slideUp කර වසා දැමීම
+              if ($(serviceMenuList).is(":visible")) {
+                $(serviceMenuList).slideUp(250);
+                if (toggleIcon) {
+                  toggleIcon.classList.remove("fa-minus");
+                  toggleIcon.classList.add("fa-plus");
+                }
+              }
+
+              // කිසිදු bounce වීමකින් තොරව content එක වෙත smooth scroll කිරීම
+              setTimeout(function () {
+                const serviceDetailsArea = document.querySelector(".service-details");
+                if (serviceDetailsArea) {
+                  const headerOffset = 85; // Fixed header clearance
+                  const targetPosition = serviceDetailsArea.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+                  
+                  window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                  });
+                }
+              }, 260);
             }
           }
         });
