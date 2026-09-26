@@ -451,6 +451,157 @@
       margin-left: 6px;
       font-size: 15px;
     }
+
+    /* ========================================================
+   NSW Immunisation Feature Banner Section
+   ======================================================== */
+    .nsw-feature-section {
+      padding: 40px 0;
+    }
+
+    /* Unique Curved Card Container */
+    .nsw-custom-card {
+      background: #ffffff;
+      /* Top-Right සහ Bottom-Left කොන් දෙක curve කිරීම */
+      border-top-right-radius: 65px;
+      border-bottom-left-radius: 65px;
+      border-top-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border: 1.5px solid #d4708f;
+      /* Screenshot එකේ ඇති pinkish/burgundy border එක */
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    /* Left Image Styling */
+    .nsw-img-box {
+      width: 100%;
+      height: 100%;
+      min-height: 320px;
+    }
+
+    .nsw-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Right Content Styling */
+    .nsw-content-box {
+      padding: 45px 35px;
+    }
+
+    .nsw-main-title {
+      color: #102a54;
+      /* Navy Blue color */
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .nsw-sub-title {
+      color: #102a54;
+      font-size: 14.5px;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+
+    /* Navy Blue Primary Button */
+    .btn-nsw-program {
+      display: inline-block;
+      background-color: #0b2653;
+      color: #ffffff !important;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 11px 26px;
+      border-radius: 8px;
+      text-decoration: none !important;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(11, 38, 83, 0.2);
+    }
+
+    .btn-nsw-program:hover {
+      background-color: #061836;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(11, 38, 83, 0.3);
+    }
+
+    /* Well-being Text with checkmark */
+    .nsw-wellbeing-text {
+      color: #1b3560;
+      font-size: 14px;
+      font-weight: 500;
+      margin: 18px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .nsw-wellbeing-text i {
+      color: #7b8ab0;
+      font-size: 14px;
+    }
+
+    /* Dual-Tone Appointment Button (Burgundy + Navy Blue) */
+    .btn-dual-appointment {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none !important;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-dual-appointment:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    }
+
+    /* Left Icon Segment (Maroon / Burgundy) */
+    .btn-dual-appointment .icon-side {
+      background-color: #7d0026;
+      color: #ffffff;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    /* Right Text Segment (Navy Blue) */
+    .btn-dual-appointment .text-side {
+      background-color: #0b2653;
+      color: #ffffff !important;
+      padding: 6px 18px;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.25;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Mobile Responsiveness Fixes */
+    @media (max-width: 991.98px) {
+      .nsw-custom-card {
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+      }
+
+      .nsw-img-box {
+        min-height: 240px;
+        max-height: 280px;
+      }
+
+      .nsw-content-box {
+        padding: 30px 20px;
+      }
+    }
   </style>
 </head>
 
@@ -738,8 +889,8 @@
                           alt="Women's Health" />
                       </div>
                       <div class="content  mb-100">
-                        <span class="service-subtitle">Personalised care for every stage of life.</span>
-                        <h3 class="mb-20">Women’s Health</h3>
+
+                        <h3 class="mb-20">Personalised care for every stage of life.</h3>
                         <p>
                           Our wonderful female GP, Dr San Keshavarzi specialises and takes a keen interest in women’s
                           health. Certainly, women’s emotional and physical health needs are broad and complex –
@@ -1264,8 +1415,7 @@
                           alt="Womens health needs" />
                       </div>
                       <div class="content  ">
-                        <span class="service-subtitle">Compassionate & Comprehensive Care</span>
-                        <h3 class="mb-20">Womens Health Needs</h3>
+
 
                         <div class="womens-health-banner">
                           <h4 style="color: #5c0322; font-weight: 700; margin-bottom: 16px;">
@@ -1275,38 +1425,36 @@
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Breast checks</li>
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Cervical screening
                               (preventative cervical cancer screening)</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Family planning / pregnancy
-                              care</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Pregnancy decision-making
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Pre-pregnancy planning
                             </li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Contraception options
-                              (implants, injections, oral contraception)</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Fertility advice</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Menopause / perimenopause
-                              support</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Period problems & menstrual
-                              disorders</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Sexual health checks</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Heavy menstrual bleeding
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Pregnancy testing and advice
                             </li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Polycystic Ovary Syndrome
-                              (PCOS)</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Postnatal care & checks</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Iron deficiency management
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Contraception advice
+                              (including device insertion and removal)</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Family planning</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Fertility advice
                             </li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> General care – regular
+                              health check ups
+                            </li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Some Gynaecological
+                              treatments</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Incontinence
+                            </li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Iron deficiency
+                            </li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i>Menopause management</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i>Menstrual disorders
+                            </li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i>Sexual health screening </li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i>Antenatal Care (pregnancy)
+                            </li>
+
                           </ul>
                         </div>
 
-                        <p>
-                          Our doctors understand that women’s health evolves throughout different life stages, from
-                          adolescence and fertility planning to menopause and beyond. We offer thorough, compassionate
-                          consultations tailored to your individual physical and emotional health requirements.
-                        </p>
-                        <p>
-                          Whether you require confidential contraceptive counselling, advice regarding irregular
-                          menstrual cycles, or long-term management of menopause symptoms, our friendly clinical team is
-                          here to support you in a comfortable, private environment.
-                        </p>
+
+
                       </div>
                     </div>
 
@@ -1318,80 +1466,155 @@
                           alt="Health Checks & Assessments" />
                       </div>
                       <div class="content">
-                        <span class="service-subtitle">Dedicated evaluations to safeguard your vitality</span>
-                        <h3 class="mb-20">Health Checks & Comprehensive Health Assessments</h3>
+
+                        <h3 class="mb-20">Prevent today for a healthier tomorrow.</h3>
 
                         <p>
-                          The true value of our Health Assessments lies in their proactive, preventative nature.
-                          Supported by the latest medical research, scheduling an assessment is the best way to
-                          safeguard your future well-being. It is recommended that you undergo an assessment if you are
-                          75 or older, or between 45 to 49 years old.
+                          The purpose of this health assessment is to help identify any risk factors that may require
+                          further health management. In addition to assessing a person’s health status, a health
+                          assessment is used to identify a broad range of factors that influence a person’s physical,
+                          psychological and social functioning.
                         </p>
                         <p>
-                          Our Health Assessments are structured into three key steps: <strong>Review of Medical
-                            History</strong>, <strong>Comprehensive Examination</strong>, and <strong>Clear
-                            Recommendations</strong>.
+                          Our friendly and professional nurse will undertake a comprehensive and confidential health
+                          check.
                         </p>
 
                         <div class="feature-box-highlight">
                           <h5>If you are aged 75 or over, we recommend an annual comprehensive health assessment,
                             bulk-billed under Medicare.</h5>
-                          <p class="mb-2"><strong>The assessment of 45–49 year olds is designed to prevent chronic
-                              diseases:</strong></p>
+                          <p class="mb-2"><strong>The annual health assessment involves:></p>
                           <ul class="service-list-check mb-0">
-                            <li><i class="far fa-check-double"></i> Early detection helps identify potential health
-                              concerns before symptoms develop.</li>
-                            <li><i class="far fa-check-double"></i> Personalized lifestyle advice empowers you to make
-                              informed decisions about your health.</li>
-                            <li><i class="far fa-check-double"></i> Comprehensive monitoring over time provides vital
-                              tracking of cardiovascular and metabolic markers.</li>
+                            <li><i class="far fa-check-double"></i>Information collection, including taking a patient
+                              history and undertaking or arranging examinations and investigations as required.</li>
+                            <li><i class="far fa-check-double"></i> Making an overall assessment of the patient.</li>
+                            <li><i class="far fa-check-double"></i> Recommending appropriate interventions.</li>
+                            <li><i class="far fa-check-double"></i> Providing advice and information to the patient.
+                            </li>
+                            <li><i class="far fa-check-double"></i> Keeping a record of the health assessment, and
+                              offering the patient a written report about the health assessment, with recommendations
+                              about matters covered by the health assessment and
+
+                              Offering the patient’s carer (if any, and if the GP considers it appropriate and the
+                              patient agrees) a copy of the report or extracts of the report relevant to the carer.</li>
+                            <li><i class="far fa-check-double"></i> Recommending appropriate interventions;</li>
                           </ul>
                         </div>
 
-                        <h4 class="mb-3" style="color: #5c0322; font-weight: 700;">The Three Steps of a Health
-                          Assessment:</h4>
+                        <div class="feature-box-highlight">
+                          <h5 class="mb-3" style="color: #5c0322; font-weight: 700;">Components of the health
+                            assessment:</h5>
 
-                        <div class="mb-3">
-                          <h5 class="fw-bold text-dark mb-2">Step 1: Review of Medical History</h5>
-                          <ul class="service-list-check">
-                            <li><i class="far fa-angle-right"></i> Detailed lifestyle review, including physical
-                              activity, nutrition, and sleep hygiene.</li>
-                            <li><i class="far fa-angle-right"></i> Evaluation of family health history to identify
-                              potential predispositions to heart disease, stroke, or diabetes.</li>
-                            <li><i class="far fa-angle-right"></i> Comprehensive review of all current prescription
-                              medications, over-the-counter supplements, and immunisation status.</li>
+                          <ul class="service-list-check mb-0">
+                            <li><i class="far fa-check-double"></i> Specific components of the health check includes an
+                              assessment of the patient’s:</li>
+
                           </ul>
                         </div>
 
+                        <div class="feature-box-highlight">
+                          <h5 class="mb-3" style="color: #5c0322; font-weight: 700;">Continence</h5>
+
+                          <ul class="service-list-check mb-0">
+                            <li><i class="far fa-check-double"></i> Immunisation status for influenza, tetanus and
+                              pneumococcus</li>
+                            <li><i class="far fa-check-double"></i> Physical function, including the patient’s
+                              activities of daily living, and whether or not the patient has had a fall in the last 3
+                              months</li>
+                            <li><i class="far fa-check-double"></i> Psychological function, including the patient’s
+                              cognition and mood</li>
+                            <li><i class="far fa-check-double"></i> Social function, including the availability and
+                              adequacy of paid and unpaid help, and whether the patient is responsible for caring for
+                              another person</li>
+                            <li><i class="far fa-check-double"></i> Measurement of the patient’s blood pressure, pulse
+                              rate and rhythm</li>
+                            <li><i class="far fa-check-double"></i> Any need the patient may have for community services
+                            </li>
+                            <li><i class="far fa-check-double"></i>Social wellbeing of the patient</li>
+                            <li><i class="far fa-check-double"></i> The patient’s oral health</li>
+                            <li><i class="far fa-check-double"></i> The patient’s nutrition status</li>
+
+                          </ul>
+                          <p>Above all, our nurse will work closely with you and your General Practitioner. Therefore,
+                            our nurse will co-ordinate any necessary follow-up consultations or supports to help you
+                            manage your health in the future. This health assessment is provided at no cost</p>
+                        </div>
+
+
+
                         <div class="mb-3">
-                          <h5 class="fw-bold text-dark mb-2">Step 2: Comprehensive Clinical Examination</h5>
-                          <ul class="service-list-check">
-                            <li><i class="far fa-angle-right"></i> Routine vital signs check: blood pressure, resting
-                              pulse, and oxygen saturation.</li>
-                            <li><i class="far fa-angle-right"></i> Physical health screening: height, weight, Body Mass
-                              Index (BMI), and waist circumference.</li>
-                            <li><i class="far fa-angle-right"></i> Cardiovascular and respiratory evaluation, along with
-                              joint mobility, vision, and hearing checks.</li>
-                            <li><i class="far fa-angle-right"></i> Pathology investigations including fasting blood
-                              glucose, full lipid profile, kidney and liver function, and urinalysis.</li>
+                          <h5 class="fw-bold text-dark mb-2">If you are aged between 45-49 year old, you can book a free
+                            health check with us.</h5>
+                          <ul class="service-list-check mb-0">
+                            <li><i class="far fa-check-double"></i>Entering middle age presents a whole new host of
+                              health challenges for many people. The Australian Department of Health categorises 45-49
+                              year olds as the demographic most at risk of developing a chronic illness.</li>
+
+
                           </ul>
                         </div>
 
-                        <div class="mb-3">
-                          <h5 class="fw-bold text-dark mb-2">Step 3: Clear Findings & Practical Recommendations</h5>
-                          <p>
-                            Following your assessment, your GP will discuss the findings in detail and formulate a
-                            personalized Health Management Plan. This may include lifestyle modifications, nutritional
-                            guidance, medication adjustments, or referrals to allied health specialists (e.g.,
-                            dietitians, physiotherapists) under Medicare-supported Team Care Arrangements.
-                          </p>
+                        <div class="feature-box-highlight">
+                          <h5 class="mb-3" style="color: #5c0322; font-weight: 700;">Why do you need to get a 45-49 year
+                            old health check?</h5>
+
+                          <ul class="service-list-check mb-0">
+                            <li><i class="far fa-check-double"></i> Between the ages of 45 and 49 years old is when,
+                              statistically, you have a good chance of showing signs of the development of chronic
+                              disease. Unfortunately chronic diseases can have a significant impact on your health and
+                              well-being later in life. Your GP may make recommendations to help you avoid health
+                              problems later in life.</li>
+                            <li><i class="far fa-check-double"></i>If you haven’t been particularly conscious of your
+                              health in the past, then this health check is critical. For people who display risk
+                              factors for developing chronic disease, a 45-49 year old health check is even more
+                              important.</li>
+
+
+                          </ul>
+
+                        </div>
+
+                        <div class="feature-box-highlight">
+                          <h5 class="mb-3" style="color: #5c0322; font-weight: 700;">What’s involved in a 45-49 year old
+                            health check?</h5>
+
+                          <ul class="service-list-check mb-0">
+                            <li><i class="far fa-check-double"></i> Our health assessments are a comprehensive and full
+                              health check of your general overall physical and mental health.</li>
+                            <li><i class="far fa-check-double"></i>A mental health assessment and physical examination
+                              and health assessment is vital to identifying and preventing the onset of any chronic
+                              illness. These checks include a thorough examination of your diet, exercise, family
+                              history, and the review of any medication you may be taking. It may also include
+                              immunisations, type 2 diabetes risk evaluation tests and/or screening tests considered
+                              necessary for your age and/or health history.</li>
+
+
+                          </ul>
+
+                        </div>
+                        <div class="feature-box-highlight">
+                          <h5 class="mb-3" style="color: #5c0322; font-weight: 700;">Other components of the health
+                            assessment may include</h5>
+
+                          <ul class="service-list-check mb-0">
+                            <li><i class="far fa-check-double"></i>Undertaking interventions and referrals where
+                              clinically needed.</li>
+                            <li><i class="far fa-check-double"></i>Delivering advice and information, including
+                              strategies to help improve a patient’s lifestyle and behavioural patterns.</li>
+                            <li><i class="far fa-check-double"></i>Medication review and management if needed.</li>
+                            <li><i class="far fa-check-double"></i>Write and record the health assessment, and provide
+                              the patient with a written copy of the health assessment underlying the recommendations
+                              covered in the appointment.</li>
+
+                          </ul>
+
                         </div>
 
                         <div class="alert alert-light border p-3 rounded">
-                          <strong style="color: #5c0322;">Medicare Eligibility & Bulk Billing:</strong>
+
                           <p class="mb-0 mt-1" style="font-size: 15px;">
-                            Health Assessments for patients aged 75 and over, and eligible patients aged 45 to 49 with
-                            chronic disease risk factors, are bulk-billed under Medicare with no out-of-pocket costs.
+                            Health assessments run for approximately one hour, including 30 minutes with a practice
+                            nurse followed by 30 minutes with your GP.
                           </p>
                         </div>
 
@@ -1405,113 +1628,165 @@
             </div>
           </div>
         </div>
+
+
+        <section class="nsw-feature-section" style="margin-top:-100px ;">
+          <div class="container">
+            <div class="nsw-custom-card">
+              <div class="row g-0 align-items-center">
+
+                <!-- Left Column: Image -->
+                <div class="col-lg-5 col-md-5">
+                  <div class="nsw-img-box">
+                    <!-- ඔබගේ Image path එක මෙතැනට ලබා දෙන්න -->
+                    <img src="assets/img/service/9-SKIN-CHECKS.jpg" alt="NSW Health Immunisation" />
+                  </div>
+                </div>
+
+                <!-- Right Column: Content -->
+                <div class="col-lg-7 col-md-7">
+                  <div class="nsw-content-box text-center">
+
+                    <!-- Heading Titles -->
+                    <h4 class="nsw-main-title">
+                      You Can Thoroughly Explore The Various NSW Immunisation Programs Available
+                    </h4>
+                    <p class="nsw-sub-title">
+                      And Find Detailed Advice And Information Right Here At Your Fingertips:
+                    </p>
+
+                    <!-- NSW Immunisation Program Button -->
+                    <div>
+                      <a href="https://www.health.nsw.gov.au/immunisation/Pages/default.aspx" target="_blank"
+                        class="btn-nsw-program">
+                        NSW Immunisation Program
+                      </a>
+                    </div>
+
+                    <!-- Well-being Checkmark Line -->
+                    <div class="nsw-wellbeing-text">
+                      <i class="fas fa-check"></i>
+                      <span>Invest In Your Well-Being Today</span>
+                    </div>
+
+                    <!-- Dual-Tone Book Appointment Button -->
+                    
+
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- service-single end -->
       </main>
 
       <!-- footer area -->
-  <footer class="footer-area custom-footer">
-  <div class="container">
-    <div class="row g-4">
+      <footer class="footer-area custom-footer">
+        <div class="container">
+          <div class="row g-4">
 
-      <!-- 1st Column: Logo & Clinic Info -->
-      <div class="col-lg-3 col-md-6 col-12 text-start">
-        <div class="footer-widget">
-          <a href="index.html" class="d-inline-block">
-            <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="footer-logo">
-          </a>
-          <p class="footer-desc mt-2" style="text-align: justify;" >
-            Sapphire General Practice provides comprehensive, patient-focused healthcare tailored to support the wellbeing of you and your family.
-          </p>
-        </div>
-      </div>
-
-      <!-- 2nd Column: Quick Links (Divided into 2 Sub-Columns, No Arrows) -->
-      <div class="col-lg-3 col-md-6 col-12 text-start">
-        <div class="footer-widget">
-          <h5 class="footer-widget-title">Quick Links</h5>
-          <div class="row g-2">
-            <!-- Left Sub-column -->
-            <div class="col-6">
-              <ul class="footer-links-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="privacy.html">Billing Policy</a></li>
-              </ul>
+            <!-- 1st Column: Logo & Clinic Info -->
+            <div class="col-lg-3 col-md-6 col-12 text-start">
+              <div class="footer-widget">
+                <a href="index.html" class="d-inline-block">
+                  <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="footer-logo">
+                </a>
+                <p class="footer-desc mt-2" style="text-align: justify;">
+                  Sapphire General Practice provides comprehensive, patient-focused healthcare tailored to support the
+                  wellbeing of you and your family.
+                </p>
+              </div>
             </div>
-            <!-- Right Sub-column -->
-            <div class="col-6">
-              <ul class="footer-links-list">
-                <li><a href="https://sapphireskinlaserclinic.com.au/" target="_blank">Skin Clinic</a></li>
-                <li><a href="telehealth.html">Telehealth</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-              </ul>
+
+            <!-- 2nd Column: Quick Links (Divided into 2 Sub-Columns, No Arrows) -->
+            <div class="col-lg-3 col-md-6 col-12 text-start">
+              <div class="footer-widget">
+                <h5 class="footer-widget-title">Quick Links</h5>
+                <div class="row g-2">
+                  <!-- Left Sub-column -->
+                  <div class="col-6">
+                    <ul class="footer-links-list">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="service.html">Services</a></li>
+                      <li><a href="privacy.html">Billing Policy</a></li>
+                    </ul>
+                  </div>
+                  <!-- Right Sub-column -->
+                  <div class="col-6">
+                    <ul class="footer-links-list">
+                      <li><a href="https://sapphireskinlaserclinic.com.au/" target="_blank">Skin Clinic</a></li>
+                      <li><a href="telehealth.html">Telehealth</a></li>
+                      <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3rd Column: Opening Hours (No Arrows) -->
+            <div class="col-lg-3 col-md-6 col-12 text-start">
+              <div class="footer-widget">
+                <h5 class="footer-widget-title">Opening Hours</h5>
+                <ul class="footer-hours-list">
+                  <li>
+                    <span>Monday - Friday <span class="ms-3">9AM - 6PM</span></span>
+
+                  </li>
+                  <li>
+                    <span>Saturday <span class="ms-5">Closed</span></span>
+
+                  </li>
+                  <li>
+                    <span>Sunday &amp; Holidays <span class="ms-3">Closed</span></span>
+
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 4th Column: Get In Touch -->
+            <div class="col-lg-3 col-md-6 col-12 text-start">
+              <div class="footer-widget">
+                <h5 class="footer-widget-title">Get In Touch</h5>
+                <ul class="footer-contact-list">
+                  <li>
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <span>6 Renwick Street, Wyoming, NSW 2250</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-phone-alt contact-icon"></i>
+                    <span>Call: <a href="tel:0243417722">02 4341 7722</a></span>
+                  </li>
+                  <li>
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <span><a href="mailto:admin@sapphiregp.com.au">admin@sapphiregp.com.au</a></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Bottom Copyright Bar (Fully Left-Aligned on Mobile) -->
+        <div class="container footer-bottom-bar">
+          <div class="row align-items-center">
+            <div class="col-md-6 col-12 text-start mb-2 mb-md-0">
+              <p class="copyright-text mb-0">
+                Copyright 2026 &copy; All Right Reserved Sapphire General Practice
+              </p>
+            </div>
+            <div class="col-md-6 col-12 text-start text-md-end">
+              <p class="copyright-text mb-0">
+                <a href="https://www.anzwebdesign.com.au/" target="_blank">Web Design Marketing Australia</a>
+              </p>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- 3rd Column: Opening Hours (No Arrows) -->
-      <div class="col-lg-3 col-md-6 col-12 text-start">
-        <div class="footer-widget">
-          <h5 class="footer-widget-title">Opening Hours</h5>
-          <ul class="footer-hours-list">
-            <li>
-              <span>Monday - Friday  <span class="ms-3">9AM - 6PM</span></span>
-              
-            </li>
-            <li>
-              <span>Saturday  <span class="ms-5" >Closed</span></span>
-             
-            </li>
-            <li>
-             <span>Sunday &amp; Holidays <span class="ms-3">Closed</span></span>
-             
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 4th Column: Get In Touch -->
-      <div class="col-lg-3 col-md-6 col-12 text-start">
-        <div class="footer-widget">
-          <h5 class="footer-widget-title">Get In Touch</h5>
-          <ul class="footer-contact-list">
-            <li>
-              <i class="fas fa-map-marker-alt contact-icon"></i>
-              <span>6 Renwick Street, Wyoming, NSW 2250</span>
-            </li>
-            <li>
-              <i class="fas fa-phone-alt contact-icon"></i>
-              <span>Call: <a href="tel:0243417722">02 4341 7722</a></span>
-            </li>
-            <li>
-              <i class="fas fa-envelope contact-icon"></i>
-              <span><a href="mailto:admin@sapphiregp.com.au">admin@sapphiregp.com.au</a></span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Bottom Copyright Bar (Fully Left-Aligned on Mobile) -->
-  <div class="container footer-bottom-bar">
-    <div class="row align-items-center">
-      <div class="col-md-6 col-12 text-start mb-2 mb-md-0">
-        <p class="copyright-text mb-0">
-          Copyright 2026 &copy; All Right Reserved Sapphire General Practice
-        </p>
-      </div>
-      <div class="col-md-6 col-12 text-start text-md-end">
-        <p class="copyright-text mb-0">
-          <a href="https://www.anzwebdesign.com.au/" target="_blank">Web Design Marketing Australia</a>
-        </p>
-      </div>
-    </div>
-  </div>
-</footer>
+      </footer>
       <!-- footer area end -->
     </div>
   </div>
