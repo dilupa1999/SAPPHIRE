@@ -705,7 +705,8 @@
 
                     <!-- All Services Widget with Mobile Dropdown -->
                     <div class="widget mb-0">
-                      <div class="all-services-header">
+                      <!-- මෙතැනට id="allServicesToggle" එක් කරන ලදී -->
+                      <div class="all-services-header" id="allServicesToggle" style="cursor: pointer;">
                         <h4 class="title mb-0" style="margin-left: 10px;">All Services</h4>
                         <span class="mobile-service-toggle-btn">
                           <i class="fas fa-plus"></i>
@@ -750,11 +751,11 @@
                         <a href="javascript:void(0)" class="service-nav-item" data-target="service-immunisation">
                           <i class="far fa-angle-double-right"></i>Immunisation
                         </a>
-                        <a href="">
-                          <!-- <i class=""></i> -->
-                        </a>
+
+                        <i class=""></i>
 
                       </div>
+
                       <div class="widget widget-extra-buttons">
                         <div class="p-1 bg-light rounded text-center">
                           <!-- Womens Health Needs -->
@@ -775,10 +776,8 @@
 
                     </div>
 
-
                   </div>
                 </div>
-
                 <!-- CONTENT AREA: Dynamic Service Details -->
                 <div class="col-xl-8 col-lg-8">
                   <div class="service-details">
@@ -1670,7 +1669,7 @@
                     </div>
 
                     <!-- Dual-Tone Book Appointment Button -->
-                    
+
 
                   </div>
                 </div>
@@ -1819,19 +1818,35 @@
       const serviceMenuList = document.querySelector(".service-menu-list");
       const toggleIcon = document.querySelector(".mobile-service-toggle-btn i");
 
-      // 1. Mobile-Only "All Services" Dropdown
-      if (allServicesToggle) {
-        allServicesToggle.addEventListener("click", function () {
+      // 1. Mobile Toggle (Plus / Minus Dropdown Functionality)
+      if (allServicesToggle && serviceMenuList) {
+        allServicesToggle.addEventListener("click", function (e) {
+          e.preventDefault();
           if (window.innerWidth < 992) {
-            $(serviceMenuList).stop(true, true).slideToggle(300, function () {
-              if ($(this).is(":visible")) {
-                toggleIcon.classList.remove("fa-plus");
-                toggleIcon.classList.add("fa-minus");
-              } else {
-                toggleIcon.classList.remove("fa-minus");
-                toggleIcon.classList.add("fa-plus");
+            if (typeof $ !== "undefined") {
+              // jQuery load වී ඇත්නම් slideToggle භාවිතා කරයි
+              $(serviceMenuList).stop(true, true).slideToggle(300, function () {
+                if ($(this).is(":visible")) {
+                  if (toggleIcon) {
+                    toggleIcon.classList.remove("fa-plus");
+                    toggleIcon.classList.add("fa-minus");
+                  }
+                } else {
+                  if (toggleIcon) {
+                    toggleIcon.classList.remove("fa-minus");
+                    toggleIcon.classList.add("fa-plus");
+                  }
+                }
+              });
+            } else {
+              // Pure JavaScript fallback
+              const isHidden = window.getComputedStyle(serviceMenuList).display === "none";
+              serviceMenuList.style.display = isHidden ? "block" : "none";
+              if (toggleIcon) {
+                toggleIcon.classList.toggle("fa-plus", !isHidden);
+                toggleIcon.classList.toggle("fa-minus", isHidden);
               }
-            });
+            }
           }
         });
       }
@@ -1862,13 +1877,18 @@
               breadcrumbTitle.innerText = titleElem.innerText;
             }
 
+            // Mobile View එකේදී menu එක auto-close වීම සහ scroll වීම
             if (window.innerWidth < 992) {
-              if ($(serviceMenuList).is(":visible")) {
-                $(serviceMenuList).slideUp(250);
-                if (toggleIcon) {
-                  toggleIcon.classList.remove("fa-minus");
-                  toggleIcon.classList.add("fa-plus");
+              if (serviceMenuList) {
+                if (typeof $ !== "undefined") {
+                  $(serviceMenuList).slideUp(250);
+                } else {
+                  serviceMenuList.style.display = "none";
                 }
+              }
+              if (toggleIcon) {
+                toggleIcon.classList.remove("fa-minus");
+                toggleIcon.classList.add("fa-plus");
               }
 
               setTimeout(function () {
