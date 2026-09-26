@@ -81,7 +81,7 @@
     }
 
     /* ========================================================
-       3. Desktop View Spacing: Sections අතර ඉඩ ඒකාකාරීව අඩු කිරීම
+       3. Desktop View Spacing
        ======================================================== */
     .service-single.py-120 {
       padding-top: 50px !important;
@@ -146,6 +146,7 @@
     }
 
     @media (min-width: 768px) {
+
       .footer-area .text-md-end,
       .footer-area .text-md-end p {
         text-align: right !important;
@@ -203,6 +204,7 @@
       from {
         opacity: 0;
       }
+
       to {
         opacity: 1;
       }
@@ -252,7 +254,6 @@
       gap: 10px;
     }
 
-    /* Mobile Service Toggle Button Style */
     .mobile-service-toggle-btn {
       display: none;
     }
@@ -303,7 +304,6 @@
         margin-bottom: 30px !important;
       }
 
-      /* Mobile Toggle Accordion Bar */
       .all-services-header {
         display: flex !important;
         justify-content: space-between !important;
@@ -336,7 +336,6 @@
         transition: transform 0.3s ease;
       }
 
-      /* Mobile එකේදී All Services ලැයිස්තුව මුලින් සඟවා තැබීම */
       .service-menu-list {
         display: none;
         margin-top: 12px;
@@ -372,6 +371,85 @@
       .service-menu-list {
         display: block !important;
       }
+    }
+
+    /* ========================================================
+       8. Online Booking Area Fix (No Borders, Clean, Left-Aligned)
+       ======================================================== */
+    .online-booking-clean,
+    .quote-contact {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin-top: 25px !important;
+      margin-bottom: 25px !important;
+    }
+
+    .online-booking-clean .top,
+    .quote-contact .top {
+      position: static !important;
+      text-align: left !important;
+      margin-bottom: 10px !important;
+      padding: 0 !important;
+    }
+
+    .online-booking-clean .booking-title,
+    .quote-contact .top h4 {
+      color: #5c0322 !important;
+      font-size: 20px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.5px !important;
+      margin-bottom: 8px !important;
+      text-align: left !important;
+      text-transform: uppercase !important;
+    }
+
+    .online-booking-clean .booking-desc,
+    .quote-contact .top p {
+      color: #555555 !important;
+      font-size: 15px !important;
+      line-height: 1.7 !important;
+      text-align: left !important;
+
+      text-align: justify !important;
+      margin-bottom: 28px !important;
+    }
+
+    /* Appointment Button Styling (Theme Matching) */
+    .appointment-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #5c0322;
+      color: #ffffff !important;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.8px;
+      padding: 13px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(92, 3, 34, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    .appointment-btn:hover {
+      background: #46122c;
+      color: #ffffff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(92, 3, 34, 0.35);
+    }
+
+    .appointment-btn .svg-icon-wrapper {
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .appointment-btn .right-arrow {
+      margin-left: 6px;
+      font-size: 15px;
     }
   </style>
 </head>
@@ -431,11 +509,10 @@
             </div>
             <div class="offcanvas-body gap-xl-4">
               <ul class="navbar-nav justify-content-end gap-1 flex-grow-1">
-                <li class="nav-item dropdown"><a class="nav-link active" href="index.html" data-bs-toggle="dropdown">Home</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
-                <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                <li class="nav-item active"><a class="nav-link active" href="service.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="privacy.html">Billing Policy</a></li>
                 <li class="nav-item"><a class="nav-link" href="https://sapphireskinlaserclinic.com.au/">Skin</a></li>
                 <li class="nav-item"><a class="nav-link" href="telehealth.html">Telehealth</a></li>
@@ -474,16 +551,16 @@
                 <!-- SIDEBAR: All Services List -->
                 <div class="col-xl-4 col-lg-4">
                   <div class="service-sidebar">
-                    
+
                     <!-- All Services Widget with Mobile Dropdown -->
-                    <div class="widget mb-4">
-                      <div class="all-services-header" >
-                        <h4 class="title mb-0 " style="margin-left: 10px;" >All Services</h4>
+                    <div class="widget mb-0">
+                      <div class="all-services-header">
+                        <h4 class="title mb-0" style="margin-left: 10px;">All Services</h4>
                         <span class="mobile-service-toggle-btn">
                           <i class="fas fa-plus"></i>
                         </span>
                       </div>
-                      
+
                       <div class="category service-menu-list">
                         <a href="javascript:void(0)" class="service-nav-item active"
                           data-target="service-childhood-immunisation">
@@ -522,26 +599,32 @@
                         <a href="javascript:void(0)" class="service-nav-item" data-target="service-immunisation">
                           <i class="far fa-angle-double-right"></i>Immunisation
                         </a>
-                      </div>
-                    </div>
-
-                    <div class="widget widget-extra-buttons">
-                      <div class="p-1 bg-light rounded text-center">
-                        <!-- Womens Health Needs -->
-                        <a href="javascript:void(0)"
-                          class="theme-btn w-100 text-uppercase service-nav-item d-flex justify-content-center align-items-center mb-2"
-                          data-target="service-womens-health-needs">
-                          <i class="fas fa-female me-2"></i> Womens health needs
+                        <a href="">
+                          <!-- <i class=""></i> -->
                         </a>
 
-                        <!-- Health Checks -->
-                        <a href="javascript:void(0)"
-                          class="theme-btn w-100 text-uppercase service-nav-item d-flex justify-content-center align-items-center"
-                          data-target="service-health-checks">
-                          <i class="fas fa-heartbeat me-2"></i> HEALTH CHECKS
-                        </a>
                       </div>
+                      <div class="widget widget-extra-buttons">
+                        <div class="p-1 bg-light rounded text-center">
+                          <!-- Womens Health Needs -->
+                          <a href="javascript:void(0)"
+                            class="theme-btn w-100 text-uppercase service-nav-item d-flex justify-content-center align-items-center mb-2"
+                            data-target="service-womens-health-needs">
+                            <i class="fas fa-female me-2"></i> Womens health needs
+                          </a>
+
+                          <!-- Health Checks -->
+                          <a href="javascript:void(0)"
+                            class="theme-btn w-100 text-uppercase service-nav-item d-flex justify-content-center align-items-center"
+                            data-target="service-health-checks">
+                            <i class="fas fa-heartbeat me-2"></i> HEALTH CHECKS
+                          </a>
+                        </div>
+                      </div>
+
                     </div>
+
+
                   </div>
                 </div>
 
@@ -549,14 +632,14 @@
                 <div class="col-xl-8 col-lg-8">
                   <div class="service-details">
 
-                    <!-- 1. Childhood Immunisation / GP Services Overview -->
+                    <!-- 1. GP Services Overview -->
                     <div class="service-detail-pane active" id="service-childhood-immunisation">
                       <div class="service-main-img-box">
                         <img
                           src="https://invidis.com/wp-content/uploads/2025/08/IXR_Enviro_Doc-Patient-SittingExamTable-OAB_SMH_Unity_2110-Website.jpg"
                           alt="Childhood Immunisation" />
                       </div>
-                      <div class="content">
+                      <div class="content mb-100">
                         <h3 class="mb-20">Our first point of care.</h3>
                         <p>
                           Our GPs offer care for people of all ages and backgrounds. With over a decade of training,
@@ -567,15 +650,36 @@
                           long-term relationships to offer personalised, effective health support throughout life.
                         </p>
                       </div>
-                      <div class="feature-box-highlight">
-                          <h5>National Immunisation Program Milestones:</h5>
-                          <ul class="service-list-check mb-0">
-                            <li><i class="far fa-check-double"></i> 6 weeks, 4 months, and 6 months core infant vaccines</li>
-                            <li><i class="far fa-check-double"></i> 12 months and 18 months developmental boosters (MMR, Meningococcal, Varicella)</li>
-                            <li><i class="far fa-check-double"></i> 4 years pre-school booster (DTPa-IPV)</li>
-                            <li><i class="far fa-check-double"></i> Catch-up immunization schedules for new migrants and overdue infants</li>
-                          </ul>
+
+                      <!-- FIX: ONLINE BOOKING Section (No Border, Normal Flow, Left Aligned) -->
+                      <div class="online-booking-clean wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="top text-start">
+                          <h4 class="booking-title">ONLINE BOOKING</h4>
+                          <p class="booking-desc">
+                            Book an appointment with your preferred doctor, see up-to-date availability,
+                            and book instantly. We also accept walk-in appointments when available.
+                          </p>
                         </div>
+
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="about-btn-appoiment wow fadeInUp" data-wow-delay=".6s">
+                            <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                              class="appointment-btn">
+                              <div class="svg-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%"
+                                  height="100%">
+                                  <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#5c0322" stroke-width="6" />
+                                  <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z"
+                                    fill="#ffb3c1" stroke="#5c0322" stroke-width="4" stroke-linejoin="round" />
+                                </svg>
+                              </div>
+                              <span>BOOK AN APPOINTMENT</span>
+                              <i class="fas fa-arrow-circle-right right-arrow"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
                     </div>
 
                     <!-- 2. Chronic Disease Management -->
@@ -585,7 +689,7 @@
                           src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80"
                           alt="Chronic Disease Management" />
                       </div>
-                      <div class="content">
+                      <div class="content  mb-100">
                         <h3 class="mb-20">Live well, stay supported.</h3>
                         <p>
                           Our GPs help manage long-term conditions like heart disease, asthma, diabetes, arthritis, and
@@ -597,6 +701,33 @@
                           improve quality of life, and stay in control of your health — every step of the way.
                         </p>
                       </div>
+                      <div class="online-booking-clean wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="top text-start">
+                          <h4 class="booking-title">ONLINE BOOKING</h4>
+                          <p class="booking-desc">
+                            Book an appointment with your preferred doctor, see up-to-date availability,
+                            and book instantly. We also accept walk-in appointments when available.
+                          </p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="about-btn-appoiment wow fadeInUp" data-wow-delay=".6s">
+                            <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                              class="appointment-btn">
+                              <div class="svg-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%"
+                                  height="100%">
+                                  <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#5c0322" stroke-width="6" />
+                                  <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z"
+                                    fill="#ffb3c1" stroke="#5c0322" stroke-width="4" stroke-linejoin="round" />
+                                </svg>
+                              </div>
+                              <span>BOOK AN APPOINTMENT</span>
+                              <i class="fas fa-arrow-circle-right right-arrow"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <!-- 3. Women's Health -->
@@ -606,7 +737,7 @@
                           src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=80"
                           alt="Women's Health" />
                       </div>
-                      <div class="content">
+                      <div class="content  mb-100">
                         <span class="service-subtitle">Personalised care for every stage of life.</span>
                         <h3 class="mb-20">Women’s Health</h3>
                         <p>
@@ -619,6 +750,33 @@
                           reproductive health and improve their well-being.
                         </p>
                       </div>
+                      <div class="online-booking-clean wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="top text-start">
+                          <h4 class="booking-title">ONLINE BOOKING</h4>
+                          <p class="booking-desc">
+                            Book an appointment with your preferred doctor, see up-to-date availability,
+                            and book instantly. We also accept walk-in appointments when available.
+                          </p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="about-btn-appoiment wow fadeInUp" data-wow-delay=".6s">
+                            <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                              class="appointment-btn">
+                              <div class="svg-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%"
+                                  height="100%">
+                                  <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#5c0322" stroke-width="6" />
+                                  <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z"
+                                    fill="#ffb3c1" stroke="#5c0322" stroke-width="4" stroke-linejoin="round" />
+                                </svg>
+                              </div>
+                              <span>BOOK AN APPOINTMENT</span>
+                              <i class="fas fa-arrow-circle-right right-arrow"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <!-- 4. Health Assessments & Medicals -->
@@ -628,7 +786,7 @@
                           src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=1200&q=80"
                           alt="Health Assessments" />
                       </div>
-                      <div class="content">
+                      <div class="content  mb-100">
                         <h3 class="mb-20">Comprehensive Health Assessments</h3>
                         <p>
                           The benefits of our Health Assessments are clear: early detection helps prevent health
@@ -642,6 +800,33 @@
                           chronic disease risk factors. Eligible health assessments are bulk-billed under Medicare.
                         </p>
                       </div>
+                      <div class="online-booking-clean wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="top text-start">
+                          <h4 class="booking-title">ONLINE BOOKING</h4>
+                          <p class="booking-desc">
+                            Book an appointment with your preferred doctor, see up-to-date availability,
+                            and book instantly. We also accept walk-in appointments when available.
+                          </p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="about-btn-appoiment wow fadeInUp" data-wow-delay=".6s">
+                            <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                              class="appointment-btn">
+                              <div class="svg-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%"
+                                  height="100%">
+                                  <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#5c0322" stroke-width="6" />
+                                  <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z"
+                                    fill="#ffb3c1" stroke="#5c0322" stroke-width="4" stroke-linejoin="round" />
+                                </svg>
+                              </div>
+                              <span>BOOK AN APPOINTMENT</span>
+                              <i class="fas fa-arrow-circle-right right-arrow"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <!-- 5. Children's Health -->
@@ -651,7 +836,7 @@
                           src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=1200&q=80"
                           alt="Children's Health" />
                       </div>
-                      <div class="content">
+                      <div class="content  mb-100">
                         <h3 class="mb-20">Healthy kids, happy families.</h3>
                         <p>
                           From newborns to teens, our GPs provide expert care for every stage of childhood. We offer
@@ -663,6 +848,33 @@
                           thriving with care you can count on.
                         </p>
                       </div>
+                      <div class="online-booking-clean wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="top text-start">
+                          <h4 class="booking-title">ONLINE BOOKING</h4>
+                          <p class="booking-desc">
+                            Book an appointment with your preferred doctor, see up-to-date availability,
+                            and book instantly. We also accept walk-in appointments when available.
+                          </p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="about-btn-appoiment wow fadeInUp" data-wow-delay=".6s">
+                            <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                              class="appointment-btn">
+                              <div class="svg-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%"
+                                  height="100%">
+                                  <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#5c0322" stroke-width="6" />
+                                  <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z"
+                                    fill="#ffb3c1" stroke="#5c0322" stroke-width="4" stroke-linejoin="round" />
+                                </svg>
+                              </div>
+                              <span>BOOK AN APPOINTMENT</span>
+                              <i class="fas fa-arrow-circle-right right-arrow"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <!-- 6. Asthma Management -->
@@ -672,7 +884,7 @@
                           src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80"
                           alt="Asthma Management" />
                       </div>
-                      <div class="content">
+                      <div class="content  mb-100">
                         <h3 class="mb-20">Breathe easier with expert care.</h3>
                         <p>
                           Asthma affects people of all ages, but with the right support, it can be managed effectively.
@@ -684,6 +896,33 @@
                           every day.
                         </p>
                       </div>
+                      <div class="online-booking-clean wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="top text-start">
+                          <h4 class="booking-title">ONLINE BOOKING</h4>
+                          <p class="booking-desc">
+                            Book an appointment with your preferred doctor, see up-to-date availability,
+                            and book instantly. We also accept walk-in appointments when available.
+                          </p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="about-btn-appoiment wow fadeInUp" data-wow-delay=".6s">
+                            <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                              class="appointment-btn">
+                              <div class="svg-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%"
+                                  height="100%">
+                                  <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#5c0322" stroke-width="6" />
+                                  <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z"
+                                    fill="#ffb3c1" stroke="#5c0322" stroke-width="4" stroke-linejoin="round" />
+                                </svg>
+                              </div>
+                              <span>BOOK AN APPOINTMENT</span>
+                              <i class="fas fa-arrow-circle-right right-arrow"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <!-- 7. Diabetes Management -->
@@ -693,7 +932,7 @@
                           src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=1200&q=80"
                           alt="Diabetes Management" />
                       </div>
-                      <div class="content">
+                      <div class="content  mb-100">
                         <h3 class="mb-20">Stay in control of your diabetes.</h3>
                         <p>
                           Living with diabetes requires regular support and guidance. Our GPs help manage type 1, type
@@ -705,6 +944,33 @@
                           long-term complications
                         </p>
                       </div>
+                      <div class="online-booking-clean wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="top text-start">
+                          <h4 class="booking-title">ONLINE BOOKING</h4>
+                          <p class="booking-desc">
+                            Book an appointment with your preferred doctor, see up-to-date availability,
+                            and book instantly. We also accept walk-in appointments when available.
+                          </p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="about-btn-appoiment wow fadeInUp" data-wow-delay=".6s">
+                            <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                              class="appointment-btn">
+                              <div class="svg-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%"
+                                  height="100%">
+                                  <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#5c0322" stroke-width="6" />
+                                  <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z"
+                                    fill="#ffb3c1" stroke="#5c0322" stroke-width="4" stroke-linejoin="round" />
+                                </svg>
+                              </div>
+                              <span>BOOK AN APPOINTMENT</span>
+                              <i class="fas fa-arrow-circle-right right-arrow"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <!-- 8. Mental Health -->
@@ -714,7 +980,7 @@
                           src="https://i.guim.co.uk/img/media/560e9a76e57f4c5582107841bbe6ea84b3e5979e/309_0_5451_3271/master/5451.jpg?width=465&dpr=1&s=none&crop=none"
                           alt="Mental Health" />
                       </div>
-                      <div class="content">
+                      <div class="content  mb-100">
                         <h3 class="mb-20">Your mental wellbeing matters.</h3>
                         <p>
                           Mental health is just as important as physical health. Our GPs support you through challenges
@@ -725,6 +991,33 @@
                           check-ins — helping you feel supported, heard, and better equipped to navigate life.
                         </p>
                       </div>
+                      <div class="online-booking-clean wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="top text-start">
+                          <h4 class="booking-title">ONLINE BOOKING</h4>
+                          <p class="booking-desc">
+                            Book an appointment with your preferred doctor, see up-to-date availability,
+                            and book instantly. We also accept walk-in appointments when available.
+                          </p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="about-btn-appoiment wow fadeInUp" data-wow-delay=".6s">
+                            <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                              class="appointment-btn">
+                              <div class="svg-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%"
+                                  height="100%">
+                                  <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#5c0322" stroke-width="6" />
+                                  <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z"
+                                    fill="#ffb3c1" stroke="#5c0322" stroke-width="4" stroke-linejoin="round" />
+                                </svg>
+                              </div>
+                              <span>BOOK AN APPOINTMENT</span>
+                              <i class="fas fa-arrow-circle-right right-arrow"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <!-- Men's Health -->
@@ -734,7 +1027,7 @@
                           src="https://cdn.prod.website-files.com/68a4198525bcfbc38683aea0/68b9260acd0aa7f06323a9a8_mens-health-month-lower-your-risk-of-chronic-diseases.jpeg"
                           alt="Men's Health" />
                       </div>
-                      <div class="content">
+                      <div class="content  mb-100">
                         <h3 class="mb-20">Supporting men at every stage.</h3>
                         <p>
                           Men’s health needs change over time. Our GPs offer support for issues like blood pressure,
@@ -746,6 +1039,33 @@
                           health and live well.
                         </p>
                       </div>
+                      <div class="online-booking-clean wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="top text-start">
+                          <h4 class="booking-title">ONLINE BOOKING</h4>
+                          <p class="booking-desc">
+                            Book an appointment with your preferred doctor, see up-to-date availability,
+                            and book instantly. We also accept walk-in appointments when available.
+                          </p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="about-btn-appoiment wow fadeInUp" data-wow-delay=".6s">
+                            <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                              class="appointment-btn">
+                              <div class="svg-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%"
+                                  height="100%">
+                                  <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#5c0322" stroke-width="6" />
+                                  <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z"
+                                    fill="#ffb3c1" stroke="#5c0322" stroke-width="4" stroke-linejoin="round" />
+                                </svg>
+                              </div>
+                              <span>BOOK AN APPOINTMENT</span>
+                              <i class="fas fa-arrow-circle-right right-arrow"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <!-- 9. Skin Cancer Checks -->
@@ -755,7 +1075,7 @@
                           src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80"
                           alt="Skin Cancer Checks" />
                       </div>
-                      <div class="content">
+                      <div class="content  mb-100">
                         <h3 class="mb-20">Protect your skin, protect your health.</h3>
                         <p>
                           Skin cancer is common in Australia, but early detection saves lives. Our GPs offer full-body
@@ -766,6 +1086,33 @@
                           you notice changes in your skin, don’t delay — book a check today.
                         </p>
                       </div>
+                      <div class="online-booking-clean wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="top text-start">
+                          <h4 class="booking-title">ONLINE BOOKING</h4>
+                          <p class="booking-desc">
+                            Book an appointment with your preferred doctor, see up-to-date availability,
+                            and book instantly. We also accept walk-in appointments when available.
+                          </p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="about-btn-appoiment wow fadeInUp" data-wow-delay=".6s">
+                            <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                              class="appointment-btn">
+                              <div class="svg-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%"
+                                  height="100%">
+                                  <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#5c0322" stroke-width="6" />
+                                  <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z"
+                                    fill="#ffb3c1" stroke="#5c0322" stroke-width="4" stroke-linejoin="round" />
+                                </svg>
+                              </div>
+                              <span>BOOK AN APPOINTMENT</span>
+                              <i class="fas fa-arrow-circle-right right-arrow"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <!-- 10. Minor Procedures -->
@@ -775,7 +1122,7 @@
                           src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80"
                           alt="Wound Care" />
                       </div>
-                      <div class="content">
+                      <div class="content  mb-100">
                         <h3 class="mb-20">Minor procedures, major care.</h3>
                         <p>
                           We provide safe, in-clinic procedures like mole and cyst removal, IUD and pessary
@@ -786,6 +1133,33 @@
                           more info, visit our Billings page or speak with our reception team.
                         </p>
                       </div>
+                      <div class="online-booking-clean wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="top text-start">
+                          <h4 class="booking-title">ONLINE BOOKING</h4>
+                          <p class="booking-desc">
+                            Book an appointment with your preferred doctor, see up-to-date availability,
+                            and book instantly. We also accept walk-in appointments when available.
+                          </p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="about-btn-appoiment wow fadeInUp" data-wow-delay=".6s">
+                            <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                              class="appointment-btn">
+                              <div class="svg-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%"
+                                  height="100%">
+                                  <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#5c0322" stroke-width="6" />
+                                  <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z"
+                                    fill="#ffb3c1" stroke="#5c0322" stroke-width="4" stroke-linejoin="round" />
+                                </svg>
+                              </div>
+                              <span>BOOK AN APPOINTMENT</span>
+                              <i class="fas fa-arrow-circle-right right-arrow"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <!-- 11. Travel Medicine -->
@@ -795,7 +1169,7 @@
                           src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80"
                           alt="Travel Medicine" />
                       </div>
-                      <div class="content">
+                      <div class="content  mb-100">
                         <h3 class="mb-20">Travel well with peace of mind.</h3>
                         <p>
                           Planning a trip? Book a travel consult with our GPs. We provide tailored advice, vaccinations,
@@ -806,6 +1180,33 @@
                           fully prepared for a safe, healthy journey — no matter where you go.
                         </p>
                       </div>
+                      <div class="online-booking-clean wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="top text-start">
+                          <h4 class="booking-title">ONLINE BOOKING</h4>
+                          <p class="booking-desc">
+                            Book an appointment with your preferred doctor, see up-to-date availability,
+                            and book instantly. We also accept walk-in appointments when available.
+                          </p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="about-btn-appoiment wow fadeInUp" data-wow-delay=".6s">
+                            <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                              class="appointment-btn">
+                              <div class="svg-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%"
+                                  height="100%">
+                                  <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#5c0322" stroke-width="6" />
+                                  <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z"
+                                    fill="#ffb3c1" stroke="#5c0322" stroke-width="4" stroke-linejoin="round" />
+                                </svg>
+                              </div>
+                              <span>BOOK AN APPOINTMENT</span>
+                              <i class="fas fa-arrow-circle-right right-arrow"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <!-- 12. Family & Adult Immunisation -->
@@ -815,7 +1216,7 @@
                           src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80"
                           alt="Immunisation" />
                       </div>
-                      <div class="content">
+                      <div class="content  mb-100">
                         <h3 class="mb-20">Protection through every season.</h3>
                         <p>
                           We offer immunisations for children and adults, including routine, flu, travel, and
@@ -826,6 +1227,33 @@
                           visit the NSW Immunisation Program.
                         </p>
                       </div>
+                      <div class="online-booking-clean wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="top text-start">
+                          <h4 class="booking-title">ONLINE BOOKING</h4>
+                          <p class="booking-desc">
+                            Book an appointment with your preferred doctor, see up-to-date availability,
+                            and book instantly. We also accept walk-in appointments when available.
+                          </p>
+                        </div>
+
+                        <div class="d-flex justify-content-start align-items-center">
+                          <div class="about-btn-appoiment wow fadeInUp" data-wow-delay=".6s">
+                            <a href="https://www.hotdoc.com.au/medical-centres/wyoming-NSW-2250/renwick-general-practice/doctors"
+                              class="appointment-btn">
+                              <div class="svg-icon-wrapper">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%"
+                                  height="100%">
+                                  <circle cx="50" cy="50" r="45" fill="#ffffff" stroke="#5c0322" stroke-width="6" />
+                                  <path d="M40 25 H 60 V 40 H 75 V 60 H 60 V 75 H 40 V 60 H 25 V 40 H 40 Z"
+                                    fill="#ffb3c1" stroke="#5c0322" stroke-width="4" stroke-linejoin="round" />
+                                </svg>
+                              </div>
+                              <span>BOOK AN APPOINTMENT</span>
+                              <i class="fas fa-arrow-circle-right right-arrow"></i>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
                     </div>
 
                     <!-- NEW PANE 1: Womens health needs -->
@@ -835,7 +1263,7 @@
                           src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80"
                           alt="Womens health needs" />
                       </div>
-                      <div class="content">
+                      <div class="content  ">
                         <span class="service-subtitle">Compassionate & Comprehensive Care</span>
                         <h3 class="mb-20">Womens Health Needs</h3>
 
@@ -849,7 +1277,8 @@
                               (preventative cervical cancer screening)</li>
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Family planning / pregnancy
                               care</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Pregnancy decision-making</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Pregnancy decision-making
+                            </li>
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Contraception options
                               (implants, injections, oral contraception)</li>
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Fertility advice</li>
@@ -858,11 +1287,13 @@
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Period problems & menstrual
                               disorders</li>
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Sexual health checks</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Heavy menstrual bleeding</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Heavy menstrual bleeding
+                            </li>
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Polycystic Ovary Syndrome
                               (PCOS)</li>
                             <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Postnatal care & checks</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Iron deficiency management</li>
+                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Iron deficiency management
+                            </li>
                           </ul>
                         </div>
 
@@ -978,120 +1409,109 @@
       </main>
 
       <!-- footer area -->
-      <footer class="footer-area py-5" style="background-color: #5c0322;">
-        <div class="container">
-          <div class="row g-4 g-lg-5">
+  <footer class="footer-area custom-footer">
+  <div class="container">
+    <div class="row g-4">
 
-            <!-- 1st Column (Logo & Contact) -->
-            <div class="col-lg-4 col-md-6 col-12 text-start">
-              <div class="footer-title-wrapper mb-4">
-                <a href="index.html" class="d-block w-100">
-                  <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="img-fluid"
-                    style="max-width: 300px;">
-                </a>
-              </div>
-              <ul class="list-unstyled mb-0" style="color: #fff; font-size: 16px;">
-                <li class="mb-3 d-flex align-items-center text-white">
-                  <i class="fas fa-phone-alt me-3"></i> Call us on :
-                  <a href="tel:0243417722" class="text-white text-decoration-none ms-1">02 4341 7722</a>
-                </li>
-                <li class="mb-3 d-flex align-items-center">
-                  <i class="fas fa-map-marker-alt me-3"></i>Address: 6 Sapphire Street, Wyoming, NSW 2250
-                </li>
-                <li class="mb-3 d-flex align-items-center">
-                  <i class="fas fa-envelope me-3"></i> admin@sapphiregp.com.au
-                </li>
-              </ul>
-            </div>
-
-            <!-- 2nd Column (Opening Hours) -->
-            <div class="col-lg-4 col-md-6 col-12 text-start">
-              <div class="footer-title-wrapper mb-4">
-                <h5 class="text-white mb-0"
-                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">
-                  Opening Hours
-                </h5>
-              </div>
-              <ul class="list-unstyled mb-0" style="color: #fff; font-size: 17px;">
-                <li class="row align-items-start mb-3">
-                  <div class="col-7 col-md-auto pe-1">
-                    <span style="color: #ffffff; margin-right: 8px;">&raquo;</span>Monday - Friday
-                  </div>
-                  <div class="col-5 col-md-auto ms-md-auto text-start text-md-end ps-0">
-                    9AM - 6PM
-                  </div>
-                </li>
-                <li class="row align-items-start mb-3">
-                  <div class="col-7 col-md-auto pe-1">
-                    <span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Saturday
-                  </div>
-                  <div class="col-5 col-md-auto ms-md-auto text-start text-md-end ps-0" style="color: #f8f7f8;">
-                    CLOSED
-                  </div>
-                </li>
-                <li class="row align-items-start mb-3">
-                  <div class="col-7 col-md-auto pe-1 d-flex">
-                    <span style="color: #ffffff; margin-right: 8px;">&raquo;</span>
-                    <span>Sunday and Public Holidays</span>
-                  </div>
-                  <div class="col-5 col-md-auto ms-md-auto text-start text-md-end ps-0" style="color: #f7f7f7;">
-                    CLOSED
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <!-- 3rd Column (Quick Links) -->
-            <div class="col-lg-4 col-md-12 col-12 text-start">
-              <div class="footer-title-wrapper mb-4">
-                <h5 class="text-white mb-0"
-                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px;">
-                  Quick Links
-                </h5>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <ul class="list-unstyled mb-0" style="font-size: 17px;">
-                    <li class="mb-3"><a href="index.html" class="text-white text-decoration-none"><span
-                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Home</a></li>
-                    <li class="mb-3"><a href="about.html" class="text-white text-decoration-none"><span
-                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>About Us</a></li>
-                    <li class="mb-3"><a href="service.html" class="text-white text-decoration-none"><span
-                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Services</a></li>
-                  </ul>
-                </div>
-                <div class="col-6">
-                  <ul class="list-unstyled mb-0" style="font-size: 17px;">
-                    <li class="mb-3"><a href="billing.html" class="text-white text-decoration-none"><span
-                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Billing Policy</a></li>
-                    <li class="mb-3"><a href="https://sapphireskinlaserclinic.com.au/"
-                        class="text-white text-decoration-none"><span
-                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Skin</a></li>
-                    <li class="mb-3"><a href="telehealth.html" class="text-white text-decoration-none"><span
-                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Telehealth</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-          </div>
+      <!-- 1st Column: Logo & Clinic Info -->
+      <div class="col-lg-3 col-md-6 col-12 text-start">
+        <div class="footer-widget">
+          <a href="index.html" class="d-inline-block">
+            <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="footer-logo">
+          </a>
+          <p class="footer-desc mt-2" style="text-align: justify;" >
+            Sapphire General Practice provides comprehensive, patient-focused healthcare tailored to support the wellbeing of you and your family.
+          </p>
         </div>
-        <div class="container mt-4 pt-3 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
-          <div class="row align-items-center">
-            <div class="col-md-6 col-12 text-start mb-2 mb-md-0">
-              <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
-                Copyright 2026 &copy; All Right Reserved Sapphire General Practice
-              </p>
+      </div>
+
+      <!-- 2nd Column: Quick Links (Divided into 2 Sub-Columns, No Arrows) -->
+      <div class="col-lg-3 col-md-6 col-12 text-start">
+        <div class="footer-widget">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <div class="row g-2">
+            <!-- Left Sub-column -->
+            <div class="col-6">
+              <ul class="footer-links-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="privacy.html">Billing Policy</a></li>
+              </ul>
             </div>
-            <div class="col-md-6 col-12 text-start text-md-end mt-2 mt-md-0">
-              <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
-                <a href="https://www.anzwebdesign.com.au/" target="_blank" class="text-decoration-none"
-                  style="color: #ffffff;">Web Design Marketing Australia</a>
-              </p>
+            <!-- Right Sub-column -->
+            <div class="col-6">
+              <ul class="footer-links-list">
+                <li><a href="https://sapphireskinlaserclinic.com.au/" target="_blank">Skin Clinic</a></li>
+                <li><a href="telehealth.html">Telehealth</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+
+      <!-- 3rd Column: Opening Hours (No Arrows) -->
+      <div class="col-lg-3 col-md-6 col-12 text-start">
+        <div class="footer-widget">
+          <h5 class="footer-widget-title">Opening Hours</h5>
+          <ul class="footer-hours-list">
+            <li>
+              <span>Monday - Friday  <span class="ms-3">9AM - 6PM</span></span>
+              
+            </li>
+            <li>
+              <span>Saturday  <span class="ms-5" >Closed</span></span>
+             
+            </li>
+            <li>
+             <span>Sunday &amp; Holidays <span class="ms-3">Closed</span></span>
+             
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4th Column: Get In Touch -->
+      <div class="col-lg-3 col-md-6 col-12 text-start">
+        <div class="footer-widget">
+          <h5 class="footer-widget-title">Get In Touch</h5>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fas fa-map-marker-alt contact-icon"></i>
+              <span>6 Renwick Street, Wyoming, NSW 2250</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt contact-icon"></i>
+              <span>Call: <a href="tel:0243417722">02 4341 7722</a></span>
+            </li>
+            <li>
+              <i class="fas fa-envelope contact-icon"></i>
+              <span><a href="mailto:admin@sapphiregp.com.au">admin@sapphiregp.com.au</a></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom Copyright Bar (Fully Left-Aligned on Mobile) -->
+  <div class="container footer-bottom-bar">
+    <div class="row align-items-center">
+      <div class="col-md-6 col-12 text-start mb-2 mb-md-0">
+        <p class="copyright-text mb-0">
+          Copyright 2026 &copy; All Right Reserved Sapphire General Practice
+        </p>
+      </div>
+      <div class="col-md-6 col-12 text-start text-md-end">
+        <p class="copyright-text mb-0">
+          <a href="https://www.anzwebdesign.com.au/" target="_blank">Web Design Marketing Australia</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
       <!-- footer area end -->
     </div>
   </div>
@@ -1124,7 +1544,7 @@
       const serviceMenuList = document.querySelector(".service-menu-list");
       const toggleIcon = document.querySelector(".mobile-service-toggle-btn i");
 
-      // 1. Mobile-Only "All Services" Dropdown (Plus/Minus Mark Toggle)
+      // 1. Mobile-Only "All Services" Dropdown
       if (allServicesToggle) {
         allServicesToggle.addEventListener("click", function () {
           if (window.innerWidth < 992) {
@@ -1146,13 +1566,11 @@
         item.addEventListener("click", function (e) {
           e.preventDefault();
 
-          // Active class update
           navItems.forEach(function (nav) {
             nav.classList.remove("active");
           });
           this.classList.add("active");
 
-          // Detail panes update
           detailPanes.forEach(function (pane) {
             pane.classList.remove("active");
             pane.style.display = "none";
@@ -1164,15 +1582,12 @@
             targetPane.style.display = "block";
             targetPane.classList.add("active");
 
-            // Update Breadcrumb text
             const titleElem = targetPane.querySelector("h3");
             if (titleElem && breadcrumbTitle) {
               breadcrumbTitle.innerText = titleElem.innerText;
             }
 
-            // Mobile view Handling (Smooth scroll without bounce)
             if (window.innerWidth < 992) {
-              // Service එකක් තේරූ පසු mobile dropdown එක smooth ලෙස slideUp කර වසා දැමීම
               if ($(serviceMenuList).is(":visible")) {
                 $(serviceMenuList).slideUp(250);
                 if (toggleIcon) {
@@ -1181,13 +1596,12 @@
                 }
               }
 
-              // කිසිදු bounce වීමකින් තොරව content එක වෙත smooth scroll කිරීම
               setTimeout(function () {
                 const serviceDetailsArea = document.querySelector(".service-details");
                 if (serviceDetailsArea) {
-                  const headerOffset = 85; // Fixed header clearance
+                  const headerOffset = 85;
                   const targetPosition = serviceDetailsArea.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-                  
+
                   window.scrollTo({
                     top: targetPosition,
                     behavior: "smooth"

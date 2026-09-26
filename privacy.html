@@ -31,7 +31,7 @@
     }
 
     .billing-content-box {
-      margin-bottom: 35px;
+      margin-bottom: 45px;
     }
 
     .billing-text-justify {
@@ -86,7 +86,6 @@
       padding: 40px 32px;
       box-shadow: 0 12px 35px rgba(65, 36, 17, 0.08), 0 3px 10px rgba(0, 0, 0, 0.03);
       color: #4a2e1b;
-      /* Rich brown text */
       text-align: justify;
       text-justify: inter-word;
       transition: all 0.35s ease;
@@ -103,40 +102,47 @@
       border-color: #dabfae;
     }
 
+    /* Pricing Header: Centered Icon & Text */
+    .pricing-header {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      margin-bottom: 22px !important;
+    }
+
     .pricing-icon {
-      width: 60px;
-      height: 60px;
+      width: 65px;
+      height: 65px;
       background: #fdf8f4;
-      border-radius: 14px;
+      border-radius: 16px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       border: 1px solid #f0e1d5;
-      margin-bottom: 20px;
+      margin: 0 auto 16px auto !important;
     }
 
     .pricing-icon img {
-      max-width: 30px;
+      max-width: 32px;
       height: auto;
     }
 
     .pricing-header h4 {
       color: #381e11;
-      /* Deep chocolate brown */
       font-size: 22px;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 8px !important;
       line-height: 1.35;
+      text-align: center !important;
     }
 
     .pricing-header p {
       color: #6c4b35;
-      /* Medium warm brown */
       font-size: 14.5px;
-      line-height: 1.65;
-      text-align: justify;
-      text-justify: inter-word;
-      margin-bottom: 25px;
+      line-height: 1.6;
+      text-align: center !important;
+      margin-bottom: 0 !important;
     }
 
     .pricing-content {
@@ -171,7 +177,6 @@
 
     .pricing-feature ul li i {
       color: #8c4f24;
-      /* Accent brown checkmark */
       font-size: 17px;
       margin-top: 3px;
       flex-shrink: 0;
@@ -234,13 +239,11 @@
             </div>
             <div class="offcanvas-body gap-xl-4">
               <ul class="navbar-nav justify-content-end gap-1 flex-grow-1">
-                <li class="nav-item dropdown"><a class="nav-link active" href="index.html"
-                    data-bs-toggle="dropdown">Home</a>
-                </li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
                 <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-                <li class="nav-item"><a class="nav-link" href="privacy.html">Billing Policy</a></li>
+                <li class="nav-item active"><a class="nav-link active" href="privacy.html">Billing Policy</a></li>
                 <li class="nav-item"><a class="nav-link" href="https://sapphireskinlaserclinic.com.au/">Skin</a></li>
                 <li class="nav-item"><a class="nav-link" href="telehealth.html">Telehealth</a></li>
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
@@ -277,31 +280,29 @@
             <div class="row justify-content-center billing-content-box">
               <div class="col-lg-12 text-center">
                 <h3 class="billing-title ani-text-1">Sapphire General Practice Fees</h3>
-                <p class="billing-text-justify wow fadeInUp"  >
+                <p class="billing-text-justify wow fadeInUp">
                   We are a mixed billing practice - your billing type is up to the discretion of the doctors and is
                   dependent on your consultation type. If you are billed privately, we will process your Medicare rebate
                   at the end of your visit. If you are privately billed, we will process your Medicare rebate at the end
-                  of your visit, making it
-                  easier for you to claim your entitled refund.
+                  of your visit, making it easier for you to claim your entitled refund.
                 </p>
-           
               </div>
             </div>
 
-            <!-- Policy & Bulk Billing Eligibility with Image -->
-            <div class="row align-items-center billing-content-box">
+            <!-- Policy & Bulk Billing Eligibility with Image (Gap Badhaya Gaya Hai) -->
+            <div class="row align-items-center billing-content-box g-4 g-lg-5">
               <div class="col-lg-5 mb-4 mb-lg-0 text-center">
                 <img src="assets/img/service/biilingpolicy.png" alt="Doctor examining child"
                   class="img-fluid rounded-4 shadow-sm" style="max-height: 880px; width: 100%; object-fit: cover;" />
               </div>
-              <div class="col-lg-7">
+              <div class="col-lg-7 ps-lg-4">
                 <h4 class="billing-title ani-text-1">Billing Policy</h4>
-                <p class="billing-text-justify  wow fadeInUp "  data-wow-delay=".2s">
+                <p class="billing-text-justify wow fadeInUp" data-wow-delay=".2s">
                   At Sapphire General Practice, we are a mixed billing clinic. This means that while some consultations
                   and patients are bulk billed, others may incur a private fee. Your billing type is determined at the
                   discretion of the treating doctor and depends on the nature and length of your consultation.
                 </p>
-                <p class="billing-text-justify  wow fadeInUp "  data-wow-delay=".2s">
+                <p class="billing-text-justify wow fadeInUp" data-wow-delay=".2s">
                   If you are privately billed, we will process your Medicare rebate at the end of your visit, making it
                   easier for you to claim your entitled refund.
                 </p>
@@ -309,7 +310,7 @@
                 <h5 class="billing-subtitle ani-text-2">Bulk Billing Eligibility</h5>
                 <p class="mb-2" style="color: #444; font-weight: 500;">The Following Patients Are Bulk Billed At Our
                   Practice:</p>
-                <ul class="eligibility-list wow fadeInUp"  data-wow-delay=".2s">
+                <ul class="eligibility-list wow fadeInUp" data-wow-delay=".2s">
                   <li><i class="fas fa-check"></i> Children under the age of 16</li>
                   <li><i class="fas fa-check"></i> Mental health consultations</li>
                   <li><i class="fas fa-check"></i> GP Management Plans (Care Plans)</li>
@@ -328,11 +329,11 @@
                   <!-- Card 1: Standard / Short Consultations -->
                   <div class="col-md-6 d-flex">
                     <div class="pricing-item wow fadeInUp w-100" data-wow-delay=".2s">
-                      <div class="pricing-header">
-                        <div class="pricing-icon">
+                      <div class="pricing-header text-center">
+                        <div class="pricing-icon mx-auto">
                           <img src="assets/img/icon/money.svg" alt="Dental Icon" />
                         </div>
-                        <div>
+                        <div class="text-center w-100">
                           <h4 class="ani-text-2">Our Consultation &amp; Procedure Fees</h4>
                           <p>(Prices shown are before Medicare rebate. Updated: May 2025)</p>
                         </div>
@@ -366,14 +367,14 @@
                   <!-- Card 2: Procedure Fees -->
                   <div class="col-md-6 d-flex">
                     <div class="pricing-item wow fadeInUp w-100" data-wow-delay=".4s">
-                      <div class="pricing-header">
-                        <div class="pricing-icon">
+                      <div class="pricing-header text-center">
+                        <div class="pricing-icon mx-auto">
                           <img src="assets/img/icon/money.svg" alt="Dental Icon" />
                         </div>
-                        <div>
+                        <div class="text-center w-100">
                           <h4 class="ani-text-2">Procedure Fees</h4>
-                          <p>For complex, multiple issues or detailed health reviews. Please note the following facility
-                            fees apply to certain procedures, in addition to any consultation fees.</p>
+                          <p>Please note the following facility fees apply to certain procedures, in addition to any
+                            consultation fees.</p>
                         </div>
                       </div>
 
@@ -409,7 +410,6 @@
                   easier for you to claim your entitled refund.
                 </p>
                 <p class="billing-text-justify">
-
                 </p>
               </div>
             </div>
@@ -420,123 +420,109 @@
       </main>
 
       <!-- footer area -->
-      <footer class="footer-area py-5" style="background-color: #5c0322;">
-        <div class="container">
-          <div class="row g-4 g-lg-5">
+<footer class="footer-area custom-footer">
+  <div class="container">
+    <div class="row g-4">
 
-            <!-- 1st Column (Logo & Contact) -->
-            <div class="col-lg-4 col-md-6 col-12 text-start">
-              <div class="footer-title-wrapper mb-4">
-                <a href="index.html" class="d-block w-100">
-                  <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="img-fluid"
-                    style="max-width: 300px;">
-                </a>
-              </div>
-              <ul class="list-unstyled mb-0" style="color: #fff; font-size: 16px;">
-                <li class="mb-3 d-flex align-items-center text-white">
-                  <i class="fas fa-phone-alt me-3"></i> Call us on :
-                  <a href="tel:0243417722" class="text-white text-decoration-none ms-1">02 4341 7722</a>
-                </li>
-                <li class="mb-3 d-flex align-items-center">
-                  <i class="fas fa-map-marker-alt me-3"></i>Address: 6 Renwick Street, Wyoming, NSW 2250
-                </li>
-                <li class="mb-3 d-flex align-items-center">
-                  <i class="fas fa-envelope me-3"></i> admin@sapphiregp.com.au
-                </li>
-              </ul>
-            </div>
-
-            <!-- 2nd Column (Opening Hours) -->
-            <div class="col-lg-4 col-md-6 col-12 text-start">
-              <div class="footer-title-wrapper mb-4">
-                <h5 class="text-white mb-0"
-                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
-                  Opening Hours
-                </h5>
-              </div>
-              <ul class="list-unstyled mb-0" style="color: #fff; font-size: 17px;">
-                <!-- Monday - Friday -->
-                <li class="row align-items-start mb-3">
-                  <div class="col-7 col-md-auto pe-1">
-                    <span style="color: #ffffff; margin-right: 8px;">&raquo;</span>Monday - Friday
-                  </div>
-                  <div class="col-5 col-md-auto ms-md-auto text-start text-md-end ps-0">
-                    9AM - 6PM
-                  </div>
-                </li>
-                <!-- Saturday -->
-                <li class="row align-items-start mb-3">
-                  <div class="col-7 col-md-auto pe-1">
-                    <span style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Saturday
-                  </div>
-                  <div class="col-5 col-md-auto ms-md-auto text-start text-md-end ps-0" style="color: #f8f7f8;">
-                    CLOSED
-                  </div>
-                </li>
-                <!-- Sunday and Public Holidays -->
-                <li class="row align-items-start mb-3">
-                  <div class="col-7 col-md-auto pe-1 d-flex">
-                    <span style="color: #ffffff; margin-right: 8px;">&raquo;</span>
-                    <span>Sunday and Public Holidays</span>
-                  </div>
-                  <div class="col-5 col-md-auto ms-md-auto text-start text-md-end ps-0" style="color: #f7f7f7;">
-                    CLOSED
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <!-- 3rd Column (Quick Links) -->
-            <div class="col-lg-4 col-md-12 col-12 text-start">
-              <div class="footer-title-wrapper mb-4">
-                <h5 class="text-white mb-0"
-                  style="text-transform: uppercase; font-size: 18px; letter-spacing: 1px; margin-top: 50px;">
-                  Quick Links
-                </h5>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <ul class="list-unstyled mb-0" style="font-size: 17px;">
-                    <li class="mb-3"><a href="index.html" class="text-white text-decoration-none"><span
-                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Home</a></li>
-                    <li class="mb-3"><a href="about.html" class="text-white text-decoration-none"><span
-                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>About Us</a></li>
-                    <li class="mb-3"><a href="services.html" class="text-white text-decoration-none"><span
-                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Services</a></li>
-                  </ul>
-                </div>
-                <div class="col-6">
-                  <ul class="list-unstyled mb-0" style="font-size: 17px;">
-                    <li class="mb-3"><a href="billing.html" class="text-white text-decoration-none"><span
-                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Billing Policy</a></li>
-                    <li class="mb-3"><a href="https://sapphireskinlaserclinic.com.au/"
-                        class="text-white text-decoration-none"><span
-                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Skin</a></li>
-                    <li class="mb-3"><a href="telehealth.html" class="text-white text-decoration-none"><span
-                          style="color: #ffb3c1; margin-right: 8px;">&raquo;</span>Telehealth</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-          </div>
+      <!-- 1st Column: Logo & Clinic Info -->
+      <div class="col-lg-3 col-md-6 col-12 text-start">
+        <div class="footer-widget">
+          <a href="index.html" class="d-inline-block">
+            <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="footer-logo">
+          </a>
+          <p class="footer-desc mt-2" style="text-align: justify;" >
+            Sapphire General Practice provides comprehensive, patient-focused healthcare tailored to support the wellbeing of you and your family.
+          </p>
         </div>
-        <div class="container mt-5 pt-4 border-top" style="border-color: rgba(255,255,255,0.1) !important;">
-          <div class="row align-items-center">
-            <div class="col-md-6 col-12 text-start mb-2 mb-md-0">
-              <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
-                Copyright 2026 &copy; All Right Reserved Sapphire General Practice
-              </p>
+      </div>
+
+      <!-- 2nd Column: Quick Links (Divided into 2 Sub-Columns, No Arrows) -->
+      <div class="col-lg-3 col-md-6 col-12 text-start">
+        <div class="footer-widget">
+          <h5 class="footer-widget-title">Quick Links</h5>
+          <div class="row g-2">
+            <!-- Left Sub-column -->
+            <div class="col-6">
+              <ul class="footer-links-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="privacy.html">Billing Policy</a></li>
+              </ul>
             </div>
-            <div class="col-md-6 col-12 text-start text-md-end mt-2 mt-md-0">
-              <p class="mb-0" style="font-size: 15px; color: #e0e0e0;">
-                <a href="https://www.anzwebdesign.com.au/" target="_blank" class="text-decoration-none"
-                  style="color: #ffffff;">Web Design Marketing Australia</a>
-              </p>
+            <!-- Right Sub-column -->
+            <div class="col-6">
+              <ul class="footer-links-list">
+                <li><a href="https://sapphireskinlaserclinic.com.au/" target="_blank">Skin Clinic</a></li>
+                <li><a href="telehealth.html">Telehealth</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+              </ul>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+
+      <!-- 3rd Column: Opening Hours (No Arrows) -->
+      <div class="col-lg-3 col-md-6 col-12 text-start">
+        <div class="footer-widget">
+          <h5 class="footer-widget-title">Opening Hours</h5>
+          <ul class="footer-hours-list">
+            <li>
+              <span>Monday - Friday  <span class="ms-3">9AM - 6PM</span></span>
+              
+            </li>
+            <li>
+              <span>Saturday  <span class="ms-5" >Closed</span></span>
+             
+            </li>
+            <li>
+             <span>Sunday &amp; Holidays <span class="ms-3">Closed</span></span>
+             
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 4th Column: Get In Touch -->
+      <div class="col-lg-3 col-md-6 col-12 text-start">
+        <div class="footer-widget">
+          <h5 class="footer-widget-title">Get In Touch</h5>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fas fa-map-marker-alt contact-icon"></i>
+              <span>6 Renwick Street, Wyoming, NSW 2250</span>
+            </li>
+            <li>
+              <i class="fas fa-phone-alt contact-icon"></i>
+              <span>Call: <a href="tel:0243417722">02 4341 7722</a></span>
+            </li>
+            <li>
+              <i class="fas fa-envelope contact-icon"></i>
+              <span><a href="mailto:admin@sapphiregp.com.au">admin@sapphiregp.com.au</a></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Bottom Copyright Bar (Fully Left-Aligned on Mobile) -->
+  <div class="container footer-bottom-bar">
+    <div class="row align-items-center">
+      <div class="col-md-6 col-12 text-start mb-2 mb-md-0">
+        <p class="copyright-text mb-0">
+          Copyright 2026 &copy; All Right Reserved Sapphire General Practice
+        </p>
+      </div>
+      <div class="col-md-6 col-12 text-start text-md-end">
+        <p class="copyright-text mb-0">
+          <a href="https://www.anzwebdesign.com.au/" target="_blank">Web Design Marketing Australia</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
       <!-- footer area end -->
     </div>
   </div>
