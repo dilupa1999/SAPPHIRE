@@ -38,23 +38,23 @@
    ======================================================== */
 
 
-   .form-group {
-  margin-bottom: 16px;
-  position: relative;
-}
+    .form-group {
+      margin-bottom: 16px;
+      position: relative;
+    }
 
-.form-control.is-invalid {
-  border-color: #e63946 !important;
-  background-color: #fff8f8;
-}
+    .form-control.is-invalid {
+      border-color: #e63946 !important;
+      background-color: #fff8f8;
+    }
 
-.error-msg {
-  color: #e63946;
-  font-size: 13px;
-  display: block;
-  margin-top: 5px;
-  font-weight: 500;
-}
+    .error-msg {
+      color: #e63946;
+      font-size: 13px;
+      display: block;
+      margin-top: 5px;
+      font-weight: 500;
+    }
   </style>
 
 </head>
@@ -97,7 +97,7 @@
           <a class="navbar-brand" href="index.html">
             <img src="assets/img/logo/logo.png" style="max-width: 100%; height: 80%; margin-left: 40px;" alt="logo" />
           </a>
-          <div class="mobile-menu-right">
+          <div class="mobile-menu-right" style="margin-right: 20px;" >
 
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
               aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -121,7 +121,7 @@
                 <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="privacy.html">Billing Policy</a></li>
                 <li class="nav-item"><a class="nav-link" href="https://sapphireskinlaserclinic.com.au/">Skin</a></li>
-                <li class="nav-item"><a class="nav-link" href="telehealth.html">Telehealth</a></li>
+            
                 <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
               </ul>
               <div class="nav-right">
@@ -939,34 +939,36 @@
                   <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="footer-logo">
                 </a>
                 <p class="footer-desc mt-2" style="text-align: justify;">
-                  Sapphire General Practice provides comprehensive, patient-focused healthcare tailored to support the
+                  Sapphire General Practice provides comprehensive, patient focused healthcare tailored to support the
                   wellbeing of you and your family.
                 </p>
               </div>
             </div>
 
-            <!-- 2nd Column: Quick Links (Divided into 2 Sub-Columns, No Arrows) -->
+
             <div class="col-lg-3 col-md-6 col-12 text-start">
               <div class="footer-widget">
                 <h5 class="footer-widget-title">Quick Links</h5>
                 <div class="row g-2">
-                  <!-- Left Sub-column -->
-                  <div class="col-6">
+
+                  <!-- Left Sub-column (Medium වලදී full-width, Large වලදී half-width) -->
+                  <div class="col-12 col-md-12 col-lg-6">
                     <ul class="footer-links-list">
                       <li><a href="index.html">Home</a></li>
                       <li><a href="about.html">About Us</a></li>
                       <li><a href="service.html">Services</a></li>
-                      <li><a href="privacy.html">Billing Policy</a></li>
                     </ul>
                   </div>
-                  <!-- Right Sub-column -->
-                  <div class="col-6">
+
+                  <!-- Right Sub-column (Medium වලදී full-width, Large වලදී half-width) -->
+                  <div class="col-12 col-md-12 col-lg-6">
                     <ul class="footer-links-list">
+                      <li><a href="privacy.html">Billing Policy</a></li>
                       <li><a href="https://sapphireskinlaserclinic.com.au/" target="_blank">Skin Clinic</a></li>
-                      <li><a href="telehealth.html">Telehealth</a></li>
                       <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                   </div>
+
                 </div>
               </div>
             </div>
@@ -1017,18 +1019,27 @@
         </div>
 
         <!-- Bottom Copyright Bar (Fully Left-Aligned on Mobile) -->
+        <!-- Footer Bottom Bar (Mobile Center Fix) -->
+
+
+
         <div class="container footer-bottom-bar">
           <div class="row align-items-center">
-            <div class="col-md-6 col-12 text-start mb-2 mb-md-0">
+
+            <!-- 1st Column: text-start සම්පූර්ණයෙන්ම ඉවත් කර text-center text-md-start යොදා ඇත -->
+            <div class="col-md-6 col-12 text-center text-md-start mb-2 mb-md-0">
               <p class="copyright-text mb-0">
                 Copyright 2026 &copy; All Right Reserved Sapphire General Practice
               </p>
             </div>
-            <div class="col-md-6 col-12 text-start text-md-end">
+
+            <!-- 2nd Column: text-start සම්පූර්ණයෙන්ම ඉවත් කර text-center text-md-end යොදා ඇත -->
+            <div class="col-md-6 col-12 text-center text-md-end">
               <p class="copyright-text mb-0">
                 <a href="https://www.anzwebdesign.com.au/" target="_blank">Web Design Marketing Australia</a>
               </p>
             </div>
+
           </div>
         </div>
       </footer>
@@ -1061,127 +1072,127 @@
         }
       });
     });
-  
-  
-  
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('contactForm');
-  const nameInput = document.getElementById('name');
-  const emailInput = document.getElementById('email');
-  const phoneInput = document.getElementById('phone');
-  const messageInput = document.getElementById('message');
 
-  // Error පෙන්වන Function එක
-  function setError(input, message) {
-    const errorElement = document.getElementById(input.id + 'Error');
-    input.classList.add('is-invalid');
-    if (errorElement) {
-      errorElement.innerText = message;
-    }
-  }
 
-  // Error ඉවත් කරන Function එක
-  function clearError(input) {
-    const errorElement = document.getElementById(input.id + 'Error');
-    input.classList.remove('is-invalid');
-    if (errorElement) {
-      errorElement.innerText = '';
-    }
-  }
 
-  // 1. Name Field Validation
-  function validateName() {
-    // ඉලක්කම් ඇතුළත් කිරීම වළක්වයි (Numbers ඉවත් කරයි)
-    nameInput.value = nameInput.value.replace(/[0-9]/g, '');
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contactForm');
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const phoneInput = document.getElementById('phone');
+      const messageInput = document.getElementById('message');
 
-    const value = nameInput.value.trim();
-    if (value === '') {
-      setError(nameInput, 'Please enter your full name.');
-      return false;
-    } else if (value.length < 3) {
-      setError(nameInput, 'Name must be at least 3 letters long.');
-      return false;
-    } else {
-      clearError(nameInput);
-      return true;
-    }
-  }
+      // Error පෙන්වන Function එක
+      function setError(input, message) {
+        const errorElement = document.getElementById(input.id + 'Error');
+        input.classList.add('is-invalid');
+        if (errorElement) {
+          errorElement.innerText = message;
+        }
+      }
 
-  // 2. Email Field Validation (Live check for '@' and valid format)
-  function validateEmail() {
-    const value = emailInput.value.trim();
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      // Error ඉවත් කරන Function එක
+      function clearError(input) {
+        const errorElement = document.getElementById(input.id + 'Error');
+        input.classList.remove('is-invalid');
+        if (errorElement) {
+          errorElement.innerText = '';
+        }
+      }
 
-    if (value === '') {
-      setError(emailInput, 'Please enter your email address.');
-      return false;
-    } else if (!value.includes('@')) {
-      setError(emailInput, 'Email must contain an "@" symbol.');
-      return false;
-    } else if (!emailPattern.test(value)) {
-      setError(emailInput, 'Please enter a valid email address (e.g., name@example.com).');
-      return false;
-    } else {
-      clearError(emailInput);
-      return true;
-    }
-  }
+      // 1. Name Field Validation
+      function validateName() {
+        // ඉලක්කම් ඇතුළත් කිරීම වළක්වයි (Numbers ඉවත් කරයි)
+        nameInput.value = nameInput.value.replace(/[0-9]/g, '');
 
-  // 3. Phone Field Validation (Only digits allowed)
-  function validatePhone() {
-    // ඉලක්කම් නොවන ඕනෑම අකුරක් හෝ සංකේතයක් ඉවත් කරයි
-    phoneInput.value = phoneInput.value.replace(/[^0-9]/g, '');
+        const value = nameInput.value.trim();
+        if (value === '') {
+          setError(nameInput, 'Please enter your full name.');
+          return false;
+        } else if (value.length < 3) {
+          setError(nameInput, 'Name must be at least 3 letters long.');
+          return false;
+        } else {
+          clearError(nameInput);
+          return true;
+        }
+      }
 
-    const value = phoneInput.value.trim();
-    if (value === '') {
-      setError(phoneInput, 'Please enter your phone number.');
-      return false;
-    } else if (value.length !== 10) {
-      setError(phoneInput, 'Phone number must be exactly 10 digits.');
-      return false;
-    } else {
-      clearError(phoneInput);
-      return true;
-    }
-  }
+      // 2. Email Field Validation (Live check for '@' and valid format)
+      function validateEmail() {
+        const value = emailInput.value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  // 4. Message Field Validation
-  function validateMessage() {
-    const value = messageInput.value.trim();
-    if (value === '') {
-      setError(messageInput, 'Please enter your message.');
-      return false;
-    } else if (value.length < 10) {
-      setError(messageInput, 'Message must be at least 10 characters long.');
-      return false;
-    } else {
-      clearError(messageInput);
-      return true;
-    }
-  }
+        if (value === '') {
+          setError(emailInput, 'Please enter your email address.');
+          return false;
+        } else if (!value.includes('@')) {
+          setError(emailInput, 'Email must contain an "@" symbol.');
+          return false;
+        } else if (!emailPattern.test(value)) {
+          setError(emailInput, 'Please enter a valid email address (e.g., name@example.com).');
+          return false;
+        } else {
+          clearError(emailInput);
+          return true;
+        }
+      }
 
-  // Submit කිරීමට පෙර ටයිප් කරන විටම (Live / Real-time) පරීක්ෂා කිරීම
-  nameInput.addEventListener('input', validateName);
-  emailInput.addEventListener('input', validateEmail);
-  phoneInput.addEventListener('input', validatePhone);
-  messageInput.addEventListener('input', validateMessage);
+      // 3. Phone Field Validation (Only digits allowed)
+      function validatePhone() {
+        // ඉලක්කම් නොවන ඕනෑම අකුරක් හෝ සංකේතයක් ඉවත් කරයි
+        phoneInput.value = phoneInput.value.replace(/[^0-9]/g, '');
 
-  // Form Submit Event
-  form.addEventListener('submit', function (e) {
-    const isNameValid = validateName();
-    const isEmailValid = validateEmail();
-    const isPhoneValid = validatePhone();
-    const isMessageValid = validateMessage();
+        const value = phoneInput.value.trim();
+        if (value === '') {
+          setError(phoneInput, 'Please enter your phone number.');
+          return false;
+        } else if (value.length !== 10) {
+          setError(phoneInput, 'Phone number must be exactly 10 digits.');
+          return false;
+        } else {
+          clearError(phoneInput);
+          return true;
+        }
+      }
 
-    // කිසියම් හෝ field එකක් වැරදි නම් form එක submit වීම නවත්වයි
-    if (!isNameValid || !isEmailValid || !isPhoneValid || !isMessageValid) {
-      e.preventDefault();
-    }
-  });
-});
+      // 4. Message Field Validation
+      function validateMessage() {
+        const value = messageInput.value.trim();
+        if (value === '') {
+          setError(messageInput, 'Please enter your message.');
+          return false;
+        } else if (value.length < 10) {
+          setError(messageInput, 'Message must be at least 10 characters long.');
+          return false;
+        } else {
+          clearError(messageInput);
+          return true;
+        }
+      }
+
+      // Submit කිරීමට පෙර ටයිප් කරන විටම (Live / Real-time) පරීක්ෂා කිරීම
+      nameInput.addEventListener('input', validateName);
+      emailInput.addEventListener('input', validateEmail);
+      phoneInput.addEventListener('input', validatePhone);
+      messageInput.addEventListener('input', validateMessage);
+
+      // Form Submit Event
+      form.addEventListener('submit', function (e) {
+        const isNameValid = validateName();
+        const isEmailValid = validateEmail();
+        const isPhoneValid = validatePhone();
+        const isMessageValid = validateMessage();
+
+        // කිසියම් හෝ field එකක් වැරදි නම් form එක submit වීම නවත්වයි
+        if (!isNameValid || !isEmailValid || !isPhoneValid || !isMessageValid) {
+          e.preventDefault();
+        }
+      });
+    });
 
 
 

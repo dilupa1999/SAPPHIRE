@@ -115,10 +115,10 @@ Table of contents
 :root {
   --body-font: "Roboto", sans-serif;
   --heading-font: "Manrope", sans-serif;
-  --theme-color: #501124;
+  --theme-color: #5c0322;
   --theme-color2: #121e41;
   --theme-bg-light: #f6f6f6;
-  --theme-bg-light2: #501124;
+  --theme-bg-light2: #5c0322;
   --body-text-color: #757f95;
   --color-white: #ffffff;
   --color-dark: #0e0303;
@@ -5167,6 +5167,9 @@ label {
 
 /* endfotter */
 /* Contact Details */
+/* Mobile devices වලදී පමණක් Text එක Center කිරීමට */
+
+
 .custom-footer .footer-contact-list {
   list-style: none !important;
   padding-left: 0 !important;

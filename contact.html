@@ -96,25 +96,25 @@
     }
 
     .form-group {
-  margin-bottom: 20px;
-  position: relative;
-}
+      margin-bottom: 20px;
+      position: relative;
+    }
 
-/* වැරදි input එකක් වටා රතු border එකක් දැමීම */
-.form-control.is-invalid {
-  border-color: #dc3545 !important;
-  background-color: #fff9f9;
-}
+    /* වැරදි input එකක් වටා රතු border එකක් දැමීම */
+    .form-control.is-invalid {
+      border-color: #dc3545 !important;
+      background-color: #fff9f9;
+    }
 
-/* Error Text Styling */
-.error-msg {
-  color: #dc3545;
-  font-size: 13px;
-  display: block;
-  margin-top: 5px;
-  font-weight: 500;
-  text-align: left;
-}
+    /* Error Text Styling */
+    .error-msg {
+      color: #dc3545;
+      font-size: 13px;
+      display: block;
+      margin-top: 5px;
+      font-weight: 500;
+      text-align: left;
+    }
   </style>
 </head>
 
@@ -156,7 +156,7 @@
           <a class="navbar-brand" href="index.html">
             <img src="assets/img/logo/logo.png" style="max-width: 100%; height: 80%; margin-left: 40px;" alt="logo" />
           </a>
-          <div class="mobile-menu-right">
+          <div class="mobile-menu-right" style="margin-right: 20px;">
 
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
               aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -180,7 +180,7 @@
                 <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="privacy.html">Billing Policy</a></li>
                 <li class="nav-item"><a class="nav-link" href="https://sapphireskinlaserclinic.com.au/">Skin</a></li>
-                <li class="nav-item"><a class="nav-link" href="telehealth.html">Telehealth</a></li>
+              
                 <li class="nav-item active"><a class="nav-link active" href="contact.html">Contact Us</a></li>
               </ul>
               <div class="nav-right">
@@ -215,7 +215,7 @@
               <div class="col-lg-5">
                 <div class="contact-content">
                   <div class="site-heading">
-                    <h3 class="site-title mb-3 ani-text-1" style="font-size: x-large;  color: #5c0322;">We're here to
+                    <h3 class="site-title mb-3 ani-text-1 text-center " style="font-size: x-large;  color: #5c0322;">We're here to
                       help you stay healthy</h3>
                     <p class="about-text mb-2">
                       At Sapphire GP, your health and well-being are our top priorities. Whether you’re booking an
@@ -283,60 +283,64 @@
                   </div>
 
                   <div class="form-message"></div>
-               <form method="post" action="https://live.themewild.com/denox/assets/php/contact.php" id="contact-form" novalidate>
-  <div class="row">
-    
-    <!-- Name Field -->
-    <div class="col-md-12">
-      <div class="form-group">
-        <div class="form-icon">
-          <i class="far fa-user"></i>
-          <input type="text" id="name" class="form-control" name="name" placeholder="NAME" required />
-        </div>
-        <small class="error-msg" id="nameError"></small>
-      </div>
-    </div>
+                  <form method="post" action="https://live.themewild.com/denox/assets/php/contact.php" id="contact-form"
+                    novalidate>
+                    <div class="row">
 
-    <!-- Phone Field -->
-    <div class="col-md-12">
-      <div class="form-group">
-        <div class="form-icon">
-          <i class="far fa-phone"></i>
-          <input type="tel" id="phone" class="form-control" name="phone" placeholder="PHONE" maxlength="10" required />
-        </div>
-        <small class="error-msg" id="phoneError"></small>
-      </div>
-    </div>
+                      <!-- Name Field -->
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <div class="form-icon">
+                            <i class="far fa-user"></i>
+                            <input type="text" id="name" class="form-control" name="name" placeholder="NAME" required />
+                          </div>
+                          <small class="error-msg" id="nameError"></small>
+                        </div>
+                      </div>
 
-    <!-- Email Field -->
-    <div class="col-md-12">
-      <div class="form-group">
-        <div class="form-icon">
-          <i class="far fa-envelope"></i>
-          <input type="email" id="email" class="form-control" name="email" placeholder="EMAIL" required />
-        </div>
-        <small class="error-msg" id="emailError"></small>
-      </div>
-    </div>
+                      <!-- Phone Field -->
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <div class="form-icon">
+                            <i class="far fa-phone"></i>
+                            <input type="tel" id="phone" class="form-control" name="phone" placeholder="PHONE"
+                              maxlength="10" required />
+                          </div>
+                          <small class="error-msg" id="phoneError"></small>
+                        </div>
+                      </div>
 
-    <!-- Message Field -->
-    <div class="col-md-12">
-      <div class="form-group">
-        <div class="form-icon">
-          <i class="far fa-comment-lines"></i>
-          <textarea id="message" name="message" cols="30" rows="4" class="form-control" placeholder="MESSAGE" required></textarea>
-        </div>
-        <small class="error-msg" id="messageError"></small>
-      </div>
-    </div>
+                      <!-- Email Field -->
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <div class="form-icon">
+                            <i class="far fa-envelope"></i>
+                            <input type="email" id="email" class="form-control" name="email" placeholder="EMAIL"
+                              required />
+                          </div>
+                          <small class="error-msg" id="emailError"></small>
+                        </div>
+                      </div>
 
-    <!-- Submit Button -->
-    <div class="col-12">
-      <button type="submit" class="theme-btn">Submit<i class="far fa-paper-plane"></i></button>
-    </div>
+                      <!-- Message Field -->
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <div class="form-icon">
+                            <i class="far fa-comment-lines"></i>
+                            <textarea id="message" name="message" cols="30" rows="4" class="form-control"
+                              placeholder="MESSAGE" required></textarea>
+                          </div>
+                          <small class="error-msg" id="messageError"></small>
+                        </div>
+                      </div>
 
-  </div>
-</form>
+                      <!-- Submit Button -->
+                      <div class="col-12">
+                        <button type="submit" class="theme-btn">Submit<i class="far fa-paper-plane"></i></button>
+                      </div>
+
+                    </div>
+                  </form>
                 </div>
               </div>
             </div>
@@ -356,109 +360,121 @@
       </main>
 
       <!-- footer area -->
-  <footer class="footer-area custom-footer">
-  <div class="container">
-    <div class="row g-4">
+      <footer class="footer-area custom-footer">
+        <div class="container">
+          <div class="row g-4">
 
-      <!-- 1st Column: Logo & Clinic Info -->
-      <div class="col-lg-3 col-md-6 col-12 text-start">
-        <div class="footer-widget">
-          <a href="index.html" class="d-inline-block">
-            <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="footer-logo">
-          </a>
-          <p class="footer-desc mt-2" style="text-align: justify;" >
-            Sapphire General Practice provides comprehensive, patient-focused healthcare tailored to support the wellbeing of you and your family.
-          </p>
-        </div>
-      </div>
+            <!-- 1st Column: Logo & Clinic Info -->
+            <div class="col-lg-3 col-md-6 col-12 text-start">
+              <div class="footer-widget">
+                <a href="index.html" class="d-inline-block">
+                  <img src="assets/img/logo/logo-light.png" alt="Sapphire Clinic Logo" class="footer-logo">
+                </a>
+                <p class="footer-desc mt-2" style="text-align: justify;">
+                  Sapphire General Practice provides comprehensive, patient focused healthcare tailored to support the
+                  wellbeing of you and your family.
+                </p>
+              </div>
+            </div>
 
-      <!-- 2nd Column: Quick Links (Divided into 2 Sub-Columns, No Arrows) -->
-      <div class="col-lg-3 col-md-6 col-12 text-start">
-        <div class="footer-widget">
-          <h5 class="footer-widget-title">Quick Links</h5>
-          <div class="row g-2">
-            <!-- Left Sub-column -->
-            <div class="col-6">
-              <ul class="footer-links-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="service.html">Services</a></li>
-                <li><a href="privacy.html">Billing Policy</a></li>
-              </ul>
+
+            <div class="col-lg-3 col-md-6 col-12 text-start">
+              <div class="footer-widget">
+                <h5 class="footer-widget-title">Quick Links</h5>
+                <div class="row g-2">
+
+                  <!-- Left Sub-column (Medium වලදී full-width, Large වලදී half-width) -->
+                  <div class="col-12 col-md-12 col-lg-6">
+                    <ul class="footer-links-list">
+                      <li><a href="index.html">Home</a></li>
+                      <li><a href="about.html">About Us</a></li>
+                      <li><a href="service.html">Services</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- Right Sub-column (Medium වලදී full-width, Large වලදී half-width) -->
+                  <div class="col-12 col-md-12 col-lg-6">
+                    <ul class="footer-links-list">
+                      <li><a href="privacy.html">Billing Policy</a></li>
+                      <li><a href="https://sapphireskinlaserclinic.com.au/" target="_blank">Skin Clinic</a></li>
+                      <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
             </div>
-            <!-- Right Sub-column -->
-            <div class="col-6">
-              <ul class="footer-links-list">
-                <li><a href="https://sapphireskinlaserclinic.com.au/" target="_blank">Skin Clinic</a></li>
-                <li><a href="telehealth.html">Telehealth</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-              </ul>
+
+            <!-- 3rd Column: Opening Hours (No Arrows) -->
+            <div class="col-lg-3 col-md-6 col-12 text-start">
+              <div class="footer-widget">
+                <h5 class="footer-widget-title">Opening Hours</h5>
+                <ul class="footer-hours-list">
+                  <li>
+                    <span>Monday - Friday <span class="ms-3">9AM - 6PM</span></span>
+
+                  </li>
+                  <li>
+                    <span>Saturday <span class="ms-5">Closed</span></span>
+
+                  </li>
+                  <li>
+                    <span>Sunday &amp; Holidays <span class="ms-3">Closed</span></span>
+
+                  </li>
+                </ul>
+              </div>
             </div>
+
+            <!-- 4th Column: Get In Touch -->
+            <div class="col-lg-3 col-md-6 col-12 text-start">
+              <div class="footer-widget">
+                <h5 class="footer-widget-title">Get In Touch</h5>
+                <ul class="footer-contact-list">
+                  <li>
+                    <i class="fas fa-map-marker-alt contact-icon"></i>
+                    <span>6 Renwick Street, Wyoming, NSW 2250</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-phone-alt contact-icon"></i>
+                    <span>Call: <a href="tel:0243417722">02 4341 7722</a></span>
+                  </li>
+                  <li>
+                    <i class="fas fa-envelope contact-icon"></i>
+                    <span><a href="mailto:admin@sapphiregp.com.au">admin@sapphiregp.com.au</a></span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
-      </div>
 
-      <!-- 3rd Column: Opening Hours (No Arrows) -->
-      <div class="col-lg-3 col-md-6 col-12 text-start">
-        <div class="footer-widget">
-          <h5 class="footer-widget-title">Opening Hours</h5>
-          <ul class="footer-hours-list">
-            <li>
-              <span>Monday - Friday  <span class="ms-3">9AM - 6PM</span></span>
-              
-            </li>
-            <li>
-              <span>Saturday  <span class="ms-5" >Closed</span></span>
-             
-            </li>
-            <li>
-             <span>Sunday &amp; Holidays <span class="ms-3">Closed</span></span>
-             
-            </li>
-          </ul>
+        <!-- Bottom Copyright Bar (Fully Left-Aligned on Mobile) -->
+        <!-- Footer Bottom Bar (Mobile Center Fix) -->
+
+
+
+        <div class="container footer-bottom-bar">
+          <div class="row align-items-center">
+
+            <!-- 1st Column: text-start සම්පූර්ණයෙන්ම ඉවත් කර text-center text-md-start යොදා ඇත -->
+            <div class="col-md-6 col-12 text-center text-md-start mb-2 mb-md-0">
+              <p class="copyright-text mb-0">
+                Copyright 2026 &copy; All Right Reserved Sapphire General Practice
+              </p>
+            </div>
+
+            <!-- 2nd Column: text-start සම්පූර්ණයෙන්ම ඉවත් කර text-center text-md-end යොදා ඇත -->
+            <div class="col-md-6 col-12 text-center text-md-end">
+              <p class="copyright-text mb-0">
+                <a href="https://www.anzwebdesign.com.au/" target="_blank">Web Design Marketing Australia</a>
+              </p>
+            </div>
+
+          </div>
         </div>
-      </div>
-
-      <!-- 4th Column: Get In Touch -->
-      <div class="col-lg-3 col-md-6 col-12 text-start">
-        <div class="footer-widget">
-          <h5 class="footer-widget-title">Get In Touch</h5>
-          <ul class="footer-contact-list">
-            <li>
-              <i class="fas fa-map-marker-alt contact-icon"></i>
-              <span>6 Renwick Street, Wyoming, NSW 2250</span>
-            </li>
-            <li>
-              <i class="fas fa-phone-alt contact-icon"></i>
-              <span>Call: <a href="tel:0243417722">02 4341 7722</a></span>
-            </li>
-            <li>
-              <i class="fas fa-envelope contact-icon"></i>
-              <span><a href="mailto:admin@sapphiregp.com.au">admin@sapphiregp.com.au</a></span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Bottom Copyright Bar (Fully Left-Aligned on Mobile) -->
-  <div class="container footer-bottom-bar">
-    <div class="row align-items-center">
-      <div class="col-md-6 col-12 text-start mb-2 mb-md-0">
-        <p class="copyright-text mb-0">
-          Copyright 2026 &copy; All Right Reserved Sapphire General Practice
-        </p>
-      </div>
-      <div class="col-md-6 col-12 text-start text-md-end">
-        <p class="copyright-text mb-0">
-          <a href="https://www.anzwebdesign.com.au/" target="_blank">Web Design Marketing Australia</a>
-        </p>
-      </div>
-    </div>
-  </div>
-</footer>
+      </footer>
       <!-- footer area end -->
     </div>
   </div>
@@ -483,119 +499,119 @@
   <script src="assets/js/main.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('contact-form');
-  const nameInput = document.getElementById('name');
-  const phoneInput = document.getElementById('phone');
-  const emailInput = document.getElementById('email');
-  const messageInput = document.getElementById('message');
+      const form = document.getElementById('contact-form');
+      const nameInput = document.getElementById('name');
+      const phoneInput = document.getElementById('phone');
+      const emailInput = document.getElementById('email');
+      const messageInput = document.getElementById('message');
 
-  // Error පෙන්වන Function එක
-  function setError(input, message) {
-    const errorElement = document.getElementById(input.id + 'Error');
-    input.classList.add('is-invalid');
-    if (errorElement) {
-      errorElement.innerText = message;
-    }
-  }
+      // Error පෙන්වන Function එක
+      function setError(input, message) {
+        const errorElement = document.getElementById(input.id + 'Error');
+        input.classList.add('is-invalid');
+        if (errorElement) {
+          errorElement.innerText = message;
+        }
+      }
 
-  // Error ඉවත් කරන Function එක
-  function clearError(input) {
-    const errorElement = document.getElementById(input.id + 'Error');
-    input.classList.remove('is-invalid');
-    if (errorElement) {
-      errorElement.innerText = '';
-    }
-  }
+      // Error ඉවත් කරන Function එක
+      function clearError(input) {
+        const errorElement = document.getElementById(input.id + 'Error');
+        input.classList.remove('is-invalid');
+        if (errorElement) {
+          errorElement.innerText = '';
+        }
+      }
 
-  // 1. Name Validation (ඉලක්කම් වැටීම වැළැක්වීම)
-  function validateName() {
-    nameInput.value = nameInput.value.replace(/[0-9]/g, ''); // Numbers ඉවත් කරයි
-    const val = nameInput.value.trim();
+      // 1. Name Validation (ඉලක්කම් වැටීම වැළැක්වීම)
+      function validateName() {
+        nameInput.value = nameInput.value.replace(/[0-9]/g, ''); // Numbers ඉවත් කරයි
+        const val = nameInput.value.trim();
 
-    if (val === '') {
-      setError(nameInput, 'Please enter your name.');
-      return false;
-    } else if (val.length < 3) {
-      setError(nameInput, 'Name must be at least 3 letters long.');
-      return false;
-    } else {
-      clearError(nameInput);
-      return true;
-    }
-  }
+        if (val === '') {
+          setError(nameInput, 'Please enter your name.');
+          return false;
+        } else if (val.length < 3) {
+          setError(nameInput, 'Name must be at least 3 letters long.');
+          return false;
+        } else {
+          clearError(nameInput);
+          return true;
+        }
+      }
 
-  // 2. Phone Validation (ඉලක්කම් පමණක් ටයිප් කළ හැකි ලෙස සීමා කිරීම)
-  function validatePhone() {
-    phoneInput.value = phoneInput.value.replace(/[^0-9]/g, ''); // ඉලක්කම් නොවන සියල්ල ඉවත් කරයි
-    const val = phoneInput.value.trim();
+      // 2. Phone Validation (ඉලක්කම් පමණක් ටයිප් කළ හැකි ලෙස සීමා කිරීම)
+      function validatePhone() {
+        phoneInput.value = phoneInput.value.replace(/[^0-9]/g, ''); // ඉලක්කම් නොවන සියල්ල ඉවත් කරයි
+        const val = phoneInput.value.trim();
 
-    if (val === '') {
-      setError(phoneInput, 'Please enter your phone number.');
-      return false;
-    } else if (val.length !== 10) {
-      setError(phoneInput, 'Phone number must be exactly 10 digits.');
-      return false;
-    } else {
-      clearError(phoneInput);
-      return true;
-    }
-  }
+        if (val === '') {
+          setError(phoneInput, 'Please enter your phone number.');
+          return false;
+        } else if (val.length !== 10) {
+          setError(phoneInput, 'Phone number must be exactly 10 digits.');
+          return false;
+        } else {
+          clearError(phoneInput);
+          return true;
+        }
+      }
 
-  // 3. Email Validation (ටයිප් කරන විටම '@' තිබේදැයි පරීක්ෂා කිරීම)
-  function validateEmail() {
-    const val = emailInput.value.trim();
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      // 3. Email Validation (ටයිප් කරන විටම '@' තිබේදැයි පරීක්ෂා කිරීම)
+      function validateEmail() {
+        const val = emailInput.value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (val === '') {
-      setError(emailInput, 'Please enter your email address.');
-      return false;
-    } else if (!val.includes('@')) {
-      setError(emailInput, 'Email must contain an "@" symbol.');
-      return false;
-    } else if (!emailPattern.test(val)) {
-      setError(emailInput, 'Please enter a valid email address (e.g. name@domain.com).');
-      return false;
-    } else {
-      clearError(emailInput);
-      return true;
-    }
-  }
+        if (val === '') {
+          setError(emailInput, 'Please enter your email address.');
+          return false;
+        } else if (!val.includes('@')) {
+          setError(emailInput, 'Email must contain an "@" symbol.');
+          return false;
+        } else if (!emailPattern.test(val)) {
+          setError(emailInput, 'Please enter a valid email address (e.g. name@domain.com).');
+          return false;
+        } else {
+          clearError(emailInput);
+          return true;
+        }
+      }
 
-  // 4. Message Validation
-  function validateMessage() {
-    const val = messageInput.value.trim();
+      // 4. Message Validation
+      function validateMessage() {
+        const val = messageInput.value.trim();
 
-    if (val === '') {
-      setError(messageInput, 'Please enter your message.');
-      return false;
-    } else if (val.length < 10) {
-      setError(messageInput, 'Message must be at least 10 characters long.');
-      return false;
-    } else {
-      clearError(messageInput);
-      return true;
-    }
-  }
+        if (val === '') {
+          setError(messageInput, 'Please enter your message.');
+          return false;
+        } else if (val.length < 10) {
+          setError(messageInput, 'Message must be at least 10 characters long.');
+          return false;
+        } else {
+          clearError(messageInput);
+          return true;
+        }
+      }
 
-  // Submit බොත්තම එබීමට පෙර ටයිප් කරන මොහොතේදීම (Real-time) Validation සිදු වීම
-  nameInput.addEventListener('input', validateName);
-  phoneInput.addEventListener('input', validatePhone);
-  emailInput.addEventListener('input', validateEmail);
-  messageInput.addEventListener('input', validateMessage);
+      // Submit බොත්තම එබීමට පෙර ටයිප් කරන මොහොතේදීම (Real-time) Validation සිදු වීම
+      nameInput.addEventListener('input', validateName);
+      phoneInput.addEventListener('input', validatePhone);
+      emailInput.addEventListener('input', validateEmail);
+      messageInput.addEventListener('input', validateMessage);
 
-  // Form Submit වන විට අවසන් වරට සියල්ල පරීක්ෂා කිරීම
-  form.addEventListener('submit', function (e) {
-    const isNameValid = validateName();
-    const isPhoneValid = validatePhone();
-    const isEmailValid = validateEmail();
-    const isMessageValid = validateMessage();
+      // Form Submit වන විට අවසන් වරට සියල්ල පරීක්ෂා කිරීම
+      form.addEventListener('submit', function (e) {
+        const isNameValid = validateName();
+        const isPhoneValid = validatePhone();
+        const isEmailValid = validateEmail();
+        const isMessageValid = validateMessage();
 
-    // කිසියම් හෝ වැරැද්දක් ඇත්නම් Form එක Submit වීම වළක්වයි
-    if (!isNameValid || !isPhoneValid || !isEmailValid || !isMessageValid) {
-      e.preventDefault();
-    }
-  });
-});
+        // කිසියම් හෝ වැරැද්දක් ඇත්නම් Form එක Submit වීම වළක්වයි
+        if (!isNameValid || !isPhoneValid || !isEmailValid || !isMessageValid) {
+          e.preventDefault();
+        }
+      });
+    });
   </script>
 </body>
 
