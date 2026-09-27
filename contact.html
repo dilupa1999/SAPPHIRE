@@ -94,6 +94,27 @@
     .footer-title-wrapper h5 {
       margin-top: 0 !important;
     }
+
+    .form-group {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* වැරදි input එකක් වටා රතු border එකක් දැමීම */
+.form-control.is-invalid {
+  border-color: #dc3545 !important;
+  background-color: #fff9f9;
+}
+
+/* Error Text Styling */
+.error-msg {
+  color: #dc3545;
+  font-size: 13px;
+  display: block;
+  margin-top: 5px;
+  font-weight: 500;
+  text-align: left;
+}
   </style>
 </head>
 
@@ -164,7 +185,7 @@
               </ul>
               <div class="nav-right">
                 <div class="nav-btn">
-                  <a href="#" class="theme-btn">Book Online<i class="fas fa-arrow-circle-right"></i></a>
+                  <a href="#" class="theme-btn">ONLINE BOOK<i class="fas fa-arrow-circle-right"></i></a>
                 </div>
               </div>
             </div>
@@ -262,47 +283,60 @@
                   </div>
 
                   <div class="form-message"></div>
-                  <form method="post" action="https://live.themewild.com/denox/assets/php/contact.php"
-                    id="contact-form">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <div class="form-icon">
-                            <i class="far fa-user"></i>
-                            <input type="text" class="form-control" name="name" placeholder="NAME" required />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <div class="form-icon">
-                            <i class="far fa-phone"></i>
-                            <input type="tel" class="form-control" name="phone" placeholder="PHONE" required />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <div class="form-icon">
-                            <i class="far fa-envelope"></i>
-                            <input type="email" class="form-control" name="email" placeholder="EMAIL" required />
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <div class="form-icon">
-                            <i class="far fa-comment-lines"></i>
-                            <textarea name="message" cols="30" rows="4" class="form-control" placeholder="MESSAGE"
-                              required></textarea>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-12">
-                        <button type="submit" class="theme-btn">SEND <i class="far fa-paper-plane"></i></button>
-                      </div>
-                    </div>
-                  </form>
+               <form method="post" action="https://live.themewild.com/denox/assets/php/contact.php" id="contact-form" novalidate>
+  <div class="row">
+    
+    <!-- Name Field -->
+    <div class="col-md-12">
+      <div class="form-group">
+        <div class="form-icon">
+          <i class="far fa-user"></i>
+          <input type="text" id="name" class="form-control" name="name" placeholder="NAME" required />
+        </div>
+        <small class="error-msg" id="nameError"></small>
+      </div>
+    </div>
+
+    <!-- Phone Field -->
+    <div class="col-md-12">
+      <div class="form-group">
+        <div class="form-icon">
+          <i class="far fa-phone"></i>
+          <input type="tel" id="phone" class="form-control" name="phone" placeholder="PHONE" maxlength="10" required />
+        </div>
+        <small class="error-msg" id="phoneError"></small>
+      </div>
+    </div>
+
+    <!-- Email Field -->
+    <div class="col-md-12">
+      <div class="form-group">
+        <div class="form-icon">
+          <i class="far fa-envelope"></i>
+          <input type="email" id="email" class="form-control" name="email" placeholder="EMAIL" required />
+        </div>
+        <small class="error-msg" id="emailError"></small>
+      </div>
+    </div>
+
+    <!-- Message Field -->
+    <div class="col-md-12">
+      <div class="form-group">
+        <div class="form-icon">
+          <i class="far fa-comment-lines"></i>
+          <textarea id="message" name="message" cols="30" rows="4" class="form-control" placeholder="MESSAGE" required></textarea>
+        </div>
+        <small class="error-msg" id="messageError"></small>
+      </div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="col-12">
+      <button type="submit" class="theme-btn">Submit<i class="far fa-paper-plane"></i></button>
+    </div>
+
+  </div>
+</form>
                 </div>
               </div>
             </div>
@@ -447,6 +481,122 @@
   <script src="assets/js/gsap-custom.js"></script>
   <script src="assets/js/contact-form.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('contact-form');
+  const nameInput = document.getElementById('name');
+  const phoneInput = document.getElementById('phone');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
+
+  // Error පෙන්වන Function එක
+  function setError(input, message) {
+    const errorElement = document.getElementById(input.id + 'Error');
+    input.classList.add('is-invalid');
+    if (errorElement) {
+      errorElement.innerText = message;
+    }
+  }
+
+  // Error ඉවත් කරන Function එක
+  function clearError(input) {
+    const errorElement = document.getElementById(input.id + 'Error');
+    input.classList.remove('is-invalid');
+    if (errorElement) {
+      errorElement.innerText = '';
+    }
+  }
+
+  // 1. Name Validation (ඉලක්කම් වැටීම වැළැක්වීම)
+  function validateName() {
+    nameInput.value = nameInput.value.replace(/[0-9]/g, ''); // Numbers ඉවත් කරයි
+    const val = nameInput.value.trim();
+
+    if (val === '') {
+      setError(nameInput, 'Please enter your name.');
+      return false;
+    } else if (val.length < 3) {
+      setError(nameInput, 'Name must be at least 3 letters long.');
+      return false;
+    } else {
+      clearError(nameInput);
+      return true;
+    }
+  }
+
+  // 2. Phone Validation (ඉලක්කම් පමණක් ටයිප් කළ හැකි ලෙස සීමා කිරීම)
+  function validatePhone() {
+    phoneInput.value = phoneInput.value.replace(/[^0-9]/g, ''); // ඉලක්කම් නොවන සියල්ල ඉවත් කරයි
+    const val = phoneInput.value.trim();
+
+    if (val === '') {
+      setError(phoneInput, 'Please enter your phone number.');
+      return false;
+    } else if (val.length !== 10) {
+      setError(phoneInput, 'Phone number must be exactly 10 digits.');
+      return false;
+    } else {
+      clearError(phoneInput);
+      return true;
+    }
+  }
+
+  // 3. Email Validation (ටයිප් කරන විටම '@' තිබේදැයි පරීක්ෂා කිරීම)
+  function validateEmail() {
+    const val = emailInput.value.trim();
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (val === '') {
+      setError(emailInput, 'Please enter your email address.');
+      return false;
+    } else if (!val.includes('@')) {
+      setError(emailInput, 'Email must contain an "@" symbol.');
+      return false;
+    } else if (!emailPattern.test(val)) {
+      setError(emailInput, 'Please enter a valid email address (e.g. name@domain.com).');
+      return false;
+    } else {
+      clearError(emailInput);
+      return true;
+    }
+  }
+
+  // 4. Message Validation
+  function validateMessage() {
+    const val = messageInput.value.trim();
+
+    if (val === '') {
+      setError(messageInput, 'Please enter your message.');
+      return false;
+    } else if (val.length < 10) {
+      setError(messageInput, 'Message must be at least 10 characters long.');
+      return false;
+    } else {
+      clearError(messageInput);
+      return true;
+    }
+  }
+
+  // Submit බොත්තම එබීමට පෙර ටයිප් කරන මොහොතේදීම (Real-time) Validation සිදු වීම
+  nameInput.addEventListener('input', validateName);
+  phoneInput.addEventListener('input', validatePhone);
+  emailInput.addEventListener('input', validateEmail);
+  messageInput.addEventListener('input', validateMessage);
+
+  // Form Submit වන විට අවසන් වරට සියල්ල පරීක්ෂා කිරීම
+  form.addEventListener('submit', function (e) {
+    const isNameValid = validateName();
+    const isPhoneValid = validatePhone();
+    const isEmailValid = validateEmail();
+    const isMessageValid = validateMessage();
+
+    // කිසියම් හෝ වැරැද්දක් ඇත්නම් Form එක Submit වීම වළක්වයි
+    if (!isNameValid || !isPhoneValid || !isEmailValid || !isMessageValid) {
+      e.preventDefault();
+    }
+  });
+});
+  </script>
 </body>
 
 </html>

@@ -5149,7 +5149,7 @@ label {
   font-size: 14px;
   color: #e0e0e0;
   margin-bottom: 10px;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  /* border-bottom: 1px dashed rgba(255, 255, 255, 0.1); */
   padding-bottom: 6px;
   text-align: left !important;
 }
@@ -5194,7 +5194,7 @@ label {
 }
 
 .custom-footer .contact-icon {
-  color: #ffb3c1;
+  color: #ffffff;
   font-size: 15px;
   margin-top: 3px;
   flex-shrink: 0;

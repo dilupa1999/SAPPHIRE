@@ -396,7 +396,7 @@
 
     .online-booking-clean .booking-title,
     .quote-contact .top h4 {
-      color: #5c0322 !important;
+      color: #49041c !important;
       font-size: 20px !important;
       font-weight: 700 !important;
       letter-spacing: 0.5px !important;
@@ -455,152 +455,271 @@
     /* ========================================================
    NSW Immunisation Feature Banner Section
    ======================================================== */
-    .nsw-feature-section {
-      padding: 40px 0;
+    /* Section & Container */
+    .nsw-modern-section {
+      position: relative;
+      margin-top: -50px;
+      z-index: 5;
+      padding-bottom: 40px;
     }
 
-    /* Unique Curved Card Container */
-    .nsw-custom-card {
+    /* Premium Card Wrapper */
+    .nsw-premium-card {
       background: #ffffff;
-      /* Top-Right සහ Bottom-Left කොන් දෙක curve කිරීම */
-      border-top-right-radius: 65px;
-      border-bottom-left-radius: 65px;
-      border-top-left-radius: 8px;
-      border-bottom-right-radius: 8px;
-      border: 1.5px solid #d4708f;
-      /* Screenshot එකේ ඇති pinkish/burgundy border එක */
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
-    }
-
-    /* Left Image Styling */
-    .nsw-img-box {
-      width: 100%;
-      height: 100%;
-      min-height: 320px;
-    }
-
-    .nsw-img-box img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* Right Content Styling */
-    .nsw-content-box {
-      padding: 45px 35px;
-    }
-
-    .nsw-main-title {
-      color: #102a54;
-      /* Navy Blue color */
-      font-size: 17px;
-      font-weight: 700;
-      line-height: 1.5;
-      margin-bottom: 8px;
-    }
-
-    .nsw-sub-title {
-      color: #102a54;
-      font-size: 14.5px;
-      font-weight: 600;
-      margin-bottom: 22px;
-    }
-
-    /* Navy Blue Primary Button */
-    .btn-nsw-program {
-      display: inline-block;
-      background-color: #0b2653;
-      color: #ffffff !important;
-      font-size: 15px;
-      font-weight: 600;
-      padding: 11px 26px;
-      border-radius: 8px;
-      text-decoration: none !important;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(11, 38, 83, 0.2);
-    }
-
-    .btn-nsw-program:hover {
-      background-color: #061836;
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(11, 38, 83, 0.3);
-    }
-
-    /* Well-being Text with checkmark */
-    .nsw-wellbeing-text {
-      color: #1b3560;
-      font-size: 14px;
-      font-weight: 500;
-      margin: 18px 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-    }
-
-    .nsw-wellbeing-text i {
-      color: #7b8ab0;
-      font-size: 14px;
-    }
-
-    /* Dual-Tone Appointment Button (Burgundy + Navy Blue) */
-    .btn-dual-appointment {
-      display: inline-flex;
-      align-items: center;
-      text-decoration: none !important;
-      border-radius: 6px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 20px 45px rgba(15, 34, 58, 0.08);
+      border: 1px solid rgba(226, 232, 240, 0.8);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .btn-dual-appointment:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    .nsw-premium-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 50px rgba(15, 34, 58, 0.12);
     }
 
-    /* Left Icon Segment (Maroon / Burgundy) */
-    .btn-dual-appointment .icon-side {
-      background-color: #7d0026;
-      color: #ffffff;
-      padding: 10px 14px;
+    /* Image & Floating Badge */
+    .image-wrapper {
+      position: relative;
+      border-radius: 16px;
+      overflow: visible;
+    }
+
+    .promo-img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+    }
+
+    .trust-badge {
+      position: absolute;
+      bottom: 20px;
+      right: -15px;
+      background: #ffffff;
+      padding: 12px 18px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-icon {
+      width: 40px;
+      height: 40px;
+      background: #e6f4ea;
+      color: #1e8e3e;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
+      font-size: 18px;
     }
 
-    /* Right Text Segment (Navy Blue) */
-    .btn-dual-appointment .text-side {
-      background-color: #0b2653;
-      color: #ffffff !important;
-      padding: 6px 18px;
+    .badge-title {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    .badge-sub {
+      display: block;
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    /* Content Styling */
+    .content-wrapper {
+      padding-left: 20px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: #eef4ff;
+      color: #551010;
       font-size: 13px;
       font-weight: 600;
-      line-height: 1.25;
-      text-align: left;
-      display: flex;
-      flex-direction: column;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
 
-    /* Mobile Responsiveness Fixes */
+    .main-heading {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+
+    .main-heading span {
+      color: #610a1d;
+    }
+
+    .description {
+      color: #64748b;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Feature Checkmark */
+    .wellbeing-highlight {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #0f172a;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+
+    .wellbeing-highlight i {
+      color: #10b981;
+      font-size: 18px;
+    }
+
+    /* Button Group */
+    .action-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* NSW Program Button */
+    .btn-nsw-link {
+      background: #55071b;
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .btn-nsw-link:hover {
+      background: #55071b;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Dual-Tone Book Appointment Button */
+    .btn-dual-tone {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .btn-dual-tone .btn-icon {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .btn-dual-tone .btn-text {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .btn-dual-tone:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.2);
+    }
+
+    /* Mobile Responsiveness */
     @media (max-width: 991.98px) {
-      .nsw-custom-card {
-        border-top-right-radius: 40px;
-        border-bottom-left-radius: 40px;
+      .content-wrapper {
+        padding-left: 0;
+        margin-top: 20px;
       }
 
-      .nsw-img-box {
-        min-height: 240px;
-        max-height: 280px;
+      .trust-badge {
+        right: 15px;
+        bottom: 15px;
       }
+    }
 
-      .nsw-content-box {
-        padding: 30px 20px;
-      }
+
+    /* Image Box එක සහ Pink Banner එක අතර Space එක */
+    .service-main-img-box {
+      margin-bottom: 25px;
+
+
+    }
+
+    .service-main-img-box img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    /* Pink Banner Container - Top සහ Bottom සමාන පරතරය */
+    .womens-health-banner {
+      background-color: #fdf2f4;
+      /* පින්තූරයේ ඇති ලා රෝස පැහැය */
+      border-radius: 12px;
+      padding: 30px;
+      /* උඩ (Top) සහ යට (Bottom) හරියටම 30px බැගින් සමාන කර ඇත */
+      box-sizing: border-box;
+    }
+
+    /* Heading Margin Fix */
+    .banner-title {
+      color: #5c0322;
+      font-weight: 700;
+      font-size: 19px;
+      margin-top: 0;
+      margin-bottom: 20px;
+      /* Title එක සහ List එක අතර ස්ථාවර පරතරය */
+      line-height: 1.4;
+    }
+
+    /* Health Item එකක Styling සහ Spacing */
+    .health-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      /* සෑම පේළියක් අතරම ස්ථාවරව පවතින කුඩා පරතරය */
+      font-size: 14.5px;
+      color: #333333;
+      line-height: 1.45;
+    }
+
+    /* Check Icon */
+    .health-item i {
+      color: #46122c;
+      font-size: 15px;
+      margin-top: 3px;
+      /* Text එකේ මුල් අකුර සමඟ icon එක කෙලින් පිහිටීමට */
+      flex-shrink: 0;
+    }
+
+    .health-item span {
+      display: inline-block;
+    }
+
+    /* Bottom Space එක සමාන වීම සඳහා දෙපැත්තේම අන්තිම item එකේ margin-bottom එක ඉවත් කිරීම */
+    .col-md-6 .health-item:last-child {
+      margin-bottom: 0;
     }
   </style>
 </head>
@@ -671,7 +790,7 @@
               </ul>
               <div class="nav-right">
                 <div class="nav-btn">
-                  <a href="#" class="theme-btn">Book Online<i class="fas fa-arrow-circle-right"></i></a>
+                  <a href="#" class="theme-btn">ONLINE BOOK<i class="fas fa-arrow-circle-right"></i></a>
                 </div>
               </div>
             </div>
@@ -756,7 +875,7 @@
 
                       </div>
 
-                      <div class="widget widget-extra-buttons"style="margin-: 0px;">
+                      <div class="widget widget-extra-buttons" style="margin: 0px;">
                         <div class="p-0  rounded text-center">
                           <!-- Womens Health Needs -->
                           <a href="javascript:void(0)"
@@ -848,7 +967,7 @@
                         <p>
                           We work with you to create tailored care plans, provide regular reviews, and coordinate with
                           allied health professionals and specialists. Our goal is to help you maintain independence,
-                          improve quality of life, and stay in control of your health — every step of the way.
+                          improve quality of life, and stay in control of your health every step of the way.
                         </p>
                       </div>
                       <div class="online-booking-clean wow fadeInUp" data-wow-delay="0.4s">
@@ -1407,54 +1526,95 @@
                     </div>
 
                     <!-- NEW PANE 1: Womens health needs -->
-                    <div class="service-detail-pane" id="service-womens-health-needs">
+                    <div class="service-detail-pane"  id="service-womens-health-needs">
+
+                      <!-- Main Image Box -->
                       <div class="service-main-img-box">
                         <img
                           src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1200&q=80"
                           alt="Womens health needs" />
                       </div>
-                      <div class="content  ">
 
-
+                      <!-- Content Banner Box -->
+                      <div class="content" style="margin-top: 60px;">
                         <div class="womens-health-banner">
-                          <h4 style="color: #5c0322; font-weight: 700; margin-bottom: 16px;">
+                          <h4 class="banner-title">
                             Our GPs can support you with the following women's health needs:
                           </h4>
-                          <ul class="service-list-check checklist-2-col mb-0">
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Breast checks</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Cervical screening
-                              (preventative cervical cancer screening)</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Pre-pregnancy planning
-                            </li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Pregnancy testing and advice
-                            </li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Contraception advice
-                              (including device insertion and removal)</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Family planning</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Fertility advice
-                            </li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> General care – regular
-                              health check ups
-                            </li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Some Gynaecological
-                              treatments</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Incontinence
-                            </li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i> Iron deficiency
-                            </li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i>Menopause management</li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i>Menstrual disorders
-                            </li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i>Sexual health screening </li>
-                            <li><i class="fas fa-check-circle" style="color: #46122c;"></i>Antenatal Care (pregnancy)
-                            </li>
 
-                          </ul>
+                          <div class="row g-0">
+                            <!-- Left Column -->
+                            <div class="col-md-6 pe-md-3">
+                              <div class="health-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Breast checks</span>
+                              </div>
+                              <div class="health-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Pre-pregnancy planning</span>
+                              </div>
+                              <div class="health-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Contraception advice (including device insertion and removal)</span>
+                              </div>
+                              <div class="health-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Fertility advice</span>
+                              </div>
+                              <div class="health-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Some Gynaecological treatments</span>
+                              </div>
+                              <div class="health-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Iron deficiency</span>
+                              </div>
+                              <div class="health-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Menstrual disorders</span>
+                              </div>
+                              <div class="health-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Antenatal Care (pregnancy)</span>
+                              </div>
+                            </div>
+
+                            <!-- Right Column -->
+                            <div class="col-md-6 ps-md-2">
+                              <div class="health-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Cervical screening (preventative cervical cancer screening)</span>
+                              </div>
+                              <div class="health-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Pregnancy testing and advice</span>
+                              </div>
+                              <div class="health-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Family planning</span>
+                              </div>
+                              <div class="health-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>General care – regular health check ups</span>
+                              </div>
+                              <div class="health-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Incontinence</span>
+                              </div>
+                              <div class="health-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Menopause management</span>
+                              </div>
+                              <div class="health-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Sexual health screening</span>
+                              </div>
+                            </div>
+                          </div>
+
                         </div>
-
-
-
                       </div>
+
                     </div>
 
                     <!-- NEW PANE 2: HEALTH CHECKS -->
@@ -1481,8 +1641,8 @@
 
                         <div class="feature-box-highlight">
                           <h5>If you are aged 75 or over, we recommend an annual comprehensive health assessment,
-                            bulk-billed under Medicare.</h5>
-                          <p class="mb-2"><strong>The annual health assessment involves:></p>
+                            bulk billed under Medicare.</h5>
+                          <p class="mb-2"><strong>The annual health assessment involves</p>
                           <ul class="service-list-check mb-0">
                             <li><i class="far fa-check-double"></i>Information collection, including taking a patient
                               history and undertaking or arranging examinations and investigations as required.</li>
@@ -1629,47 +1789,67 @@
         </div>
 
 
-        <section class="nsw-feature-section" style="margin-top:-70px ;">
+        <section class="nsw-modern-section">
           <div class="container">
-            <div class="nsw-custom-card">
-              <div class="row g-0 align-items-center">
+            <div class="nsw-premium-card">
+              <div class="row align-items-center g-4">
 
-                <!-- Left Column: Image -->
-                <div class="col-lg-5 col-md-5">
-                  <div class="nsw-img-box">
-                    <!-- ඔබගේ Image path එක මෙතැනට ලබා දෙන්න -->
-                    <img src="assets/img/service/9-SKIN-CHECKS.jpg" alt="NSW Health Immunisation" />
+                <!-- Left Column: Visual with Floating Badge -->
+                <div class="col-lg-5">
+                  <div class="image-wrapper">
+                    <img src="assets/img/service/9-SKIN-CHECKS.jpg" alt="NSW Health Immunisation"
+                      class="img-fluid promo-img" />
+
+                    <!-- Modern Floating Trust Badge -->
+                    <div class="trust-badge">
+                      <div class="badge-icon">
+                        <i class="fas fa-shield-alt"></i>
+                      </div>
+                      <div class="badge-info">
+                        <span class="badge-title">NSW Health</span>
+                        <span class="badge-sub">Verified Guidance</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                <!-- Right Column: Content -->
-                <div class="col-lg-7 col-md-7">
-                  <div class="nsw-content-box text-center">
+                <!-- Right Column: Content & Actions -->
+                <div class="col-lg-7">
+                  <div class="content-wrapper">
 
-                    <!-- Heading Titles -->
-                    <h4 class="nsw-main-title">
-                      You Can Thoroughly Explore The Various NSW Immunisation Programs Available
-                    </h4>
-                    <p class="nsw-sub-title">
-                      And Find Detailed Advice And Information Right Here At Your Fingertips:
+                    <!-- Top Tag -->
+                    <span class="section-tag">
+                      <i class="fas fa-heartbeat me-1"></i> Preventative Healthcare
+                    </span>
+
+                    <!-- Main Heading -->
+                    <h3 class="main-heading">
+                      Explore Available <span>NSW Immunisation</span> Programs
+                    </h3>
+
+                    <!-- Subtitle -->
+                    <p class="description">
+                      Find detailed medical advice, recommended schedules, and government-approved healthcare
+                      information right here at your fingertips.
                     </p>
 
-                    <!-- NSW Immunisation Program Button -->
-                    <div>
+                    <!-- Key Feature Highlight -->
+                    <div class="wellbeing-highlight">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Invest In Your Well-Being & Family Protection Today</span>
+                    </div>
+
+                    <!-- Action Buttons (Including Dual-Tone) -->
+                    <div class="action-buttons">
+                      <!-- Primary NSW Program Button -->
                       <a href="https://www.health.nsw.gov.au/immunisation/Pages/default.aspx" target="_blank"
-                        class="btn-nsw-program">
-                        NSW Immunisation Program
+                        class="btn-nsw-link">
+                        NSW Immunisation Program <i class="fas fa-arrow-right ms-2"></i>
                       </a>
+
+                      <!-- Dual-Tone Book Appointment Button -->
+
                     </div>
-
-                    <!-- Well-being Checkmark Line -->
-                    <div class="nsw-wellbeing-text">
-                      <i class="fas fa-check"></i>
-                      <span>Invest In Your Well-Being Today</span>
-                    </div>
-
-                    <!-- Dual-Tone Book Appointment Button -->
-
 
                   </div>
                 </div>
