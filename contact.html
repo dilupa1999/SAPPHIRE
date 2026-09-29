@@ -38,14 +38,25 @@
     }
 
     /* Footer Copyright Bar එකේ alignment නිවැරදි කිරීම */
-    .footer-copyright-left,
-    .footer-copyright-left p {
+     .footer-area.py-5 {
+      padding-top: 45px !important;
+      padding-bottom: 45px !important;
+    }
+
+    .footer-title-wrapper h5 {
+      margin-top: 0 !important;
+    }
+
+    .footer-area p {
       text-align: left !important;
     }
 
-    .footer-copyright-right,
-    .footer-copyright-right p {
-      text-align: right !important;
+    @media (min-width: 768px) {
+
+      .footer-area .text-md-end,
+      .footer-area .text-md-end p {
+        text-align: right !important;
+      }
     }
 
     /* Sections අතර ඉඩ ඒකාකාරීව සහ අඩු ලෙස සකස් කිරීම (Uniform Spacing) */
