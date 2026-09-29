@@ -7173,3 +7173,112 @@ label {
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     }
   
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+          /* Card එක ඇතුළත Text එක හිරවීම වැළැක්වීමේ Styles */
+          .compact-testimonial-card {
+            background: #ffffff !important;
+            border: 0px solid #5c0322 !important;
+            /* Maroon border එක */
+            border-radius: 16px !important;
+            padding: 22px 20px !important;
+            /* 👈 Text එක border එකේ නොගෑවී ඇතුළතින් ලස්සනට ඉඩ තැබීමට */
+            box-sizing: border-box !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: space-between !important;
+            min-height: 250px !important;
+            /* සියලුම cards එකම උසින් තබා ගැනීමට */
+            transition: all 0.3s ease;
+          }
+
+          /* Quote Icon & Stars */
+          .compact-testimonial-card .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px !important;
+          }
+
+          /* Justified Review Text */
+          .review-text {
+            font-size: 0.88rem !important;
+            line-height: 1.65 !important;
+            color: #444444 !important;
+            text-align: justify !important;
+            text-justify: inter-word !important;
+            margin-bottom: 4px !important;
+          }
+
+          /* මුලින් පේළි 4 කට සීමා කිරීම */
+          .review-text.collapsed {
+            display: -webkit-box !important;
+            -webkit-line-clamp: 4 !important;
+            -webkit-box-orient: vertical !important;
+            overflow: hidden !important;
+          }
+
+          /* Read More කළ විට සම්පූර්ණයෙන්ම දිගහැරීම */
+          .review-text.expanded {
+            display: block !important;
+            overflow: visible !important;
+          }
+
+          /* Read More / Read Less Text Button */
+          .btn-read-toggle {
+            background: none !important;
+            border: none !important;
+            padding: 0 !important;
+            color: #5c0322 !important;
+            font-weight: 700 !important;
+            font-size: 0.82rem !important;
+            cursor: pointer !important;
+            outline: none !important;
+            margin-top: 4px !important;
+            margin-bottom: 10px !important;
+            display: inline-block !important;
+          }
+
+          .btn-read-toggle:hover {
+            color: #b07d4b !important;
+            text-decoration: underline !important;
+          }
+
+          /* Author Section (යට කොටස) */
+          .author-wrap {
+            display: flex;
+            align-items: center;
+            margin-top: auto !important;
+            /* Card එකේ පතුලටම රැඳවීමට */
+            padding-top: 12px !important;
+            border-top: 1px solid #f0f0f0 !important;
+          }
+
+          .initials-circle {
+            width: 34px !important;
+            height: 34px !important;
+            background-color: #5c0322 !important;
+            color: #ffffff !important;
+            font-weight: 700 !important;
+            font-size: 0.82rem !important;
+            flex-shrink: 0;
+          }
+
+          .author-name {
+            font-size: 0.9rem !important;
+            font-weight: 600 !important;
+            color: #222222 !important;
+            text-transform: capitalize !important;
+          }
+       
