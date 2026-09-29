@@ -190,18 +190,37 @@
       }
     }
 
-    /* සාමාන්‍ය තිර සඳහා (Desktop / Laptop) */
-.clinic-heading {
-  text-align: left;
-}
 
-/* Mobile Screens සඳහා (768px ට අඩු) */
-@media (max-width: 767.98px) {
-  .clinic-heading {
-    text-align: justify !important;
-    text-justify: inter-word;
-  }
-}
+    /* Clinic Heading Core Styles */
+    .clinic-heading {
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1.35;
+      text-align: left !important;
+    }
+
+    /* Mobile & Tablet (< 992px) */
+    @media (max-width: 991px) {
+      .clinic-heading {
+        font-size: 20px !important;
+        /* Mobile එකට ගැලපෙන size එක */
+        line-height: 1.4 !important;
+        text-align: left !important;
+      }
+
+      /* Mobile එකේදී span දෙකම එක දිගට (inline) ගලා යාම තහවුරු කිරීම */
+      .clinic-heading span {
+        display: inline !important;
+      }
+    }
+
+    /* Desktop (>= 992px) */
+    @media (min-width: 992px) {
+      .clinic-heading .d-lg-block {
+        display: block !important;
+        /* Large screen වලදී පමණක් ඊළඟ පේළියට යවයි */
+      }
+    }
   </style>
 </head>
 
@@ -306,13 +325,13 @@
 
             <!-- First Section -->
             <div class="row align-items-center gx-lg-5 about-section-row">
-              <div class="col-lg-6 col-md-12 about-img-box mb-lg-0">
+              <div class="col-lg-6 col-md-12 about-img-box mb-lg-4">
                 <div class="about-left wow fadeInLeft" data-wow-delay=".2s">
                   <div class="about-img">
                     <div class="row g-0">
                       <div class="col-12">
                         <div class="img-3"
-                          style="max-height: 380px; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: 15px;">
+                          style="max-height: 350px; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: 15px;">
                           <div class="ani-img reveal w-100">
                             <img src="assets/img/about/sapphire-clinic-portrait.png" alt="" class="w-100"
                               style="object-fit: cover; min-height: 100%;" />
@@ -324,12 +343,11 @@
                 </div>
               </div>
               <div class="col-lg-6 col-md-12">
-                <div class="about-right">
-                  <div class="site-heading mb-3">
-                    <h4 class="site-title ani-text-1 clinic-heading" style="font-size: large; color: #5c0322;">
-                      Caring for our community with compassion, expertise, and a personal touch.
-                    </h4>
-                  </div>
+                <div class="about-right align-content-center ">
+                  <h3 class="clinic-heading mb-3 mb-md-4" style="color: #5c0322; font-weight: 600;">
+                    <span class="d-lg-block">Caring for our community with compassion</span>
+                    <span>expertise, and a personal touch.</span>
+                  </h3>
                   <p class="about-text wow fadeInUp" data-wow-delay=".2s">
                     At Sapphire General Practice, our mission is to provide our community with exceptional medical care
                     that puts your wellbeing first. We believe every patient deserves to feel heard, respected, and
@@ -351,8 +369,8 @@
                   <div class="about-img">
                     <div class="row g-0">
                       <div class="col-12">
-                        <div class="img-3"
-                          style="max-height: 330px; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: 15px;">
+                         <div class="img-3"
+                          style="max-height: 320px; overflow: hidden; display: flex; align-items: center; justify-content: center; border-radius: 15px;">
                           <div class="ani-img reveal w-100">
                             <img src="assets/img/about/injexenimg.png" alt="" class="w-100"
                               style="object-fit: cover; min-height: 100%;" />

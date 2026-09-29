@@ -175,10 +175,10 @@ Version         : 1.0
         items: 2,
       },
       1000: {
-        items: 2,
+        items: 3,
       },
       1200: {
-        items: 2,
+        items: 3,
       },
     },
   });
