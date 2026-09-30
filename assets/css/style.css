@@ -3222,10 +3222,18 @@ label {
   width: 97%;
   border-radius: 40px 40px 40px 0;
 }
+/* Desktop / Normal screen සඳහා */
 .contact-form {
   background: var(--color-white);
-  padding: 40px;
+  padding: 30px; /* Desktop සඳහා අවශ්‍ය padding එක මෙතැනට දෙන්න (උදා: 30px හෝ 40px) */
   border-radius: 20px;
+}
+
+/* Mobile devices සඳහා පමණි (Screen width එක 768px හෝ ඊට අඩු විට) */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 10px;
+  }
 }
 .contact-form-header {
   margin-bottom: 30px;
@@ -6186,7 +6194,7 @@ label {
 .quote-form {
   position: relative;
   background: var(--color-white);
-  padding: 30px;
+  padding: 0px;
   border-radius: 20px;
   box-shadow: var(--box-shadow);
   z-index: 1;
