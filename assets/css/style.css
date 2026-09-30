@@ -6194,7 +6194,7 @@ label {
 .quote-form {
   position: relative;
   background: var(--color-white);
-  padding: 0px;
+  padding: 20px;
   border-radius: 20px;
   box-shadow: var(--box-shadow);
   z-index: 1;

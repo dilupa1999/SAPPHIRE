@@ -1,0 +1,157 @@
+
+    .billing-section {
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
+
+    .billing-content-box {
+      margin-bottom: 45px;
+    }
+
+    .billing-text-justify {
+      text-align: justify;
+      text-justify: inter-word;
+      line-height: 1.7;
+      color: #555555;
+      margin-bottom: 15px;
+    }
+
+    .billing-title {
+      color: #5c0322;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+
+    .billing-subtitle {
+      color: #333333;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 12px;
+    }
+
+    .eligibility-list {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 20px;
+    }
+
+    .eligibility-list li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 10px;
+      color: #555555;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .eligibility-list li i {
+      position: absolute;
+      left: 0;
+      top: 4px;
+      color: #5c0322;
+      font-size: 15px;
+    }
+
+    /* Hostinger-style Pricing Cards */
+    .pricing-item {
+      background-color: #ffffff;
+      border: 1px solid #ebdcd0;
+      border-radius: 20px;
+      padding: 40px 32px;
+      box-shadow: 0 12px 35px rgba(65, 36, 17, 0.08), 0 3px 10px rgba(0, 0, 0, 0.03);
+      color: #4a2e1b;
+      text-align: justify;
+      text-justify: inter-word;
+      transition: all 0.35s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* Card hover elevation */
+    .pricing-item:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 22px 45px rgba(65, 36, 17, 0.15);
+      border-color: #dabfae;
+    }
+
+    /* Pricing Header: Centered Icon & Text */
+    .pricing-header {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      margin-bottom: 22px !important;
+    }
+
+    .pricing-icon {
+      width: 65px;
+      height: 65px;
+      background: #fdf8f4;
+      border-radius: 16px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #f0e1d5;
+      margin: 0 auto 16px auto !important;
+    }
+
+    .pricing-icon img {
+      max-width: 32px;
+      height: auto;
+    }
+
+    .pricing-header h4 {
+      color: #381e11;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px !important;
+      line-height: 1.35;
+      text-align: center !important;
+    }
+
+    .pricing-header p {
+      color: #6c4b35;
+      font-size: 14.5px;
+      line-height: 1.6;
+      text-align: center !important;
+      margin-bottom: 0 !important;
+    }
+
+    .pricing-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .pricing-feature ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .pricing-feature ul li {
+      color: #4a2e1b;
+      padding: 14px 0;
+      font-size: 15px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      line-height: 1.55;
+      text-align: justify;
+      text-justify: inter-word;
+      border-bottom: 1px dashed #eddcd0;
+    }
+
+    .pricing-feature ul li:last-child {
+      border-bottom: none;
+    }
+
+    .pricing-feature ul li i {
+      color: #8c4f24;
+      font-size: 17px;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }

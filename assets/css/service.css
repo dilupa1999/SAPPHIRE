@@ -1,0 +1,698 @@
+  <style>
+    /* ========================================================
+       1. Breadcrumb Spacing & Title Fix
+       ======================================================== */
+    .site-breadcrumb {
+      position: relative !important;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      padding-top: 170px !important;
+      padding-bottom: 70px !important;
+      margin-bottom: 0 !important;
+      text-align: center !important;
+    }
+
+    .site-breadcrumb::before {
+      content: "" !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      background: rgba(0, 0, 0, 0.45) !important;
+      z-index: 1 !important;
+    }
+
+    .site-breadcrumb .container {
+      position: relative !important;
+      z-index: 2 !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .site-breadcrumb .breadcrumb-title {
+      color: #ffffff !important;
+      font-size: 36px !important;
+      font-weight: 700 !important;
+      margin: 0 !important;
+      display: block !important;
+      visibility: visible !important;
+      text-transform: capitalize !important;
+    }
+
+    /* ========================================================
+       2. Content Text Justify (Service විස්තර සඳහා පමණක්)
+       ======================================================== */
+    .service-details p,
+    .service-list-check li,
+    .feature-box-highlight p,
+    .womens-health-banner p,
+    .alert p {
+      text-align: justify !important;
+      text-justify: inter-word;
+    }
+
+    /* ========================================================
+       3. Desktop View Spacing
+       ======================================================== */
+    .service-single.py-120 {
+      padding-top: 50px !important;
+      padding-bottom: 50px !important;
+    }
+
+    .service-main-img-box {
+      max-height: 450px;
+      overflow: hidden;
+      border-radius: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      margin-bottom: 20px !important;
+    }
+
+    .service-main-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .service-details .mb-20 {
+      margin-bottom: 12px !important;
+    }
+
+    .feature-box-highlight {
+      background: #fdf2f4;
+      border-left: 4px solid #5c0322;
+      padding: 18px !important;
+      border-radius: 8px;
+      margin: 20px 0 !important;
+    }
+
+    .feature-box-highlight h5 {
+      color: #5c0322;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .womens-health-banner {
+      background: #ffe6ec;
+      border-radius: 16px;
+      padding: 24px !important;
+      margin-bottom: 22px !important;
+      border-left: 5px solid #46122c;
+    }
+
+    /* ========================================================
+       4. Footer & Copyright Bar Alignment Fix
+       ======================================================== */
+    .footer-area.py-5 {
+      padding-top: 45px !important;
+      padding-bottom: 45px !important;
+    }
+
+    .footer-title-wrapper h5 {
+      margin-top: 0 !important;
+    }
+
+    .footer-area p {
+      text-align: left !important;
+    }
+
+    @media (min-width: 768px) {
+
+      .footer-area .text-md-end,
+      .footer-area .text-md-end p {
+        text-align: right !important;
+      }
+    }
+
+    /* ========================================================
+       5. Interactive Service Switcher & Styles
+       ======================================================== */
+    .service-nav-item {
+      display: flex;
+      align-items: center;
+      padding: 12px 18px;
+      margin-bottom: 8px;
+      border-radius: 8px;
+      background: #f8f9fa;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border-left: 4px solid transparent;
+      cursor: pointer;
+    }
+
+    .service-nav-item i {
+      margin-right: 12px;
+      color: #5c0322;
+      transition: transform 0.3s ease;
+    }
+
+    .service-nav-item:hover,
+    .service-nav-item.active {
+      background: #5c0322 !important;
+      color: #ffffff !important;
+      border-left-color: #ffb3c1;
+      transform: translateX(4px);
+    }
+
+    .service-nav-item:hover i,
+    .service-nav-item.active i {
+      color: #ffffff !important;
+      transform: translateX(4px);
+    }
+
+    .service-detail-pane {
+      display: none;
+      animation: fadeInService 0.3s ease-in-out;
+    }
+
+    .service-detail-pane.active {
+      display: block;
+    }
+
+    @keyframes fadeInService {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .service-subtitle {
+      color: #5c0322;
+      font-weight: 600;
+      font-style: italic;
+      margin-bottom: 12px;
+      display: block;
+      font-size: 1.05rem;
+    }
+
+    .service-details p {
+      line-height: 1.8;
+      margin-bottom: 14px;
+      color: #555;
+    }
+
+    .service-list-check {
+      list-style: none;
+      padding-left: 0;
+      margin: 16px 0;
+    }
+
+    .service-list-check li {
+      position: relative;
+      padding-left: 28px;
+      margin-bottom: 8px;
+      color: #444;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+
+    .service-list-check li i {
+      position: absolute;
+      left: 0;
+      top: 4px;
+      color: #5c0322;
+      font-size: 16px;
+    }
+
+    .checklist-2-col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 10px;
+    }
+
+    .mobile-service-toggle-btn {
+      display: none;
+    }
+
+    /* ========================================================
+       6. 'All Services' Underline / Line Removal Fix
+       ======================================================== */
+    .service-sidebar .widget .title,
+    .all-services-header .title {
+      text-decoration: none !important;
+      border-bottom: none !important;
+      padding-bottom: 0 !important;
+    }
+
+    .service-sidebar .widget .title::before,
+    .service-sidebar .widget .title::after,
+    .all-services-header .title::before,
+    .all-services-header .title::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    @media (min-width: 992px) {
+      .all-services-header {
+        margin-bottom: 16px;
+      }
+    }
+
+    /* ========================================================
+       7. Mobile Responsive Spacing (max-width: 991.98px)
+       ======================================================== */
+    @media (max-width: 991.98px) {
+      .site-breadcrumb {
+        padding-top: 125px !important;
+        padding-bottom: 45px !important;
+      }
+
+      .site-breadcrumb .breadcrumb-title {
+        font-size: 28px !important;
+      }
+
+      .service-single.py-120 {
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
+      }
+
+      .service-sidebar {
+        margin-bottom: 30px !important;
+      }
+
+      .all-services-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        cursor: pointer;
+        padding: 14px 18px;
+        background: #fdf2f4;
+        border-radius: 10px;
+        border-left: 5px solid #5c0322;
+        margin-bottom: 0 !important;
+        user-select: none;
+      }
+
+      .all-services-header .title {
+        margin-bottom: 0 !important;
+        font-size: 20px;
+        color: #5c0322;
+      }
+
+      .mobile-service-toggle-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: #5c0322;
+        color: #ffffff;
+        border-radius: 50%;
+        font-size: 14px;
+        transition: transform 0.3s ease;
+      }
+
+      .service-menu-list {
+        display: none;
+        margin-top: 12px;
+      }
+
+      .widget-extra-buttons {
+        margin-top: 0px !important;
+      }
+
+      .service-main-img-box {
+        max-height: 280px !important;
+        border-radius: 20px !important;
+        margin-bottom: 18px !important;
+      }
+
+      .womens-health-banner {
+        padding: 18px !important;
+        margin-bottom: 18px !important;
+      }
+
+      .feature-box-highlight {
+        padding: 15px !important;
+        margin: 16px 0 !important;
+      }
+
+      .footer-area.py-5 {
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .service-menu-list {
+        display: block !important;
+      }
+    }
+
+    /* ========================================================
+       8. Online Booking Area Fix (No Borders, Clean, Left-Aligned)
+       ======================================================== */
+    .online-booking-clean,
+    .quote-contact {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin-top: 25px !important;
+      margin-bottom: 25px !important;
+    }
+
+    .online-booking-clean .top,
+    .quote-contact .top {
+      position: static !important;
+      text-align: left !important;
+      margin-bottom: 10px !important;
+      padding: 0 !important;
+    }
+
+    .online-booking-clean .booking-title,
+    .quote-contact .top h4 {
+      color: #49041c !important;
+      font-size: 20px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.5px !important;
+      margin-bottom: 8px !important;
+      text-align: left !important;
+      text-transform: uppercase !important;
+    }
+
+    .online-booking-clean .booking-desc,
+    .quote-contact .top p {
+      color: #555555 !important;
+      font-size: 15px !important;
+      line-height: 1.7 !important;
+      text-align: left !important;
+
+      text-align: justify !important;
+      margin-bottom: 28px !important;
+    }
+
+    /* Appointment Button Styling (Theme Matching) */
+    .appointment-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #5c0322;
+      color: #ffffff !important;
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.8px;
+      padding: 13px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(92, 3, 34, 0.25);
+      transition: all 0.3s ease;
+    }
+
+    .appointment-btn:hover {
+      background: #46122c;
+      color: #ffffff !important;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(92, 3, 34, 0.35);
+    }
+
+    .appointment-btn .svg-icon-wrapper {
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .appointment-btn .right-arrow {
+      margin-left: 6px;
+      font-size: 15px;
+    }
+
+    /* ========================================================
+   NSW Immunisation Feature Banner Section
+   ======================================================== */
+    /* Section & Container */
+    .nsw-modern-section {
+      position: relative;
+      margin-top: -50px;
+      z-index: 5;
+      padding-bottom: 40px;
+    }
+
+    /* Premium Card Wrapper */
+    .nsw-premium-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 20px 45px rgba(15, 34, 58, 0.08);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .nsw-premium-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 50px rgba(15, 34, 58, 0.12);
+    }
+
+    /* Image & Floating Badge */
+    .image-wrapper {
+      position: relative;
+      border-radius: 6px;
+      overflow: visible;
+    }
+
+    .promo-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+    }
+
+    .trust-badge {
+      position: absolute;
+      bottom: 20px;
+      right: 3px;
+      background: #ffffff;
+      padding: 12px 18px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-icon {
+      width: 40px;
+      height: 40px;
+      background: #e6f4ea;
+      color: #1e8e3e;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+
+    .badge-title {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #1e293b;
+    }
+
+    .badge-sub {
+      display: block;
+      font-size: 12px;
+      color: #64748b;
+    }
+
+    /* Content Styling */
+    .content-wrapper {
+      padding-left: 20px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background: #eef4ff;
+      color: #551010;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 15px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .main-heading {
+      font-size: 26px;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.35;
+      margin-bottom: 14px;
+    }
+
+    .main-heading span {
+      color: #610a1d;
+    }
+
+    .description {
+      color: #64748b;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Feature Checkmark */
+    .wellbeing-highlight {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #0f172a;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 28px;
+    }
+
+    .wellbeing-highlight i {
+      color: #10b981;
+      font-size: 18px;
+    }
+
+    /* Button Group */
+    .action-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 15px;
+    }
+
+    /* NSW Program Button */
+    .btn-nsw-link {
+      background: #55071b;
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .btn-nsw-link:hover {
+      background: #55071b;
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    /* Dual-Tone Book Appointment Button */
+    .btn-dual-tone {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .btn-dual-tone .btn-icon {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+    }
+
+    .btn-dual-tone .btn-text {
+      background: #1e293b;
+      color: #ffffff;
+      padding: 12px 20px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .btn-dual-tone:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.2);
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 991.98px) {
+      .content-wrapper {
+        padding-left: 0;
+        margin-top: 20px;
+      }
+
+      .trust-badge {
+        right: 15px;
+        bottom: 15px;
+      }
+    }
+
+
+
+    .service-main-img-box {
+      margin-bottom: 25px;
+
+
+    }
+
+    .service-main-img-box img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    /* Pink Banner Container - Top සහ Bottom සමාන පරතරය */
+    .womens-health-banner {
+      background-color: #fdf2f4;
+   
+      border-radius: 12px;
+      padding: 30px;
+  
+      box-sizing: border-box;
+    }
+
+    /* Heading Margin Fix */
+    .banner-title {
+      color: #5c0322;
+      font-weight: 700;
+      font-size: 19px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    
+      line-height: 1.4;
+    }
+
+    
+    .health-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 12px;
+      /* සෑම පේළියක් අතරම ස්ථාවරව පවතින කුඩා පරතරය */
+      font-size: 14.5px;
+      color: #333333;
+      line-height: 1.45;
+    }
+
+    /* Check Icon */
+    .health-item i {
+      color: #46122c;
+      font-size: 15px;
+      margin-top: 3px;
+      /* Text එකේ මුල් අකුර සමඟ icon එක කෙලින් පිහිටීමට */
+      flex-shrink: 0;
+    }
+
+    .health-item span {
+      display: inline-block;
+    }
+
+    /* Bottom Space එක සමාන වීම සඳහා දෙපැත්තේම අන්තිම item එකේ margin-bottom එක ඉවත් කිරීම */
+    .col-md-6 .health-item:last-child {
+      margin-bottom: 0;
+    }
+ 

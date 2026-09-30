@@ -1,0 +1,322 @@
+/* ========================================================
+       1. Breadcrumb Spacing & Title Fix
+       ======================================================== */
+    .site-breadcrumb {
+      position: relative !important;
+      background-size: cover !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      padding-top: 170px !important;
+      padding-bottom: 70px !important;
+      margin-bottom: 0 !important;
+      text-align: center !important;
+    }
+
+    .site-breadcrumb::before {
+      content: "" !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      background: rgba(0, 0, 0, 0.45) !important;
+      z-index: 1 !important;
+    }
+
+    .site-breadcrumb .container {
+      position: relative !important;
+      z-index: 2 !important;
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .site-breadcrumb .breadcrumb-title {
+      color: #ffffff !important;
+      font-size: 36px !important;
+      font-weight: 700 !important;
+      margin: 0 !important;
+      display: block !important;
+      visibility: visible !important;
+      text-transform: capitalize !important;
+    }
+
+    /* ========================================================
+       2. Team Area & "Meet the Heart" Layout Fix
+       ======================================================== */
+    .team-area {
+      margin-top: 0 !important;
+      background: #ffffff !important;
+      position: relative !important;
+      z-index: 2 !important;
+    }
+
+    .team-area.py-120 {
+      padding-top: 60px !important;
+      padding-bottom: 50px !important;
+      margin-top: 0 !important;
+    }
+
+    .team-area .site-heading {
+      margin-top: 0 !important;
+      margin-bottom: 30px !important;
+      position: relative !important;
+      top: 0 !important;
+      transform: none !important;
+    }
+
+    .team-area .site-heading .site-title {
+      margin-top: 0 !important;
+      margin-bottom: 14px !important;
+      color: #5c0322 !important;
+      position: relative !important;
+      top: 0 !important;
+      transform: none !important;
+      font-size: 28px !important;
+      font-weight: 700 !important;
+    }
+
+    .team-header-img-wrapper {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(92, 3, 34, 0.1);
+    }
+
+    .team-header-img-wrapper img {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      display: block;
+      border-radius: 16px;
+      transition: transform 0.4s ease;
+    }
+
+    .team-header-img-wrapper:hover img {
+      transform: scale(1.03);
+    }
+
+    /* ========================================================
+       3. Text Justify (Content Paragraphs)
+       ======================================================== */
+    .team-area p,
+    .team-bio-details p,
+    .site-heading span {
+      text-align: justify !important;
+      text-justify: inter-word;
+      display: block;
+    }
+
+    /* ========================================================
+       4. Card Container, Hover & Bio Styling
+       ======================================================== */
+    .team-item {
+      position: relative !important;
+      overflow: hidden !important;
+      border-radius: 12px !important;
+    }
+
+    .team-item .team-img {
+      position: relative !important;
+      overflow: hidden !important;
+      border-radius: 12px !important;
+    }
+
+    .team-item .team-img img {
+      width: 100% !important;
+      display: block !important;
+      transition: transform 0.4s ease !important;
+    }
+
+    .team-item:hover .team-img img {
+      transform: scale(1.04) !important;
+    }
+
+    .team-item .team-content {
+      position: absolute !important;
+      bottom: 12px !important;
+      left: 12px !important;
+      right: 12px !important;
+      top: auto !important;
+      transform: none !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      background: #ffffffa6 !important;
+      padding: 10px 14px !important;
+      border-radius: 10px !important;
+      text-align: center !important;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25) !important;
+      transition: all 0.35s ease-in-out !important;
+      z-index: 5 !important;
+      height: auto !important;
+    }
+
+    .team-item .team-content::before,
+    .team-item .team-content::after {
+      display: none !important;
+    }
+
+    .team-item .team-content h4 {
+      margin: 0 !important;
+      padding: 0 !important;
+      font-size: 16px !important;
+      font-weight: 600 !important;
+      line-height: 1.3 !important;
+    }
+
+    .team-item .team-content h4 a {
+      color: #000000 !important;
+      text-decoration: none !important;
+    }
+
+    .team-item .team-content span {
+      display: block !important;
+      color: #5a0f1c !important;
+      font-size: 12.5px !important;
+      line-height: 1.4 !important;
+      max-height: 0 !important;
+      opacity: 0 !important;
+      overflow: hidden !important;
+      margin-top: 0 !important;
+      transition: all 0.35s ease-in-out !important;
+      text-align: center !important;
+    }
+
+    .team-item:hover .team-content span {
+      max-height: 90px !important;
+      opacity: 1 !important;
+      margin-top: 6px !important;
+    }
+
+    .team-card-wrapper {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .team-bio-details {
+      background: #ffffff;
+      margin-top: 18px !important;
+      padding: 20px !important;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+      border: 1px solid #f0f0f0;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .team-bio-details .team-bio-name {
+      color: #5c0322;
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #fce8ee;
+    }
+
+    .team-bio-details p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: #555555;
+      margin-bottom: 10px !important;
+    }
+
+    .team-bio-details p:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    /* Read More Expandable Styles */
+    .bio-more-content {
+      display: none;
+    }
+
+    .btn-read-more {
+      background: transparent;
+      border: none;
+      padding: 6px 0 0 0;
+      margin-top: 4px;
+      color: #5c0322;
+      font-weight: 600;
+      font-size: 13.5px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      outline: none;
+      transition: color 0.25s ease;
+      align-self: flex-start;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .btn-read-more:hover {
+      color: #a0103f;
+    }
+
+    /* ========================================================
+       5. Footer & Copyright Bar Alignment Fix
+       ======================================================== */
+    .footer-area.py-5 {
+      padding-top: 45px !important;
+      padding-bottom: 45px !important;
+    }
+
+    .footer-title-wrapper h5 {
+      margin-top: 0 !important;
+    }
+
+    .footer-area p {
+      text-align: left !important;
+    }
+
+    @media (min-width: 768px) {
+
+      .footer-area .text-md-end,
+      .footer-area .text-md-end p {
+        text-align: right !important;
+      }
+    }
+
+    /* ========================================================
+       6. Mobile Responsive Spacing (max-width: 991.98px)
+       ======================================================== */
+    @media (max-width: 991.98px) {
+      .site-breadcrumb {
+        padding-top: 125px !important;
+        padding-bottom: 45px !important;
+      }
+
+      .site-breadcrumb .breadcrumb-title {
+        font-size: 28px !important;
+      }
+
+      .team-area.py-120 {
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
+      }
+
+      .team-area .site-heading {
+        margin-bottom: 22px !important;
+      }
+
+      .team-card-wrapper {
+        margin-bottom: 20px !important;
+      }
+
+      .team-bio-details {
+        margin-top: 14px !important;
+        padding: 16px !important;
+      }
+
+      .team-header-img-wrapper img {
+        height: 240px;
+      }
+
+      .footer-area.py-5 {
+        padding-top: 35px !important;
+        padding-bottom: 35px !important;
+      }
+    }
+ 

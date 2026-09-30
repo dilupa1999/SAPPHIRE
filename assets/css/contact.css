@@ -1,0 +1,101 @@
+
+    p,
+    .about-text,
+    .contact-content p,
+    .contact-form-header p,
+    .accessibility-info p,
+    .emergencies-box p {
+      text-align: justify !important;
+      text-justify: inter-word;
+    }
+
+
+    .footer-area.py-5 {
+      padding-top: 45px !important;
+      padding-bottom: 45px !important;
+    }
+
+    .footer-title-wrapper h5 {
+      margin-top: 0 !important;
+    }
+
+    .footer-area p {
+      text-align: left !important;
+    }
+
+    @media (min-width: 768px) {
+
+      .footer-area .text-md-end,
+      .footer-area .text-md-end p {
+        text-align: right !important;
+      }
+    }
+
+
+    .contact-area.py-120 {
+      padding-top: 50px !important;
+      padding-bottom: 50px !important;
+    }
+
+    .contact-map.pb-120 {
+      padding-bottom: 50px !important;
+    }
+
+    .footer-area.py-5 {
+      padding-top: 45px !important;
+      padding-bottom: 45px !important;
+    }
+
+  
+    .site-heading {
+      margin-bottom: 20px !important;
+    }
+
+    .contact-info {
+      margin-bottom: 26px !important;
+    }
+
+    .contact-form-header {
+      margin-bottom: 20px !important;
+    }
+
+    .form-group {
+      margin-bottom: 14px !important;
+    }
+
+    .accessibility-info {
+      margin-top: 20px !important;
+      padding-top: 10px !important;
+    }
+
+    .emergencies-box {
+      margin-top: 20px !important;
+      padding-top: 15px !important;
+    }
+
+  
+    .footer-title-wrapper h5 {
+      margin-top: 0 !important;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+
+    .form-control.is-invalid {
+      border-color: #dc3545 !important;
+      background-color: #fff9f9;
+    }
+
+    /* Error Text Styling */
+    .error-msg {
+      color: #dc3545;
+      font-size: 13px;
+      display: block;
+      margin-top: 5px;
+      font-weight: 500;
+      text-align: left;
+    }
+ 
